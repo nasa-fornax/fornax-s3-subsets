@@ -6,11 +6,10 @@ from typing import Callable, Mapping, Optional, Sequence, Union
 
 import fitsio
 import numpy as np
-from gPhoton.reference import Stopwatch
 
 from s3_fuse.fits import get_header, imsz_from_header
 from s3_fuse.mount_s3 import mount_bucket
-from s3_fuse.utilz import record_and_yell, crudely_find_library
+from s3_fuse.utilz import record_and_yell, crudely_find_library, Stopwatch
 
 
 def random_rectangular_slices(
