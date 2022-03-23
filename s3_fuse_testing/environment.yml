@@ -1,0 +1,22 @@
+# this environment file should produce a conda environment suitable for running
+# just the generic slice benchmarking & testing.
+
+# it will not contain everything needed to run the gPhoton pipeline or the canned
+# GALEX benchmarks in galex_slice_testing.ipynb.
+
+name: fornax-slice-testing
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  # optional if you just want to work with astropy
+  - fitsio
+  # optional if you just want to work with fitsio
+  - astropy
+  - fs
+  - cytoolz
+  - python-dateutil
+  - sh
+  - numpy
+  # optional, only used to present a log dataframe
+  - pandas
