@@ -35,7 +35,7 @@ def wait_for_file_output(path, string, delay=0.1):
 
 
 def wait_for_output(stream, string, delay=0.1):
-    if isinstance(stream(str, Path)):
+    if isinstance(stream, (str, Path)):
         return wait_for_file_output(stream, string, delay)
     while not any(map(lambda line: string in line, stream)):
         time.sleep(delay)
