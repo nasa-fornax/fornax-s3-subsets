@@ -154,3 +154,19 @@ class TimeSwitcher:
         return self.__repr__()
 
 
+def strip_irrelevant_kwargs(func, *args, **kwargs):
+    """
+    call a function with subsets of kwargs until it agrees to be called.
+    quick hacky way to enable a consistent interface for callables whose real
+    signatures cannot be inspected because they live inside extensions or
+    whatever.
+    """
+    while len(kwargs) > 0:
+        try:
+            return func(*args, **kwargs)
+        except TypeError as error:
+            if "unexpected keyword" not in str(error):
+                raise error
+            bad_kwarg = str(error).split("'")[1]
+            kwargs.pop(bad_kwarg)
+    return func(*args)

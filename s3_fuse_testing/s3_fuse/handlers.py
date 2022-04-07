@@ -7,27 +7,9 @@ from typing import Callable, Mapping, Optional, Sequence, Union
 import numpy as np
 
 from s3_fuse.fits import get_header, imsz_from_header
+from s3_fuse.random_generators import rectangular_slices
 from s3_fuse.mount_s3 import mount_bucket
 from s3_fuse.utilz import record_and_yell, crudely_find_library, Stopwatch
-
-
-def random_rectangular_slices(
-    imsz: Sequence[int],
-    cut_count: int,
-    box_size: int,
-    rng: Optional[np.random.Generator] = None,
-    size_variance: int = 0,
-) -> np.ndarray:
-    """generate coordinates for random rectangular slices"""
-    if rng is None:
-        rng = np.random.default_rng()
-    offsets = np.array([rng.integers(0, imsz[ix], cut_count) for ix in (0, 1)])
-    offsets = np.dstack([offsets, offsets + box_size])
-    if size_variance == 0:
-        return offsets
-    variances = rng.integers(-size_variance, size_variance, offsets.shape)
-    offsets += variances
-    return np.array([np.clip(offsets[ix], 0, imsz[ix]) for ix in (0, 1)])
 
 
 def perform_cut(
@@ -76,7 +58,7 @@ def get_cuts_from_file(
     # pick some boxes to slice from the HDU
     imsz = imsz_from_header(header)
     rng = np.random.default_rng(seed)
-    boxes = random_rectangular_slices(imsz, rng=rng, **cut_settings)
+    boxes = rectangular_slices(imsz, rng=rng, **cut_settings)
     # TODO: hacky
     if shallow and len(imsz) == 3:
         bands = rng.integers(0, imsz[2], boxes.shape[1])
