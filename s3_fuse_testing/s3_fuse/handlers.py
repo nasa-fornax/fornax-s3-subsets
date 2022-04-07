@@ -4,7 +4,6 @@ top-level handling functions for s3-slicing testing and benchmarks
 from pathlib import Path
 from typing import Callable, Mapping, Optional, Sequence, Union
 
-import fitsio
 import numpy as np
 
 from s3_fuse.fits import get_header, imsz_from_header
@@ -32,7 +31,7 @@ def random_rectangular_slices(
 
 
 def perform_cut(
-    array_handle: Union[fitsio.hdu.base.HDUBase, np.ndarray],
+    array_handle: Union["fitsio.hdu.base.HDUBase", np.ndarray],
     cut_ix: int,
     imsz: Sequence[int],
     boxes: np.ndarray,

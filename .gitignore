@@ -141,3 +141,12 @@ cython_debug/
 # PyCharm
 .idea
 
+# secrets -- please do not delete this !!! 
+s3_fuse_testing/s3_fuse/secrets/*
+
+# allow an explanation of the potential existence of the secrets
+!s3_fuse_testing/s3_fuse/secrets/readme.md
+
+# dev scratch files
+*scratch.py
+*scratch.ipynb

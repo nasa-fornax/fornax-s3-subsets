@@ -1,0 +1,1 @@
+This repository's .gitignore file excludes the contents of this directory other than readme file you are looking at right now. This directory may be used to stash credential files etc. used for testing.
