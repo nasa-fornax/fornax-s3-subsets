@@ -25,10 +25,12 @@ def perform_cut(
     """
     x0, x1, y0, y1 = boxes[:, cut_ix, :].ravel()
     if (len(imsz) == 3) and (bands is not None):
-        return array_handle[bands[cut_ix], y0:y1, x0:x1]
+        # written in this weird way for fitsio, which will not automatically
+        # broadcast slices
+        return array_handle[
+            y0:y1, x0:x1, bands[cut_ix]:bands[cut_ix] + 1
+        ][:, :, 0]
     elif len(imsz) == 3:
-        # fitsio will, for whatever reason, not automatically broadcast this
-        # slice
         return array_handle[:, y0:y1, x0:x1]
     return array_handle[y0:y1, x0:x1]
 
@@ -61,7 +63,7 @@ def get_cuts_from_file(
     boxes = rectangular_slices(imsz, rng=rng, **cut_settings)
     # TODO: hacky
     if shallow and len(imsz) == 3:
-        bands = rng.integers(0, imsz[2], boxes.shape[1])
+        bands = rng.integers(0, imsz[0], boxes.shape[1])
     else:
         bands = None
     # and then slice them!
@@ -76,7 +78,7 @@ def get_cuts_from_file(
             f"retrieve data,{path},{boxes[:, cut_ix, :].ravel()}", log
         )
         cuts[cut_ix] = cut.copy()
-    print(f"{watch.peek()} total seconds")
+#     print(f"{watch.peek()} total seconds")
     return cuts, log
 
 
