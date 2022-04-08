@@ -9,6 +9,7 @@ from inspect import getmodule
 from io import BytesIO
 from pathlib import Path
 import time
+import subprocess
 from typing import MutableMapping, Any, Callable
 
 from cytoolz import juxt
@@ -170,3 +171,61 @@ def strip_irrelevant_kwargs(func, *args, **kwargs):
             bad_kwarg = str(error).split("'")[1]
             kwargs.pop(bad_kwarg)
     return func(*args)
+
+
+PROC_NET_DEV_FIELDS = (
+    "bytes",
+    "packets",
+    "errs",
+    "drop",
+    "fifo",
+    "frame",
+    "compressed",
+    "multicast"
+)
+
+
+def catprocnetdev():
+    return subprocess.run(
+        ('cat', '/proc/net/dev'), stdout=subprocess.PIPE
+    ).stdout.decode()
+
+
+def parseprocnetdev(procnetdev, rejects=("lo",)):
+    interface_lines = filter(
+        lambda l: ":" in l[:12], map(str.strip, procnetdev.split("\n"))
+    )
+    entries = []
+    for interface, values in map(lambda l: l.split(":"), interface_lines):
+        if interface in rejects:
+            continue
+        records = {
+            field: int(number)
+            for field, number
+            in zip(PROC_NET_DEV_FIELDS, filter(None, values.split(" ")))
+        }
+        entries.append({"interface": interface} | records)
+    return entries
+
+
+class Netstat:
+    # TODO: monitor TX as well as RX, etc.
+    def __init__(self, rejects=("lo",)):
+        self.rejects = rejects
+        self.absolute, self.last, self.interval, self.total = None, {}, {}, {}
+        self.update()
+
+    def update(self):
+        self.absolute = parseprocnetdev(catprocnetdev(), self.rejects)
+        for line in self.absolute:
+            interface, bytes_ = line['interface'], line['bytes']
+            if interface not in self.interval.keys():
+                self.total[interface] = 0
+                self.interval[interface] = 0
+                self.last[interface] = bytes_
+            else:
+                self.interval[interface] = bytes_ - self.last[interface]
+                self.total[interface] += self.interval[interface]
+
+    def __repr__(self):
+        return str(self.absolute)
