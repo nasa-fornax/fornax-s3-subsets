@@ -106,7 +106,7 @@ def make_handler_log_record(timestamp: str, log_line: str) -> dict[str, str]:
 
 
 def assemble_cut_log(test_result):
-    cuts, runtime, handler_log, fuse_log = test_result
+    cuts, runtime, volume, handler_log, fuse_log = test_result
     if fuse_log is not None:
         goofys_records = make_simple_goofys_log(fuse_log.split("\n"))
     else:
