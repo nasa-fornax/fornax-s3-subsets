@@ -13,6 +13,7 @@ dependencies:
   - fitsio
   # optional if you just want to work with fitsio
   - astropy
+  - fast_histogram
   - fs
   - cytoolz
   - python-dateutil
