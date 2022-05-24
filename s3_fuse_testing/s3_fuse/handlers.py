@@ -4,12 +4,13 @@ top-level handling functions for s3-slicing testing and benchmarks
 from pathlib import Path
 from typing import Callable, Mapping, Optional, Sequence, Union
 
+from killscreen.monitors import Stopwatch
 import numpy as np
 
 from s3_fuse.fits import get_header, imsz_from_header
 from s3_fuse.random_generators import rectangular_slices
 from s3_fuse.mount_s3 import mount_bucket
-from s3_fuse.utilz import record_and_yell, crudely_find_library, Stopwatch
+from s3_fuse.utilz import record_and_yell, crudely_find_library
 
 
 def perform_cut(

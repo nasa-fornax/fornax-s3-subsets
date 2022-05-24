@@ -9,8 +9,7 @@ import fitsio
 import pyarrow as pa
 import pyarrow.compute as pac
 from cytoolz import first
-
-from s3_fuse.fits import (
+from gPhoton.coords.wcs import (
     extract_wcs_keywords, corners_of_a_square, sky_box_to_image_box
 )
 

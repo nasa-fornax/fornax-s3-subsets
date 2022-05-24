@@ -3,7 +3,7 @@
 import re
 from typing import MutableMapping, Sequence
 
-from s3_fuse.utilz import TimeSwitcher
+from killscreen.monitors import TimeSwitcher
 
 
 def record_nonempty(
