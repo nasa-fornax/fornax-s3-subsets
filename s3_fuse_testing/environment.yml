@@ -1,25 +1,33 @@
-# this environment file should produce a conda environment suitable for running
-# just the generic slice benchmarking & testing.
-
-# it will not contain everything needed to run the gPhoton pipeline or the
-# canned GALEX benchmarks in galex_slice_testing.ipynb.
-
 name: fornax-slice-testing
 channels:
+  - numba
   - conda-forge
 dependencies:
   - python=3.9
-  # optional if you just want to work with astropy
-  - fitsio
-  # optional if you just want to work with fitsio
   - astropy
-  - fast_histogram
-  - fs
-  - cytoolz
-  - python-dateutil
-  - sh
-  - numpy
-  # semi-optional, only used to present a log dataframe
-  - pandas
-  # semi-optional, only used for 'uncontaminating' transfers
+  - astroquery
   - boto3
+  - dustgoggles
+  - fast-histogram
+  - fire
+  - fitsio
+  - flask
+  - fs
+  # non-mandatory, cannot be used on non-intel-compatible architectures
+  - icc_rt
+  - ipython
+  - jupyter
+  - matplotlib
+  - more-itertools
+  - numba
+  - numpy
+  - pandas
+  - photutils
+  - pip
+  - pyarrow
+  - python-isal
+  - requests
+  - rich
+  - scikit-learn
+  - scipy
+  - sh
