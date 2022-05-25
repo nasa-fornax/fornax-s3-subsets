@@ -4,13 +4,14 @@ top-level handling functions for s3-slicing testing and benchmarks
 from pathlib import Path
 from typing import Callable, Mapping, Optional, Sequence, Union
 
-from killscreen.monitors import Stopwatch
+from gPhoton.io.fits_utils import logged_fits_initializer
+from gPhoton.pretty import print_stats, notary
+from killscreen.monitors import Stopwatch, Netstat
 import numpy as np
 
-from s3_fuse.fits import get_header, imsz_from_header
-from s3_fuse.random_generators import rectangular_slices
+from s3_fuse.fits import imsz_from_header
 from s3_fuse.mount_s3 import mount_bucket
-from s3_fuse.utilz import record_and_yell, crudely_find_library
+from s3_fuse.random_generators import rectangular_slices
 
 
 def perform_cut(
@@ -36,28 +37,21 @@ def perform_cut(
     return array_handle[y0:y1, x0:x1]
 
 
-def get_cuts_from_file(
+def random_cuts_from_file(
     path: Path,
     loader: Callable,
     hdu_ix: int,
     cut_settings: Mapping,
     seed: Optional[int] = None,
     shallow: bool = False,
+    verbose=0
 ):
     """take random slices from a fits file; examine this process closely"""
-    # initialize fits HDU list object and read selected HDU's header
-    watch = Stopwatch(silent=True)
-    watch.start()
-    log = {}
-    record_and_yell(f"init fits object,{path}", log)
-    hdul = loader(path)
-    library = crudely_find_library(loader)
-    record_and_yell(f"get header,{path}", log)
-    header = get_header(hdul, hdu_ix, library)
-    # initialize selected HDU object and get its data 'handle'
-    record_and_yell(f"get data handle,{path}", log)
-    hdu = hdul[hdu_ix]
-    array_handle = hdu if library == "fitsio" else hdu.data
+    array_handle, header, log, stat = logged_fits_initializer(
+        [hdu_ix], loader, path, verbose
+    )
+    array_handle = array_handle[0]
+    note = notary(log)
     # pick some boxes to slice from the HDU
     imsz = imsz_from_header(header)
     rng = np.random.default_rng(seed)
@@ -70,34 +64,31 @@ def get_cuts_from_file(
     # and then slice them!
     cuts = {}
     for cut_ix in range(boxes.shape[1]):
-        record_and_yell(
-            f"planning cuts,{path},{boxes[:, cut_ix, :].ravel()}", log
-        )
         cuts[cut_ix] = perform_cut(array_handle, cut_ix, imsz, boxes, bands)
+        note(f"planned cuts,{path},{stat()}", loud=verbose > 1)
     for cut_ix, cut in cuts.items():
-        record_and_yell(
-            f"retrieve data,{path},{boxes[:, cut_ix, :].ravel()}", log
-        )
         cuts[cut_ix] = cut.copy()
-#     print(f"{watch.peek()} total seconds")
+        note(f"got data,{path},{stat()}", loud=verbose > 1)
     return cuts, log
 
 
-def get_cuts_from_files(paths, s3_settings, return_cuts, **cut_settings):
+def random_cuts_from_files(paths, s3_settings, return_cuts, **cut_settings):
     """
     top-level benchmarking function: optionally (re)mount an s3 bucket,
     then take slices from various FITS files
     """
-    log = {}
+    watch, netstat, log = Stopwatch(silent=True), Netstat(), {}
+    stat, note = print_stats(watch, netstat), notary(log)
     # (re)mount s3 bucket to avoid 'cheating'
-    record_and_yell(f"mounting bucket", log, loud=True)
     mount_bucket(**s3_settings)
+    note(f"mounted bucket,,{stat()}", loud=True)
     watch = Stopwatch(silent=True)
     watch.start()
     cuts = []
     for path in paths:
-        record_and_yell(f"getting cuts,{path}", log, loud=True)
-        path_cuts, path_log = get_cuts_from_file(path, **cut_settings)
+        # TODO: confusing to call these separate objects both cut_settings
+        path_cuts, path_log = random_cuts_from_file(path, **cut_settings)
+        note(f"got cuts,{path},{stat()}", loud=True)
         if return_cuts is True:
             cuts.append(path_cuts)
         else:
@@ -107,3 +98,5 @@ def get_cuts_from_files(paths, s3_settings, return_cuts, **cut_settings):
     if len(paths) >= 2:
         print(f"{runtime} total seconds for entire file list")
     return cuts, runtime, log
+
+

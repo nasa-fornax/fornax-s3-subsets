@@ -49,17 +49,6 @@ def make_tiled_galex_object(
     return path_comp
 
 
-def get_header(hdul, hdu_ix, library):
-    """
-    fetching header from either an astropy or fitsio HDU list object
-    """
-    if library == "fitsio":
-        return hdul[hdu_ix].read_header()
-    elif library == "astropy":
-        return hdul[hdu_ix].header
-    raise ValueError(f"don't know {library}")
-
-
 def imsz_from_header(header):
     """
     get image size from either compressed or uncompressed FITS image headers

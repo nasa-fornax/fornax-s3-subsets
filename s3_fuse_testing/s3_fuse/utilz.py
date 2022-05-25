@@ -1,24 +1,13 @@
 """
-helper functions for s3-slice organization and benchmarking.
-text i/o and stream handling, conversion, functional utilities, etc.
+stream handling, generic utilities, etc.
 """
-import datetime as dt
-import functools
-from inspect import getmodule
+import os
+import shutil
+from functools import partial
 from io import BytesIO
-from typing import Any, Callable, MutableMapping
-
-from cytoolz import first
-from killscreen.utilities import mb
-
-
-def record_and_yell(message: str, cache: MutableMapping, loud: bool = False):
-    """
-    place message into a cache object with a timestamp; optionally print it
-    """
-    if loud is True:
-        print(message)
-    cache[dt.datetime.now().isoformat()] = message
+import random
+from pathlib import Path
+from typing import Callable
 
 
 def preload_target(function, path, *args, **kwargs):
@@ -36,13 +25,15 @@ def preload_target(function, path, *args, **kwargs):
     return function(buffer, *args, **kwargs)
 
 
-def crudely_find_library(obj: Any) -> str:
-    if isinstance(obj, functools.partial):
-        if len(obj.args) > 0:
-            if isinstance(obj.args[0], Callable):
-                return crudely_find_library(obj.args[0])
-        return crudely_find_library(obj.func)
-    return getmodule(obj).__name__.split(".")[0]
+def preload_from_shm(function, path, *args, **kwargs):
+    """
+    preloader for functions that will not accept buffers -- thin wrappers
+    to C extensions like fitsio.FITS, for instance. will only work on Linux
+    and may fail in some Linux environments depending on security settings.
+    """
+    os.makedirs('/dev/shm/slicetemp', exist_ok=True)
+    shutil.copy(path, '/dev/shm/slicetemp')
+    return function(f"/dev/shm/slicetemp/{Path(path).name}", *args, **kwargs)
 
 
 def strip_irrelevant_kwargs(func, *args, **kwargs):
@@ -63,10 +54,41 @@ def strip_irrelevant_kwargs(func, *args, **kwargs):
     return func(*args)
 
 
-def print_stats(watch, stat):
-    stat.update()
-    print(
-        f"{watch.peek()} s; "
-        f"{mb(round(first(stat.interval.values())))} MB"
-    )
-    watch.click()
+def sample_table(table, k=None):
+    """
+    select a sample of size k from rows of a pyarrow Table.
+    """
+    if k is None:
+        return table
+    return table.take(random.sample(range(len(table)), k=k))
+
+
+def make_loaders(*loader_names: str) -> dict[str, Callable]:
+    """
+    produce a mapping from FITS-loader names to callable load methods.
+    currently only three are defined by default.
+    """
+    loaders = {}
+    for name in loader_names:
+        if name == "astropy":
+            import astropy.io.fits
+            loaders[name] = astropy.io.fits.open
+        elif name == "fitsio":
+            import fitsio
+            loaders[name] = fitsio.FITS
+        # "greedy" version of astropy.io.fits.open, which fully loads a file
+        # into memory before doing anything with it. a useful bench reference.
+        # note that fitsio.FITS will not accept filelike objects and cannot be
+        # wrapped in this way without modifying its C extensions.
+        elif name == "greedy_astropy":
+            import astropy.io.fits
+            loaders[name] = partial(preload_target, astropy.io.fits.open)
+        elif name == "greedy_fitsio":
+            import fitsio
+            # fitsio is a thinnish wrapper for cfitsio and cannot be
+            # transparently initialized from python buffer objects.
+            # this will probably fail on non-Linux systems and may fail
+            # in some Linux environments, depending on security settings.
+            loaders[name] = partial(preload_from_shm, fitsio.FITS)
+
+    return loaders

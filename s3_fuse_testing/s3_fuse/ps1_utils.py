@@ -3,18 +3,12 @@ utilities for interacting with PS1 catalogs, files, and services.
 """
 from pathlib import Path
 
-import astropy
-import astropy.wcs
-import fitsio
+from cytoolz.curried import get
+from gPhoton.coadd import skybox_cuts_from_file, zero_flag_and_edge
+from gPhoton.reference import eclipse_to_paths
+from more_itertools import all_equal
 import pyarrow as pa
 import pyarrow.compute as pac
-from cytoolz.curried import get
-from gPhoton.coords.wcs import (
-    extract_wcs_keywords, corners_of_a_square, sky_box_to_image_box
-)
-from more_itertools import all_equal
-
-from s3_fuse.utilz import print_stats
 
 
 def ps1_stack_path(proj_cell, sky_cell, band):
@@ -55,58 +49,53 @@ def prune_ps1_catalog(catalog_table, test_table):
     return pa.concat_tables(proj_cell_tables)
 
 
-def get_ps1_cutouts(
-    targets, bands, side_length, data_root, stat, watch, verbose=2
-):
+def get_ps1_cutouts(targets, loader, bands, side_length, data_root, verbose=2):
     # probably a mild waste of time, but might as well check
     assert all_equal(map(get(['proj_cell', 'sky_cell']), targets))
     if verbose > 0:
         print(
-            f"...accessing PS1 stack image(s) w/proj cell, sky cell = "
-            f"{targets[0]['proj_cell']}, {targets[0]['sky_cell']}..."
+            f"... accessing PS1 stack image(s) w/proj cell, sky cell = "
+            f"{targets[0]['proj_cell']}, {targets[0]['sky_cell']} ..."
         )
-    cutouts = {}
-    ps1_wcs = None
-    watch.click(), stat.update()
+    cuts, log = {}, {}
+    wcs_object = None
     for band in bands:
         # I exactly copied the canonical ps1 directory structure for this
         # test deployment; it lives under the ps1 prefix in the test bucket
         path = ps1_stack_path(
             targets[0]['proj_cell'], targets[0]['sky_cell'], band
         )
-        path = f"{data_root}/ps1{path}"
+        path = f"{data_root}{path}"
         if verbose > 0:
-            print(f"... initializing {Path(path).name} ... ", end="")
-        hdul = fitsio.FITS(path)
+            print(f"... initializing {Path(path).name} ... ")
         # all ps1 stack images associated with a sky cell / proj cell should
-        # have the same wcs no matter their bands, so don't waste
-        # time initializing the wcs multiple times (the projections themselves
-        # should be very cheap because they're so small)
-        if ps1_wcs is None:
-            ps1_wcs = astropy.wcs.WCS(
-                extract_wcs_keywords(hdul[1].read_header())
-            )
-        if verbose > 0:
-            print_stats(watch, stat)
-        if verbose == 1:
-            print(f"... making {len(targets)} slices ...", end="")
-        for target in targets:
-            if verbose > 1:
-                print(
-                    f"... slicing objID={target['obj_id']}; "
-                    f"ra={round(target['ra'], 3)}; "
-                    f"dec={round(target['dec'], 3)} ... ",
-                    end=""
-                )
-            corners = corners_of_a_square(
-                target['ra'], target['dec'], side_length
-            )
-            coords = sky_box_to_image_box(corners, ps1_wcs)
-            cutouts[f"{target['obj_id']}_{band}"] = hdul[1][
-                 coords[2]:coords[3] + 1, coords[0]:coords[1] + 1
-            ]
-            if verbose > 1:
-                print_stats(watch, stat)
-        if verbose == 1:
-            print_stats(watch, stat)
-    return cutouts, ps1_wcs
+        # have the same wcs no matter their bands, so don't waste time
+        # repeatedly initializing the WCS object (the projection operations
+        # themselves are very cheap because we're only projecting 4 pixels,
+        # so they can be harmlessly repeated)
+        band_cuts, wcs_object, _, band_log = skybox_cuts_from_file(
+            path, loader, targets, side_length, (1,), wcs_object, verbose
+        )
+        cuts[band] = band_cuts
+        log |= band_log
+    return cuts, wcs_object, log
+
+
+def get_galex_cutouts(
+    eclipse, targets, loader, side_length, data_root, verbose=0
+):
+    # our canonical GALEX path structure, except that these test files happen
+    # not to have 'rice' in the name despite being RICE-compressed
+    path = eclipse_to_paths(eclipse, data_root, None, "none")["NUV"]["image"]
+    if verbose > 0:
+        print(f"... initializing {Path(path).name} ... ")
+    cuts, wcs_object, header, log = skybox_cuts_from_file(
+        path, loader, targets, side_length, (1, 2, 3), verbose=verbose
+    )
+    for cut in cuts:
+        cut['array'] = zero_flag_and_edge(
+            cut['arrays'][0], cut['arrays'][1], cut['arrays'][2]
+        ) / header['EXPTIME']
+        cut.pop('arrays')
+    return cuts, wcs_object, log
+
