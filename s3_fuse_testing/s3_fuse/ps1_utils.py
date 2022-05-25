@@ -8,10 +8,13 @@ import astropy.wcs
 import fitsio
 import pyarrow as pa
 import pyarrow.compute as pac
-from cytoolz import first
+from cytoolz.curried import get
 from gPhoton.coords.wcs import (
     extract_wcs_keywords, corners_of_a_square, sky_box_to_image_box
 )
+from more_itertools import all_equal
+
+from s3_fuse.utilz import print_stats
 
 
 def ps1_stack_path(proj_cell, sky_cell, band):
@@ -53,36 +56,57 @@ def prune_ps1_catalog(catalog_table, test_table):
 
 
 def get_ps1_cutouts(
-    target, bands, side_length, data_root, stat, watch
+    targets, bands, side_length, data_root, stat, watch, verbose=2
 ):
-    band_cutouts = {}
-    ps1_wcs, coords = None, None
+    # probably a mild waste of time, but might as well check
+    assert all_equal(map(get(['proj_cell', 'sky_cell']), targets))
+    if verbose > 0:
+        print(
+            f"...accessing PS1 stack image(s) w/proj cell, sky cell = "
+            f"{targets[0]['proj_cell']}, {targets[0]['sky_cell']}..."
+        )
+    cutouts = {}
+    ps1_wcs = None
+    watch.click(), stat.update()
     for band in bands:
-        # note that I exactly copied the ps1 file tree structure for this
-        # test s3 deployment
-        path = ps1_stack_path(target['proj_cell'], target['sky_cell'], band)
+        # I exactly copied the canonical ps1 directory structure for this
+        # test deployment; it lives under the ps1 prefix in the test bucket
+        path = ps1_stack_path(
+            targets[0]['proj_cell'], targets[0]['sky_cell'], band
+        )
         path = f"{data_root}/ps1{path}"
+        if verbose > 0:
+            print(f"... initializing {Path(path).name} ... ", end="")
         hdul = fitsio.FITS(path)
-        # all bands of a ps1 stack image should have the same wcs, don't
-        # waste time projecting stuff twice
+        # all ps1 stack images associated with a sky cell / proj cell should
+        # have the same wcs no matter their bands, so don't waste
+        # time initializing the wcs multiple times (the projections themselves
+        # should be very cheap because they're so small)
         if ps1_wcs is None:
-            print("... planning cuts on PS1 images ...")
             ps1_wcs = astropy.wcs.WCS(
                 extract_wcs_keywords(hdul[1].read_header())
             )
+        if verbose > 0:
+            print_stats(watch, stat)
+        if verbose == 1:
+            print(f"... making {len(targets)} slices ...", end="")
+        for target in targets:
+            if verbose > 1:
+                print(
+                    f"... slicing objID={target['obj_id']}; "
+                    f"ra={round(target['ra'], 3)}; "
+                    f"dec={round(target['dec'], 3)} ... ",
+                    end=""
+                )
             corners = corners_of_a_square(
                 target['ra'], target['dec'], side_length
             )
             coords = sky_box_to_image_box(corners, ps1_wcs)
-            watch.click()
-        print(f"slicing data from {Path(path).name}")
-        band_cutouts[band] = hdul[1][
-             coords[2]:coords[3] + 1, coords[0]:coords[1] + 1
-        ]
-        watch.click()
-        stat.update()
-        print(
-            f"{round(first(stat.interval.values()) / 1024 ** 2)} "
-            f"MB transferred"
-        )
-    return band_cutouts, ps1_wcs
+            cutouts[f"{target['obj_id']}_{band}"] = hdul[1][
+                 coords[2]:coords[3] + 1, coords[0]:coords[1] + 1
+            ]
+            if verbose > 1:
+                print_stats(watch, stat)
+        if verbose == 1:
+            print_stats(watch, stat)
+    return cutouts, ps1_wcs

@@ -8,6 +8,9 @@ from inspect import getmodule
 from io import BytesIO
 from typing import Any, Callable, MutableMapping
 
+from cytoolz import first
+from killscreen.utilities import mb
+
 
 def record_and_yell(message: str, cache: MutableMapping, loud: bool = False):
     """
@@ -58,3 +61,12 @@ def strip_irrelevant_kwargs(func, *args, **kwargs):
             bad_kwarg = str(error).split("'")[1]
             kwargs.pop(bad_kwarg)
     return func(*args)
+
+
+def print_stats(watch, stat):
+    stat.update()
+    print(
+        f"{watch.peek()} s; "
+        f"{mb(round(first(stat.interval.values())))} MB"
+    )
+    watch.click()
