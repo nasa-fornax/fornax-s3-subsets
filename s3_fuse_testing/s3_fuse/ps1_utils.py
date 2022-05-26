@@ -1,14 +1,89 @@
 """
 utilities for interacting with PS1 catalogs, files, and services.
 """
+from io import BytesIO
 from pathlib import Path
+from typing import Collection, Optional
 
+import astropy.io.fits
 from cytoolz.curried import get
-from gPhoton.coadd import skybox_cuts_from_file, zero_flag_and_edge
-from gPhoton.reference import eclipse_to_paths
+from gPhoton.coadd import skybox_cuts_from_file
 from more_itertools import all_equal
 import pyarrow as pa
 import pyarrow.compute as pac
+import requests
+
+PS1_FILTERS = ("g", "r", "i", "z", "y")
+PS1_IMAGE_TYPES = (
+    "stack",
+    "warp",
+    "stack.wt",
+    "stack.mask",
+    "stack.exp",
+    "stack.num",
+    "warp.wt",
+    "warp.mask"
+)
+PS1_IMAGE_FORMATS = ("fits", "jpg", "png")
+PS1_FILENAME_URL = "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py"
+PS1_CUTOUT_URL = "https://ps1images.stsci.edu/cgi-bin/fitscut.cgi"
+
+
+# see documentation at
+# https://outerspace.stsci.edu/display/PANSTARRS/PS1+Image+Cutout+Service
+def request_ps1_filenames(
+    ra: Collection[float],
+    dec: Collection[float],
+    filters: Collection[str] = PS1_FILTERS,
+    image_types: Collection[str] = ("stack",),
+    session: Optional[requests.Session] = None
+):
+    """
+    using the STSCI ps1 filename service, fetch ps1 filenames for a given set
+    of ra and dec positions, image filters, and image types.
+    """
+    image_type_str = ",".join(image_types)
+    filters_str = "".join(filters)
+    radec_str = "\n".join(
+        map(lambda radec: f"{radec[0]} {radec[1]}", zip(ra, dec))
+    )
+    if session is None:
+        session = requests.Session()
+    response = session.post(
+        PS1_FILENAME_URL,
+        data={"filters": filters_str, "type": image_type_str},
+        files={"file": radec_str}
+    )
+    response.raise_for_status()
+    lines = tuple(map(lambda s: s.split(" "), response.text.split("\n")))
+    fields = lines[0]
+    records = [
+        {field: value for field, value in zip(fields, line)}
+        for line in lines[1:]
+    ]
+    return records
+
+
+def request_ps1_cutout(filename, ra, dec, side_length, image_format):
+    """
+    using the STSCI PS1 image cutout service, fetch cutout of side_length
+    (in arcseconds) from filename, centered at ra, dec, in image_format.
+    """
+    # approximate resolution of PS1 images is 4 pixels / asec
+    side_length = round(side_length * 4)
+    response = requests.get(
+        PS1_CUTOUT_URL,
+        params={
+            "ra": ra,
+            "dec": dec,
+            "size": side_length,
+            "format": image_format,
+            "red": filename
+        }
+    )
+    buffer = BytesIO(response.content)
+    buffer.seek(0)
+    return astropy.io.fits.open(buffer)
 
 
 def ps1_stack_path(proj_cell, sky_cell, band):
@@ -80,22 +155,4 @@ def get_ps1_cutouts(targets, loader, bands, side_length, data_root, verbose=2):
         log |= band_log
     return cuts, wcs_object, log
 
-
-def get_galex_cutouts(
-    eclipse, targets, loader, side_length, data_root, verbose=0
-):
-    # our canonical GALEX path structure, except that these test files happen
-    # not to have 'rice' in the name despite being RICE-compressed
-    path = eclipse_to_paths(eclipse, data_root, None, "none")["NUV"]["image"]
-    if verbose > 0:
-        print(f"... initializing {Path(path).name} ... ")
-    cuts, wcs_object, header, log = skybox_cuts_from_file(
-        path, loader, targets, side_length, (1, 2, 3), verbose=verbose
-    )
-    for cut in cuts:
-        cut['array'] = zero_flag_and_edge(
-            cut['arrays'][0], cut['arrays'][1], cut['arrays'][2]
-        ) / header['EXPTIME']
-        cut.pop('arrays')
-    return cuts, wcs_object, log
 

@@ -6,8 +6,10 @@ others require a gPhoton 2 installation in the environment.
 
 import random
 import warnings
+from pathlib import Path
 
 from gPhoton.aspect import TABLE_PATHS
+from gPhoton.coadd import skybox_cuts_from_file, zero_flag_and_edge
 from gPhoton.reference import eclipse_to_paths
 from pyarrow import parquet
 
@@ -65,3 +67,22 @@ def parquet_generic_search(columns, predicates, refs, table_path):
         for column, predicate, ref in zip(columns, predicates, refs)
     ]
     return parquet.read_table(table_path, filters=filters)
+
+
+def get_galex_cutouts(
+    eclipse, targets, loader, side_length, data_root, verbose=0
+):
+    # our canonical GALEX path structure, except that these test files happen
+    # not to have 'rice' in the name despite being RICE-compressed
+    path = eclipse_to_paths(eclipse, data_root, None, "none")["NUV"]["image"]
+    if verbose > 0:
+        print(f"... initializing {Path(path).name} ... ")
+    cuts, wcs_object, header, log = skybox_cuts_from_file(
+        path, loader, targets, side_length, (1, 2, 3), verbose=verbose
+    )
+    for cut in cuts:
+        cut['array'] = zero_flag_and_edge(
+            cut['arrays'][0], cut['arrays'][1], cut['arrays'][2]
+        ) / header['EXPTIME']
+        cut.pop('arrays')
+    return cuts, wcs_object, log
