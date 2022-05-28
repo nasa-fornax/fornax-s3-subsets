@@ -2,16 +2,23 @@
 utilities for interacting with PS1 catalogs, files, and services.
 """
 from io import BytesIO
-from pathlib import Path
-from typing import Collection, Optional
+from itertools import product
+from multiprocessing import Pool
+from typing import Collection, Optional, Sequence, Any
 
 import astropy.io.fits
-from cytoolz.curried import get
-from gPhoton.coadd import skybox_cuts_from_file
-from more_itertools import all_equal
+import astropy.wcs
 import pyarrow as pa
 import pyarrow.compute as pac
 import requests
+from cytoolz import groupby
+from cytoolz.curried import get
+from gPhoton.coadd import cut_skyboxes
+from gPhoton.io.fits_utils import logged_fits_initializer
+from gPhoton.pretty import make_monitors
+from more_itertools import chunked
+
+from s3_fuse.utilz import cleanup_greedy_shm
 
 PS1_FILTERS = ("g", "r", "i", "z", "y")
 PS1_IMAGE_TYPES = (
@@ -32,11 +39,11 @@ PS1_CUTOUT_URL = "https://ps1images.stsci.edu/cgi-bin/fitscut.cgi"
 # see documentation at
 # https://outerspace.stsci.edu/display/PANSTARRS/PS1+Image+Cutout+Service
 def request_ps1_filenames(
-    ra: Collection[float],
-    dec: Collection[float],
-    filters: Collection[str] = PS1_FILTERS,
-    image_types: Collection[str] = ("stack",),
-    session: Optional[requests.Session] = None
+        ra: Collection[float],
+        dec: Collection[float],
+        filters: Collection[str] = PS1_FILTERS,
+        image_types: Collection[str] = ("stack",),
+        session: Optional[requests.Session] = None
 ):
     """
     using the STSCI ps1 filename service, fetch ps1 filenames for a given set
@@ -124,35 +131,91 @@ def prune_ps1_catalog(catalog_table, test_table):
     return pa.concat_tables(proj_cell_tables)
 
 
-def get_ps1_cutouts(targets, loader, bands, side_length, data_root, verbose=2):
-    # probably a mild waste of time, but might as well check
-    assert all_equal(map(get(['proj_cell', 'sky_cell']), targets))
-    if verbose > 0:
-        print(
-            f"... accessing PS1 stack image(s) w/proj cell, sky cell = "
-            f"{targets[0]['proj_cell']}, {targets[0]['sky_cell']} ..."
+# TODO, maybe: merge these with galex functions in some way --
+#  annoying because requires some kind of chunked parameter passing
+#  or giving up on chunked WCS init in PS1
+def get_ps1_cutouts(
+    stacks: Collection[tuple[int, int]],
+    loader,
+    targets,
+    length,
+    data_root,
+    bands,
+    verbose=1,
+    logged=True,
+    image_chunksize: int = 40,
+    image_threads=None,
+    cut_threads=None,
+):
+    stat, note = make_monitors(fake=not logged, silent=True)
+    stack_chunks = chunked(stacks, int(image_chunksize / len(bands)))
+    target_groups = groupby(get(['proj_cell', 'sky_cell']), targets)
+    cuts = {}
+    for chunk in stack_chunks:
+        metadata = initialize_ps1_chunk(
+            loader, bands, chunk, image_threads, data_root, verbose
         )
-    cuts, log = {}, {}
-    wcs_object = None
-    for band in bands:
-        # I exactly copied the canonical ps1 directory structure for this
-        # test deployment; it lives under the ps1 prefix in the test bucket
-        path = ps1_stack_path(
-            targets[0]['proj_cell'], targets[0]['sky_cell'], band
+        plans = []
+        for name, file_info in metadata.items():
+            proj, sky, band = name
+            for target in target_groups[(proj, sky)]:
+                meta_dict = {
+                    'wcs': metadata[(proj, sky, bands[0])]['wcs'],
+                    'path': metadata[(proj, sky, band)]['path'],
+                    'band': band
+                }
+                plans.append(target.copy() | meta_dict)
+        note(
+            f"initialized {len(chunk) * len(bands)} images,{stat()}",
+            verbose > 1
         )
-        path = f"{data_root}{path}"
-        if verbose > 0:
-            print(f"... initializing {Path(path).name} ... ")
+        cut_kwargs = {
+            "loader": loader, "hdu_indices": (1,), "side_length": length
+        }
+        cuts |= cut_skyboxes(plans, cut_threads, cut_kwargs)
+        cleanup_greedy_shm(loader)
+        note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
+    note(
+        f"made {len(cuts)} cuts from {len(stacks) * len(bands)} images,"
+        f"{stat(total=True)}",
+        verbose > 0
+    )
+    return cuts, note(None, eject=True)
+
+
+def initialize_ps1_chunk(
+    loader,
+    bands,
+    chunk: Sequence[tuple[int, int]],
+    threads,
+    data_root,
+    verbose=0,
+) -> dict[tuple[int, int, str], Any]:
+    pool = Pool(threads) if threads is not None else None
+    metadata = {}
+    for band, stack in product(bands, chunk):
         # all ps1 stack images associated with a sky cell / proj cell should
         # have the same wcs no matter their bands, so don't waste time
         # repeatedly initializing the WCS object (the projection operations
-        # themselves are very cheap because we're only projecting 4 pixels,
-        # so they can be harmlessly repeated)
-        band_cuts, wcs_object, _, band_log = skybox_cuts_from_file(
-            path, loader, targets, side_length, (1,), wcs_object, verbose
-        )
-        cuts[band] = band_cuts
-        log |= band_log
-    return cuts, wcs_object, log
-
-
+        # themselves are very cheap because we're only projecting 4 pixels)
+        stack_init_params = {
+            "path": f"{data_root}{ps1_stack_path(*stack, band)}",
+            "get_wcs": band == bands[0],
+            "loader": loader,
+            "hdu_indices": [1],
+            "verbose": verbose,
+            "logged": False
+        }
+        if pool is None:
+            metadata[(*stack, band)] = logged_fits_initializer(
+                **stack_init_params
+            )
+        else:
+            metadata[(*stack, band)] = pool.apply_async(
+                logged_fits_initializer, kwds=stack_init_params
+            )
+    if pool is not None:
+        pool.close()
+        pool.join()
+        metadata |= {k: v.get() for k, v in metadata.items()}
+    return metadata

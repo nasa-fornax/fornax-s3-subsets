@@ -3,15 +3,21 @@ galex-specific utilities.
 some are vendored from gPhoton 2.
 others require a gPhoton 2 installation in the environment.
 """
-
 import random
 import warnings
-from pathlib import Path
+from itertools import product
+from multiprocessing import Pool
+from typing import Sequence, Any
 
 from gPhoton.aspect import TABLE_PATHS
-from gPhoton.coadd import skybox_cuts_from_file, zero_flag_and_edge
+from gPhoton.coadd import cut_skyboxes
+from gPhoton.io.fits_utils import logged_fits_initializer
+from gPhoton.pretty import make_monitors
 from gPhoton.reference import eclipse_to_paths
+from more_itertools import chunked
 from pyarrow import parquet
+
+from s3_fuse.utilz import cleanup_greedy_shm
 
 
 def get_galex_version_path(eclipse, band, depth, obj, version, data_root):
@@ -69,20 +75,93 @@ def parquet_generic_search(columns, predicates, refs, table_path):
     return parquet.read_table(table_path, filters=filters)
 
 
+# TODO, maybe: merge these with PS1 functions in some way --
+#  annoying because requires some kind of chunked parameter passing
+#  or giving up on chunked WCS init in PS1
 def get_galex_cutouts(
-    eclipse, targets, loader, side_length, data_root, verbose=0
+    eclipses,
+    loader,
+    targets,
+    length,
+    data_root,
+    bands,
+    verbose=1,
+    logged=True,
+    image_chunksize: int = 40,
+    image_threads=None,
+    cut_threads=None,
 ):
-    # our canonical GALEX path structure, except that these test files happen
-    # not to have 'rice' in the name despite being RICE-compressed
-    path = eclipse_to_paths(eclipse, data_root, None, "none")["NUV"]["image"]
-    if verbose > 0:
-        print(f"... initializing {Path(path).name} ... ")
-    cuts, wcs_object, header, log = skybox_cuts_from_file(
-        path, loader, targets, side_length, (1, 2, 3), verbose=verbose
+    stat, note = make_monitors(fake=not logged, silent=True)
+    eclipse_chunks = chunked(eclipses, int(image_chunksize / len(bands)))
+    eclipse_targets = {
+        eclipse: tuple(filter(lambda t: eclipse in t['galex'], targets))
+        for eclipse in eclipses
+    }
+    cuts = {}
+    for chunk in eclipse_chunks:
+        metadata = initialize_galex_chunk(
+            loader=loader,
+            bands=bands,
+            chunk=chunk,
+            threads=image_threads,
+            data_root=data_root
+        )
+        plans = []
+        for name, file_info in metadata.items():
+            eclipse, band = name
+            for target in eclipse_targets[eclipse]:
+                meta_dict = {
+                    'wcs': metadata[(eclipse, band)]['wcs'],
+                    'path': metadata[(eclipse, band)]['path'],
+                    'band': band
+                }
+                plans.append(target.copy() | meta_dict)
+        note(
+            f"initialized {len(chunk) * len(bands)} images,{stat()}",
+            verbose > 1
+        )
+        cut_kwargs = {
+            "loader": loader, "hdu_indices": (1, 2, 3), "side_length": length
+        }
+        cuts |= cut_skyboxes(plans, cut_threads, cut_kwargs)
+        cleanup_greedy_shm(loader)
+        note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
+    note(
+        f"made {len(cuts)} cuts from {len(eclipses) * len(bands)} images,"
+        f"{stat(total=True)}",
+        verbose > 0
     )
-    for cut in cuts:
-        cut['array'] = zero_flag_and_edge(
-            cut['arrays'][0], cut['arrays'][1], cut['arrays'][2]
-        ) / header['EXPTIME']
-        cut.pop('arrays')
-    return cuts, wcs_object, log
+    return cuts, note(None, eject=True)
+
+
+def initialize_galex_chunk(
+    loader,
+    bands,
+    chunk: Sequence[int],
+    threads,
+    data_root
+) -> dict[tuple[int, str], Any]:
+    pool = Pool(threads) if threads is not None else None
+    metadata = {}
+    for band, eclipse in product(bands, chunk):
+        init_params = {
+            # our canonical GALEX path structure, except that these test files
+            # do not have 'rice' in the name despite being RICE-compressed
+            "path":  eclipse_to_paths(
+                eclipse, data_root, None, "none"
+            )[band]["image"],
+            "get_wcs": True,
+            "loader": loader,
+            "hdu_indices": (1, 2, 3)
+        }
+        if pool is None:
+            metadata[(eclipse, band)] = logged_fits_initializer(**init_params)
+        else:
+            metadata[(eclipse, band)] = pool.apply_async(
+                logged_fits_initializer, kwds=init_params
+            )
+    if pool is not None:
+        pool.close()
+        pool.join()
+        metadata |= {k: v.get() for k, v in metadata.items()}
+    return metadata

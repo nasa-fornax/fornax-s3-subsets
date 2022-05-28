@@ -1,11 +1,13 @@
 """
 stream handling, generic utilities, etc.
 """
+import functools
 import os
+import random
 import shutil
 from functools import partial
+from inspect import getfullargspec
 from io import BytesIO
-import random
 from pathlib import Path
 from typing import Callable
 
@@ -25,15 +27,20 @@ def preload_target(function, path, *args, **kwargs):
     return function(buffer, *args, **kwargs)
 
 
-def preload_from_shm(function, path, *args, **kwargs):
+def preload_from_shm(
+    function, source, *args, shm_path="/dev/shm/slicetemp", **kwargs
+):
     """
     preloader for functions that will not accept buffers -- thin wrappers
     to C extensions like fitsio.FITS, for instance. will only work on Linux
     and may fail in some Linux environments depending on security settings.
     """
-    os.makedirs('/dev/shm/slicetemp', exist_ok=True)
-    shutil.copy(path, '/dev/shm/slicetemp')
-    return function(f"/dev/shm/slicetemp/{Path(path).name}", *args, **kwargs)
+    if Path(source).parent != Path(shm_path):
+        os.makedirs('/dev/shm/slicetemp', exist_ok=True)
+        shutil.copy(source, '/dev/shm/slicetemp')
+    return function(
+        Path(shm_path, Path(source).name), *args, **kwargs
+    )
 
 
 def strip_irrelevant_kwargs(func, *args, **kwargs):
@@ -92,3 +99,12 @@ def make_loaders(*loader_names: str) -> dict[str, Callable]:
             loaders[name] = partial(preload_from_shm, fitsio.FITS)
 
     return loaders
+
+
+def cleanup_greedy_shm(loader):
+    func = loader.func if isinstance(loader, functools.partial) else loader
+    spec = getfullargspec(func)
+    if spec.kwonlydefaults is None:
+        return
+    if 'shm_path' in spec.kwonlydefaults:
+        shutil.rmtree(spec.kwonlydefaults['shm_path'], True)
