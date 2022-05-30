@@ -82,8 +82,10 @@ def make_ps1_slices(targets: list[dict]):
     )
     rate, weight = parse_topline(log)
     print(f"{rate} cutouts/s, {weight} MB / cutout")
-    logframe = pd.DataFrame(log)
-    logframe.to_csv(Path(DUMP_PATH, f'{filestamp()}_log.csv'), index=None)
+    logframe = pd.DataFrame(
+        [line.split(",") for line in log.values()], index=log.keys()
+    )
+    logframe.to_csv(Path(DUMP_PATH, f'{filestamp()}_log.csv'))
 
 
 # tell fire to handle command line call
