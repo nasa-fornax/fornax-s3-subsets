@@ -158,7 +158,7 @@ def get_ps1_cutouts(
     target_groups = groupby(get(['proj_cell', 'sky_cell']), targets)
     cuts = {}
     tag = filestamp()
-    for ix, chunk in stack_chunks:
+    for ix, chunk in enumerate(stack_chunks):
         metadata = initialize_ps1_chunk(
             loader, bands, chunk, image_threads, data_root, verbose
         )
