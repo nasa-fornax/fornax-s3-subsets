@@ -187,10 +187,10 @@ def get_ps1_cutouts(
             with open(Path(dump_to, f"chunk_{ix}_{tag}.pkl"), "wb+") as stream:
                 pickle.dump(chunk_cuts, stream)
             note(f"dumped {len(plans)} cutouts to disk,{stat()}", verbose > 1)
-        if return_cuts is True:
-            cuts |= chunk_cuts
-        else:
-            del chunk_cuts
+        if return_cuts is False:
+            for cut in chunk_cuts.values():
+                del cut["arrays"]
+        cuts |= chunk_cuts
     note(
         f"made {len(cuts)} cuts from {len(stacks) * len(bands)} images,"
         f"{stat(total=True)}",
