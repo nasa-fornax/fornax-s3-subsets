@@ -76,7 +76,12 @@ def _mount_bucket_with_goofys_in_debug_mode(
 
 
 def mount_bucket(
-    backend, remount, mount_path, bucket, stream_handlers=None, verbose=False
+    backend,
+    mount_path,
+    bucket,
+    remount=False,
+    stream_handlers=None,
+    verbose=False
 ):
     if conditional_unmount(remount, mount_path) is False:
         return

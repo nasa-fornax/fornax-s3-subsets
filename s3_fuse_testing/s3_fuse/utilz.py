@@ -4,6 +4,7 @@ stream handling, generic utilities, etc.
 import functools
 import os
 import random
+import re
 import shutil
 from functools import partial
 from inspect import getfullargspec
@@ -108,3 +109,15 @@ def cleanup_greedy_shm(loader):
         return
     if 'shm_path' in spec.kwonlydefaults:
         shutil.rmtree(spec.kwonlydefaults['shm_path'], True)
+
+
+def parse_topline(log):
+    """parse top line of output log from skybox-slicing examples."""
+    total = next(reversed(log.values()))
+    summary, duration, volume = total.split(",")
+    cut_count = int(re.search(r"\d+", summary).group())
+    seconds = float(re.search(r"\d+\.?\d+", duration).group())
+    megabytes = float(re.search(r"\d+\.?\d+", volume).group())
+    rate = cut_count / seconds
+    weight = megabytes / cut_count
+    return round(rate, 2), round(weight, 2)

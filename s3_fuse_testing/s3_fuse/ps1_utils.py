@@ -1,9 +1,11 @@
 """
 utilities for interacting with PS1 catalogs, files, and services.
 """
+import pickle
 from io import BytesIO
 from itertools import product
 from multiprocessing import Pool
+from pathlib import Path
 from typing import Collection, Optional, Sequence, Any
 
 import astropy.io.fits
@@ -16,6 +18,7 @@ from cytoolz.curried import get
 from gPhoton.coadd import cut_skyboxes
 from gPhoton.io.fits_utils import logged_fits_initializer
 from gPhoton.pretty import make_monitors
+from killscreen.utilities import filestamp
 from more_itertools import chunked
 
 from s3_fuse.utilz import cleanup_greedy_shm
@@ -146,12 +149,16 @@ def get_ps1_cutouts(
     image_chunksize: int = 40,
     image_threads=None,
     cut_threads=None,
+    return_cuts=True,
+    dump=False,
+    dump_to="."
 ):
     stat, note = make_monitors(fake=not logged, silent=True)
     stack_chunks = chunked(stacks, int(image_chunksize / len(bands)))
     target_groups = groupby(get(['proj_cell', 'sky_cell']), targets)
     cuts = {}
-    for chunk in stack_chunks:
+    tag = filestamp()
+    for ix, chunk in stack_chunks:
         metadata = initialize_ps1_chunk(
             loader, bands, chunk, image_threads, data_root, verbose
         )
@@ -172,9 +179,20 @@ def get_ps1_cutouts(
         cut_kwargs = {
             "loader": loader, "hdu_indices": (1,), "side_length": length
         }
-        cuts |= cut_skyboxes(plans, cut_threads, cut_kwargs)
+        chunk_cuts = cut_skyboxes(plans, cut_threads, cut_kwargs)
         cleanup_greedy_shm(loader)
         note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
+        if dump is True:
+            # TODO: do this more nicely
+            with open(
+                Path(dump_to, f"chunk_{ix}_{tag}.pkl", "wb+")
+            ) as stream:
+                pickle.dump(chunk_cuts, stream)
+            note(f"dumped {len(plans)} cutouts to disk,{stat()}", verbose > 1)
+        if return_cuts is True:
+            cuts |= chunk_cuts
+        else:
+            del chunk_cuts
     note(
         f"made {len(cuts)} cuts from {len(stacks) * len(bands)} images,"
         f"{stat(total=True)}",
