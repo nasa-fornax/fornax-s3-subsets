@@ -184,9 +184,7 @@ def get_ps1_cutouts(
         note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
         if dump is True:
             # TODO: do this more nicely
-            with open(
-                Path(dump_to, f"chunk_{ix}_{tag}.pkl", "wb+")
-            ) as stream:
+            with open(Path(dump_to, f"chunk_{ix}_{tag}.pkl"), "wb+") as stream:
                 pickle.dump(chunk_cuts, stream)
             note(f"dumped {len(plans)} cutouts to disk,{stat()}", verbose > 1)
         if return_cuts is True:
