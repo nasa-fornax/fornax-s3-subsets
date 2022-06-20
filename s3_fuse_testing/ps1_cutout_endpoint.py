@@ -42,8 +42,8 @@ LOADER = tuple(make_loaders("fitsio",).items())[0]
 TUNING = {
     "fitsio": {
         "image_chunksize": 40,
-        "image_threads": cpu_count() * 4,
-        "cut_threads": cpu_count() * 4
+        "image_threads": cpu_count() * 6,
+        "cut_threads": cpu_count() * 6
     },
     "greedy_fitsio": {
         "image_chunksize": 10,
