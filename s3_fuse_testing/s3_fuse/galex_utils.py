@@ -5,7 +5,7 @@ others require a gPhoton 2 installation in the environment.
 """
 import random
 import warnings
-from itertools import product
+from itertools import chain, product
 from multiprocessing import Pool
 from typing import Sequence, Any
 
@@ -97,7 +97,7 @@ def get_galex_cutouts(
         eclipse: tuple(filter(lambda t: eclipse in t['galex'], targets))
         for eclipse in eclipses
     }
-    cuts = {}
+    cuts = []
     for chunk in eclipse_chunks:
         metadata = initialize_galex_chunk(
             loader=loader,
@@ -113,7 +113,8 @@ def get_galex_cutouts(
                 meta_dict = {
                     'wcs': metadata[(eclipse, band)]['wcs'],
                     'path': metadata[(eclipse, band)]['path'],
-                    'band': band
+                    'band': band,
+                    'eclipse': eclipse
                 }
                 plans.append(target.copy() | meta_dict)
         note(
@@ -123,7 +124,7 @@ def get_galex_cutouts(
         cut_kwargs = {
             "loader": loader, "hdu_indices": (1, 2, 3), "side_length": length
         }
-        cuts |= cut_skyboxes(plans, cut_threads, cut_kwargs)
+        cuts += cut_skyboxes(plans, cut_threads, cut_kwargs)
         cleanup_greedy_shm(loader)
         note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
     note(

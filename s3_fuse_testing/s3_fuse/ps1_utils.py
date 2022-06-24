@@ -156,7 +156,7 @@ def get_ps1_cutouts(
     stat, note = make_monitors(fake=not logged, silent=True)
     stack_chunks = chunked(stacks, int(image_chunksize / len(bands)))
     target_groups = groupby(get(['proj_cell', 'sky_cell']), targets)
-    cuts = {}
+    cuts = []
     tag = filestamp()
     for ix, chunk in enumerate(stack_chunks):
         metadata = initialize_ps1_chunk(
@@ -188,9 +188,9 @@ def get_ps1_cutouts(
                 pickle.dump(chunk_cuts, stream)
             note(f"dumped {len(plans)} cutouts to disk,{stat()}", verbose > 1)
         if return_cuts is False:
-            for cut in chunk_cuts.values():
+            for cut in chunk_cuts:
                 del cut["arrays"]
-        cuts |= chunk_cuts
+        cuts += chunk_cuts
     note(
         f"made {len(cuts)} cuts from {len(stacks) * len(bands)} images,"
         f"{stat(total=True)}",
