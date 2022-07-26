@@ -146,10 +146,8 @@ def initialize_galex_chunk(
     metadata = {}
     for band, eclipse in product(bands, chunk):
         init_params = {
-            # our canonical GALEX path structure, except that these test files
-            # do not have 'rice' in the name despite being RICE-compressed
             "path":  eclipse_to_paths(
-                eclipse, data_root, None, "none"
+                eclipse, data_root, None, "rice"
             )[band]["image"],
             "get_wcs": True,
             "loader": loader,
