@@ -165,10 +165,12 @@ def get_ps1_cutouts(
         plans = []
         for name, file_info in metadata.items():
             proj, sky, band = name
+            # noinspection PyTypeChecker
             for target in target_groups[(proj, sky)]:
                 meta_dict = {
                     'wcs': metadata[(proj, sky, bands[0])]['wcs'],
                     'path': metadata[(proj, sky, band)]['path'],
+                    'header': metadata[(proj, sky, band)]['header'],
                     'band': band
                 }
                 plans.append(target.copy() | meta_dict)
@@ -234,4 +236,5 @@ def initialize_ps1_chunk(
         pool.close()
         pool.join()
         metadata |= {k: v.get() for k, v in metadata.items()}
+    # noinspection PyTypeChecker
     return metadata
