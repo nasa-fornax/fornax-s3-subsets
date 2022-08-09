@@ -42,11 +42,11 @@ PS1_CUTOUT_URL = "https://ps1images.stsci.edu/cgi-bin/fitscut.cgi"
 # see documentation at
 # https://outerspace.stsci.edu/display/PANSTARRS/PS1+Image+Cutout+Service
 def request_ps1_filenames(
-        ra: Collection[float],
-        dec: Collection[float],
-        filters: Collection[str] = PS1_FILTERS,
-        image_types: Collection[str] = ("stack",),
-        session: Optional[requests.Session] = None
+    ra: Collection[float],
+    dec: Collection[float],
+    filters: Collection[str] = PS1_FILTERS,
+    image_types: Collection[str] = ("stack",),
+    session: Optional[requests.Session] = None
 ):
     """
     using the STSCI ps1 filename service, fetch ps1 filenames for a given set

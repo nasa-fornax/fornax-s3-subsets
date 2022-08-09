@@ -51,10 +51,11 @@ def make_tiled_galex_object(
 
 def imsz_from_header(header):
     """
-    get image size from either compressed or uncompressed FITS image headers
+    get image size from either compressed or uncompressed FITS image headers.
+    returns in 'reversed' order for numpy array indexing.
     """
     key_type = 'ZNAXIS' if "ZNAXIS" in header.keys() else "NAXIS"
     axis_entries = keyfilter(
         lambda k: re.match(rf"{key_type}\d", k), dict(header)
     )
-    return tuple(axis_entries.values())
+    return tuple(reversed(axis_entries.values()))

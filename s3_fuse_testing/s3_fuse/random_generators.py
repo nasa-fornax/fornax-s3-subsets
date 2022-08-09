@@ -18,23 +18,57 @@ from s3_fuse.utilz import strip_irrelevant_kwargs
 RNG = np.random.default_rng()
 
 
+def _procrusteanize(parameters, reference_length, fill_value=0):
+    difference = reference_length - len(parameters)
+    if difference > 0:
+        return list(parameters) + [fill_value for _ in range(difference)]
+    if difference < 0:
+        return parameters[:reference_length]
+    return parameters
+
+
 def rectangular_slices(
     imsz: Sequence[int],
     cut_count: int,
-    box_size: int,
+    lengths: Sequence[int],
+    variances: Optional[Sequence[int]] = None,
     rng: Optional[np.random.Generator] = None,
-    size_variance: int = 0,
 ) -> np.ndarray:
-    """generate coordinates for random rectangular slices"""
+    """
+    generate coordinates for random rectangular slices.
+
+    returns an n x m x 2 array ("offsets"), where n is the number of slices to
+    take from the image and m is the number of axes in the image to be sliced.
+
+    then offsets[i] gives specifications for the starting and ending
+    indices of cut i, one axis per row, starting index in the 0th column,
+    ending index in the 1st column, e.g.:
+    slices = np.apply_along_axis(lambda row: slice(*row), 1, offsets[i])
+    """
+    # if cut_sizes is specified to lower dimensionality than the image fill
+    # with 1s; if higher, truncate. similarly with variances, but fill with 0s.
+    lengths = _procrusteanize(lengths, len(imsz), 1)
+    if variances is not None:
+        variances = _procrusteanize(variances, len(imsz), 0)
     if rng is None:
         rng = np.random.default_rng()
-    offsets = np.array([rng.integers(0, imsz[ix], cut_count) for ix in (0, 1)])
-    offsets = np.dstack([offsets, offsets + box_size])
-    if size_variance == 0:
+    offsets = np.array(
+        [
+            rng.integers(0, axis_size - axis_cut_size, cut_count)
+            for axis_size, axis_cut_size in zip(imsz, lengths)
+        ]
+    ).T
+    offsets = np.dstack([offsets, offsets + np.array(lengths)])
+    if variances is None:
         return offsets
-    variances = rng.integers(-size_variance, size_variance, offsets.shape)
-    offsets += variances
-    return np.array([np.clip(offsets[ix], 0, imsz[ix]) for ix in (0, 1)])
+    for ax_ix, variance in enumerate(variances):
+        if variance < 1:
+            continue
+        per_cut_variances = rng.integers(-variance, variance, cut_count)
+        offsets[:, ax_ix, 1] = np.clip(
+            offsets[:, ax_ix, 1] + per_cut_variances, 0, imsz[ax_ix]
+        )
+    return offsets
 
 
 def fits_file(

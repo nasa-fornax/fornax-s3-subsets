@@ -14,57 +14,32 @@ from s3_fuse.mount_s3 import mount_bucket
 from s3_fuse.random_generators import rectangular_slices
 
 
-def perform_cut(
-    array_handle: Union["fitsio.hdu.base.HDUBase", np.ndarray],
-    cut_ix: int,
-    imsz: Sequence[int],
-    boxes: np.ndarray,
-    bands: Optional[Sequence[int]] = None,
-) -> np.ndarray:
-    """
-    cut a specified 'box' from an array (like the data attribute of an
-    astropy.io.fits HDU) or array accessor (like a fitsio HDU)
-    """
-    x0, x1, y0, y1 = boxes[:, cut_ix, :].ravel()
-    if (len(imsz) == 3) and (bands is not None):
-        # written in this weird way for fitsio, which will not automatically
-        # broadcast slices
-        return array_handle[
-            y0:y1, x0:x1, bands[cut_ix]:bands[cut_ix] + 1
-        ][:, :, 0]
-    elif len(imsz) == 3:
-        return array_handle[:, y0:y1, x0:x1]
-    return array_handle[y0:y1, x0:x1]
-
-
 def random_cuts_from_file(
     path: Path,
     loader: Callable,
     hdu_ix: int,
     cut_settings: Mapping,
     seed: Optional[int] = None,
-    shallow: bool = False,
     verbose=0
 ):
     """take random slices from a fits file; examine this process closely"""
-    array_handle, header, log, stat = logged_fits_initializer(
-        [hdu_ix], loader, path, verbose
+    hdu_struct = logged_fits_initializer(
+        path, loader, [hdu_ix], False, True, verbose
     )
-    array_handle = array_handle[0]
+    array_handle = hdu_struct['handles'][0]
+    log, header, stat = [hdu_struct[k] for k in ('log', 'header', 'stat')]
     note = notary(log)
     # pick some boxes to slice from the HDU
     imsz = imsz_from_header(header)
     rng = np.random.default_rng(seed)
-    boxes = rectangular_slices(imsz, rng=rng, **cut_settings)
-    # TODO: hacky
-    if shallow and len(imsz) == 3:
-        bands = rng.integers(0, imsz[0], boxes.shape[1])
-    else:
-        bands = None
+    offsets = rectangular_slices(imsz, rng=rng, **cut_settings)
     # and then slice them!
     cuts = {}
-    for cut_ix in range(boxes.shape[1]):
-        cuts[cut_ix] = perform_cut(array_handle, cut_ix, imsz, boxes, bands)
+    for cut_ix in range(offsets.shape[0]):
+        slices = tuple(
+            np.apply_along_axis(lambda row: slice(*row), 1, offsets[cut_ix])
+        )
+        cuts[cut_ix] = array_handle[slices]
         note(f"planned cuts,{path},{stat()}", loud=verbose > 1)
     for cut_ix, cut in cuts.items():
         cuts[cut_ix] = cut.copy()
