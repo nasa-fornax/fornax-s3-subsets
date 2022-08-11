@@ -5,7 +5,7 @@ others require a gPhoton 2 installation in the environment.
 """
 import random
 import warnings
-from itertools import chain, product
+from itertools import product
 from multiprocessing import Pool
 from typing import Sequence, Any
 
@@ -140,7 +140,8 @@ def initialize_galex_chunk(
     bands,
     chunk: Sequence[int],
     threads,
-    data_root
+    data_root,
+    data_handle_attribute="data"
 ) -> dict[tuple[int, str], Any]:
     pool = Pool(threads) if threads is not None else None
     metadata = {}
@@ -151,7 +152,8 @@ def initialize_galex_chunk(
             )[band]["image"],
             "get_wcs": True,
             "loader": loader,
-            "hdu_indices": (1, 2, 3)
+            "hdu_indices": (1, 2, 3),
+            "data_handle_attribute": data_handle_attribute
         }
         if pool is None:
             metadata[(eclipse, band)] = logged_fits_initializer(**init_params)
