@@ -74,31 +74,25 @@ def sample_table(table, k=None):
 def make_loaders(*loader_names: str) -> dict[str, Callable]:
     """
     produce a mapping from FITS-loader names to callable load methods.
-    currently only three are defined by default.
     """
     loaders = {}
     for name in loader_names:
-        if name == "astropy":
+        if "astropy" in name:
             import astropy.io.fits
             loaders[name] = astropy.io.fits.open
-        elif name == "fitsio":
+            if "greedy" in name:
+                # "greedily" load files into memory before doing anything with
+                # them. a useful bench reference.
+                loaders[name] = partial(preload_target, loaders[name])
+        elif "fitsio" in name:
             import fitsio
             loaders[name] = fitsio.FITS
-        # "greedy" version of astropy.io.fits.open, which fully loads a file
-        # into memory before doing anything with it. a useful bench reference.
-        # note that fitsio.FITS will not accept filelike objects and cannot be
-        # wrapped in this way without modifying its C extensions.
-        elif name == "greedy_astropy":
-            import astropy.io.fits
-            loaders[name] = partial(preload_target, astropy.io.fits.open)
-        elif name == "greedy_fitsio":
-            import fitsio
-            # fitsio is a thinnish wrapper for cfitsio and cannot be
-            # transparently initialized from python buffer objects.
-            # this will probably fail on non-Linux systems and may fail
-            # in some Linux environments, depending on security settings.
-            loaders[name] = partial(preload_from_shm, fitsio.FITS)
-
+            if "greedy" in name:
+                # fitsio is a thinnish wrapper for cfitsio and cannot be
+                # transparently initialized from python buffer objects.
+                # this will probably fail on non-Linux systems and may fail
+                # in some Linux environments, depending on settings.
+                loaders[name] = partial(preload_from_shm, loaders[name])
     return loaders
 
 
