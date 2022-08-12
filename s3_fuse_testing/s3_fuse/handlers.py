@@ -62,7 +62,7 @@ def benchmark_cuts(
     return_cuts: bool = False,
     n_files: Optional[int] = None,
     seed: Optional[int] = None,
-    **kwargs
+    **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
     # set up monitors: timer, net traffic gauge, dict to put logs in
@@ -121,7 +121,7 @@ def interpret_benchmark_instructions(
             # monkeypatching members of astropy.io.fits in ways I am not
             # comfortable with)
             case["bucket"] = None
-            case["data_handle_attribute"] = "section"
+            case["astropy_handle_attribute"] = "section"
             case["paths"] = tuple(
                 map(lambda x: s3_url(settings["bucket"], x), case["paths"])
             )
