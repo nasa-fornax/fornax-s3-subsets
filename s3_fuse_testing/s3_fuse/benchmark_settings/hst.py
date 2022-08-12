@@ -2,7 +2,7 @@
 test parameters for a sampling of 'mid-size' (20-60 MB) HST drizzle images
 """
 
-CUT_SHAPES = ((100, 100), (200, 200), (200, 10), (10, 200))
+CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 20)
 BUCKET = "stpubdata"
 HDU_IX = 1

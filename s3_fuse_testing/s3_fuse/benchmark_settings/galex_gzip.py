@@ -7,7 +7,7 @@ for subsetting!  it should be no better -- maybe worse -- than just downloading
 the whole file.
 """
 
-CUT_SHAPES = ((100, 100), (200, 200), (200, 10), (10, 200))
+CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 20)
 BUCKET = "nishapur"
 HDU_IX = 0

@@ -1,4 +1,11 @@
-CUT_SHAPES = ((1, 200, 200, 1), (200, 200, 1, 1), (200, 1, 200, 1))
+"""
+test parameters for a series of full TESSCut cubes. these are massive
+(35-115 GB) 4-dimensional uncompressed rasters.
+"""
+# this series of shapes is intended to demonstrate the huge performance
+# differences caused by 'orientation' in a >2D FITS array.
+# note that the last axis is only length 2.
+CUT_SHAPES = ((1, 100, 100, 1), (100, 100, 1, 1), (100, 1, 100, 1))
 CUT_COUNTS = (1, 5)
 BUCKET = "stpubdata"
 HDU_IX = 1
@@ -6,8 +13,10 @@ HDU_IX = 1
 # a 'greedy' loader would require at least 120 GB of
 # available RAM for some of these files. This would drop
 # to a mere ~40 GB for astropy_s3 (s3 access without section,
-# copies an entire HDU into memory) but would still require using
-# a rather expensive instance.
+# copies an entire HDU into memory), but would still require using
+# a rather expensive instance. fitsio simply won't work at all --
+# CFITSIO throws an error when it simply _thinks_ about opening
+# one of these files, before transferring any data at all.
 LOADERS = ("astropy", "astropy_s3_section")
 TEST_FILES = (
     "tess/public/mast/tess-s0026-4-1-cube.fits",
