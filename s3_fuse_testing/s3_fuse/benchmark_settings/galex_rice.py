@@ -7,8 +7,9 @@ CUT_SHAPES = ((100, 100), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 20)
 BUCKET = "nishapur"
 HDU_IX = 1
-LOADERS = ("astropy", "greedy_astropy", "astropy_section", "fitsio")
-
+LOADERS = (
+    "astropy", "astropy_s3_section", "astropy_s3", "fitsio", "greedy_astropy"
+)
 TEST_FILES = (
     'e06818/e06818-fd-full-rice.fits',
     'e43718/e43718-nd-full-rice.fits',

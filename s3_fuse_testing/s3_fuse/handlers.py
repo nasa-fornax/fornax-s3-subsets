@@ -114,17 +114,20 @@ def interpret_benchmark_instructions(
         }
         case |= deepcopy(settings)
         case["loader"] = make_loaders(loader)[loader]
+        if "s3" in loader:
+            case["bucket"] = None
+            case["paths"] = tuple(
+                map(lambda x: s3_url(settings["bucket"], x), case["paths"])
+            )
         if "section" in loader:
             # the necessary behavior changes in this case are slightly too
             # complex to implement them via straightforwardly wrapping
             # astropy.io.fits.open (or at least it would require
             # monkeypatching members of astropy.io.fits in ways I am not
-            # comfortable with)
-            case["bucket"] = None
+            # comfortable with), so we pass a special argument to instruct
+            # downstream functions to access the "section" attribute
+            # of HDUs instead of the "data" attribute.
             case["astropy_handle_attribute"] = "section"
-            case["paths"] = tuple(
-                map(lambda x: s3_url(settings["bucket"], x), case["paths"])
-            )
         elif "mountpoint" in settings.keys():
             case["paths"] = tuple(
                 (str(Path(settings['mountpoint'], p)) for p in case['paths'])

@@ -2,7 +2,13 @@ CUT_SHAPES = ((1, 200, 200, 1), (200, 200, 1, 1), (200, 1, 200, 1))
 CUT_COUNTS = (1, 5)
 BUCKET = "stpubdata"
 HDU_IX = 1
-LOADERS = ("astropy", "astropy_section")
+# these files are too big to open with other loaders.
+# a 'greedy' loader would require at least 120 GB of
+# available RAM for some of these files. This would drop
+# to a mere ~40 GB for astropy_s3 (s3 access without section,
+# copies an entire HDU into memory) but would still require using
+# a rather expensive instance.
+LOADERS = ("astropy", "astropy_s3_section")
 TEST_FILES = (
     "tess/public/mast/tess-s0026-4-1-cube.fits",
     "tess/public/mast/tess-s0052-2-3-cube.fits",
