@@ -78,7 +78,7 @@ def fitsstat(path: Union[str, Path]) -> dict:
             'size': hduinfo['datLoc'] - hduinfo['hdrLoc'] + hduinfo['datSpan'],
             'name': hdulinfo[hdu_ix][1],
             'hdutype': hdulinfo[hdu_ix][3],
-            'dim': hdulinfo[hdu_ix][5],
+            'dim': imsz_from_header(hdu.header),
         }
         if len(hdu_info['dim']) == 0:
             hdu_info['itemsize'] = None
