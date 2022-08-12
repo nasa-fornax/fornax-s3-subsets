@@ -1,7 +1,10 @@
 """utility functions for occasional FITS manipulation"""
+from functools import reduce
+from operator import mul
 import os
 import re
-from typing import Sequence, Literal
+from pathlib import Path
+from typing import Sequence, Literal, Union
 
 from cytoolz import keyfilter
 
@@ -60,3 +63,30 @@ def imsz_from_header(header):
         dict(header)
     )
     return tuple(reversed(axis_entries.values()))
+
+
+def fitsstat(path: Union[str, Path]) -> dict:
+    import astropy.io.fits
+
+    info = {'filesize': os.stat(path).st_size}
+    hdul = astropy.io.fits.open(path)
+    hdulinfo = hdul.info(False)
+    info['n_hdu'] = len(hdul)
+    for hdu_ix, hdu in enumerate(hdul):
+        hduinfo = hdu.fileinfo()
+        hdu_info = {
+            'size': hduinfo['datLoc'] - hduinfo['hdrLoc'] + hduinfo['datSpan'],
+            'name': hdulinfo[hdu_ix][1],
+            'hdutype': hdulinfo[hdu_ix][3],
+            'dim': hdulinfo[hdu_ix][5],
+        }
+        if len(hdu_info['dim']) == 0:
+            hdu_info['itemsize'] = None
+            hdu_info['datasize'] = 0
+        else:
+            hdu_info['itemsize'] = abs(hdu.header['BITPIX'])
+            hdu_info[
+                'datasize'
+            ] = abs(hdu.header['BITPIX'] * reduce(mul, hdu_info['dim']))
+        info[hdu_ix] = hdu_info
+    return info
