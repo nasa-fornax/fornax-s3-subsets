@@ -3,6 +3,9 @@ test parameters for a series of JWST CRF images. these are ~200 MB
 uncompressed files, but they're mostly so big because they have a bunch of
 backplanes. the individual extensions are ~2000x2000 32-bit floating-point
 arrays.
+
+...except for the last extension, which is maybe compressed ASDF data?
+looking into it.
 """
 CUT_SHAPES = ((100, 100), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 20)
