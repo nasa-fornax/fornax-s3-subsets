@@ -82,10 +82,7 @@ def benchmark_cuts(
         else:
             del path_cuts
         log |= path_log
-    runtime = watch.peek()
-    if len(paths) > 1:
-        print(f"{runtime}s for total file list,,")
-    return cuts, runtime, log
+    return cuts, watch, stat, log
 
 
 def interpret_benchmark_instructions(
