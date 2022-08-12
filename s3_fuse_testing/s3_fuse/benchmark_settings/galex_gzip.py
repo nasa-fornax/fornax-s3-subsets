@@ -1,7 +1,10 @@
 """
-test parameters for a sampling of full-depth gPhoton 2-generated GALEX images in gzip-compressed format. same files as the galex_rice case.
+test parameters for a sampling of full-depth gPhoton 2-generated GALEX images
+in gzip-compressed format. same underlying data as the galex_rice case.
 
-please note that this is specifically intended to be a really terrible case for subsetting!  it should be no better -- maybe worse -- than just downloading the whole file.
+please note that this is specifically intended to be a really terrible case
+for subsetting!  it should be no better -- maybe worse -- than just downloading
+the whole file.
 """
 
 CUT_SHAPES = ((100, 100), (200, 200), (200, 10), (10, 200))
