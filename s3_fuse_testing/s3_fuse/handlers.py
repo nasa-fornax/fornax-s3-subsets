@@ -104,7 +104,7 @@ def interpret_benchmark_instructions(
     settings |= {
         "paths": instructions.TEST_FILES,
         "bucket": instructions.BUCKET,
-        "hdu_ix": (instructions.HDU_IX,)
+        "hdu_ix": instructions.HDU_IX
     }
     cases = []
     for shape, count, loader in product(
