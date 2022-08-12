@@ -1,7 +1,7 @@
 """
 top-level handling functions for s3-slicing testing and benchmarks
 """
-from typing import Callable, Optional, Sequence
+from typing import Callable, Optional, Sequence, Any
 
 import numpy as np
 from gPhoton.io.fits_utils import logged_fits_initializer
@@ -61,7 +61,7 @@ def benchmark_cuts(
     return_cuts: bool = False,
     n_files: Optional[int] = None,
     seed: Optional[int] = None,
-    _title: str = "",
+    **kwargs
 ):
     paths = paths[:n_files] if n_files is not None else paths
     # set up monitors: timer, net traffic gauge, dict to put logs in
@@ -87,9 +87,7 @@ def benchmark_cuts(
     return cuts, runtime, log
 
 
-def interpret_benchmark_instructions(
-    benchmark_name: str, general_settings: dict
-) -> list:
+def interpret_benchmark_instructions(benchmark_name: str) -> list:
     """
     produce a set of arguments to random_cuts_from_files() using literals
     defined in a submodule of benchmark_settings
@@ -99,17 +97,17 @@ def interpret_benchmark_instructions(
     from itertools import product
 
     instructions = import_module(f"benchmark_settings.{benchmark_name}")
-    settings = deepcopy(general_settings)
-    settings["paths"] = instructions.TEST_FILES
-    settings["bucket"] = instructions.BUCKET
-    settings["hdu_ix"] = (instructions.HDU_IX,)
+    settings = {
+        "paths": instructions.TEST_FILES,
+        "bucket": instructions.BUCKET,
+        "hdu_ix": (instructions.HDU_IX,)
+    }
     cases = []
-    for shape, count, name in product(
-            instructions.CUT_SHAPES, instructions.CUT_COUNTS,
-            instructions.LOADERS
+    for shape, count, loader in product(
+        instructions.CUT_SHAPES, instructions.CUT_COUNTS, instructions.LOADERS
     ):
         case = {
-            'title': f"{benchmark_name} {name} {shape} {count}",
+            'identifier': f"{benchmark_name}_{loader}_{shape}_{count}",
             "shape": shape,
             "count": count
         }
@@ -119,8 +117,8 @@ def interpret_benchmark_instructions(
         # (or at least it would require monkeypatching members of
         # astropy.io.fits in
         # ways I am not comfortable with)
-        case["loader"] = make_loaders(name)[name]
-        if "section" in name:
+        case["loader"] = make_loaders(loader)[loader]
+        if "section" in loader:
             case["bucket"] = None
             case["data_handle_attribute"] = "section"
             case["paths"] = tuple(
