@@ -115,3 +115,11 @@ def parse_topline(log):
     rate = cut_count / seconds
     weight = megabytes / cut_count
     return round(rate, 2), round(weight, 2)
+
+
+def s3_url(bucket: str, path: str) -> str:
+    """
+    make a conventional S3 URL from a bucket name and a 'path'
+    (prefixes + object name) to an object in that bucket
+    """
+    return f"s3://{bucket}/{path}"

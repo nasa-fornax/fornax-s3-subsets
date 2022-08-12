@@ -29,8 +29,8 @@ def _procrusteanize(parameters, reference_length, fill_value=0):
 
 def rectangular_slices(
     imsz: Sequence[int],
-    cut_count: int,
-    lengths: Sequence[int],
+    count: int,
+    shape: Sequence[int],
     variances: Optional[Sequence[int]] = None,
     rng: Optional[np.random.Generator] = None,
 ) -> np.ndarray:
@@ -45,16 +45,16 @@ def rectangular_slices(
     ending index in the 1st column, e.g.:
     slices = np.apply_along_axis(lambda row: slice(*row), 1, offsets[i])
     """
-    # if cut_sizes is specified to lower dimensionality than the image fill
+    # if cut_shape is specified to lower dimensionality than the image fill
     # with 1s; if higher, truncate. similarly with variances, but fill with 0s.
-    lengths = _procrusteanize(lengths, len(imsz), 1)
+    lengths = _procrusteanize(shape, len(imsz), 1)
     if variances is not None:
         variances = _procrusteanize(variances, len(imsz), 0)
     if rng is None:
         rng = np.random.default_rng()
     offsets = np.array(
         [
-            rng.integers(0, axis_size - axis_cut_size, cut_count)
+            rng.integers(0, axis_size - axis_cut_size, count)
             for axis_size, axis_cut_size in zip(imsz, lengths)
         ]
     ).T
@@ -64,7 +64,7 @@ def rectangular_slices(
     for ax_ix, variance in enumerate(variances):
         if variance < 1:
             continue
-        per_cut_variances = rng.integers(-variance, variance, cut_count)
+        per_cut_variances = rng.integers(-variance, variance, count)
         offsets[:, ax_ix, 1] = np.clip(
             offsets[:, ax_ix, 1] + per_cut_variances, 0, imsz[ax_ix]
         )
