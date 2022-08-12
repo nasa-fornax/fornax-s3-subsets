@@ -56,6 +56,7 @@ def imsz_from_header(header):
     """
     key_type = 'ZNAXIS' if "ZNAXIS" in header.keys() else "NAXIS"
     axis_entries = keyfilter(
-        lambda k: re.match(rf"{key_type}\d", k), dict(header)
+        lambda k: False if k is None else re.match(rf"{key_type}\d", k),
+        dict(header)
     )
     return tuple(reversed(axis_entries.values()))
