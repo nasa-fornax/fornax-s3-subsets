@@ -96,7 +96,9 @@ def interpret_benchmark_instructions(
     from importlib import import_module
     from itertools import product
 
-    instructions = import_module(f"benchmark_settings.{benchmark_name}")
+    instructions = import_module(
+        f"s3_fuse.benchmark_settings.{benchmark_name}"
+    )
     settings = {} if general_settings is None else deepcopy(general_settings)
     settings |= {
         "paths": instructions.TEST_FILES,
