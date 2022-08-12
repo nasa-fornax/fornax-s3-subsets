@@ -6,7 +6,7 @@ CUT_SHAPES = ((100, 100), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 20)
 BUCKET = "stpubdata"
 HDU_IX = 1
-LOADERS = ("astropy", "greedy_astropy", "astropy_section", "fitsio")
+LOADERS = ("greedy_astropy", "astropy_section", "astropy", "fitsio")
 
 TEST_FILES = (
     'hst/public/u5i2/u5i21403r/u5i21403r_drz.fits',

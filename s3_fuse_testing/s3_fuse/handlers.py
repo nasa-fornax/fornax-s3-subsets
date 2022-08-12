@@ -108,7 +108,7 @@ def interpret_benchmark_instructions(
         instructions.CUT_SHAPES, instructions.CUT_COUNTS, instructions.LOADERS
     ):
         case = {
-            'identifier': f"{benchmark_name}_{loader}_{shape}_{count}",
+            'identifier': f"{benchmark_name}-{loader}-{shape}-{count}",
             "shape": shape,
             "count": count
         }
