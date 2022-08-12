@@ -1,6 +1,7 @@
 """
 top-level handling functions for s3-slicing testing and benchmarks
 """
+from pathlib import Path
 from typing import Callable, Optional, Sequence, Any
 
 import numpy as np
@@ -87,7 +88,9 @@ def benchmark_cuts(
     return cuts, runtime, log
 
 
-def interpret_benchmark_instructions(benchmark_name: str) -> list:
+def interpret_benchmark_instructions(
+    benchmark_name: str, general_settings: Optional[dict] = None
+) -> list:
     """
     produce a set of arguments to random_cuts_from_files() using literals
     defined in a submodule of benchmark_settings
@@ -97,7 +100,8 @@ def interpret_benchmark_instructions(benchmark_name: str) -> list:
     from itertools import product
 
     instructions = import_module(f"benchmark_settings.{benchmark_name}")
-    settings = {
+    settings = {} if general_settings is None else deepcopy(general_settings)
+    settings |= {
         "paths": instructions.TEST_FILES,
         "bucket": instructions.BUCKET,
         "hdu_ix": (instructions.HDU_IX,)
@@ -112,17 +116,21 @@ def interpret_benchmark_instructions(benchmark_name: str) -> list:
             "count": count
         }
         case |= deepcopy(settings)
-        # the necessary behavior changes in this case are slightly too complex
-        # to implement them via straightforwardly wrapping astropy.io.fits.open
-        # (or at least it would require monkeypatching members of
-        # astropy.io.fits in
-        # ways I am not comfortable with)
         case["loader"] = make_loaders(loader)[loader]
         if "section" in loader:
+            # the necessary behavior changes in this case are slightly too
+            # complex to implement them via straightforwardly wrapping
+            # astropy.io.fits.open (or at least it would require
+            # monkeypatching members of astropy.io.fits in ways I am not
+            # comfortable with)
             case["bucket"] = None
             case["data_handle_attribute"] = "section"
             case["paths"] = tuple(
                 map(lambda x: s3_url(settings["bucket"], x), case["paths"])
+            )
+        elif "mountpoint" in settings.keys():
+            case["paths"] = tuple(
+                (str(Path(settings['mountpoint'], p)) for p in case['paths'])
             )
         cases.append(case)
     return cases
