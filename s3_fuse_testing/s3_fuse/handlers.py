@@ -7,13 +7,12 @@ from typing import Callable, Optional, Sequence
 
 import numpy as np
 from gPhoton.io.fits_utils import logged_fits_initializer
-from gPhoton.pretty import print_stats, notary
-from killscreen.monitors import Stopwatch, Netstat
+from gPhoton.pretty import notary
+from killscreen.monitors import Stopwatch, Netstat, CPUMonitor, print_stats
 
 from s3_fuse.fits import imsz_from_header
 from s3_fuse.random_generators import rectangular_slices
-from s3_fuse.utilz import make_loaders, s3_url, load_first_aws_credential, \
-    CPUMonitor
+from s3_fuse.utilz import make_loaders, s3_url, load_first_aws_credential
 
 
 def random_cuts_from_file(
@@ -73,12 +72,13 @@ def benchmark_cuts(
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
-    # set up monitors: timer, net traffic gauge, dict to put logs in
-    watch, netstat, log = Stopwatch(silent=True), Netstat(), {}
-    # stat is a formatting/printing function for time and net traffic results;
-    # note simultaneously prints messages and puts them timestamped in 'log';
-    # cpumon monitors elapsed cpu times.
-    stat, note, cpumon = print_stats(watch, netstat), notary(log), CPUMonitor()
+    # set up monitors: timer, net traffic gauge, cpu timer, dict to put logs in
+    watch, netstat, cpumon, log = (
+        Stopwatch(silent=True, digits=None), Netstat(), CPUMonitor(), {}
+    )
+    # stat is a formatting/printing function monitor results;
+    # note simultaneously prints messages and puts them timestamped in 'log'
+    stat, note = print_stats(watch, netstat, cpumon), notary(log)
     rng = np.random.default_rng(seed)
     cuts = []
     # although fsspec uses boto3, it doesn't appear to use boto3's default
@@ -93,8 +93,6 @@ def benchmark_cuts(
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
     watch.start(), cpumon.update()
-    # TODO; make this CPU thing much nicer
-    cpulog = []
     for path in paths:
         path_cuts, path_log = random_cuts_from_file(
             path, loader, hdu_ix, count, shape, rng, astropy_handle_attribute
@@ -105,10 +103,7 @@ def benchmark_cuts(
         else:
             del path_cuts
         log |= path_log
-        cpumon.update()
-        cpulog.append(cpumon.interval)
-    note(f"case done,,{stat(total=True)}")
-    return cuts, stat, log, cpulog
+    return cuts, stat, log
 
 
 def interpret_benchmark_instructions(
