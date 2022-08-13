@@ -137,7 +137,7 @@ def interpret_benchmark_instructions(
         shape, count, loader, throttle = element
         ratestr = f"-{int(throttle/1000)}" if throttle is not None else "None"
         title = "-".join(
-            (benchmark_name, loader, '_'.join(map(str, shape)), ratestr)
+            (benchmark_name, loader, count, '_'.join(map(str, shape)), ratestr)
         )
         case = {
             'title': title,
