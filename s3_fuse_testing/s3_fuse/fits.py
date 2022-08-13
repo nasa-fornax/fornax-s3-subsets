@@ -87,6 +87,8 @@ def fitsstat(path: Union[str, Path]) -> dict:
             hdu_info['itemsize'] = abs(hdu.header['BITPIX'])
             hdu_info[
                 'datasize'
-            ] = abs(hdu.header['BITPIX'] * reduce(mul, hdu_info['dim']))
+            ] = int(
+                abs(hdu.header['BITPIX'] * reduce(mul, hdu_info['dim'])) / 8
+            )
         info[hdu_ix] = hdu_info
     return info
