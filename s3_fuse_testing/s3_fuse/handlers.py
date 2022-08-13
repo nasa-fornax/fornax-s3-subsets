@@ -112,7 +112,7 @@ def interpret_benchmark_instructions(
         instructions.CUT_SHAPES, instructions.CUT_COUNTS, instructions.LOADERS
     ]
     if "throttle" in general_settings.keys():
-        variables.append("throttle")
+        variables.append(general_settings["throttle"])
     for element in product(*variables):
         shape, count, loader = element[:3]
         case = {
