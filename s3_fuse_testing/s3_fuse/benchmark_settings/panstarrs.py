@@ -4,9 +4,9 @@ CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 20)
 BUCKET = "nishapur"
 HDU_IX = 1
-LOADERS = (
-    "astropy", "astropy_s3_section", "astropy_s3", "fitsio", "greedy_astropy"
-)
+# note that CompImageHDU does not expose a .section attribute -- it wouldn't
+# particularly matter anyway.
+LOADERS = "astropy", "astropy_s3", "fitsio", "greedy_astropy"
 TEST_FILES = (
     'ps1/rings.v3.skycell/1724/066/rings.v3.skycell.1724.066.stk.g.unconv.fits',
     'ps1/rings.v3.skycell/1979/006/rings.v3.skycell.1979.006.stk.g.unconv.fits',
