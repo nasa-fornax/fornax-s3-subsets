@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Callable, Optional, Sequence
 
 import numpy as np
-from gPhoton.pretty import notary
+from gPhoton.pretty import notary, print_inline
 from killscreen.monitors import Stopwatch, Netstat, CPUMonitor, print_stats
 
 from s3_fuse.fits import imsz_from_header, logged_fits_initializer
@@ -48,15 +48,13 @@ def random_cuts_from_file(
         slices = tuple(
             np.apply_along_axis(lambda row: slice(*row), 1, indices[cut_ix])
         )
-        cuts[cut_ix] = array_handle[slices]
-    # we perform this unusual-looking step because astropy does not, in
-    # general, actually copy memmapped data into memory in response to the
-    # __getitem__ call. so if we do not do _something_ with said data,
-    # astropy will in most cases never actually retrieve it (unless we've
-    # forced it to be "greedy" or similar, of course)
-    for cut_ix, cut in cuts.items():
-        cuts[cut_ix] = cut.copy()
-    note(f"got data,{path},{stat()}")
+        # we perform this unusual-looking copy because astropy does not, in
+        # general, actually copy memmapped data into memory in response to the
+        # __getitem__ call. so if we do not do _something_ with said data,
+        # astropy will in most cases never actually retrieve it (unless we've
+        # forced it to be "greedy" or similar, of course)
+        cuts[cut_ix] = array_handle[slices].copy()
+        note(f"got cut {cut_ix},{path},{stat()}")
     note(f"file done,{path},{stat(total=True)}")
     cuts['indices'] = indices
     return cuts, log
@@ -72,7 +70,6 @@ def benchmark_cuts(
     return_cuts: bool = False,
     n_files: Optional[int] = None,
     seed: Optional[int] = None,
-    verbose: bool = False,
     aws_credentials_path: Optional[str] = None,
     authenticate_s3: bool = False,
     **_
@@ -100,16 +97,17 @@ def benchmark_cuts(
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
     watch.start(), cpumon.update()
-    for path in paths:
+    print_inline(f"0/{len(paths)} complete")
+    for i, path in enumerate(paths):
         path_cuts, path_log = random_cuts_from_file(
             path, loader, hdu_ix, count, shape, rng, astropy_handle_attribute
         )
-        note(f"got cuts,{path},{stat()}", loud=verbose)
         if return_cuts is True:
             cuts.append(path_cuts)
         else:
             del path_cuts
         log |= path_log
+        print_inline(f"{i}/{len(paths)} complete")
     return cuts, stat, log
 
 
