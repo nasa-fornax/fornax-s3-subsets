@@ -125,21 +125,21 @@ def interpret_benchmark_instructions(
         "hdu_ix": instructions.HDU_IX
     }
     cases = []
-    variables = [
-        instructions.CUT_SHAPES, instructions.CUT_COUNTS, instructions.LOADERS
-    ]
-    if "throttle" in general_settings.keys():
-        variables.append(general_settings["throttle"])
-    for element in product(*variables):
-        shape, count, loader = element[:3]
+    throttle_speeds = general_settings.get("bandwidth")
+    throttle_speeds = (None,) if throttle_speeds is None else throttle_speeds
+    for element in product(
+        instructions.CUT_SHAPES,
+        instructions.CUT_COUNTS,
+        instructions.LOADERS,
+        throttle_speeds
+    ):
+        shape, count, loader, throttle = element
         case = {
-            'identifier': f"{benchmark_name}-{loader}-{shape}-{count}",
+            'title': f"{benchmark_name}-{loader}-{shape}-{count}-{throttle}",
             "shape": shape,
-            "count": count
+            "count": count,
+            "throttle": throttle
         }
-        if len(element) == 4:
-            case["throttle"] = element[3]
-            case['identifier'] += f'-{element[3]}'
         case |= deepcopy(settings)
         case["loader"] = make_loaders(loader)[loader]
         if "s3" in loader:
