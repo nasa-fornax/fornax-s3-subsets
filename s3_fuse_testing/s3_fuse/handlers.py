@@ -84,7 +84,7 @@ def benchmark_cuts(
         else:
             del path_cuts
         log |= path_log
-    return cuts, watch, stat, log
+    return cuts, stat, log
 
 
 def interpret_benchmark_instructions(
