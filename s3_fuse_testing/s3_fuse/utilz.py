@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Callable
 
 import sh
+from dustgoggles.func import zero
 
 
 def preload_target(function, path, *args, **kwargs):
@@ -175,14 +176,19 @@ class Throttle:
     order to permit clean application of caps to particular code sections.
     all caveats on throttle() and unthrottle() about crudeness and security
     and so on apply here as well.
+
+    does nothing whatsoever if you pass None for both upload and download.
     """
 
     def __init__(
-            self, download=None, upload=None, interface="ens5", verbose=False
+        self, download=None, upload=None, interface="ens5", verbose=False
     ):
-        self.throttle = partial(throttle, download, upload, interface)
-        self.unthrottle = partial(unthrottle, interface)
-        self.verbose = verbose
+        if (download is not None) or (upload is not None):
+            self.throttle = partial(throttle, download, upload, interface)
+            self.unthrottle = partial(unthrottle, interface)
+            self.verbose = verbose
+        else:
+            self.throttle, self.unthrottle = partial(zero), partial(zero)
 
     def __enter__(self):
         self.throttle()
