@@ -12,6 +12,7 @@ from io import BytesIO
 from pathlib import Path
 from typing import Callable
 
+import sh
 
 def preload_target(function, path, *args, **kwargs):
     """
@@ -123,3 +124,44 @@ def s3_url(bucket: str, path: str) -> str:
     (prefixes + object name) to an object in that bucket
     """
     return f"s3://{bucket}/{path}"
+
+
+def throttle(download=None, upload=None, interface="ens5"):
+    """
+    throttle network speed using wondershaper. requires a wondershaper
+    installation and execution by a user with sudoer privileges and no
+    password.
+    this permissions hack is sloppy and only suitable on single-user systems
+    that have no password for sudoers _anyway_. I do not particularly
+    recommend editing this to add your password as plain text.
+    it would be better to edit permissions for the parts of the
+    system wondershaper touches if you wanted to use this in a
+    more general context.
+    """
+    if (download is None) and (upload is None):
+        return
+    arguments = ['-a', interface]
+    if download is not None:
+        arguments += ['-d', download]
+    if upload is not None:
+        arguments += ['-u', upload]
+    with sh.contrib.sudo(password="", _with=True):
+        sh.wondershaper(*arguments)
+
+
+def unthrottle(interface="ens5"):
+    """
+    unthrottle a network interface previously throttled by wondershaper.
+    requires a wondershaper installation and execution by a user with
+    sudoer privileges and no password. that permissions hack is sloppy;
+    see notes on throttle().
+    """
+    with sh.contrib.sudo(password="", _with=True):
+        try:
+            # sloppy! see comments on throttle.
+            with sh.contrib.sudo(password="", _with=True):
+                sh.wondershaper('-c', '-a', interface)
+        # for some reason, wondershaper always throws an error code
+        # on clear operations, even when successful.
+        except sh.ErrorReturnCode:
+            pass
