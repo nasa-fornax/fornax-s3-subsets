@@ -65,7 +65,7 @@ def benchmark_cuts(
     return_cuts: bool = False,
     n_files: Optional[int] = None,
     seed: Optional[int] = None,
-    verbose: bool = False
+    verbose: bool = False,
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
