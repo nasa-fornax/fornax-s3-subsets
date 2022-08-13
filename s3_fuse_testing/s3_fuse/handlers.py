@@ -9,11 +9,10 @@ from pathlib import Path
 from typing import Callable, Optional, Sequence
 
 import numpy as np
-from gPhoton.io.fits_utils import logged_fits_initializer
 from gPhoton.pretty import notary
 from killscreen.monitors import Stopwatch, Netstat, CPUMonitor, print_stats
 
-from s3_fuse.fits import imsz_from_header
+from s3_fuse.fits import imsz_from_header, logged_fits_initializer
 from s3_fuse.random_generators import rectangular_slices
 from s3_fuse.utilz import make_loaders, s3_url, load_first_aws_credential
 
