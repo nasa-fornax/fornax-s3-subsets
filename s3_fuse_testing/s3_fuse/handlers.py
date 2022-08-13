@@ -135,11 +135,15 @@ def interpret_benchmark_instructions(
     ):
         shape, count, loader, throttle = element
         case = {
-            'title': f"{benchmark_name}-{loader}-{shape}-{count}-{throttle}",
+            'title': f"{benchmark_name}-{loader}-{shape}-{count}",
             "shape": shape,
             "count": count,
             "throttle": throttle
         }
+        if throttle is not None:
+            case["title"] += f"-{throttle/1000}"
+        else:
+            case["title"] += "-None"
         case |= deepcopy(settings)
         case["loader"] = make_loaders(loader)[loader]
         if "s3" in loader:
