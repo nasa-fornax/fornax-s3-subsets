@@ -2,582 +2,582 @@
 size,67602240,2,2880,67599360,rings.v3.skycell.1724.066.stk.g.unconv.fits
 name,67602240,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1724.066.stk.g.unconv.fits
 hdutype,67602240,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1724.066.stk.g.unconv.fits
-dim,67602240,2,(),"(6274, 6258)",rings.v3.skycell.1724.066.stk.g.unconv.fits
+dim,67602240,2,(),"(6258, 6274)",rings.v3.skycell.1724.066.stk.g.unconv.fits
 itemsize,67602240,2,,16,rings.v3.skycell.1724.066.stk.g.unconv.fits
-datasize,67602240,2,0,628203072,rings.v3.skycell.1724.066.stk.g.unconv.fits
+datasize,67602240,2,0,78525384,rings.v3.skycell.1724.066.stk.g.unconv.fits
 size,68247360,2,2880,68244480,rings.v3.skycell.1979.006.stk.g.unconv.fits
 name,68247360,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1979.006.stk.g.unconv.fits
 hdutype,68247360,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1979.006.stk.g.unconv.fits
-dim,68247360,2,(),"(6274, 6269)",rings.v3.skycell.1979.006.stk.g.unconv.fits
+dim,68247360,2,(),"(6269, 6274)",rings.v3.skycell.1979.006.stk.g.unconv.fits
 itemsize,68247360,2,,16,rings.v3.skycell.1979.006.stk.g.unconv.fits
-datasize,68247360,2,0,629307296,rings.v3.skycell.1979.006.stk.g.unconv.fits
+datasize,68247360,2,0,78663412,rings.v3.skycell.1979.006.stk.g.unconv.fits
 size,67590720,2,2880,67587840,rings.v3.skycell.1538.046.stk.z.unconv.fits
 name,67590720,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1538.046.stk.z.unconv.fits
 hdutype,67590720,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1538.046.stk.z.unconv.fits
-dim,67590720,2,(),"(6248, 6250)",rings.v3.skycell.1538.046.stk.z.unconv.fits
+dim,67590720,2,(),"(6250, 6248)",rings.v3.skycell.1538.046.stk.z.unconv.fits
 itemsize,67590720,2,,16,rings.v3.skycell.1538.046.stk.z.unconv.fits
-datasize,67590720,2,0,624800000,rings.v3.skycell.1538.046.stk.z.unconv.fits
+datasize,67590720,2,0,78100000,rings.v3.skycell.1538.046.stk.z.unconv.fits
 size,67452480,2,2880,67449600,rings.v3.skycell.1378.035.stk.g.unconv.fits
 name,67452480,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1378.035.stk.g.unconv.fits
 hdutype,67452480,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1378.035.stk.g.unconv.fits
-dim,67452480,2,(),"(6240, 6243)",rings.v3.skycell.1378.035.stk.g.unconv.fits
+dim,67452480,2,(),"(6243, 6240)",rings.v3.skycell.1378.035.stk.g.unconv.fits
 itemsize,67452480,2,,16,rings.v3.skycell.1378.035.stk.g.unconv.fits
-datasize,67452480,2,0,623301120,rings.v3.skycell.1378.035.stk.g.unconv.fits
+datasize,67452480,2,0,77912640,rings.v3.skycell.1378.035.stk.g.unconv.fits
 size,65980800,2,2880,65977920,rings.v3.skycell.1279.032.stk.z.unconv.fits
 name,65980800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1279.032.stk.z.unconv.fits
 hdutype,65980800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1279.032.stk.z.unconv.fits
-dim,65980800,2,(),"(6240, 6243)",rings.v3.skycell.1279.032.stk.z.unconv.fits
+dim,65980800,2,(),"(6243, 6240)",rings.v3.skycell.1279.032.stk.z.unconv.fits
 itemsize,65980800,2,,16,rings.v3.skycell.1279.032.stk.z.unconv.fits
-datasize,65980800,2,0,623301120,rings.v3.skycell.1279.032.stk.z.unconv.fits
+datasize,65980800,2,0,77912640,rings.v3.skycell.1279.032.stk.z.unconv.fits
 size,67639680,2,2880,67636800,rings.v3.skycell.1627.097.stk.z.unconv.fits
 name,67639680,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1627.097.stk.z.unconv.fits
 hdutype,67639680,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1627.097.stk.z.unconv.fits
-dim,67639680,2,(),"(6242, 6254)",rings.v3.skycell.1627.097.stk.z.unconv.fits
+dim,67639680,2,(),"(6254, 6242)",rings.v3.skycell.1627.097.stk.z.unconv.fits
 itemsize,67639680,2,,16,rings.v3.skycell.1627.097.stk.z.unconv.fits
-datasize,67639680,2,0,624599488,rings.v3.skycell.1627.097.stk.z.unconv.fits
+datasize,67639680,2,0,78074936,rings.v3.skycell.1627.097.stk.z.unconv.fits
 size,67904640,2,2880,67901760,rings.v3.skycell.2316.026.stk.z.unconv.fits
 name,67904640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2316.026.stk.z.unconv.fits
 hdutype,67904640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2316.026.stk.z.unconv.fits
-dim,67904640,2,(),"(6261, 6295)",rings.v3.skycell.2316.026.stk.z.unconv.fits
+dim,67904640,2,(),"(6295, 6261)",rings.v3.skycell.2316.026.stk.z.unconv.fits
 itemsize,67904640,2,,16,rings.v3.skycell.2316.026.stk.z.unconv.fits
-datasize,67904640,2,0,630607920,rings.v3.skycell.2316.026.stk.z.unconv.fits
+datasize,67904640,2,0,78825990,rings.v3.skycell.2316.026.stk.z.unconv.fits
 size,67838400,2,2880,67835520,rings.v3.skycell.1632.085.stk.z.unconv.fits
 name,67838400,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1632.085.stk.z.unconv.fits
 hdutype,67838400,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1632.085.stk.z.unconv.fits
-dim,67838400,2,(),"(6242, 6254)",rings.v3.skycell.1632.085.stk.z.unconv.fits
+dim,67838400,2,(),"(6254, 6242)",rings.v3.skycell.1632.085.stk.z.unconv.fits
 itemsize,67838400,2,,16,rings.v3.skycell.1632.085.stk.z.unconv.fits
-datasize,67838400,2,0,624599488,rings.v3.skycell.1632.085.stk.z.unconv.fits
+datasize,67838400,2,0,78074936,rings.v3.skycell.1632.085.stk.z.unconv.fits
 size,67141440,2,2880,67138560,rings.v3.skycell.1287.017.stk.g.unconv.fits
 name,67141440,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1287.017.stk.g.unconv.fits
 hdutype,67141440,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1287.017.stk.g.unconv.fits
-dim,67141440,2,(),"(6240, 6243)",rings.v3.skycell.1287.017.stk.g.unconv.fits
+dim,67141440,2,(),"(6243, 6240)",rings.v3.skycell.1287.017.stk.g.unconv.fits
 itemsize,67141440,2,,16,rings.v3.skycell.1287.017.stk.g.unconv.fits
-datasize,67141440,2,0,623301120,rings.v3.skycell.1287.017.stk.g.unconv.fits
+datasize,67141440,2,0,77912640,rings.v3.skycell.1287.017.stk.g.unconv.fits
 size,67469760,2,2880,67466880,rings.v3.skycell.1375.022.stk.z.unconv.fits
 name,67469760,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1375.022.stk.z.unconv.fits
 hdutype,67469760,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1375.022.stk.z.unconv.fits
-dim,67469760,2,(),"(6240, 6243)",rings.v3.skycell.1375.022.stk.z.unconv.fits
+dim,67469760,2,(),"(6243, 6240)",rings.v3.skycell.1375.022.stk.z.unconv.fits
 itemsize,67469760,2,,16,rings.v3.skycell.1375.022.stk.z.unconv.fits
-datasize,67469760,2,0,623301120,rings.v3.skycell.1375.022.stk.z.unconv.fits
+datasize,67469760,2,0,77912640,rings.v3.skycell.1375.022.stk.z.unconv.fits
 size,67489920,2,2880,67487040,rings.v3.skycell.1275.051.stk.g.unconv.fits
 name,67489920,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1275.051.stk.g.unconv.fits
 hdutype,67489920,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1275.051.stk.g.unconv.fits
-dim,67489920,2,(),"(6240, 6243)",rings.v3.skycell.1275.051.stk.g.unconv.fits
+dim,67489920,2,(),"(6243, 6240)",rings.v3.skycell.1275.051.stk.g.unconv.fits
 itemsize,67489920,2,,16,rings.v3.skycell.1275.051.stk.g.unconv.fits
-datasize,67489920,2,0,623301120,rings.v3.skycell.1275.051.stk.g.unconv.fits
+datasize,67489920,2,0,77912640,rings.v3.skycell.1275.051.stk.g.unconv.fits
 size,67714560,2,2880,67711680,rings.v3.skycell.2317.007.stk.g.unconv.fits
 name,67714560,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2317.007.stk.g.unconv.fits
 hdutype,67714560,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2317.007.stk.g.unconv.fits
-dim,67714560,2,(),"(6261, 6295)",rings.v3.skycell.2317.007.stk.g.unconv.fits
+dim,67714560,2,(),"(6295, 6261)",rings.v3.skycell.2317.007.stk.g.unconv.fits
 itemsize,67714560,2,,16,rings.v3.skycell.2317.007.stk.g.unconv.fits
-datasize,67714560,2,0,630607920,rings.v3.skycell.2317.007.stk.g.unconv.fits
+datasize,67714560,2,0,78825990,rings.v3.skycell.2317.007.stk.g.unconv.fits
 size,67815360,2,2880,67812480,rings.v3.skycell.1099.069.stk.z.unconv.fits
 name,67815360,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1099.069.stk.z.unconv.fits
 hdutype,67815360,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1099.069.stk.z.unconv.fits
-dim,67815360,2,(),"(6248, 6250)",rings.v3.skycell.1099.069.stk.z.unconv.fits
+dim,67815360,2,(),"(6250, 6248)",rings.v3.skycell.1099.069.stk.z.unconv.fits
 itemsize,67815360,2,,16,rings.v3.skycell.1099.069.stk.z.unconv.fits
-datasize,67815360,2,0,624800000,rings.v3.skycell.1099.069.stk.z.unconv.fits
+datasize,67815360,2,0,78100000,rings.v3.skycell.1099.069.stk.z.unconv.fits
 size,67455360,2,2880,67452480,rings.v3.skycell.1285.051.stk.z.unconv.fits
 name,67455360,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1285.051.stk.z.unconv.fits
 hdutype,67455360,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1285.051.stk.z.unconv.fits
-dim,67455360,2,(),"(6240, 6243)",rings.v3.skycell.1285.051.stk.z.unconv.fits
+dim,67455360,2,(),"(6243, 6240)",rings.v3.skycell.1285.051.stk.z.unconv.fits
 itemsize,67455360,2,,16,rings.v3.skycell.1285.051.stk.z.unconv.fits
-datasize,67455360,2,0,623301120,rings.v3.skycell.1285.051.stk.z.unconv.fits
+datasize,67455360,2,0,77912640,rings.v3.skycell.1285.051.stk.z.unconv.fits
 size,67700160,2,2880,67697280,rings.v3.skycell.1105.046.stk.z.unconv.fits
 name,67700160,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1105.046.stk.z.unconv.fits
 hdutype,67700160,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1105.046.stk.z.unconv.fits
-dim,67700160,2,(),"(6248, 6250)",rings.v3.skycell.1105.046.stk.z.unconv.fits
+dim,67700160,2,(),"(6250, 6248)",rings.v3.skycell.1105.046.stk.z.unconv.fits
 itemsize,67700160,2,,16,rings.v3.skycell.1105.046.stk.z.unconv.fits
-datasize,67700160,2,0,624800000,rings.v3.skycell.1105.046.stk.z.unconv.fits
+datasize,67700160,2,0,78100000,rings.v3.skycell.1105.046.stk.z.unconv.fits
 size,67259520,2,2880,67256640,rings.v3.skycell.1635.066.stk.i.unconv.fits
 name,67259520,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1635.066.stk.i.unconv.fits
 hdutype,67259520,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1635.066.stk.i.unconv.fits
-dim,67259520,2,(),"(6242, 6254)",rings.v3.skycell.1635.066.stk.i.unconv.fits
+dim,67259520,2,(),"(6254, 6242)",rings.v3.skycell.1635.066.stk.i.unconv.fits
 itemsize,67259520,2,,16,rings.v3.skycell.1635.066.stk.i.unconv.fits
-datasize,67259520,2,0,624599488,rings.v3.skycell.1635.066.stk.i.unconv.fits
+datasize,67259520,2,0,78074936,rings.v3.skycell.1635.066.stk.i.unconv.fits
 size,68544000,2,2880,68541120,rings.v3.skycell.2116.025.stk.z.unconv.fits
 name,68544000,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2116.025.stk.z.unconv.fits
 hdutype,68544000,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2116.025.stk.z.unconv.fits
-dim,68544000,2,(),"(6305, 6279)",rings.v3.skycell.2116.025.stk.z.unconv.fits
+dim,68544000,2,(),"(6279, 6305)",rings.v3.skycell.2116.025.stk.z.unconv.fits
 itemsize,68544000,2,,16,rings.v3.skycell.2116.025.stk.z.unconv.fits
-datasize,68544000,2,0,633425520,rings.v3.skycell.2116.025.stk.z.unconv.fits
+datasize,68544000,2,0,79178190,rings.v3.skycell.2116.025.stk.z.unconv.fits
 size,68152320,2,2880,68149440,rings.v3.skycell.1462.055.stk.g.unconv.fits
 name,68152320,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1462.055.stk.g.unconv.fits
 hdutype,68152320,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1462.055.stk.g.unconv.fits
-dim,68152320,2,(),"(6291, 6247)",rings.v3.skycell.1462.055.stk.g.unconv.fits
+dim,68152320,2,(),"(6247, 6291)",rings.v3.skycell.1462.055.stk.g.unconv.fits
 itemsize,68152320,2,,16,rings.v3.skycell.1462.055.stk.g.unconv.fits
-datasize,68152320,2,0,628798032,rings.v3.skycell.1462.055.stk.g.unconv.fits
+datasize,68152320,2,0,78599754,rings.v3.skycell.1462.055.stk.g.unconv.fits
 size,67561920,2,2880,67559040,rings.v3.skycell.1551.065.stk.g.unconv.fits
 name,67561920,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1551.065.stk.g.unconv.fits
 hdutype,67561920,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1551.065.stk.g.unconv.fits
-dim,67561920,2,(),"(6248, 6250)",rings.v3.skycell.1551.065.stk.g.unconv.fits
+dim,67561920,2,(),"(6250, 6248)",rings.v3.skycell.1551.065.stk.g.unconv.fits
 itemsize,67561920,2,,16,rings.v3.skycell.1551.065.stk.g.unconv.fits
-datasize,67561920,2,0,624800000,rings.v3.skycell.1551.065.stk.g.unconv.fits
+datasize,67561920,2,0,78100000,rings.v3.skycell.1551.065.stk.g.unconv.fits
 size,68448960,2,2880,68446080,rings.v3.skycell.2259.000.stk.z.unconv.fits
 name,68448960,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2259.000.stk.z.unconv.fits
 hdutype,68448960,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2259.000.stk.z.unconv.fits
-dim,68448960,2,(),"(6307, 6289)",rings.v3.skycell.2259.000.stk.z.unconv.fits
+dim,68448960,2,(),"(6289, 6307)",rings.v3.skycell.2259.000.stk.z.unconv.fits
 itemsize,68448960,2,,16,rings.v3.skycell.2259.000.stk.z.unconv.fits
-datasize,68448960,2,0,634635568,rings.v3.skycell.2259.000.stk.z.unconv.fits
+datasize,68448960,2,0,79329446,rings.v3.skycell.2259.000.stk.z.unconv.fits
 size,67847040,2,2880,67844160,rings.v3.skycell.2324.077.stk.g.unconv.fits
 name,67847040,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2324.077.stk.g.unconv.fits
 hdutype,67847040,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2324.077.stk.g.unconv.fits
-dim,67847040,2,(),"(6261, 6295)",rings.v3.skycell.2324.077.stk.g.unconv.fits
+dim,67847040,2,(),"(6295, 6261)",rings.v3.skycell.2324.077.stk.g.unconv.fits
 itemsize,67847040,2,,16,rings.v3.skycell.2324.077.stk.g.unconv.fits
-datasize,67847040,2,0,630607920,rings.v3.skycell.2324.077.stk.g.unconv.fits
+datasize,67847040,2,0,78825990,rings.v3.skycell.2324.077.stk.g.unconv.fits
 size,68273280,2,2880,68270400,rings.v3.skycell.1461.037.stk.g.unconv.fits
 name,68273280,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1461.037.stk.g.unconv.fits
 hdutype,68273280,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1461.037.stk.g.unconv.fits
-dim,68273280,2,(),"(6291, 6247)",rings.v3.skycell.1461.037.stk.g.unconv.fits
+dim,68273280,2,(),"(6247, 6291)",rings.v3.skycell.1461.037.stk.g.unconv.fits
 itemsize,68273280,2,,16,rings.v3.skycell.1461.037.stk.g.unconv.fits
-datasize,68273280,2,0,628798032,rings.v3.skycell.1461.037.stk.g.unconv.fits
+datasize,68273280,2,0,78599754,rings.v3.skycell.1461.037.stk.g.unconv.fits
 size,67374720,2,2880,67371840,rings.v3.skycell.1377.057.stk.g.unconv.fits
 name,67374720,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1377.057.stk.g.unconv.fits
 hdutype,67374720,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1377.057.stk.g.unconv.fits
-dim,67374720,2,(),"(6240, 6243)",rings.v3.skycell.1377.057.stk.g.unconv.fits
+dim,67374720,2,(),"(6243, 6240)",rings.v3.skycell.1377.057.stk.g.unconv.fits
 itemsize,67374720,2,,16,rings.v3.skycell.1377.057.stk.g.unconv.fits
-datasize,67374720,2,0,623301120,rings.v3.skycell.1377.057.stk.g.unconv.fits
+datasize,67374720,2,0,77912640,rings.v3.skycell.1377.057.stk.g.unconv.fits
 size,68025600,2,2880,68022720,rings.v3.skycell.1882.000.stk.z.unconv.fits
 name,68025600,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1882.000.stk.z.unconv.fits
 hdutype,68025600,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1882.000.stk.z.unconv.fits
-dim,68025600,2,(),"(6255, 6265)",rings.v3.skycell.1882.000.stk.z.unconv.fits
+dim,68025600,2,(),"(6265, 6255)",rings.v3.skycell.1882.000.stk.z.unconv.fits
 itemsize,68025600,2,,16,rings.v3.skycell.1882.000.stk.z.unconv.fits
-datasize,68025600,2,0,627001200,rings.v3.skycell.1882.000.stk.z.unconv.fits
+datasize,68025600,2,0,78375150,rings.v3.skycell.1882.000.stk.z.unconv.fits
 size,66677760,2,2880,66674880,rings.v3.skycell.1378.002.stk.z.unconv.fits
 name,66677760,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1378.002.stk.z.unconv.fits
 hdutype,66677760,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1378.002.stk.z.unconv.fits
-dim,66677760,2,(),"(6240, 6243)",rings.v3.skycell.1378.002.stk.z.unconv.fits
+dim,66677760,2,(),"(6243, 6240)",rings.v3.skycell.1378.002.stk.z.unconv.fits
 itemsize,66677760,2,,16,rings.v3.skycell.1378.002.stk.z.unconv.fits
-datasize,66677760,2,0,623301120,rings.v3.skycell.1378.002.stk.z.unconv.fits
+datasize,66677760,2,0,77912640,rings.v3.skycell.1378.002.stk.z.unconv.fits
 size,67936320,2,2880,67933440,rings.v3.skycell.2043.062.stk.z.unconv.fits
 name,67936320,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2043.062.stk.z.unconv.fits
 hdutype,67936320,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2043.062.stk.z.unconv.fits
-dim,67936320,2,(),"(6265, 6274)",rings.v3.skycell.2043.062.stk.z.unconv.fits
+dim,67936320,2,(),"(6274, 6265)",rings.v3.skycell.2043.062.stk.z.unconv.fits
 itemsize,67936320,2,,16,rings.v3.skycell.2043.062.stk.z.unconv.fits
-datasize,67936320,2,0,628905760,rings.v3.skycell.2043.062.stk.z.unconv.fits
+datasize,67936320,2,0,78613220,rings.v3.skycell.2043.062.stk.z.unconv.fits
 size,68218560,2,2880,68215680,rings.v3.skycell.2473.082.stk.g.unconv.fits
 name,68218560,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2473.082.stk.g.unconv.fits
 hdutype,68218560,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2473.082.stk.g.unconv.fits
-dim,68218560,2,(),"(6240, 6319)",rings.v3.skycell.2473.082.stk.g.unconv.fits
+dim,68218560,2,(),"(6319, 6240)",rings.v3.skycell.2473.082.stk.g.unconv.fits
 itemsize,68218560,2,,16,rings.v3.skycell.2473.082.stk.g.unconv.fits
-datasize,68218560,2,0,630888960,rings.v3.skycell.2473.082.stk.g.unconv.fits
+datasize,68218560,2,0,78861120,rings.v3.skycell.2473.082.stk.g.unconv.fits
 size,67867200,2,2880,67864320,rings.v3.skycell.1723.004.stk.g.unconv.fits
 name,67867200,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1723.004.stk.g.unconv.fits
 hdutype,67867200,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1723.004.stk.g.unconv.fits
-dim,67867200,2,(),"(6274, 6258)",rings.v3.skycell.1723.004.stk.g.unconv.fits
+dim,67867200,2,(),"(6258, 6274)",rings.v3.skycell.1723.004.stk.g.unconv.fits
 itemsize,67867200,2,,16,rings.v3.skycell.1723.004.stk.g.unconv.fits
-datasize,67867200,2,0,628203072,rings.v3.skycell.1723.004.stk.g.unconv.fits
+datasize,67867200,2,0,78525384,rings.v3.skycell.1723.004.stk.g.unconv.fits
 size,68209920,2,2880,68207040,rings.v3.skycell.1462.051.stk.z.unconv.fits
 name,68209920,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1462.051.stk.z.unconv.fits
 hdutype,68209920,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1462.051.stk.z.unconv.fits
-dim,68209920,2,(),"(6291, 6247)",rings.v3.skycell.1462.051.stk.z.unconv.fits
+dim,68209920,2,(),"(6247, 6291)",rings.v3.skycell.1462.051.stk.z.unconv.fits
 itemsize,68209920,2,,16,rings.v3.skycell.1462.051.stk.z.unconv.fits
-datasize,68209920,2,0,628798032,rings.v3.skycell.1462.051.stk.z.unconv.fits
+datasize,68209920,2,0,78599754,rings.v3.skycell.1462.051.stk.z.unconv.fits
 size,67008960,2,2880,67006080,rings.v3.skycell.2321.094.stk.z.unconv.fits
 name,67008960,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2321.094.stk.z.unconv.fits
 hdutype,67008960,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2321.094.stk.z.unconv.fits
-dim,67008960,2,(),"(6261, 6295)",rings.v3.skycell.2321.094.stk.z.unconv.fits
+dim,67008960,2,(),"(6295, 6261)",rings.v3.skycell.2321.094.stk.z.unconv.fits
 itemsize,67008960,2,,16,rings.v3.skycell.2321.094.stk.z.unconv.fits
-datasize,67008960,2,0,630607920,rings.v3.skycell.2321.094.stk.z.unconv.fits
+datasize,67008960,2,0,78825990,rings.v3.skycell.2321.094.stk.z.unconv.fits
 size,66052800,2,2880,66049920,rings.v3.skycell.1459.044.stk.z.unconv.fits
 name,66052800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1459.044.stk.z.unconv.fits
 hdutype,66052800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1459.044.stk.z.unconv.fits
-dim,66052800,2,(),"(6291, 6247)",rings.v3.skycell.1459.044.stk.z.unconv.fits
+dim,66052800,2,(),"(6247, 6291)",rings.v3.skycell.1459.044.stk.z.unconv.fits
 itemsize,66052800,2,,16,rings.v3.skycell.1459.044.stk.z.unconv.fits
-datasize,66052800,2,0,628798032,rings.v3.skycell.1459.044.stk.z.unconv.fits
+datasize,66052800,2,0,78599754,rings.v3.skycell.1459.044.stk.z.unconv.fits
 size,68400000,2,2880,68397120,rings.v3.skycell.2375.038.stk.z.unconv.fits
 name,68400000,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2375.038.stk.z.unconv.fits
 hdutype,68400000,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2375.038.stk.z.unconv.fits
-dim,68400000,2,(),"(6283, 6302)",rings.v3.skycell.2375.038.stk.z.unconv.fits
+dim,68400000,2,(),"(6302, 6283)",rings.v3.skycell.2375.038.stk.z.unconv.fits
 itemsize,68400000,2,,16,rings.v3.skycell.2375.038.stk.z.unconv.fits
-datasize,68400000,2,0,633527456,rings.v3.skycell.2375.038.stk.z.unconv.fits
+datasize,68400000,2,0,79190932,rings.v3.skycell.2375.038.stk.z.unconv.fits
 size,67798080,2,2880,67795200,rings.v3.skycell.2326.011.stk.z.unconv.fits
 name,67798080,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2326.011.stk.z.unconv.fits
 hdutype,67798080,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2326.011.stk.z.unconv.fits
-dim,67798080,2,(),"(6261, 6295)",rings.v3.skycell.2326.011.stk.z.unconv.fits
+dim,67798080,2,(),"(6295, 6261)",rings.v3.skycell.2326.011.stk.z.unconv.fits
 itemsize,67798080,2,,16,rings.v3.skycell.2326.011.stk.z.unconv.fits
-datasize,67798080,2,0,630607920,rings.v3.skycell.2326.011.stk.z.unconv.fits
+datasize,67798080,2,0,78825990,rings.v3.skycell.2326.011.stk.z.unconv.fits
 size,68088960,2,2880,68086080,rings.v3.skycell.1968.010.stk.g.unconv.fits
 name,68088960,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1968.010.stk.g.unconv.fits
 hdutype,68088960,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1968.010.stk.g.unconv.fits
-dim,68088960,2,(),"(6274, 6269)",rings.v3.skycell.1968.010.stk.g.unconv.fits
+dim,68088960,2,(),"(6269, 6274)",rings.v3.skycell.1968.010.stk.g.unconv.fits
 itemsize,68088960,2,,16,rings.v3.skycell.1968.010.stk.g.unconv.fits
-datasize,68088960,2,0,629307296,rings.v3.skycell.1968.010.stk.g.unconv.fits
+datasize,68088960,2,0,78663412,rings.v3.skycell.1968.010.stk.g.unconv.fits
 size,67285440,2,2880,67282560,rings.v3.skycell.1640.076.stk.z.unconv.fits
 name,67285440,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1640.076.stk.z.unconv.fits
 hdutype,67285440,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1640.076.stk.z.unconv.fits
-dim,67285440,2,(),"(6242, 6254)",rings.v3.skycell.1640.076.stk.z.unconv.fits
+dim,67285440,2,(),"(6254, 6242)",rings.v3.skycell.1640.076.stk.z.unconv.fits
 itemsize,67285440,2,,16,rings.v3.skycell.1640.076.stk.z.unconv.fits
-datasize,67285440,2,0,624599488,rings.v3.skycell.1640.076.stk.z.unconv.fits
+datasize,67285440,2,0,78074936,rings.v3.skycell.1640.076.stk.z.unconv.fits
 size,67619520,2,2880,67616640,rings.v3.skycell.1970.096.stk.g.unconv.fits
 name,67619520,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1970.096.stk.g.unconv.fits
 hdutype,67619520,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1970.096.stk.g.unconv.fits
-dim,67619520,2,(),"(6274, 6269)",rings.v3.skycell.1970.096.stk.g.unconv.fits
+dim,67619520,2,(),"(6269, 6274)",rings.v3.skycell.1970.096.stk.g.unconv.fits
 itemsize,67619520,2,,16,rings.v3.skycell.1970.096.stk.g.unconv.fits
-datasize,67619520,2,0,629307296,rings.v3.skycell.1970.096.stk.g.unconv.fits
+datasize,67619520,2,0,78663412,rings.v3.skycell.1970.096.stk.g.unconv.fits
 size,68820480,2,2880,68817600,rings.v3.skycell.2427.037.stk.z.unconv.fits
 name,68820480,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2427.037.stk.z.unconv.fits
 hdutype,68820480,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2427.037.stk.z.unconv.fits
-dim,68820480,2,(),"(6278, 6311)",rings.v3.skycell.2427.037.stk.z.unconv.fits
+dim,68820480,2,(),"(6311, 6278)",rings.v3.skycell.2427.037.stk.z.unconv.fits
 itemsize,68820480,2,,16,rings.v3.skycell.2427.037.stk.z.unconv.fits
-datasize,68820480,2,0,633927328,rings.v3.skycell.2427.037.stk.z.unconv.fits
+datasize,68820480,2,0,79240916,rings.v3.skycell.2427.037.stk.z.unconv.fits
 size,68734080,2,2880,68731200,rings.v3.skycell.2117.073.stk.g.unconv.fits
 name,68734080,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2117.073.stk.g.unconv.fits
 hdutype,68734080,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2117.073.stk.g.unconv.fits
-dim,68734080,2,(),"(6305, 6279)",rings.v3.skycell.2117.073.stk.g.unconv.fits
+dim,68734080,2,(),"(6279, 6305)",rings.v3.skycell.2117.073.stk.g.unconv.fits
 itemsize,68734080,2,,16,rings.v3.skycell.2117.073.stk.g.unconv.fits
-datasize,68734080,2,0,633425520,rings.v3.skycell.2117.073.stk.g.unconv.fits
+datasize,68734080,2,0,79178190,rings.v3.skycell.2117.073.stk.g.unconv.fits
 size,67302720,2,2880,67299840,rings.v3.skycell.1367.085.stk.g.unconv.fits
 name,67302720,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1367.085.stk.g.unconv.fits
 hdutype,67302720,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1367.085.stk.g.unconv.fits
-dim,67302720,2,(),"(6240, 6243)",rings.v3.skycell.1367.085.stk.g.unconv.fits
+dim,67302720,2,(),"(6243, 6240)",rings.v3.skycell.1367.085.stk.g.unconv.fits
 itemsize,67302720,2,,16,rings.v3.skycell.1367.085.stk.g.unconv.fits
-datasize,67302720,2,0,623301120,rings.v3.skycell.1367.085.stk.g.unconv.fits
+datasize,67302720,2,0,77912640,rings.v3.skycell.1367.085.stk.g.unconv.fits
 size,67870080,2,2880,67867200,rings.v3.skycell.1897.017.stk.g.unconv.fits
 name,67870080,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1897.017.stk.g.unconv.fits
 hdutype,67870080,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1897.017.stk.g.unconv.fits
-dim,67870080,2,(),"(6255, 6265)",rings.v3.skycell.1897.017.stk.g.unconv.fits
+dim,67870080,2,(),"(6265, 6255)",rings.v3.skycell.1897.017.stk.g.unconv.fits
 itemsize,67870080,2,,16,rings.v3.skycell.1897.017.stk.g.unconv.fits
-datasize,67870080,2,0,627001200,rings.v3.skycell.1897.017.stk.g.unconv.fits
+datasize,67870080,2,0,78375150,rings.v3.skycell.1897.017.stk.g.unconv.fits
 size,67530240,2,2880,67527360,rings.v3.skycell.1273.015.stk.g.unconv.fits
 name,67530240,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1273.015.stk.g.unconv.fits
 hdutype,67530240,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1273.015.stk.g.unconv.fits
-dim,67530240,2,(),"(6240, 6243)",rings.v3.skycell.1273.015.stk.g.unconv.fits
+dim,67530240,2,(),"(6243, 6240)",rings.v3.skycell.1273.015.stk.g.unconv.fits
 itemsize,67530240,2,,16,rings.v3.skycell.1273.015.stk.g.unconv.fits
-datasize,67530240,2,0,623301120,rings.v3.skycell.1273.015.stk.g.unconv.fits
+datasize,67530240,2,0,77912640,rings.v3.skycell.1273.015.stk.g.unconv.fits
 size,68601600,2,2880,68598720,rings.v3.skycell.2262.010.stk.g.unconv.fits
 name,68601600,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2262.010.stk.g.unconv.fits
 hdutype,68601600,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2262.010.stk.g.unconv.fits
-dim,68601600,2,(),"(6307, 6289)",rings.v3.skycell.2262.010.stk.g.unconv.fits
+dim,68601600,2,(),"(6289, 6307)",rings.v3.skycell.2262.010.stk.g.unconv.fits
 itemsize,68601600,2,,16,rings.v3.skycell.2262.010.stk.g.unconv.fits
-datasize,68601600,2,0,634635568,rings.v3.skycell.2262.010.stk.g.unconv.fits
+datasize,68601600,2,0,79329446,rings.v3.skycell.2262.010.stk.g.unconv.fits
 size,67599360,2,2880,67596480,rings.v3.skycell.1634.061.stk.i.unconv.fits
 name,67599360,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1634.061.stk.i.unconv.fits
 hdutype,67599360,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1634.061.stk.i.unconv.fits
-dim,67599360,2,(),"(6242, 6254)",rings.v3.skycell.1634.061.stk.i.unconv.fits
+dim,67599360,2,(),"(6254, 6242)",rings.v3.skycell.1634.061.stk.i.unconv.fits
 itemsize,67599360,2,,16,rings.v3.skycell.1634.061.stk.i.unconv.fits
-datasize,67599360,2,0,624599488,rings.v3.skycell.1634.061.stk.i.unconv.fits
+datasize,67599360,2,0,78074936,rings.v3.skycell.1634.061.stk.i.unconv.fits
 size,68002560,2,2880,67999680,rings.v3.skycell.1893.099.stk.g.unconv.fits
 name,68002560,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1893.099.stk.g.unconv.fits
 hdutype,68002560,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1893.099.stk.g.unconv.fits
-dim,68002560,2,(),"(6255, 6265)",rings.v3.skycell.1893.099.stk.g.unconv.fits
+dim,68002560,2,(),"(6265, 6255)",rings.v3.skycell.1893.099.stk.g.unconv.fits
 itemsize,68002560,2,,16,rings.v3.skycell.1893.099.stk.g.unconv.fits
-datasize,68002560,2,0,627001200,rings.v3.skycell.1893.099.stk.g.unconv.fits
+datasize,68002560,2,0,78375150,rings.v3.skycell.1893.099.stk.g.unconv.fits
 size,67443840,2,2880,67440960,rings.v3.skycell.1281.003.stk.g.unconv.fits
 name,67443840,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1281.003.stk.g.unconv.fits
 hdutype,67443840,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1281.003.stk.g.unconv.fits
-dim,67443840,2,(),"(6240, 6243)",rings.v3.skycell.1281.003.stk.g.unconv.fits
+dim,67443840,2,(),"(6243, 6240)",rings.v3.skycell.1281.003.stk.g.unconv.fits
 itemsize,67443840,2,,16,rings.v3.skycell.1281.003.stk.g.unconv.fits
-datasize,67443840,2,0,623301120,rings.v3.skycell.1281.003.stk.g.unconv.fits
+datasize,67443840,2,0,77912640,rings.v3.skycell.1281.003.stk.g.unconv.fits
 size,68068800,2,2880,68065920,rings.v3.skycell.1450.085.stk.g.unconv.fits
 name,68068800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1450.085.stk.g.unconv.fits
 hdutype,68068800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1450.085.stk.g.unconv.fits
-dim,68068800,2,(),"(6291, 6247)",rings.v3.skycell.1450.085.stk.g.unconv.fits
+dim,68068800,2,(),"(6247, 6291)",rings.v3.skycell.1450.085.stk.g.unconv.fits
 itemsize,68068800,2,,16,rings.v3.skycell.1450.085.stk.g.unconv.fits
-datasize,68068800,2,0,628798032,rings.v3.skycell.1450.085.stk.g.unconv.fits
+datasize,68068800,2,0,78599754,rings.v3.skycell.1450.085.stk.g.unconv.fits
 size,68829120,2,2880,68826240,rings.v3.skycell.2518.052.stk.g.unconv.fits
 name,68829120,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2518.052.stk.g.unconv.fits
 hdutype,68829120,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2518.052.stk.g.unconv.fits
-dim,68829120,2,(),"(6307, 6333)",rings.v3.skycell.2518.052.stk.g.unconv.fits
+dim,68829120,2,(),"(6333, 6307)",rings.v3.skycell.2518.052.stk.g.unconv.fits
 itemsize,68829120,2,,16,rings.v3.skycell.2518.052.stk.g.unconv.fits
-datasize,68829120,2,0,639075696,rings.v3.skycell.2518.052.stk.g.unconv.fits
+datasize,68829120,2,0,79884462,rings.v3.skycell.2518.052.stk.g.unconv.fits
 size,67501440,2,2880,67498560,rings.v3.skycell.1811.011.stk.g.unconv.fits
 name,67501440,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1811.011.stk.g.unconv.fits
 hdutype,67501440,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1811.011.stk.g.unconv.fits
-dim,67501440,2,(),"(6279, 6261)",rings.v3.skycell.1811.011.stk.g.unconv.fits
+dim,67501440,2,(),"(6261, 6279)",rings.v3.skycell.1811.011.stk.g.unconv.fits
 itemsize,67501440,2,,16,rings.v3.skycell.1811.011.stk.g.unconv.fits
-datasize,67501440,2,0,629005104,rings.v3.skycell.1811.011.stk.g.unconv.fits
+datasize,67501440,2,0,78625638,rings.v3.skycell.1811.011.stk.g.unconv.fits
 size,68068800,2,2880,68065920,rings.v3.skycell.2321.031.stk.g.unconv.fits
 name,68068800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2321.031.stk.g.unconv.fits
 hdutype,68068800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2321.031.stk.g.unconv.fits
-dim,68068800,2,(),"(6261, 6295)",rings.v3.skycell.2321.031.stk.g.unconv.fits
+dim,68068800,2,(),"(6295, 6261)",rings.v3.skycell.2321.031.stk.g.unconv.fits
 itemsize,68068800,2,,16,rings.v3.skycell.2321.031.stk.g.unconv.fits
-datasize,68068800,2,0,630607920,rings.v3.skycell.2321.031.stk.g.unconv.fits
+datasize,68068800,2,0,78825990,rings.v3.skycell.2321.031.stk.g.unconv.fits
 size,67982400,2,2880,67979520,rings.v3.skycell.1815.052.stk.g.unconv.fits
 name,67982400,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1815.052.stk.g.unconv.fits
 hdutype,67982400,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1815.052.stk.g.unconv.fits
-dim,67982400,2,(),"(6279, 6261)",rings.v3.skycell.1815.052.stk.g.unconv.fits
+dim,67982400,2,(),"(6261, 6279)",rings.v3.skycell.1815.052.stk.g.unconv.fits
 itemsize,67982400,2,,16,rings.v3.skycell.1815.052.stk.g.unconv.fits
-datasize,67982400,2,0,629005104,rings.v3.skycell.1815.052.stk.g.unconv.fits
+datasize,67982400,2,0,78625638,rings.v3.skycell.1815.052.stk.g.unconv.fits
 size,68402880,2,2880,68400000,rings.v3.skycell.2314.079.stk.z.unconv.fits
 name,68402880,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2314.079.stk.z.unconv.fits
 hdutype,68402880,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2314.079.stk.z.unconv.fits
-dim,68402880,2,(),"(6261, 6295)",rings.v3.skycell.2314.079.stk.z.unconv.fits
+dim,68402880,2,(),"(6295, 6261)",rings.v3.skycell.2314.079.stk.z.unconv.fits
 itemsize,68402880,2,,16,rings.v3.skycell.2314.079.stk.z.unconv.fits
-datasize,68402880,2,0,630607920,rings.v3.skycell.2314.079.stk.z.unconv.fits
+datasize,68402880,2,0,78825990,rings.v3.skycell.2314.079.stk.z.unconv.fits
 size,68797440,2,2880,68794560,rings.v3.skycell.2195.071.stk.g.unconv.fits
 name,68797440,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2195.071.stk.g.unconv.fits
 hdutype,68797440,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2195.071.stk.g.unconv.fits
-dim,68797440,2,(),"(6320, 6284)",rings.v3.skycell.2195.071.stk.g.unconv.fits
+dim,68797440,2,(),"(6284, 6320)",rings.v3.skycell.2195.071.stk.g.unconv.fits
 itemsize,68797440,2,,16,rings.v3.skycell.2195.071.stk.g.unconv.fits
-datasize,68797440,2,0,635438080,rings.v3.skycell.2195.071.stk.g.unconv.fits
+datasize,68797440,2,0,79429760,rings.v3.skycell.2195.071.stk.g.unconv.fits
 size,66228480,2,2880,66225600,rings.v3.skycell.1557.053.stk.z.unconv.fits
 name,66228480,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1557.053.stk.z.unconv.fits
 hdutype,66228480,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1557.053.stk.z.unconv.fits
-dim,66228480,2,(),"(6248, 6250)",rings.v3.skycell.1557.053.stk.z.unconv.fits
+dim,66228480,2,(),"(6250, 6248)",rings.v3.skycell.1557.053.stk.z.unconv.fits
 itemsize,66228480,2,,16,rings.v3.skycell.1557.053.stk.z.unconv.fits
-datasize,66228480,2,0,624800000,rings.v3.skycell.1557.053.stk.z.unconv.fits
+datasize,66228480,2,0,78100000,rings.v3.skycell.1557.053.stk.z.unconv.fits
 size,66772800,2,2880,66769920,rings.v3.skycell.1557.003.stk.z.unconv.fits
 name,66772800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1557.003.stk.z.unconv.fits
 hdutype,66772800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1557.003.stk.z.unconv.fits
-dim,66772800,2,(),"(6248, 6250)",rings.v3.skycell.1557.003.stk.z.unconv.fits
+dim,66772800,2,(),"(6250, 6248)",rings.v3.skycell.1557.003.stk.z.unconv.fits
 itemsize,66772800,2,,16,rings.v3.skycell.1557.003.stk.z.unconv.fits
-datasize,66772800,2,0,624800000,rings.v3.skycell.1557.003.stk.z.unconv.fits
+datasize,66772800,2,0,78100000,rings.v3.skycell.1557.003.stk.z.unconv.fits
 size,67440960,2,2880,67438080,rings.v3.skycell.1370.040.stk.g.unconv.fits
 name,67440960,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1370.040.stk.g.unconv.fits
 hdutype,67440960,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1370.040.stk.g.unconv.fits
-dim,67440960,2,(),"(6240, 6243)",rings.v3.skycell.1370.040.stk.g.unconv.fits
+dim,67440960,2,(),"(6243, 6240)",rings.v3.skycell.1370.040.stk.g.unconv.fits
 itemsize,67440960,2,,16,rings.v3.skycell.1370.040.stk.g.unconv.fits
-datasize,67440960,2,0,623301120,rings.v3.skycell.1370.040.stk.g.unconv.fits
+datasize,67440960,2,0,77912640,rings.v3.skycell.1370.040.stk.g.unconv.fits
 size,67409280,2,2880,67406400,rings.v3.skycell.1278.067.stk.g.unconv.fits
 name,67409280,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1278.067.stk.g.unconv.fits
 hdutype,67409280,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1278.067.stk.g.unconv.fits
-dim,67409280,2,(),"(6240, 6243)",rings.v3.skycell.1278.067.stk.g.unconv.fits
+dim,67409280,2,(),"(6243, 6240)",rings.v3.skycell.1278.067.stk.g.unconv.fits
 itemsize,67409280,2,,16,rings.v3.skycell.1278.067.stk.g.unconv.fits
-datasize,67409280,2,0,623301120,rings.v3.skycell.1278.067.stk.g.unconv.fits
+datasize,67409280,2,0,77912640,rings.v3.skycell.1278.067.stk.g.unconv.fits
 size,67824000,2,2880,67821120,rings.v3.skycell.1815.074.stk.g.unconv.fits
 name,67824000,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1815.074.stk.g.unconv.fits
 hdutype,67824000,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1815.074.stk.g.unconv.fits
-dim,67824000,2,(),"(6279, 6261)",rings.v3.skycell.1815.074.stk.g.unconv.fits
+dim,67824000,2,(),"(6261, 6279)",rings.v3.skycell.1815.074.stk.g.unconv.fits
 itemsize,67824000,2,,16,rings.v3.skycell.1815.074.stk.g.unconv.fits
-datasize,67824000,2,0,629005104,rings.v3.skycell.1815.074.stk.g.unconv.fits
+datasize,67824000,2,0,78625638,rings.v3.skycell.1815.074.stk.g.unconv.fits
 size,67368960,2,2880,67366080,rings.v3.skycell.1554.032.stk.g.unconv.fits
 name,67368960,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1554.032.stk.g.unconv.fits
 hdutype,67368960,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1554.032.stk.g.unconv.fits
-dim,67368960,2,(),"(6248, 6250)",rings.v3.skycell.1554.032.stk.g.unconv.fits
+dim,67368960,2,(),"(6250, 6248)",rings.v3.skycell.1554.032.stk.g.unconv.fits
 itemsize,67368960,2,,16,rings.v3.skycell.1554.032.stk.g.unconv.fits
-datasize,67368960,2,0,624800000,rings.v3.skycell.1554.032.stk.g.unconv.fits
+datasize,67368960,2,0,78100000,rings.v3.skycell.1554.032.stk.g.unconv.fits
 size,67924800,2,2880,67921920,rings.v3.skycell.1882.000.stk.g.unconv.fits
 name,67924800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1882.000.stk.g.unconv.fits
 hdutype,67924800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1882.000.stk.g.unconv.fits
-dim,67924800,2,(),"(6255, 6265)",rings.v3.skycell.1882.000.stk.g.unconv.fits
+dim,67924800,2,(),"(6265, 6255)",rings.v3.skycell.1882.000.stk.g.unconv.fits
 itemsize,67924800,2,,16,rings.v3.skycell.1882.000.stk.g.unconv.fits
-datasize,67924800,2,0,627001200,rings.v3.skycell.1882.000.stk.g.unconv.fits
+datasize,67924800,2,0,78375150,rings.v3.skycell.1882.000.stk.g.unconv.fits
 size,67273920,2,2880,67271040,rings.v3.skycell.1288.013.stk.z.unconv.fits
 name,67273920,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1288.013.stk.z.unconv.fits
 hdutype,67273920,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1288.013.stk.z.unconv.fits
-dim,67273920,2,(),"(6240, 6243)",rings.v3.skycell.1288.013.stk.z.unconv.fits
+dim,67273920,2,(),"(6243, 6240)",rings.v3.skycell.1288.013.stk.z.unconv.fits
 itemsize,67273920,2,,16,rings.v3.skycell.1288.013.stk.z.unconv.fits
-datasize,67273920,2,0,623301120,rings.v3.skycell.1288.013.stk.z.unconv.fits
+datasize,67273920,2,0,77912640,rings.v3.skycell.1288.013.stk.z.unconv.fits
 size,68264640,2,2880,68261760,rings.v3.skycell.2328.075.stk.g.unconv.fits
 name,68264640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2328.075.stk.g.unconv.fits
 hdutype,68264640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2328.075.stk.g.unconv.fits
-dim,68264640,2,(),"(6261, 6295)",rings.v3.skycell.2328.075.stk.g.unconv.fits
+dim,68264640,2,(),"(6295, 6261)",rings.v3.skycell.2328.075.stk.g.unconv.fits
 itemsize,68264640,2,,16,rings.v3.skycell.2328.075.stk.g.unconv.fits
-datasize,68264640,2,0,630607920,rings.v3.skycell.2328.075.stk.g.unconv.fits
+datasize,68264640,2,0,78825990,rings.v3.skycell.2328.075.stk.g.unconv.fits
 size,68261760,2,2880,68258880,rings.v3.skycell.1461.064.stk.g.unconv.fits
 name,68261760,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1461.064.stk.g.unconv.fits
 hdutype,68261760,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1461.064.stk.g.unconv.fits
-dim,68261760,2,(),"(6291, 6247)",rings.v3.skycell.1461.064.stk.g.unconv.fits
+dim,68261760,2,(),"(6247, 6291)",rings.v3.skycell.1461.064.stk.g.unconv.fits
 itemsize,68261760,2,,16,rings.v3.skycell.1461.064.stk.g.unconv.fits
-datasize,68261760,2,0,628798032,rings.v3.skycell.1461.064.stk.g.unconv.fits
+datasize,68261760,2,0,78599754,rings.v3.skycell.1461.064.stk.g.unconv.fits
 size,67487040,2,2880,67484160,rings.v3.skycell.1285.018.stk.z.unconv.fits
 name,67487040,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1285.018.stk.z.unconv.fits
 hdutype,67487040,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1285.018.stk.z.unconv.fits
-dim,67487040,2,(),"(6240, 6243)",rings.v3.skycell.1285.018.stk.z.unconv.fits
+dim,67487040,2,(),"(6243, 6240)",rings.v3.skycell.1285.018.stk.z.unconv.fits
 itemsize,67487040,2,,16,rings.v3.skycell.1285.018.stk.z.unconv.fits
-datasize,67487040,2,0,623301120,rings.v3.skycell.1285.018.stk.z.unconv.fits
+datasize,67487040,2,0,77912640,rings.v3.skycell.1285.018.stk.z.unconv.fits
 size,67616640,2,2880,67613760,rings.v3.skycell.1637.036.stk.z.unconv.fits
 name,67616640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1637.036.stk.z.unconv.fits
 hdutype,67616640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1637.036.stk.z.unconv.fits
-dim,67616640,2,(),"(6242, 6254)",rings.v3.skycell.1637.036.stk.z.unconv.fits
+dim,67616640,2,(),"(6254, 6242)",rings.v3.skycell.1637.036.stk.z.unconv.fits
 itemsize,67616640,2,,16,rings.v3.skycell.1637.036.stk.z.unconv.fits
-datasize,67616640,2,0,624599488,rings.v3.skycell.1637.036.stk.z.unconv.fits
+datasize,67616640,2,0,78074936,rings.v3.skycell.1637.036.stk.z.unconv.fits
 size,68241600,2,2880,68238720,rings.v3.skycell.1800.072.stk.g.unconv.fits
 name,68241600,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1800.072.stk.g.unconv.fits
 hdutype,68241600,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1800.072.stk.g.unconv.fits
-dim,68241600,2,(),"(6279, 6261)",rings.v3.skycell.1800.072.stk.g.unconv.fits
+dim,68241600,2,(),"(6261, 6279)",rings.v3.skycell.1800.072.stk.g.unconv.fits
 itemsize,68241600,2,,16,rings.v3.skycell.1800.072.stk.g.unconv.fits
-datasize,68241600,2,0,629005104,rings.v3.skycell.1800.072.stk.g.unconv.fits
+datasize,68241600,2,0,78625638,rings.v3.skycell.1800.072.stk.g.unconv.fits
 size,68886720,2,2880,68883840,rings.v3.skycell.2266.007.stk.z.unconv.fits
 name,68886720,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2266.007.stk.z.unconv.fits
 hdutype,68886720,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2266.007.stk.z.unconv.fits
-dim,68886720,2,(),"(6307, 6289)",rings.v3.skycell.2266.007.stk.z.unconv.fits
+dim,68886720,2,(),"(6289, 6307)",rings.v3.skycell.2266.007.stk.z.unconv.fits
 itemsize,68886720,2,,16,rings.v3.skycell.2266.007.stk.z.unconv.fits
-datasize,68886720,2,0,634635568,rings.v3.skycell.2266.007.stk.z.unconv.fits
+datasize,68886720,2,0,79329446,rings.v3.skycell.2266.007.stk.z.unconv.fits
 size,67178880,2,2880,67176000,rings.v3.skycell.1287.026.stk.z.unconv.fits
 name,67178880,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1287.026.stk.z.unconv.fits
 hdutype,67178880,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1287.026.stk.z.unconv.fits
-dim,67178880,2,(),"(6240, 6243)",rings.v3.skycell.1287.026.stk.z.unconv.fits
+dim,67178880,2,(),"(6243, 6240)",rings.v3.skycell.1287.026.stk.z.unconv.fits
 itemsize,67178880,2,,16,rings.v3.skycell.1287.026.stk.z.unconv.fits
-datasize,67178880,2,0,623301120,rings.v3.skycell.1287.026.stk.z.unconv.fits
+datasize,67178880,2,0,77912640,rings.v3.skycell.1287.026.stk.z.unconv.fits
 size,68163840,2,2880,68160960,rings.v3.skycell.1469.079.stk.z.unconv.fits
 name,68163840,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1469.079.stk.z.unconv.fits
 hdutype,68163840,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1469.079.stk.z.unconv.fits
-dim,68163840,2,(),"(6291, 6247)",rings.v3.skycell.1469.079.stk.z.unconv.fits
+dim,68163840,2,(),"(6247, 6291)",rings.v3.skycell.1469.079.stk.z.unconv.fits
 itemsize,68163840,2,,16,rings.v3.skycell.1469.079.stk.z.unconv.fits
-datasize,68163840,2,0,628798032,rings.v3.skycell.1469.079.stk.z.unconv.fits
+datasize,68163840,2,0,78599754,rings.v3.skycell.1469.079.stk.z.unconv.fits
 size,67616640,2,2880,67613760,rings.v3.skycell.1097.089.stk.g.unconv.fits
 name,67616640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1097.089.stk.g.unconv.fits
 hdutype,67616640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1097.089.stk.g.unconv.fits
-dim,67616640,2,(),"(6248, 6250)",rings.v3.skycell.1097.089.stk.g.unconv.fits
+dim,67616640,2,(),"(6250, 6248)",rings.v3.skycell.1097.089.stk.g.unconv.fits
 itemsize,67616640,2,,16,rings.v3.skycell.1097.089.stk.g.unconv.fits
-datasize,67616640,2,0,624800000,rings.v3.skycell.1097.089.stk.g.unconv.fits
+datasize,67616640,2,0,78100000,rings.v3.skycell.1097.089.stk.g.unconv.fits
 size,67602240,2,2880,67599360,rings.v3.skycell.1283.062.stk.z.unconv.fits
 name,67602240,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1283.062.stk.z.unconv.fits
 hdutype,67602240,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1283.062.stk.z.unconv.fits
-dim,67602240,2,(),"(6240, 6243)",rings.v3.skycell.1283.062.stk.z.unconv.fits
+dim,67602240,2,(),"(6243, 6240)",rings.v3.skycell.1283.062.stk.z.unconv.fits
 itemsize,67602240,2,,16,rings.v3.skycell.1283.062.stk.z.unconv.fits
-datasize,67602240,2,0,623301120,rings.v3.skycell.1283.062.stk.z.unconv.fits
+datasize,67602240,2,0,77912640,rings.v3.skycell.1283.062.stk.z.unconv.fits
 size,67527360,2,2880,67524480,rings.v3.skycell.1717.005.stk.z.unconv.fits
 name,67527360,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1717.005.stk.z.unconv.fits
 hdutype,67527360,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1717.005.stk.z.unconv.fits
-dim,67527360,2,(),"(6274, 6258)",rings.v3.skycell.1717.005.stk.z.unconv.fits
+dim,67527360,2,(),"(6258, 6274)",rings.v3.skycell.1717.005.stk.z.unconv.fits
 itemsize,67527360,2,,16,rings.v3.skycell.1717.005.stk.z.unconv.fits
-datasize,67527360,2,0,628203072,rings.v3.skycell.1717.005.stk.z.unconv.fits
+datasize,67527360,2,0,78525384,rings.v3.skycell.1717.005.stk.z.unconv.fits
 size,67881600,2,2880,67878720,rings.v3.skycell.1274.087.stk.z.unconv.fits
 name,67881600,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1274.087.stk.z.unconv.fits
 hdutype,67881600,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1274.087.stk.z.unconv.fits
-dim,67881600,2,(),"(6240, 6243)",rings.v3.skycell.1274.087.stk.z.unconv.fits
+dim,67881600,2,(),"(6243, 6240)",rings.v3.skycell.1274.087.stk.z.unconv.fits
 itemsize,67881600,2,,16,rings.v3.skycell.1274.087.stk.z.unconv.fits
-datasize,67881600,2,0,623301120,rings.v3.skycell.1274.087.stk.z.unconv.fits
+datasize,67881600,2,0,77912640,rings.v3.skycell.1274.087.stk.z.unconv.fits
 size,67633920,2,2880,67631040,rings.v3.skycell.1458.058.stk.g.unconv.fits
 name,67633920,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1458.058.stk.g.unconv.fits
 hdutype,67633920,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1458.058.stk.g.unconv.fits
-dim,67633920,2,(),"(6291, 6247)",rings.v3.skycell.1458.058.stk.g.unconv.fits
+dim,67633920,2,(),"(6247, 6291)",rings.v3.skycell.1458.058.stk.g.unconv.fits
 itemsize,67633920,2,,16,rings.v3.skycell.1458.058.stk.g.unconv.fits
-datasize,67633920,2,0,628798032,rings.v3.skycell.1458.058.stk.g.unconv.fits
+datasize,67633920,2,0,78599754,rings.v3.skycell.1458.058.stk.g.unconv.fits
 size,68068800,2,2880,68065920,rings.v3.skycell.1458.076.stk.g.unconv.fits
 name,68068800,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1458.076.stk.g.unconv.fits
 hdutype,68068800,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1458.076.stk.g.unconv.fits
-dim,68068800,2,(),"(6291, 6247)",rings.v3.skycell.1458.076.stk.g.unconv.fits
+dim,68068800,2,(),"(6247, 6291)",rings.v3.skycell.1458.076.stk.g.unconv.fits
 itemsize,68068800,2,,16,rings.v3.skycell.1458.076.stk.g.unconv.fits
-datasize,68068800,2,0,628798032,rings.v3.skycell.1458.076.stk.g.unconv.fits
+datasize,68068800,2,0,78599754,rings.v3.skycell.1458.076.stk.g.unconv.fits
 size,67536000,2,2880,67533120,rings.v3.skycell.1723.056.stk.z.unconv.fits
 name,67536000,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1723.056.stk.z.unconv.fits
 hdutype,67536000,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1723.056.stk.z.unconv.fits
-dim,67536000,2,(),"(6274, 6258)",rings.v3.skycell.1723.056.stk.z.unconv.fits
+dim,67536000,2,(),"(6258, 6274)",rings.v3.skycell.1723.056.stk.z.unconv.fits
 itemsize,67536000,2,,16,rings.v3.skycell.1723.056.stk.z.unconv.fits
-datasize,67536000,2,0,628203072,rings.v3.skycell.1723.056.stk.z.unconv.fits
+datasize,67536000,2,0,78525384,rings.v3.skycell.1723.056.stk.z.unconv.fits
 size,67481280,2,2880,67478400,rings.v3.skycell.1372.031.stk.z.unconv.fits
 name,67481280,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1372.031.stk.z.unconv.fits
 hdutype,67481280,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1372.031.stk.z.unconv.fits
-dim,67481280,2,(),"(6240, 6243)",rings.v3.skycell.1372.031.stk.z.unconv.fits
+dim,67481280,2,(),"(6243, 6240)",rings.v3.skycell.1372.031.stk.z.unconv.fits
 itemsize,67481280,2,,16,rings.v3.skycell.1372.031.stk.z.unconv.fits
-datasize,67481280,2,0,623301120,rings.v3.skycell.1372.031.stk.z.unconv.fits
+datasize,67481280,2,0,77912640,rings.v3.skycell.1372.031.stk.z.unconv.fits
 size,67651200,2,2880,67648320,rings.v3.skycell.1726.062.stk.z.unconv.fits
 name,67651200,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1726.062.stk.z.unconv.fits
 hdutype,67651200,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1726.062.stk.z.unconv.fits
-dim,67651200,2,(),"(6274, 6258)",rings.v3.skycell.1726.062.stk.z.unconv.fits
+dim,67651200,2,(),"(6258, 6274)",rings.v3.skycell.1726.062.stk.z.unconv.fits
 itemsize,67651200,2,,16,rings.v3.skycell.1726.062.stk.z.unconv.fits
-datasize,67651200,2,0,628203072,rings.v3.skycell.1726.062.stk.z.unconv.fits
+datasize,67651200,2,0,78525384,rings.v3.skycell.1726.062.stk.z.unconv.fits
 size,67409280,2,2880,67406400,rings.v3.skycell.1630.039.stk.z.unconv.fits
 name,67409280,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1630.039.stk.z.unconv.fits
 hdutype,67409280,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1630.039.stk.z.unconv.fits
-dim,67409280,2,(),"(6242, 6254)",rings.v3.skycell.1630.039.stk.z.unconv.fits
+dim,67409280,2,(),"(6254, 6242)",rings.v3.skycell.1630.039.stk.z.unconv.fits
 itemsize,67409280,2,,16,rings.v3.skycell.1630.039.stk.z.unconv.fits
-datasize,67409280,2,0,624599488,rings.v3.skycell.1630.039.stk.z.unconv.fits
+datasize,67409280,2,0,78074936,rings.v3.skycell.1630.039.stk.z.unconv.fits
 size,67930560,2,2880,67927680,rings.v3.skycell.1727.006.stk.z.unconv.fits
 name,67930560,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1727.006.stk.z.unconv.fits
 hdutype,67930560,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1727.006.stk.z.unconv.fits
-dim,67930560,2,(),"(6274, 6258)",rings.v3.skycell.1727.006.stk.z.unconv.fits
+dim,67930560,2,(),"(6258, 6274)",rings.v3.skycell.1727.006.stk.z.unconv.fits
 itemsize,67930560,2,,16,rings.v3.skycell.1727.006.stk.z.unconv.fits
-datasize,67930560,2,0,628203072,rings.v3.skycell.1727.006.stk.z.unconv.fits
+datasize,67930560,2,0,78525384,rings.v3.skycell.1727.006.stk.z.unconv.fits
 size,68097600,2,2880,68094720,rings.v3.skycell.1187.066.stk.z.unconv.fits
 name,68097600,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1187.066.stk.z.unconv.fits
 hdutype,68097600,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1187.066.stk.z.unconv.fits
-dim,68097600,2,(),"(6291, 6247)",rings.v3.skycell.1187.066.stk.z.unconv.fits
+dim,68097600,2,(),"(6247, 6291)",rings.v3.skycell.1187.066.stk.z.unconv.fits
 itemsize,68097600,2,,16,rings.v3.skycell.1187.066.stk.z.unconv.fits
-datasize,68097600,2,0,628798032,rings.v3.skycell.1187.066.stk.z.unconv.fits
+datasize,68097600,2,0,78599754,rings.v3.skycell.1187.066.stk.z.unconv.fits
 size,67495680,2,2880,67492800,rings.v3.skycell.1374.073.stk.z.unconv.fits
 name,67495680,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1374.073.stk.z.unconv.fits
 hdutype,67495680,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1374.073.stk.z.unconv.fits
-dim,67495680,2,(),"(6240, 6243)",rings.v3.skycell.1374.073.stk.z.unconv.fits
+dim,67495680,2,(),"(6243, 6240)",rings.v3.skycell.1374.073.stk.z.unconv.fits
 itemsize,67495680,2,,16,rings.v3.skycell.1374.073.stk.z.unconv.fits
-datasize,67495680,2,0,623301120,rings.v3.skycell.1374.073.stk.z.unconv.fits
+datasize,67495680,2,0,77912640,rings.v3.skycell.1374.073.stk.z.unconv.fits
 size,68002560,2,2880,67999680,rings.v3.skycell.1453.065.stk.g.unconv.fits
 name,68002560,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1453.065.stk.g.unconv.fits
 hdutype,68002560,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1453.065.stk.g.unconv.fits
-dim,68002560,2,(),"(6291, 6247)",rings.v3.skycell.1453.065.stk.g.unconv.fits
+dim,68002560,2,(),"(6247, 6291)",rings.v3.skycell.1453.065.stk.g.unconv.fits
 itemsize,68002560,2,,16,rings.v3.skycell.1453.065.stk.g.unconv.fits
-datasize,68002560,2,0,628798032,rings.v3.skycell.1453.065.stk.g.unconv.fits
+datasize,68002560,2,0,78599754,rings.v3.skycell.1453.065.stk.g.unconv.fits
 size,68045760,2,2880,68042880,rings.v3.skycell.1973.014.stk.z.unconv.fits
 name,68045760,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1973.014.stk.z.unconv.fits
 hdutype,68045760,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1973.014.stk.z.unconv.fits
-dim,68045760,2,(),"(6274, 6269)",rings.v3.skycell.1973.014.stk.z.unconv.fits
+dim,68045760,2,(),"(6269, 6274)",rings.v3.skycell.1973.014.stk.z.unconv.fits
 itemsize,68045760,2,,16,rings.v3.skycell.1973.014.stk.z.unconv.fits
-datasize,68045760,2,0,629307296,rings.v3.skycell.1973.014.stk.z.unconv.fits
+datasize,68045760,2,0,78663412,rings.v3.skycell.1973.014.stk.z.unconv.fits
 size,68552640,2,2880,68549760,rings.v3.skycell.2259.025.stk.g.unconv.fits
 name,68552640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2259.025.stk.g.unconv.fits
 hdutype,68552640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2259.025.stk.g.unconv.fits
-dim,68552640,2,(),"(6307, 6289)",rings.v3.skycell.2259.025.stk.g.unconv.fits
+dim,68552640,2,(),"(6289, 6307)",rings.v3.skycell.2259.025.stk.g.unconv.fits
 itemsize,68552640,2,,16,rings.v3.skycell.2259.025.stk.g.unconv.fits
-datasize,68552640,2,0,634635568,rings.v3.skycell.2259.025.stk.g.unconv.fits
+datasize,68552640,2,0,79329446,rings.v3.skycell.2259.025.stk.g.unconv.fits
 size,67642560,2,2880,67639680,rings.v3.skycell.1468.052.stk.z.unconv.fits
 name,67642560,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1468.052.stk.z.unconv.fits
 hdutype,67642560,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1468.052.stk.z.unconv.fits
-dim,67642560,2,(),"(6291, 6247)",rings.v3.skycell.1468.052.stk.z.unconv.fits
+dim,67642560,2,(),"(6247, 6291)",rings.v3.skycell.1468.052.stk.z.unconv.fits
 itemsize,67642560,2,,16,rings.v3.skycell.1468.052.stk.z.unconv.fits
-datasize,67642560,2,0,628798032,rings.v3.skycell.1468.052.stk.z.unconv.fits
+datasize,67642560,2,0,78599754,rings.v3.skycell.1468.052.stk.z.unconv.fits
 size,67438080,2,2880,67435200,rings.v3.skycell.2250.031.stk.g.unconv.fits
 name,67438080,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2250.031.stk.g.unconv.fits
 hdutype,67438080,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2250.031.stk.g.unconv.fits
-dim,67438080,2,(),"(6307, 6289)",rings.v3.skycell.2250.031.stk.g.unconv.fits
+dim,67438080,2,(),"(6289, 6307)",rings.v3.skycell.2250.031.stk.g.unconv.fits
 itemsize,67438080,2,,16,rings.v3.skycell.2250.031.stk.g.unconv.fits
-datasize,67438080,2,0,634635568,rings.v3.skycell.2250.031.stk.g.unconv.fits
+datasize,67438080,2,0,79329446,rings.v3.skycell.2250.031.stk.g.unconv.fits
 size,67898880,2,2880,67896000,rings.v3.skycell.1963.020.stk.z.unconv.fits
 name,67898880,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1963.020.stk.z.unconv.fits
 hdutype,67898880,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1963.020.stk.z.unconv.fits
-dim,67898880,2,(),"(6274, 6269)",rings.v3.skycell.1963.020.stk.z.unconv.fits
+dim,67898880,2,(),"(6269, 6274)",rings.v3.skycell.1963.020.stk.z.unconv.fits
 itemsize,67898880,2,,16,rings.v3.skycell.1963.020.stk.z.unconv.fits
-datasize,67898880,2,0,629307296,rings.v3.skycell.1963.020.stk.z.unconv.fits
+datasize,67898880,2,0,78663412,rings.v3.skycell.1963.020.stk.z.unconv.fits
 size,67527360,2,2880,67524480,rings.v3.skycell.1283.008.stk.z.unconv.fits
 name,67527360,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1283.008.stk.z.unconv.fits
 hdutype,67527360,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1283.008.stk.z.unconv.fits
-dim,67527360,2,(),"(6240, 6243)",rings.v3.skycell.1283.008.stk.z.unconv.fits
+dim,67527360,2,(),"(6243, 6240)",rings.v3.skycell.1283.008.stk.z.unconv.fits
 itemsize,67527360,2,,16,rings.v3.skycell.1283.008.stk.z.unconv.fits
-datasize,67527360,2,0,623301120,rings.v3.skycell.1283.008.stk.z.unconv.fits
+datasize,67527360,2,0,77912640,rings.v3.skycell.1283.008.stk.z.unconv.fits
 size,68005440,2,2880,68002560,rings.v3.skycell.1728.081.stk.g.unconv.fits
 name,68005440,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1728.081.stk.g.unconv.fits
 hdutype,68005440,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1728.081.stk.g.unconv.fits
-dim,68005440,2,(),"(6274, 6258)",rings.v3.skycell.1728.081.stk.g.unconv.fits
+dim,68005440,2,(),"(6258, 6274)",rings.v3.skycell.1728.081.stk.g.unconv.fits
 itemsize,68005440,2,,16,rings.v3.skycell.1728.081.stk.g.unconv.fits
-datasize,68005440,2,0,628203072,rings.v3.skycell.1728.081.stk.g.unconv.fits
+datasize,68005440,2,0,78525384,rings.v3.skycell.1728.081.stk.g.unconv.fits
 size,67164480,2,2880,67161600,rings.v3.skycell.1644.041.stk.z.unconv.fits
 name,67164480,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1644.041.stk.z.unconv.fits
 hdutype,67164480,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1644.041.stk.z.unconv.fits
-dim,67164480,2,(),"(6242, 6254)",rings.v3.skycell.1644.041.stk.z.unconv.fits
+dim,67164480,2,(),"(6254, 6242)",rings.v3.skycell.1644.041.stk.z.unconv.fits
 itemsize,67164480,2,,16,rings.v3.skycell.1644.041.stk.z.unconv.fits
-datasize,67164480,2,0,624599488,rings.v3.skycell.1644.041.stk.z.unconv.fits
+datasize,67164480,2,0,78074936,rings.v3.skycell.1644.041.stk.z.unconv.fits
 size,68544000,2,2880,68541120,rings.v3.skycell.2263.000.stk.z.unconv.fits
 name,68544000,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2263.000.stk.z.unconv.fits
 hdutype,68544000,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2263.000.stk.z.unconv.fits
-dim,68544000,2,(),"(6307, 6289)",rings.v3.skycell.2263.000.stk.z.unconv.fits
+dim,68544000,2,(),"(6289, 6307)",rings.v3.skycell.2263.000.stk.z.unconv.fits
 itemsize,68544000,2,,16,rings.v3.skycell.2263.000.stk.z.unconv.fits
-datasize,68544000,2,0,634635568,rings.v3.skycell.2263.000.stk.z.unconv.fits
+datasize,68544000,2,0,79329446,rings.v3.skycell.2263.000.stk.z.unconv.fits
 size,67613760,2,2880,67610880,rings.v3.skycell.1364.074.stk.g.unconv.fits
 name,67613760,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1364.074.stk.g.unconv.fits
 hdutype,67613760,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1364.074.stk.g.unconv.fits
-dim,67613760,2,(),"(6240, 6243)",rings.v3.skycell.1364.074.stk.g.unconv.fits
+dim,67613760,2,(),"(6243, 6240)",rings.v3.skycell.1364.074.stk.g.unconv.fits
 itemsize,67613760,2,,16,rings.v3.skycell.1364.074.stk.g.unconv.fits
-datasize,67613760,2,0,623301120,rings.v3.skycell.1364.074.stk.g.unconv.fits
+datasize,67613760,2,0,77912640,rings.v3.skycell.1364.074.stk.g.unconv.fits
 size,68264640,2,2880,68261760,rings.v3.skycell.1966.079.stk.z.unconv.fits
 name,68264640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1966.079.stk.z.unconv.fits
 hdutype,68264640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1966.079.stk.z.unconv.fits
-dim,68264640,2,(),"(6274, 6269)",rings.v3.skycell.1966.079.stk.z.unconv.fits
+dim,68264640,2,(),"(6269, 6274)",rings.v3.skycell.1966.079.stk.z.unconv.fits
 itemsize,68264640,2,,16,rings.v3.skycell.1966.079.stk.z.unconv.fits
-datasize,68264640,2,0,629307296,rings.v3.skycell.1966.079.stk.z.unconv.fits
+datasize,68264640,2,0,78663412,rings.v3.skycell.1966.079.stk.z.unconv.fits
 size,67320000,2,2880,67317120,rings.v3.skycell.1272.089.stk.g.unconv.fits
 name,67320000,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1272.089.stk.g.unconv.fits
 hdutype,67320000,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1272.089.stk.g.unconv.fits
-dim,67320000,2,(),"(6240, 6243)",rings.v3.skycell.1272.089.stk.g.unconv.fits
+dim,67320000,2,(),"(6243, 6240)",rings.v3.skycell.1272.089.stk.g.unconv.fits
 itemsize,67320000,2,,16,rings.v3.skycell.1272.089.stk.g.unconv.fits
-datasize,67320000,2,0,623301120,rings.v3.skycell.1272.089.stk.g.unconv.fits
+datasize,67320000,2,0,77912640,rings.v3.skycell.1272.089.stk.g.unconv.fits
 size,68287680,2,2880,68284800,rings.v3.skycell.2477.090.stk.g.unconv.fits
 name,68287680,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2477.090.stk.g.unconv.fits
 hdutype,68287680,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2477.090.stk.g.unconv.fits
-dim,68287680,2,(),"(6240, 6319)",rings.v3.skycell.2477.090.stk.g.unconv.fits
+dim,68287680,2,(),"(6319, 6240)",rings.v3.skycell.2477.090.stk.g.unconv.fits
 itemsize,68287680,2,,16,rings.v3.skycell.2477.090.stk.g.unconv.fits
-datasize,68287680,2,0,630888960,rings.v3.skycell.2477.090.stk.g.unconv.fits
+datasize,68287680,2,0,78861120,rings.v3.skycell.2477.090.stk.g.unconv.fits
 size,65744640,2,2880,65741760,rings.v3.skycell.1469.069.stk.g.unconv.fits
 name,65744640,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.1469.069.stk.g.unconv.fits
 hdutype,65744640,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.1469.069.stk.g.unconv.fits
-dim,65744640,2,(),"(6291, 6247)",rings.v3.skycell.1469.069.stk.g.unconv.fits
+dim,65744640,2,(),"(6247, 6291)",rings.v3.skycell.1469.069.stk.g.unconv.fits
 itemsize,65744640,2,,16,rings.v3.skycell.1469.069.stk.g.unconv.fits
-datasize,65744640,2,0,628798032,rings.v3.skycell.1469.069.stk.g.unconv.fits
+datasize,65744640,2,0,78599754,rings.v3.skycell.1469.069.stk.g.unconv.fits
 size,67965120,2,2880,67962240,rings.v3.skycell.2473.037.stk.z.unconv.fits
 name,67965120,2,PRIMARY,COMPRESSED_IMAGE,rings.v3.skycell.2473.037.stk.z.unconv.fits
 hdutype,67965120,2,PrimaryHDU,CompImageHDU,rings.v3.skycell.2473.037.stk.z.unconv.fits
-dim,67965120,2,(),"(6240, 6319)",rings.v3.skycell.2473.037.stk.z.unconv.fits
+dim,67965120,2,(),"(6319, 6240)",rings.v3.skycell.2473.037.stk.z.unconv.fits
 itemsize,67965120,2,,16,rings.v3.skycell.2473.037.stk.z.unconv.fits
-datasize,67965120,2,0,630888960,rings.v3.skycell.2473.037.stk.z.unconv.fits
+datasize,67965120,2,0,78861120,rings.v3.skycell.2473.037.stk.z.unconv.fits
