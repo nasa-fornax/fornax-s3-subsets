@@ -20,7 +20,7 @@ def random_cuts_from_file(
     hdu_ix: int,
     count: int,
     shape: Sequence[int],
-    rng_seed: Optional[int] = None,
+    rng=None,
     astropy_handle_attribute: str = "data",
 ):
     """take random slices from a fits file; examine this process closely"""
@@ -36,7 +36,8 @@ def random_cuts_from_file(
     note = notary(log)
     # pick some boxes to slice from the HDU
     imsz = imsz_from_header(header)
-    rng = np.random.default_rng(rng_seed)
+    if rng is None:
+        rng = np.random.default_rng()
     indices = rectangular_slices(imsz, rng=rng, count=count, shape=shape)
     # and then slice them!
     cuts = {'indices': indices}
@@ -70,11 +71,12 @@ def benchmark_cuts(
     # stat is a formatting/printing function for time and net traffic results;
     # note simultaneously prints messages and puts them timestamped in 'log'
     stat, note = print_stats(watch, netstat), notary(log)
-    watch.start()
+    rng = np.random.default_rng(seed)
     cuts = []
+    watch.start()
     for path in paths:
         path_cuts, path_log = random_cuts_from_file(
-            path, loader, hdu_ix, count, shape, seed, astropy_handle_attribute
+            path, loader, hdu_ix, count, shape, rng, astropy_handle_attribute
         )
         note(f"got cuts,{path},{stat()}", loud=True)
         if return_cuts is True:
