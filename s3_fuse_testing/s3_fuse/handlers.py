@@ -1,7 +1,10 @@
 """
 top-level handling functions for s3-slicing testing and benchmarks
 """
+from copy import deepcopy
 from functools import partial
+from importlib import import_module
+from itertools import product
 from pathlib import Path
 from typing import Callable, Optional, Sequence
 
@@ -113,10 +116,6 @@ def interpret_benchmark_instructions(
     produce a set of arguments to random_cuts_from_files() using literals
     defined in a submodule of benchmark_settings
     """
-    from copy import deepcopy
-    from importlib import import_module
-    from itertools import product
-
     instructions = import_module(
         f"s3_fuse.benchmark_settings.{benchmark_name}"
     )
@@ -136,18 +135,17 @@ def interpret_benchmark_instructions(
         throttle_speeds
     ):
         shape, count, loader, throttle = element
+        ratestr = f"-{int(throttle/1000)}" if throttle is not None else "None"
+        title = "-".join(
+            (benchmark_name, loader, '_'.join(map(str, shape)), ratestr)
+        )
         case = {
-            'title': f"{benchmark_name}-{loader}-{shape}-{count}",
+            'title': title,
             "shape": shape,
             "count": count,
-            "throttle": throttle
-        }
-        if throttle is not None:
-            case["title"] += f"-{int(throttle/1000)}"
-        else:
-            case["title"] += "-None"
-        case |= deepcopy(settings)
-        case["loader"] = make_loaders(loader)[loader]
+            "throttle": throttle,
+            "loader": make_loaders(loader)[loader]
+        } | deepcopy(settings)
         if "s3" in loader:
             case["bucket"] = None
             case["paths"] = tuple(
