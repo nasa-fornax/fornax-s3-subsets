@@ -122,6 +122,7 @@ def interpret_benchmark_instructions(
         }
         if len(element) == 4:
             case["throttle"] = element[3]
+            case['identifier'] += f'-{element[3]}'
         case |= deepcopy(settings)
         case["loader"] = make_loaders(loader)[loader]
         if "s3" in loader:
