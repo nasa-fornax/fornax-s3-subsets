@@ -40,7 +40,7 @@ def random_cuts_from_file(
         rng = np.random.default_rng()
     indices = rectangular_slices(imsz, rng=rng, count=count, shape=shape)
     # and then slice them!
-    cuts = {'indices': indices}
+    cuts = {}
     for cut_ix in range(indices.shape[0]):
         slices = tuple(
             np.apply_along_axis(lambda row: slice(*row), 1, indices[cut_ix])
@@ -50,6 +50,8 @@ def random_cuts_from_file(
     for cut_ix, cut in cuts.items():
         cuts[cut_ix] = cut.copy()
         note(f"got data,{path},{stat()}")
+    note(f"done with file,{path},{stat(total=True)} file total")
+    cuts['indices'] = indices
     return cuts, log
 
 
@@ -84,6 +86,7 @@ def benchmark_cuts(
         else:
             del path_cuts
         log |= path_log
+    note(f"done with case,,{stat(total=True)} case total")
     return cuts, stat, log
 
 
