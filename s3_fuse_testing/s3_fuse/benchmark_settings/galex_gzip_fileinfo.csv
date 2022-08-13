@@ -4,598 +4,598 @@ name,22582732,3,PRIMARY,,,e06818-fd-full.fits.gz
 hdutype,22582732,3,PrimaryHDU,ImageHDU,ImageHDU,e06818-fd-full.fits.gz
 dim,22582732,3,"(3093, 3098)","(3093, 3098)","(3093, 3098)",e06818-fd-full.fits.gz
 itemsize,22582732,3,64,8,8,e06818-fd-full.fits.gz
-datasize,22582732,3,613255296,76656912,76656912,e06818-fd-full.fits.gz
+datasize,22582732,3,76656912,9582114,9582114,e06818-fd-full.fits.gz
 size,53504786,3,82002240,10252800,10252800,e43718-nd-full.fits.gz
 name,53504786,3,PRIMARY,,,e43718-nd-full.fits.gz
 hdutype,53504786,3,PrimaryHDU,ImageHDU,ImageHDU,e43718-nd-full.fits.gz
 dim,53504786,3,"(3199, 3204)","(3199, 3204)","(3199, 3204)",e43718-nd-full.fits.gz
 itemsize,53504786,3,64,8,8,e43718-nd-full.fits.gz
-datasize,53504786,3,655974144,81996768,81996768,e43718-nd-full.fits.gz
+datasize,53504786,3,81996768,10249596,10249596,e43718-nd-full.fits.gz
 size,16010204,3,79102080,9892800,9892800,e07415-fd-full.fits.gz
 name,16010204,3,PRIMARY,,,e07415-fd-full.fits.gz
 hdutype,16010204,3,PrimaryHDU,ImageHDU,ImageHDU,e07415-fd-full.fits.gz
 dim,16010204,3,"(3171, 3118)","(3171, 3118)","(3171, 3118)",e07415-fd-full.fits.gz
 itemsize,16010204,3,64,8,8,e07415-fd-full.fits.gz
-datasize,16010204,3,632779392,79097424,79097424,e07415-fd-full.fits.gz
+datasize,16010204,3,79097424,9887178,9887178,e07415-fd-full.fits.gz
 size,54273691,3,81717120,10218240,10218240,e33791-nd-full.fits.gz
 name,54273691,3,PRIMARY,,,e33791-nd-full.fits.gz
 hdutype,54273691,3,PrimaryHDU,ImageHDU,ImageHDU,e33791-nd-full.fits.gz
 dim,54273691,3,"(3210, 3182)","(3210, 3182)","(3210, 3182)",e33791-nd-full.fits.gz
 itemsize,54273691,3,64,8,8,e33791-nd-full.fits.gz
-datasize,54273691,3,653710080,81713760,81713760,e33791-nd-full.fits.gz
+datasize,54273691,3,81713760,10214220,10214220,e33791-nd-full.fits.gz
 size,53123320,3,81564480,10198080,10198080,e33568-nd-full.fits.gz
 name,53123320,3,PRIMARY,,,e33568-nd-full.fits.gz
 hdutype,53123320,3,PrimaryHDU,ImageHDU,ImageHDU,e33568-nd-full.fits.gz
 dim,53123320,3,"(3183, 3203)","(3183, 3203)","(3183, 3203)",e33568-nd-full.fits.gz
 itemsize,53123320,3,64,8,8,e33568-nd-full.fits.gz
-datasize,53123320,3,652489536,81561192,81561192,e33568-nd-full.fits.gz
+datasize,53123320,3,81561192,10195149,10195149,e33568-nd-full.fits.gz
 size,51177486,3,80242560,10033920,10033920,e09208-nd-full.fits.gz
 name,51177486,3,PRIMARY,,,e09208-nd-full.fits.gz
 hdutype,51177486,3,PrimaryHDU,ImageHDU,ImageHDU,e09208-nd-full.fits.gz
 dim,51177486,3,"(3173, 3161)","(3173, 3161)","(3173, 3161)",e09208-nd-full.fits.gz
 itemsize,51177486,3,64,8,8,e09208-nd-full.fits.gz
-datasize,51177486,3,641910592,80238824,80238824,e09208-nd-full.fits.gz
+datasize,51177486,3,80238824,10029853,10029853,e09208-nd-full.fits.gz
 size,51819614,3,77621760,9705600,9705600,e26141-nd-full.fits.gz
 name,51819614,3,PRIMARY,,,e26141-nd-full.fits.gz
 hdutype,51819614,3,PrimaryHDU,ImageHDU,ImageHDU,e26141-nd-full.fits.gz
 dim,51819614,3,"(3082, 3148)","(3082, 3148)","(3082, 3148)",e26141-nd-full.fits.gz
 itemsize,51819614,3,64,8,8,e26141-nd-full.fits.gz
-datasize,51819614,3,620936704,77617088,77617088,e26141-nd-full.fits.gz
+datasize,51819614,3,77617088,9702136,9702136,e26141-nd-full.fits.gz
 size,52839729,3,75870720,9486720,9486720,e15231-nd-full.fits.gz
 name,52839729,3,PRIMARY,,,e15231-nd-full.fits.gz
 hdutype,52839729,3,PrimaryHDU,ImageHDU,ImageHDU,e15231-nd-full.fits.gz
 dim,52839729,3,"(3077, 3082)","(3077, 3082)","(3077, 3082)",e15231-nd-full.fits.gz
 itemsize,52839729,3,64,8,8,e15231-nd-full.fits.gz
-datasize,52839729,3,606932096,75866512,75866512,e15231-nd-full.fits.gz
+datasize,52839729,3,75866512,9483314,9483314,e15231-nd-full.fits.gz
 size,9611558,3,78439680,9809280,9809280,e18451-fd-full.fits.gz
 name,9611558,3,PRIMARY,,,e18451-fd-full.fits.gz
 hdutype,9611558,3,PrimaryHDU,ImageHDU,ImageHDU,e18451-fd-full.fits.gz
 dim,9611558,3,"(3087, 3176)","(3087, 3176)","(3087, 3176)",e18451-fd-full.fits.gz
 itemsize,9611558,3,64,8,8,e18451-fd-full.fits.gz
-datasize,9611558,3,627475968,78434496,78434496,e18451-fd-full.fits.gz
+datasize,9611558,3,78434496,9804312,9804312,e18451-fd-full.fits.gz
 size,53011876,3,79004160,9878400,9878400,e16031-nd-full.fits.gz
 name,53011876,3,PRIMARY,,,e16031-nd-full.fits.gz
 hdutype,53011876,3,PrimaryHDU,ImageHDU,ImageHDU,e16031-nd-full.fits.gz
 dim,53011876,3,"(3129, 3156)","(3129, 3156)","(3129, 3156)",e16031-nd-full.fits.gz
 itemsize,53011876,3,64,8,8,e16031-nd-full.fits.gz
-datasize,53011876,3,632007936,79000992,79000992,e16031-nd-full.fits.gz
+datasize,53011876,3,79000992,9875124,9875124,e16031-nd-full.fits.gz
 size,52864650,3,75919680,9492480,9492480,e28416-nd-full.fits.gz
 name,52864650,3,PRIMARY,,,e28416-nd-full.fits.gz
 hdutype,52864650,3,PrimaryHDU,ImageHDU,ImageHDU,e28416-nd-full.fits.gz
 dim,52864650,3,"(3085, 3076)","(3085, 3076)","(3085, 3076)",e28416-nd-full.fits.gz
 itemsize,52864650,3,64,8,8,e28416-nd-full.fits.gz
-datasize,52864650,3,607325440,75915680,75915680,e28416-nd-full.fits.gz
+datasize,52864650,3,75915680,9489460,9489460,e28416-nd-full.fits.gz
 size,53706044,3,77008320,9630720,9630720,e03797-nd-full.fits.gz
 name,53706044,3,PRIMARY,,,e03797-nd-full.fits.gz
 hdutype,53706044,3,PrimaryHDU,ImageHDU,ImageHDU,e03797-nd-full.fits.gz
 dim,53706044,3,"(3110, 3095)","(3110, 3095)","(3110, 3095)",e03797-nd-full.fits.gz
 itemsize,53706044,3,64,8,8,e03797-nd-full.fits.gz
-datasize,53706044,3,616028800,77003600,77003600,e03797-nd-full.fits.gz
+datasize,53706044,3,77003600,9625450,9625450,e03797-nd-full.fits.gz
 size,53655759,3,80470080,10062720,10062720,e46167-nd-full.fits.gz
 name,53655759,3,PRIMARY,,,e46167-nd-full.fits.gz
 hdutype,53655759,3,PrimaryHDU,ImageHDU,ImageHDU,e46167-nd-full.fits.gz
 dim,53655759,3,"(3166, 3177)","(3166, 3177)","(3166, 3177)",e46167-nd-full.fits.gz
 itemsize,53655759,3,64,8,8,e46167-nd-full.fits.gz
-datasize,53655759,3,643736448,80467056,80467056,e46167-nd-full.fits.gz
+datasize,53655759,3,80467056,10058382,10058382,e46167-nd-full.fits.gz
 size,3644209,3,77299200,9665280,9665280,e21371-fd-full.fits.gz
 name,3644209,3,PRIMARY,,,e21371-fd-full.fits.gz
 hdutype,3644209,3,PrimaryHDU,ImageHDU,ImageHDU,e21371-fd-full.fits.gz
 dim,3644209,3,"(3139, 3078)","(3139, 3078)","(3139, 3078)",e21371-fd-full.fits.gz
 itemsize,3644209,3,64,8,8,e21371-fd-full.fits.gz
-datasize,3644209,3,618357888,77294736,77294736,e21371-fd-full.fits.gz
+datasize,3644209,3,77294736,9661842,9661842,e21371-fd-full.fits.gz
 size,53816570,3,80000640,10005120,10005120,e07770-nd-full.fits.gz
 name,53816570,3,PRIMARY,,,e07770-nd-full.fits.gz
 hdutype,53816570,3,PrimaryHDU,ImageHDU,ImageHDU,e07770-nd-full.fits.gz
 dim,53816570,3,"(3206, 3119)","(3206, 3119)","(3206, 3119)",e07770-nd-full.fits.gz
 itemsize,53816570,3,64,8,8,e07770-nd-full.fits.gz
-datasize,53816570,3,639968896,79996112,79996112,e07770-nd-full.fits.gz
+datasize,53816570,3,79996112,9999514,9999514,e07770-nd-full.fits.gz
 size,9071172,3,78079680,9763200,9763200,e29633-fd-full.fits.gz
 name,9071172,3,PRIMARY,,,e29633-fd-full.fits.gz
 hdutype,9071172,3,PrimaryHDU,ImageHDU,ImageHDU,e29633-fd-full.fits.gz
 dim,9071172,3,"(3134, 3114)","(3134, 3114)","(3134, 3114)",e29633-fd-full.fits.gz
 itemsize,9071172,3,64,8,8,e29633-fd-full.fits.gz
-datasize,9071172,3,624593664,78074208,78074208,e29633-fd-full.fits.gz
+datasize,9071172,3,78074208,9759276,9759276,e29633-fd-full.fits.gz
 size,53989981,3,80697600,10091520,10091520,e41228-nd-full.fits.gz
 name,53989981,3,PRIMARY,,,e41228-nd-full.fits.gz
 hdutype,53989981,3,PrimaryHDU,ImageHDU,ImageHDU,e41228-nd-full.fits.gz
 dim,53989981,3,"(3163, 3189)","(3163, 3189)","(3163, 3189)",e41228-nd-full.fits.gz
 itemsize,53989981,3,64,8,8,e41228-nd-full.fits.gz
-datasize,53989981,3,645555648,80694456,80694456,e41228-nd-full.fits.gz
+datasize,53989981,3,80694456,10086807,10086807,e41228-nd-full.fits.gz
 size,53386975,3,77106240,9642240,9642240,e24342-nd-full.fits.gz
 name,53386975,3,PRIMARY,,,e24342-nd-full.fits.gz
 hdutype,53386975,3,PrimaryHDU,ImageHDU,ImageHDU,e24342-nd-full.fits.gz
 dim,53386975,3,"(3087, 3122)","(3087, 3122)","(3087, 3122)",e24342-nd-full.fits.gz
 itemsize,53386975,3,64,8,8,e24342-nd-full.fits.gz
-datasize,53386975,3,616807296,77100912,77100912,e24342-nd-full.fits.gz
+datasize,53386975,3,77100912,9637614,9637614,e24342-nd-full.fits.gz
 size,19618137,3,75404160,9429120,9429120,e29544-fd-full.fits.gz
 name,19618137,3,PRIMARY,,,e29544-fd-full.fits.gz
 hdutype,19618137,3,PrimaryHDU,ImageHDU,ImageHDU,e29544-fd-full.fits.gz
 dim,19618137,3,"(3075, 3065)","(3075, 3065)","(3075, 3065)",e29544-fd-full.fits.gz
 itemsize,19618137,3,64,8,8,e29544-fd-full.fits.gz
-datasize,19618137,3,603192000,75399000,75399000,e29544-fd-full.fits.gz
+datasize,19618137,3,75399000,9424875,9424875,e29544-fd-full.fits.gz
 size,18886914,3,78543360,9820800,9820800,e00938-fd-full.fits.gz
 name,18886914,3,PRIMARY,,,e00938-fd-full.fits.gz
 hdutype,18886914,3,PrimaryHDU,ImageHDU,ImageHDU,e00938-fd-full.fits.gz
 dim,18886914,3,"(3096, 3171)","(3096, 3171)","(3096, 3171)",e00938-fd-full.fits.gz
 itemsize,18886914,3,64,8,8,e00938-fd-full.fits.gz
-datasize,18886914,3,628314624,78539328,78539328,e00938-fd-full.fits.gz
+datasize,18886914,3,78539328,9817416,9817416,e00938-fd-full.fits.gz
 size,52499065,3,79712640,9967680,9967680,e28374-nd-full.fits.gz
 name,52499065,3,PRIMARY,,,e28374-nd-full.fits.gz
 hdutype,52499065,3,PrimaryHDU,ImageHDU,ImageHDU,e28374-nd-full.fits.gz
 dim,52499065,3,"(3167, 3146)","(3167, 3146)","(3167, 3146)",e28374-nd-full.fits.gz
 itemsize,52499065,3,64,8,8,e28374-nd-full.fits.gz
-datasize,52499065,3,637656448,79707056,79707056,e28374-nd-full.fits.gz
+datasize,52499065,3,79707056,9963382,9963382,e28374-nd-full.fits.gz
 size,53264989,3,81817920,10229760,10229760,e04338-nd-full.fits.gz
 name,53264989,3,PRIMARY,,,e04338-nd-full.fits.gz
 hdutype,53264989,3,PrimaryHDU,ImageHDU,ImageHDU,e04338-nd-full.fits.gz
 dim,53264989,3,"(3177, 3219)","(3177, 3219)","(3177, 3219)",e04338-nd-full.fits.gz
 itemsize,53264989,3,64,8,8,e04338-nd-full.fits.gz
-datasize,53264989,3,654512832,81814104,81814104,e04338-nd-full.fits.gz
+datasize,53264989,3,81814104,10226763,10226763,e04338-nd-full.fits.gz
 size,53961585,3,78117120,9768960,9768960,e07053-nd-full.fits.gz
 name,53961585,3,PRIMARY,,,e07053-nd-full.fits.gz
 hdutype,53961585,3,PrimaryHDU,ImageHDU,ImageHDU,e07053-nd-full.fits.gz
 dim,53961585,3,"(3163, 3087)","(3163, 3087)","(3163, 3087)",e07053-nd-full.fits.gz
 itemsize,53961585,3,64,8,8,e07053-nd-full.fits.gz
-datasize,53961585,3,624907584,78113448,78113448,e07053-nd-full.fits.gz
+datasize,53961585,3,78113448,9764181,9764181,e07053-nd-full.fits.gz
 size,19191825,3,77304960,9668160,9668160,e19760-fd-full.fits.gz
 name,19191825,3,PRIMARY,,,e19760-fd-full.fits.gz
 hdutype,19191825,3,PrimaryHDU,ImageHDU,ImageHDU,e19760-fd-full.fits.gz
 dim,19191825,3,"(3123, 3094)","(3123, 3094)","(3123, 3094)",e19760-fd-full.fits.gz
 itemsize,19191825,3,64,8,8,e19760-fd-full.fits.gz
-datasize,19191825,3,618403968,77300496,77300496,e19760-fd-full.fits.gz
+datasize,19191825,3,77300496,9662562,9662562,e19760-fd-full.fits.gz
 size,20127883,3,79225920,9907200,9907200,e07451-fd-full.fits.gz
 name,20127883,3,PRIMARY,,,e07451-fd-full.fits.gz
 hdutype,20127883,3,PrimaryHDU,ImageHDU,ImageHDU,e07451-fd-full.fits.gz
 dim,20127883,3,"(3119, 3175)","(3119, 3175)","(3119, 3175)",e07451-fd-full.fits.gz
 itemsize,20127883,3,64,8,8,e07451-fd-full.fits.gz
-datasize,20127883,3,633780800,79222600,79222600,e07451-fd-full.fits.gz
+datasize,20127883,3,79222600,9902825,9902825,e07451-fd-full.fits.gz
 size,53157555,3,76216320,9529920,9529920,e09909-nd-full.fits.gz
 name,53157555,3,PRIMARY,,,e09909-nd-full.fits.gz
 hdutype,53157555,3,PrimaryHDU,ImageHDU,ImageHDU,e09909-nd-full.fits.gz
 dim,53157555,3,"(3094, 3079)","(3094, 3079)","(3094, 3079)",e09909-nd-full.fits.gz
 itemsize,53157555,3,64,8,8,e09909-nd-full.fits.gz
-datasize,53157555,3,609691264,76211408,76211408,e09909-nd-full.fits.gz
+datasize,53157555,3,76211408,9526426,9526426,e09909-nd-full.fits.gz
 size,13753999,3,77495040,9691200,9691200,e13999-fd-full.fits.gz
 name,13753999,3,PRIMARY,,,e13999-fd-full.fits.gz
 hdutype,13753999,3,PrimaryHDU,ImageHDU,ImageHDU,e13999-fd-full.fits.gz
 dim,13753999,3,"(3076, 3149)","(3076, 3149)","(3076, 3149)",e13999-fd-full.fits.gz
 itemsize,13753999,3,64,8,8,e13999-fd-full.fits.gz
-datasize,13753999,3,619924736,77490592,77490592,e13999-fd-full.fits.gz
+datasize,13753999,3,77490592,9686324,9686324,e13999-fd-full.fits.gz
 size,54645940,3,80953920,10123200,10123200,e42100-nd-full.fits.gz
 name,54645940,3,PRIMARY,,,e42100-nd-full.fits.gz
 hdutype,54645940,3,PrimaryHDU,ImageHDU,ImageHDU,e42100-nd-full.fits.gz
 dim,54645940,3,"(3179, 3183)","(3179, 3183)","(3179, 3183)",e42100-nd-full.fits.gz
 itemsize,54645940,3,64,8,8,e42100-nd-full.fits.gz
-datasize,54645940,3,647600448,80950056,80950056,e42100-nd-full.fits.gz
+datasize,54645940,3,80950056,10118757,10118757,e42100-nd-full.fits.gz
 size,23685532,3,77002560,9627840,9627840,e06748-fd-full.fits.gz
 name,23685532,3,PRIMARY,,,e06748-fd-full.fits.gz
 hdutype,23685532,3,PrimaryHDU,ImageHDU,ImageHDU,e06748-fd-full.fits.gz
 dim,23685532,3,"(3078, 3127)","(3078, 3127)","(3078, 3127)",e06748-fd-full.fits.gz
 itemsize,23685532,3,64,8,8,e06748-fd-full.fits.gz
-datasize,23685532,3,615993984,76999248,76999248,e06748-fd-full.fits.gz
+datasize,23685532,3,76999248,9624906,9624906,e06748-fd-full.fits.gz
 size,40865098,3,78897600,9866880,9866880,e40591-nd-full.fits.gz
 name,40865098,3,PRIMARY,,,e40591-nd-full.fits.gz
 hdutype,40865098,3,PrimaryHDU,ImageHDU,ImageHDU,e40591-nd-full.fits.gz
 dim,40865098,3,"(3106, 3175)","(3106, 3175)","(3106, 3175)",e40591-nd-full.fits.gz
 itemsize,40865098,3,64,8,8,e40591-nd-full.fits.gz
-datasize,40865098,3,631139200,78892400,78892400,e40591-nd-full.fits.gz
+datasize,40865098,3,78892400,9861550,9861550,e40591-nd-full.fits.gz
 size,29006698,3,75401280,9429120,9429120,e43013-nd-full.fits.gz
 name,29006698,3,PRIMARY,,,e43013-nd-full.fits.gz
 hdutype,29006698,3,PrimaryHDU,ImageHDU,ImageHDU,e43013-nd-full.fits.gz
 dim,29006698,3,"(3052, 3088)","(3052, 3088)","(3052, 3088)",e43013-nd-full.fits.gz
 itemsize,29006698,3,64,8,8,e43013-nd-full.fits.gz
-datasize,29006698,3,603172864,75396608,75396608,e43013-nd-full.fits.gz
+datasize,29006698,3,75396608,9424576,9424576,e43013-nd-full.fits.gz
 size,54172103,3,80216640,10031040,10031040,e44795-nd-full.fits.gz
 name,54172103,3,PRIMARY,,,e44795-nd-full.fits.gz
 hdutype,54172103,3,PrimaryHDU,ImageHDU,ImageHDU,e44795-nd-full.fits.gz
 dim,54172103,3,"(3176, 3157)","(3176, 3157)","(3176, 3157)",e44795-nd-full.fits.gz
 itemsize,54172103,3,64,8,8,e44795-nd-full.fits.gz
-datasize,54172103,3,641704448,80213056,80213056,e44795-nd-full.fits.gz
+datasize,54172103,3,80213056,10026632,10026632,e44795-nd-full.fits.gz
 size,5183089,3,78727680,9843840,9843840,e26760-fd-full.fits.gz
 name,5183089,3,PRIMARY,,,e26760-fd-full.fits.gz
 hdutype,5183089,3,PrimaryHDU,ImageHDU,ImageHDU,e26760-fd-full.fits.gz
 dim,5183089,3,"(3118, 3156)","(3118, 3156)","(3118, 3156)",e26760-fd-full.fits.gz
 itemsize,5183089,3,64,8,8,e26760-fd-full.fits.gz
-datasize,5183089,3,629786112,78723264,78723264,e26760-fd-full.fits.gz
+datasize,5183089,3,78723264,9840408,9840408,e26760-fd-full.fits.gz
 size,54294701,3,79989120,10002240,10002240,e22053-nd-full.fits.gz
 name,54294701,3,PRIMARY,,,e22053-nd-full.fits.gz
 hdutype,54294701,3,PrimaryHDU,ImageHDU,ImageHDU,e22053-nd-full.fits.gz
 dim,54294701,3,"(3167, 3157)","(3167, 3157)","(3167, 3157)",e22053-nd-full.fits.gz
 itemsize,54294701,3,64,8,8,e22053-nd-full.fits.gz
-datasize,54294701,3,639886016,79985752,79985752,e22053-nd-full.fits.gz
+datasize,54294701,3,79985752,9998219,9998219,e22053-nd-full.fits.gz
 size,22666860,3,78252480,9786240,9786240,e14313-fd-full.fits.gz
 name,22666860,3,PRIMARY,,,e14313-fd-full.fits.gz
 hdutype,22666860,3,PrimaryHDU,ImageHDU,ImageHDU,e14313-fd-full.fits.gz
 dim,22666860,3,"(3147, 3108)","(3147, 3108)","(3147, 3108)",e14313-fd-full.fits.gz
 itemsize,22666860,3,64,8,8,e14313-fd-full.fits.gz
-datasize,22666860,3,625976064,78247008,78247008,e14313-fd-full.fits.gz
+datasize,22666860,3,78247008,9780876,9780876,e14313-fd-full.fits.gz
 size,53089829,3,80979840,10126080,10126080,e35028-nd-full.fits.gz
 name,53089829,3,PRIMARY,,,e35028-nd-full.fits.gz
 hdutype,53089829,3,PrimaryHDU,ImageHDU,ImageHDU,e35028-nd-full.fits.gz
 dim,53089829,3,"(3169, 3194)","(3169, 3194)","(3169, 3194)",e35028-nd-full.fits.gz
 itemsize,53089829,3,64,8,8,e35028-nd-full.fits.gz
-datasize,53089829,3,647794304,80974288,80974288,e35028-nd-full.fits.gz
+datasize,53089829,3,80974288,10121786,10121786,e35028-nd-full.fits.gz
 size,14167800,3,76907520,9616320,9616320,e05027-fd-full.fits.gz
 name,14167800,3,PRIMARY,,,e05027-fd-full.fits.gz
 hdutype,14167800,3,PrimaryHDU,ImageHDU,ImageHDU,e05027-fd-full.fits.gz
 dim,14167800,3,"(3113, 3088)","(3113, 3088)","(3113, 3088)",e05027-fd-full.fits.gz
 itemsize,14167800,3,64,8,8,e05027-fd-full.fits.gz
-datasize,14167800,3,615228416,76903552,76903552,e05027-fd-full.fits.gz
+datasize,14167800,3,76903552,9612944,9612944,e05027-fd-full.fits.gz
 size,7078642,3,78269760,9786240,9786240,e31636-fd-full.fits.gz
 name,7078642,3,PRIMARY,,,e31636-fd-full.fits.gz
 hdutype,7078642,3,PrimaryHDU,ImageHDU,ImageHDU,e31636-fd-full.fits.gz
 dim,7078642,3,"(3163, 3093)","(3163, 3093)","(3163, 3093)",e31636-fd-full.fits.gz
 itemsize,7078642,3,64,8,8,e31636-fd-full.fits.gz
-datasize,7078642,3,626122176,78265272,78265272,e31636-fd-full.fits.gz
+datasize,7078642,3,78265272,9783159,9783159,e31636-fd-full.fits.gz
 size,52892051,3,80409600,10054080,10054080,e35387-nd-full.fits.gz
 name,52892051,3,PRIMARY,,,e35387-nd-full.fits.gz
 hdutype,52892051,3,PrimaryHDU,ImageHDU,ImageHDU,e35387-nd-full.fits.gz
 dim,52892051,3,"(3208, 3133)","(3208, 3133)","(3208, 3133)",e35387-nd-full.fits.gz
 itemsize,52892051,3,64,8,8,e35387-nd-full.fits.gz
-datasize,52892051,3,643242496,80405312,80405312,e35387-nd-full.fits.gz
+datasize,52892051,3,80405312,10050664,10050664,e35387-nd-full.fits.gz
 size,49022942,3,76933440,9619200,9619200,e10602-nd-full.fits.gz
 name,49022942,3,PRIMARY,,,e10602-nd-full.fits.gz
 hdutype,49022942,3,PrimaryHDU,ImageHDU,ImageHDU,e10602-nd-full.fits.gz
 dim,49022942,3,"(3111, 3091)","(3111, 3091)","(3111, 3091)",e10602-nd-full.fits.gz
 itemsize,49022942,3,64,8,8,e10602-nd-full.fits.gz
-datasize,49022942,3,615430464,76928808,76928808,e10602-nd-full.fits.gz
+datasize,49022942,3,76928808,9616101,9616101,e10602-nd-full.fits.gz
 size,50530929,3,75672000,9463680,9463680,e20916-nd-full.fits.gz
 name,50530929,3,PRIMARY,,,e20916-nd-full.fits.gz
 hdutype,50530929,3,PrimaryHDU,ImageHDU,ImageHDU,e20916-nd-full.fits.gz
 dim,50530929,3,"(3089, 3062)","(3089, 3062)","(3089, 3062)",e20916-nd-full.fits.gz
 itemsize,50530929,3,64,8,8,e20916-nd-full.fits.gz
-datasize,50530929,3,605345152,75668144,75668144,e20916-nd-full.fits.gz
+datasize,50530929,3,75668144,9458518,9458518,e20916-nd-full.fits.gz
 size,50763245,3,75991680,9504000,9504000,e25577-nd-full.fits.gz
 name,50763245,3,PRIMARY,,,e25577-nd-full.fits.gz
 hdutype,50763245,3,PrimaryHDU,ImageHDU,ImageHDU,e25577-nd-full.fits.gz
 dim,50763245,3,"(3068, 3096)","(3068, 3096)","(3068, 3096)",e25577-nd-full.fits.gz
 itemsize,50763245,3,64,8,8,e25577-nd-full.fits.gz
-datasize,50763245,3,607905792,75988224,75988224,e25577-nd-full.fits.gz
+datasize,50763245,3,75988224,9498528,9498528,e25577-nd-full.fits.gz
 size,10647392,3,79583040,9950400,9950400,e09353-fd-full.fits.gz
 name,10647392,3,PRIMARY,,,e09353-fd-full.fits.gz
 hdutype,10647392,3,PrimaryHDU,ImageHDU,ImageHDU,e09353-fd-full.fits.gz
 dim,10647392,3,"(3176, 3132)","(3176, 3132)","(3176, 3132)",e09353-fd-full.fits.gz
 itemsize,10647392,3,64,8,8,e09353-fd-full.fits.gz
-datasize,10647392,3,636622848,79577856,79577856,e09353-fd-full.fits.gz
+datasize,10647392,3,79577856,9947232,9947232,e09353-fd-full.fits.gz
 size,2847766,3,78667200,9838080,9838080,e28978-fd-full.fits.gz
 name,2847766,3,PRIMARY,,,e28978-fd-full.fits.gz
 hdutype,2847766,3,PrimaryHDU,ImageHDU,ImageHDU,e28978-fd-full.fits.gz
 dim,2847766,3,"(3178, 3094)","(3178, 3094)","(3178, 3094)",e28978-fd-full.fits.gz
 itemsize,2847766,3,64,8,8,e28978-fd-full.fits.gz
-datasize,2847766,3,629294848,78661856,78661856,e28978-fd-full.fits.gz
+datasize,2847766,3,78661856,9832732,9832732,e28978-fd-full.fits.gz
 size,45051805,3,80519040,10068480,10068480,e11428-nd-full.fits.gz
 name,45051805,3,PRIMARY,,,e11428-nd-full.fits.gz
 hdutype,45051805,3,PrimaryHDU,ImageHDU,ImageHDU,e11428-nd-full.fits.gz
 dim,45051805,3,"(3152, 3193)","(3152, 3193)","(3152, 3193)",e11428-nd-full.fits.gz
 itemsize,45051805,3,64,8,8,e11428-nd-full.fits.gz
-datasize,45051805,3,644117504,80514688,80514688,e11428-nd-full.fits.gz
+datasize,45051805,3,80514688,10064336,10064336,e11428-nd-full.fits.gz
 size,18071928,3,79156800,9898560,9898560,e14019-fd-full.fits.gz
 name,18071928,3,PRIMARY,,,e14019-fd-full.fits.gz
 hdutype,18071928,3,PrimaryHDU,ImageHDU,ImageHDU,e14019-fd-full.fits.gz
 dim,18071928,3,"(3137, 3154)","(3137, 3154)","(3137, 3154)",e14019-fd-full.fits.gz
 itemsize,18071928,3,64,8,8,e14019-fd-full.fits.gz
-datasize,18071928,3,633222272,79152784,79152784,e14019-fd-full.fits.gz
+datasize,18071928,3,79152784,9894098,9894098,e14019-fd-full.fits.gz
 size,2834822,3,77728320,9720000,9720000,e17201-fd-full.fits.gz
 name,2834822,3,PRIMARY,,,e17201-fd-full.fits.gz
 hdutype,2834822,3,PrimaryHDU,ImageHDU,ImageHDU,e17201-fd-full.fits.gz
 dim,2834822,3,"(3121, 3113)","(3121, 3113)","(3121, 3113)",e17201-fd-full.fits.gz
 itemsize,2834822,3,64,8,8,e17201-fd-full.fits.gz
-datasize,2834822,3,621803072,77725384,77725384,e17201-fd-full.fits.gz
+datasize,2834822,3,77725384,9715673,9715673,e17201-fd-full.fits.gz
 size,47585568,3,76190400,9527040,9527040,e13734-nd-full.fits.gz
 name,47585568,3,PRIMARY,,,e13734-nd-full.fits.gz
 hdutype,47585568,3,PrimaryHDU,ImageHDU,ImageHDU,e13734-nd-full.fits.gz
 dim,47585568,3,"(3103, 3069)","(3103, 3069)","(3103, 3069)",e13734-nd-full.fits.gz
 itemsize,47585568,3,64,8,8,e13734-nd-full.fits.gz
-datasize,47585568,3,609478848,76184856,76184856,e13734-nd-full.fits.gz
+datasize,47585568,3,76184856,9523107,9523107,e13734-nd-full.fits.gz
 size,5211144,3,77624640,9705600,9705600,e21486-fd-full.fits.gz
 name,5211144,3,PRIMARY,,,e21486-fd-full.fits.gz
 hdutype,5211144,3,PrimaryHDU,ImageHDU,ImageHDU,e21486-fd-full.fits.gz
 dim,5211144,3,"(3144, 3086)","(3144, 3086)","(3144, 3086)",e21486-fd-full.fits.gz
 itemsize,5211144,3,64,8,8,e21486-fd-full.fits.gz
-datasize,5211144,3,620952576,77619072,77619072,e21486-fd-full.fits.gz
+datasize,5211144,3,77619072,9702384,9702384,e21486-fd-full.fits.gz
 size,53553255,3,77057280,9636480,9636480,e20036-nd-full.fits.gz
 name,53553255,3,PRIMARY,,,e20036-nd-full.fits.gz
 hdutype,53553255,3,PrimaryHDU,ImageHDU,ImageHDU,e20036-nd-full.fits.gz
 dim,53553255,3,"(3092, 3115)","(3092, 3115)","(3092, 3115)",e20036-nd-full.fits.gz
 itemsize,53553255,3,64,8,8,e20036-nd-full.fits.gz
-datasize,53553255,3,616421120,77052640,77052640,e20036-nd-full.fits.gz
+datasize,53553255,3,77052640,9631580,9631580,e20036-nd-full.fits.gz
 size,23075747,3,79387200,9927360,9927360,e30689-fd-full.fits.gz
 name,23075747,3,PRIMARY,,,e30689-fd-full.fits.gz
 hdutype,23075747,3,PrimaryHDU,ImageHDU,ImageHDU,e30689-fd-full.fits.gz
 dim,23075747,3,"(3098, 3203)","(3098, 3203)","(3098, 3203)",e30689-fd-full.fits.gz
 itemsize,23075747,3,64,8,8,e30689-fd-full.fits.gz
-datasize,23075747,3,635065216,79383152,79383152,e30689-fd-full.fits.gz
+datasize,23075747,3,79383152,9922894,9922894,e30689-fd-full.fits.gz
 size,8819451,3,75720960,9469440,9469440,e12509-fd-full.fits.gz
 name,8819451,3,PRIMARY,,,e12509-fd-full.fits.gz
 hdutype,8819451,3,PrimaryHDU,ImageHDU,ImageHDU,e12509-fd-full.fits.gz
 dim,8819451,3,"(3093, 3060)","(3093, 3060)","(3093, 3060)",e12509-fd-full.fits.gz
 itemsize,8819451,3,64,8,8,e12509-fd-full.fits.gz
-datasize,8819451,3,605733120,75716640,75716640,e12509-fd-full.fits.gz
+datasize,8819451,3,75716640,9464580,9464580,e12509-fd-full.fits.gz
 size,52830524,3,77207040,9653760,9653760,e37319-nd-full.fits.gz
 name,52830524,3,PRIMARY,,,e37319-nd-full.fits.gz
 hdutype,52830524,3,PrimaryHDU,ImageHDU,ImageHDU,e37319-nd-full.fits.gz
 dim,52830524,3,"(3103, 3110)","(3103, 3110)","(3103, 3110)",e37319-nd-full.fits.gz
 itemsize,52830524,3,64,8,8,e37319-nd-full.fits.gz
-datasize,52830524,3,617621120,77202640,77202640,e37319-nd-full.fits.gz
+datasize,52830524,3,77202640,9650330,9650330,e37319-nd-full.fits.gz
 size,18101398,3,82100160,10267200,10267200,e28245-fd-full.fits.gz
 name,18101398,3,PRIMARY,,,e28245-fd-full.fits.gz
 hdutype,18101398,3,PrimaryHDU,ImageHDU,ImageHDU,e28245-fd-full.fits.gz
 dim,18101398,3,"(3223, 3184)","(3223, 3184)","(3223, 3184)",e28245-fd-full.fits.gz
 itemsize,18101398,3,64,8,8,e28245-fd-full.fits.gz
-datasize,18101398,3,656770048,82096256,82096256,e28245-fd-full.fits.gz
+datasize,18101398,3,82096256,10262032,10262032,e28245-fd-full.fits.gz
 size,54477322,3,79228800,9907200,9907200,e08323-nd-full.fits.gz
 name,54477322,3,PRIMARY,,,e08323-nd-full.fits.gz
 hdutype,54477322,3,PrimaryHDU,ImageHDU,ImageHDU,e08323-nd-full.fits.gz
 dim,54477322,3,"(3124, 3170)","(3124, 3170)","(3124, 3170)",e08323-nd-full.fits.gz
 itemsize,54477322,3,64,8,8,e08323-nd-full.fits.gz
-datasize,54477322,3,633797120,79224640,79224640,e08323-nd-full.fits.gz
+datasize,54477322,3,79224640,9903080,9903080,e08323-nd-full.fits.gz
 size,51054688,3,80824320,10105920,10105920,e01747-nd-full.fits.gz
 name,51054688,3,PRIMARY,,,e01747-nd-full.fits.gz
 hdutype,51054688,3,PrimaryHDU,ImageHDU,ImageHDU,e01747-nd-full.fits.gz
 dim,51054688,3,"(3159, 3198)","(3159, 3198)","(3159, 3198)",e01747-nd-full.fits.gz
 itemsize,51054688,3,64,8,8,e01747-nd-full.fits.gz
-datasize,51054688,3,646558848,80819856,80819856,e01747-nd-full.fits.gz
+datasize,51054688,3,80819856,10102482,10102482,e01747-nd-full.fits.gz
 size,44663875,3,75009600,9380160,9380160,e04348-nd-full.fits.gz
 name,44663875,3,PRIMARY,,,e04348-nd-full.fits.gz
 hdutype,44663875,3,PrimaryHDU,ImageHDU,ImageHDU,e04348-nd-full.fits.gz
 dim,44663875,3,"(3076, 3048)","(3076, 3048)","(3076, 3048)",e04348-nd-full.fits.gz
 itemsize,44663875,3,64,8,8,e04348-nd-full.fits.gz
-datasize,44663875,3,600041472,75005184,75005184,e04348-nd-full.fits.gz
+datasize,44663875,3,75005184,9375648,9375648,e04348-nd-full.fits.gz
 size,50556805,3,79888320,9990720,9990720,e34827-nd-full.fits.gz
 name,50556805,3,PRIMARY,,,e34827-nd-full.fits.gz
 hdutype,50556805,3,PrimaryHDU,ImageHDU,ImageHDU,e34827-nd-full.fits.gz
 dim,50556805,3,"(3152, 3168)","(3152, 3168)","(3152, 3168)",e34827-nd-full.fits.gz
 itemsize,50556805,3,64,8,8,e34827-nd-full.fits.gz
-datasize,50556805,3,639074304,79884288,79884288,e34827-nd-full.fits.gz
+datasize,50556805,3,79884288,9985536,9985536,e34827-nd-full.fits.gz
 size,18755843,3,78275520,9789120,9789120,e06038-fd-full.fits.gz
 name,18755843,3,PRIMARY,,,e06038-fd-full.fits.gz
 hdutype,18755843,3,PrimaryHDU,ImageHDU,ImageHDU,e06038-fd-full.fits.gz
 dim,18755843,3,"(3150, 3106)","(3150, 3106)","(3150, 3106)",e06038-fd-full.fits.gz
 itemsize,18755843,3,64,8,8,e06038-fd-full.fits.gz
-datasize,18755843,3,626169600,78271200,78271200,e06038-fd-full.fits.gz
+datasize,18755843,3,78271200,9783900,9783900,e06038-fd-full.fits.gz
 size,43643044,3,77978880,9751680,9751680,e16418-nd-full.fits.gz
 name,43643044,3,PRIMARY,,,e16418-nd-full.fits.gz
 hdutype,43643044,3,PrimaryHDU,ImageHDU,ImageHDU,e16418-nd-full.fits.gz
 dim,43643044,3,"(3136, 3108)","(3136, 3108)","(3136, 3108)",e16418-nd-full.fits.gz
 itemsize,43643044,3,64,8,8,e16418-nd-full.fits.gz
-datasize,43643044,3,623788032,77973504,77973504,e16418-nd-full.fits.gz
+datasize,43643044,3,77973504,9746688,9746688,e16418-nd-full.fits.gz
 size,16311298,3,76884480,9613440,9613440,e05265-fd-full.fits.gz
 name,16311298,3,PRIMARY,,,e05265-fd-full.fits.gz
 hdutype,16311298,3,PrimaryHDU,ImageHDU,ImageHDU,e05265-fd-full.fits.gz
 dim,16311298,3,"(3102, 3098)","(3102, 3098)","(3102, 3098)",e05265-fd-full.fits.gz
 itemsize,16311298,3,64,8,8,e05265-fd-full.fits.gz
-datasize,16311298,3,615039744,76879968,76879968,e05265-fd-full.fits.gz
+datasize,16311298,3,76879968,9609996,9609996,e05265-fd-full.fits.gz
 size,18492206,3,75723840,9469440,9469440,e04139-nd-full.fits.gz
 name,18492206,3,PRIMARY,,,e04139-nd-full.fits.gz
 hdutype,18492206,3,PrimaryHDU,ImageHDU,ImageHDU,e04139-nd-full.fits.gz
 dim,18492206,3,"(3075, 3078)","(3075, 3078)","(3075, 3078)",e04139-nd-full.fits.gz
 itemsize,18492206,3,64,8,8,e04139-nd-full.fits.gz
-datasize,18492206,3,605750400,75718800,75718800,e04139-nd-full.fits.gz
+datasize,18492206,3,75718800,9464850,9464850,e04139-nd-full.fits.gz
 size,13873560,3,76345920,9547200,9547200,e10930-nd-full.fits.gz
 name,13873560,3,PRIMARY,,,e10930-nd-full.fits.gz
 hdutype,13873560,3,PrimaryHDU,ImageHDU,ImageHDU,e10930-nd-full.fits.gz
 dim,13873560,3,"(3137, 3042)","(3137, 3042)","(3137, 3042)",e10930-nd-full.fits.gz
 itemsize,13873560,3,64,8,8,e10930-nd-full.fits.gz
-datasize,13873560,3,610736256,76342032,76342032,e10930-nd-full.fits.gz
+datasize,13873560,3,76342032,9542754,9542754,e10930-nd-full.fits.gz
 size,38007469,3,79358400,9924480,9924480,e23532-nd-full.fits.gz
 name,38007469,3,PRIMARY,,,e23532-nd-full.fits.gz
 hdutype,38007469,3,PrimaryHDU,ImageHDU,ImageHDU,e23532-nd-full.fits.gz
 dim,38007469,3,"(3148, 3151)","(3148, 3151)","(3148, 3151)",e23532-nd-full.fits.gz
 itemsize,38007469,3,64,8,8,e23532-nd-full.fits.gz
-datasize,38007469,3,634838272,79354784,79354784,e23532-nd-full.fits.gz
+datasize,38007469,3,79354784,9919348,9919348,e23532-nd-full.fits.gz
 size,53598197,3,80291520,10039680,10039680,e26676-nd-full.fits.gz
 name,53598197,3,PRIMARY,,,e26676-nd-full.fits.gz
 hdutype,53598197,3,PrimaryHDU,ImageHDU,ImageHDU,e26676-nd-full.fits.gz
 dim,53598197,3,"(3148, 3188)","(3148, 3188)","(3148, 3188)",e26676-nd-full.fits.gz
 itemsize,53598197,3,64,8,8,e26676-nd-full.fits.gz
-datasize,53598197,3,642292736,80286592,80286592,e26676-nd-full.fits.gz
+datasize,53598197,3,80286592,10035824,10035824,e26676-nd-full.fits.gz
 size,37158088,3,75525120,9443520,9443520,e25925-nd-full.fits.gz
 name,37158088,3,PRIMARY,,,e25925-nd-full.fits.gz
 hdutype,37158088,3,PrimaryHDU,ImageHDU,ImageHDU,e25925-nd-full.fits.gz
 dim,37158088,3,"(3069, 3076)","(3069, 3076)","(3069, 3076)",e25925-nd-full.fits.gz
 itemsize,37158088,3,64,8,8,e25925-nd-full.fits.gz
-datasize,37158088,3,604175616,75521952,75521952,e25925-nd-full.fits.gz
+datasize,37158088,3,75521952,9440244,9440244,e25925-nd-full.fits.gz
 size,37079938,3,76118400,9518400,9518400,e43597-nd-full.fits.gz
 name,37079938,3,PRIMARY,,,e43597-nd-full.fits.gz
 hdutype,37079938,3,PrimaryHDU,ImageHDU,ImageHDU,e43597-nd-full.fits.gz
 dim,37079938,3,"(3079, 3090)","(3079, 3090)","(3079, 3090)",e43597-nd-full.fits.gz
 itemsize,37079938,3,64,8,8,e43597-nd-full.fits.gz
-datasize,37079938,3,608903040,76112880,76112880,e43597-nd-full.fits.gz
+datasize,37079938,3,76112880,9514110,9514110,e43597-nd-full.fits.gz
 size,47132357,3,79606080,9953280,9953280,e15645-nd-full.fits.gz
 name,47132357,3,PRIMARY,,,e15645-nd-full.fits.gz
 hdutype,47132357,3,PrimaryHDU,ImageHDU,ImageHDU,e15645-nd-full.fits.gz
 dim,47132357,3,"(3183, 3126)","(3183, 3126)","(3183, 3126)",e15645-nd-full.fits.gz
 itemsize,47132357,3,64,8,8,e15645-nd-full.fits.gz
-datasize,47132357,3,636803712,79600464,79600464,e15645-nd-full.fits.gz
+datasize,47132357,3,79600464,9950058,9950058,e15645-nd-full.fits.gz
 size,17003128,3,78327360,9794880,9794880,e29245-fd-full.fits.gz
 name,17003128,3,PRIMARY,,,e29245-fd-full.fits.gz
 hdutype,17003128,3,PrimaryHDU,ImageHDU,ImageHDU,e29245-fd-full.fits.gz
 dim,17003128,3,"(3117, 3141)","(3117, 3141)","(3117, 3141)",e29245-fd-full.fits.gz
 itemsize,17003128,3,64,8,8,e29245-fd-full.fits.gz
-datasize,17003128,3,626591808,78323976,78323976,e29245-fd-full.fits.gz
+datasize,17003128,3,78323976,9790497,9790497,e29245-fd-full.fits.gz
 size,25851586,3,79349760,9921600,9921600,e30590-fd-full.fits.gz
 name,25851586,3,PRIMARY,,,e30590-fd-full.fits.gz
 hdutype,25851586,3,PrimaryHDU,ImageHDU,ImageHDU,e30590-fd-full.fits.gz
 dim,25851586,3,"(3184, 3115)","(3184, 3115)","(3184, 3115)",e30590-fd-full.fits.gz
 itemsize,25851586,3,64,8,8,e30590-fd-full.fits.gz
-datasize,25851586,3,634762240,79345280,79345280,e30590-fd-full.fits.gz
+datasize,25851586,3,79345280,9918160,9918160,e30590-fd-full.fits.gz
 size,54236894,3,79508160,9941760,9941760,e40404-nd-full.fits.gz
 name,54236894,3,PRIMARY,,,e40404-nd-full.fits.gz
 hdutype,54236894,3,PrimaryHDU,ImageHDU,ImageHDU,e40404-nd-full.fits.gz
 dim,54236894,3,"(3164, 3141)","(3164, 3141)","(3164, 3141)",e40404-nd-full.fits.gz
 itemsize,54236894,3,64,8,8,e40404-nd-full.fits.gz
-datasize,54236894,3,636039936,79504992,79504992,e40404-nd-full.fits.gz
+datasize,54236894,3,79504992,9938124,9938124,e40404-nd-full.fits.gz
 size,53617552,3,80334720,10045440,10045440,e26678-nd-full.fits.gz
 name,53617552,3,PRIMARY,,,e26678-nd-full.fits.gz
 hdutype,53617552,3,PrimaryHDU,ImageHDU,ImageHDU,e26678-nd-full.fits.gz
 dim,53617552,3,"(3205, 3133)","(3205, 3133)","(3205, 3133)",e26678-nd-full.fits.gz
 itemsize,53617552,3,64,8,8,e26678-nd-full.fits.gz
-datasize,53617552,3,642640960,80330120,80330120,e26678-nd-full.fits.gz
+datasize,53617552,3,80330120,10041265,10041265,e26678-nd-full.fits.gz
 size,2120406,3,76610880,9578880,9578880,e01411-fd-full.fits.gz
 name,2120406,3,PRIMARY,,,e01411-fd-full.fits.gz
 hdutype,2120406,3,PrimaryHDU,ImageHDU,ImageHDU,e01411-fd-full.fits.gz
 dim,2120406,3,"(3085, 3104)","(3085, 3104)","(3085, 3104)",e01411-fd-full.fits.gz
 itemsize,2120406,3,64,8,8,e01411-fd-full.fits.gz
-datasize,2120406,3,612853760,76606720,76606720,e01411-fd-full.fits.gz
+datasize,2120406,3,76606720,9575840,9575840,e01411-fd-full.fits.gz
 size,53152867,3,75919680,9492480,9492480,e13712-nd-full.fits.gz
 name,53152867,3,PRIMARY,,,e13712-nd-full.fits.gz
 hdutype,53152867,3,PrimaryHDU,ImageHDU,ImageHDU,e13712-nd-full.fits.gz
 dim,53152867,3,"(3094, 3067)","(3094, 3067)","(3094, 3067)",e13712-nd-full.fits.gz
 itemsize,53152867,3,64,8,8,e13712-nd-full.fits.gz
-datasize,53152867,3,607315072,75914384,75914384,e13712-nd-full.fits.gz
+datasize,53152867,3,75914384,9489298,9489298,e13712-nd-full.fits.gz
 size,47680724,3,80138880,10022400,10022400,e10743-nd-full.fits.gz
 name,47680724,3,PRIMARY,,,e10743-nd-full.fits.gz
 hdutype,47680724,3,PrimaryHDU,ImageHDU,ImageHDU,e10743-nd-full.fits.gz
 dim,47680724,3,"(3144, 3186)","(3144, 3186)","(3144, 3186)",e10743-nd-full.fits.gz
 itemsize,47680724,3,64,8,8,e10743-nd-full.fits.gz
-datasize,47680724,3,641074176,80134272,80134272,e10743-nd-full.fits.gz
+datasize,47680724,3,80134272,10016784,10016784,e10743-nd-full.fits.gz
 size,53002687,3,77653440,9711360,9711360,e08553-nd-full.fits.gz
 name,53002687,3,PRIMARY,,,e08553-nd-full.fits.gz
 hdutype,53002687,3,PrimaryHDU,ImageHDU,ImageHDU,e08553-nd-full.fits.gz
 dim,53002687,3,"(3106, 3125)","(3106, 3125)","(3106, 3125)",e08553-nd-full.fits.gz
 itemsize,53002687,3,64,8,8,e08553-nd-full.fits.gz
-datasize,53002687,3,621200000,77650000,77650000,e08553-nd-full.fits.gz
+datasize,53002687,3,77650000,9706250,9706250,e08553-nd-full.fits.gz
 size,51825329,3,78373440,9800640,9800640,e34196-nd-full.fits.gz
 name,51825329,3,PRIMARY,,,e34196-nd-full.fits.gz
 hdutype,51825329,3,PrimaryHDU,ImageHDU,ImageHDU,e34196-nd-full.fits.gz
 dim,51825329,3,"(3157, 3103)","(3157, 3103)","(3157, 3103)",e34196-nd-full.fits.gz
 itemsize,51825329,3,64,8,8,e34196-nd-full.fits.gz
-datasize,51825329,3,626954944,78369368,78369368,e34196-nd-full.fits.gz
+datasize,51825329,3,78369368,9796171,9796171,e34196-nd-full.fits.gz
 size,24311003,3,79836480,9982080,9982080,e28692-fd-full.fits.gz
 name,24311003,3,PRIMARY,,,e28692-fd-full.fits.gz
 hdutype,24311003,3,PrimaryHDU,ImageHDU,ImageHDU,e28692-fd-full.fits.gz
 dim,24311003,3,"(3175, 3143)","(3175, 3143)","(3175, 3143)",e28692-fd-full.fits.gz
 itemsize,24311003,3,64,8,8,e28692-fd-full.fits.gz
-datasize,24311003,3,638657600,79832200,79832200,e28692-fd-full.fits.gz
+datasize,24311003,3,79832200,9979025,9979025,e28692-fd-full.fits.gz
 size,53418550,3,79908480,9993600,9993600,e25728-nd-full.fits.gz
 name,53418550,3,PRIMARY,,,e25728-nd-full.fits.gz
 hdutype,53418550,3,PrimaryHDU,ImageHDU,ImageHDU,e25728-nd-full.fits.gz
 dim,53418550,3,"(3188, 3133)","(3188, 3133)","(3188, 3133)",e25728-nd-full.fits.gz
 itemsize,53418550,3,64,8,8,e25728-nd-full.fits.gz
-datasize,53418550,3,639232256,79904032,79904032,e25728-nd-full.fits.gz
+datasize,53418550,3,79904032,9988004,9988004,e25728-nd-full.fits.gz
 size,47154202,3,76636800,9584640,9584640,e37169-nd-full.fits.gz
 name,47154202,3,PRIMARY,,,e37169-nd-full.fits.gz
 hdutype,47154202,3,PrimaryHDU,ImageHDU,ImageHDU,e37169-nd-full.fits.gz
 dim,47154202,3,"(3102, 3088)","(3102, 3088)","(3102, 3088)",e37169-nd-full.fits.gz
 itemsize,47154202,3,64,8,8,e37169-nd-full.fits.gz
-datasize,47154202,3,613054464,76631808,76631808,e37169-nd-full.fits.gz
+datasize,47154202,3,76631808,9578976,9578976,e37169-nd-full.fits.gz
 size,18233170,3,78753600,9846720,9846720,e04469-fd-full.fits.gz
 name,18233170,3,PRIMARY,,,e04469-fd-full.fits.gz
 hdutype,18233170,3,PrimaryHDU,ImageHDU,ImageHDU,e04469-fd-full.fits.gz
 dim,18233170,3,"(3158, 3117)","(3158, 3117)","(3158, 3117)",e04469-fd-full.fits.gz
 itemsize,18233170,3,64,8,8,e04469-fd-full.fits.gz
-datasize,18233170,3,629983104,78747888,78747888,e04469-fd-full.fits.gz
+datasize,18233170,3,78747888,9843486,9843486,e04469-fd-full.fits.gz
 size,11495274,3,78851520,9861120,9861120,e05160-fd-full.fits.gz
 name,11495274,3,PRIMARY,,,e05160-fd-full.fits.gz
 hdutype,11495274,3,PrimaryHDU,ImageHDU,ImageHDU,e05160-fd-full.fits.gz
 dim,11495274,3,"(3115, 3164)","(3115, 3164)","(3115, 3164)",e05160-fd-full.fits.gz
 itemsize,11495274,3,64,8,8,e05160-fd-full.fits.gz
-datasize,11495274,3,630775040,78846880,78846880,e05160-fd-full.fits.gz
+datasize,11495274,3,78846880,9855860,9855860,e05160-fd-full.fits.gz
 size,6560777,3,79490880,9938880,9938880,e14829-fd-full.fits.gz
 name,6560777,3,PRIMARY,,,e14829-fd-full.fits.gz
 hdutype,6560777,3,PrimaryHDU,ImageHDU,ImageHDU,e14829-fd-full.fits.gz
 dim,6560777,3,"(3202, 3103)","(3202, 3103)","(3202, 3103)",e14829-fd-full.fits.gz
 itemsize,6560777,3,64,8,8,e14829-fd-full.fits.gz
-datasize,6560777,3,635891584,79486448,79486448,e14829-fd-full.fits.gz
+datasize,6560777,3,79486448,9935806,9935806,e14829-fd-full.fits.gz
 size,53499693,3,80876160,10114560,10114560,e28618-nd-full.fits.gz
 name,53499693,3,PRIMARY,,,e28618-nd-full.fits.gz
 hdutype,53499693,3,PrimaryHDU,ImageHDU,ImageHDU,e28618-nd-full.fits.gz
 dim,53499693,3,"(3189, 3170)","(3189, 3170)","(3189, 3170)",e28618-nd-full.fits.gz
 itemsize,53499693,3,64,8,8,e28618-nd-full.fits.gz
-datasize,53499693,3,646984320,80873040,80873040,e28618-nd-full.fits.gz
+datasize,53499693,3,80873040,10109130,10109130,e28618-nd-full.fits.gz
 size,38171920,3,79390080,9927360,9927360,e15308-nd-full.fits.gz
 name,38171920,3,PRIMARY,,,e15308-nd-full.fits.gz
 hdutype,38171920,3,PrimaryHDU,ImageHDU,ImageHDU,e15308-nd-full.fits.gz
 dim,38171920,3,"(3101, 3200)","(3101, 3200)","(3101, 3200)",e15308-nd-full.fits.gz
 itemsize,38171920,3,64,8,8,e15308-nd-full.fits.gz
-datasize,38171920,3,635084800,79385600,79385600,e15308-nd-full.fits.gz
+datasize,38171920,3,79385600,9923200,9923200,e15308-nd-full.fits.gz
 size,4102460,3,77520960,9694080,9694080,e25707-fd-full.fits.gz
 name,4102460,3,PRIMARY,,,e25707-fd-full.fits.gz
 hdutype,4102460,3,PrimaryHDU,ImageHDU,ImageHDU,e25707-fd-full.fits.gz
 dim,4102460,3,"(3078, 3148)","(3078, 3148)","(3078, 3148)",e25707-fd-full.fits.gz
 itemsize,4102460,3,64,8,8,e25707-fd-full.fits.gz
-datasize,4102460,3,620130816,77516352,77516352,e25707-fd-full.fits.gz
+datasize,4102460,3,77516352,9689544,9689544,e25707-fd-full.fits.gz
 size,52095871,3,80746560,10097280,10097280,e09880-nd-full.fits.gz
 name,52095871,3,PRIMARY,,,e09880-nd-full.fits.gz
 hdutype,52095871,3,PrimaryHDU,ImageHDU,ImageHDU,e09880-nd-full.fits.gz
 dim,52095871,3,"(3198, 3156)","(3198, 3156)","(3198, 3156)",e09880-nd-full.fits.gz
 itemsize,52095871,3,64,8,8,e09880-nd-full.fits.gz
-datasize,52095871,3,645944832,80743104,80743104,e09880-nd-full.fits.gz
+datasize,52095871,3,80743104,10092888,10092888,e09880-nd-full.fits.gz
 size,53449036,3,80343360,10045440,10045440,e08265-nd-full.fits.gz
 name,53449036,3,PRIMARY,,,e08265-nd-full.fits.gz
 hdutype,53449036,3,PrimaryHDU,ImageHDU,ImageHDU,e08265-nd-full.fits.gz
 dim,53449036,3,"(3153, 3185)","(3153, 3185)","(3153, 3185)",e08265-nd-full.fits.gz
 itemsize,53449036,3,64,8,8,e08265-nd-full.fits.gz
-datasize,53449036,3,642707520,80338440,80338440,e08265-nd-full.fits.gz
+datasize,53449036,3,80338440,10042305,10042305,e08265-nd-full.fits.gz
 size,39604551,3,75893760,9489600,9489600,e21588-nd-full.fits.gz
 name,39604551,3,PRIMARY,,,e21588-nd-full.fits.gz
 hdutype,39604551,3,PrimaryHDU,ImageHDU,ImageHDU,e21588-nd-full.fits.gz
 dim,39604551,3,"(3087, 3073)","(3087, 3073)","(3087, 3073)",e21588-nd-full.fits.gz
 itemsize,39604551,3,64,8,8,e21588-nd-full.fits.gz
-datasize,39604551,3,607126464,75890808,75890808,e21588-nd-full.fits.gz
+datasize,39604551,3,75890808,9486351,9486351,e21588-nd-full.fits.gz
 size,20284436,3,78776640,9849600,9849600,e01827-fd-full.fits.gz
 name,20284436,3,PRIMARY,,,e01827-fd-full.fits.gz
 hdutype,20284436,3,PrimaryHDU,ImageHDU,ImageHDU,e01827-fd-full.fits.gz
 dim,20284436,3,"(3160, 3116)","(3160, 3116)","(3160, 3116)",e01827-fd-full.fits.gz
 itemsize,20284436,3,64,8,8,e01827-fd-full.fits.gz
-datasize,20284436,3,630179840,78772480,78772480,e01827-fd-full.fits.gz
+datasize,20284436,3,78772480,9846560,9846560,e01827-fd-full.fits.gz
 size,52857208,3,78068160,9763200,9763200,e35170-nd-full.fits.gz
 name,52857208,3,PRIMARY,,,e35170-nd-full.fits.gz
 hdutype,52857208,3,PrimaryHDU,ImageHDU,ImageHDU,e35170-nd-full.fits.gz
 dim,52857208,3,"(3087, 3161)","(3087, 3161)","(3087, 3161)",e35170-nd-full.fits.gz
 itemsize,52857208,3,64,8,8,e35170-nd-full.fits.gz
-datasize,52857208,3,624512448,78064056,78064056,e35170-nd-full.fits.gz
+datasize,52857208,3,78064056,9758007,9758007,e35170-nd-full.fits.gz
 size,25519377,3,79444800,9933120,9933120,e20155-fd-full.fits.gz
 name,25519377,3,PRIMARY,,,e20155-fd-full.fits.gz
 hdutype,25519377,3,PrimaryHDU,ImageHDU,ImageHDU,e20155-fd-full.fits.gz
 dim,25519377,3,"(3194, 3109)","(3194, 3109)","(3194, 3109)",e20155-fd-full.fits.gz
 itemsize,25519377,3,64,8,8,e20155-fd-full.fits.gz
-datasize,25519377,3,635529344,79441168,79441168,e20155-fd-full.fits.gz
+datasize,25519377,3,79441168,9930146,9930146,e20155-fd-full.fits.gz
 size,54597067,3,83260800,10411200,10411200,e35030-nd-full.fits.gz
 name,54597067,3,PRIMARY,,,e35030-nd-full.fits.gz
 hdutype,54597067,3,PrimaryHDU,ImageHDU,ImageHDU,e35030-nd-full.fits.gz
 dim,54597067,3,"(3234, 3218)","(3234, 3218)","(3234, 3218)",e35030-nd-full.fits.gz
 itemsize,54597067,3,64,8,8,e35030-nd-full.fits.gz
-datasize,54597067,3,666048768,83256096,83256096,e35030-nd-full.fits.gz
+datasize,54597067,3,83256096,10407012,10407012,e35030-nd-full.fits.gz
 size,22588817,3,78543360,9820800,9820800,e22848-fd-full.fits.gz
 name,22588817,3,PRIMARY,,,e22848-fd-full.fits.gz
 hdutype,22588817,3,PrimaryHDU,ImageHDU,ImageHDU,e22848-fd-full.fits.gz
 dim,22588817,3,"(3096, 3171)","(3096, 3171)","(3096, 3171)",e22848-fd-full.fits.gz
 itemsize,22588817,3,64,8,8,e22848-fd-full.fits.gz
-datasize,22588817,3,628314624,78539328,78539328,e22848-fd-full.fits.gz
+datasize,22588817,3,78539328,9817416,9817416,e22848-fd-full.fits.gz
 size,52667941,3,79585920,9953280,9953280,e10853-nd-full.fits.gz
 name,52667941,3,PRIMARY,,,e10853-nd-full.fits.gz
 hdutype,52667941,3,PrimaryHDU,ImageHDU,ImageHDU,e10853-nd-full.fits.gz
 dim,52667941,3,"(3159, 3149)","(3159, 3149)","(3159, 3149)",e10853-nd-full.fits.gz
 itemsize,52667941,3,64,8,8,e10853-nd-full.fits.gz
-datasize,52667941,3,636652224,79581528,79581528,e10853-nd-full.fits.gz
+datasize,52667941,3,79581528,9947691,9947691,e10853-nd-full.fits.gz
 size,21529767,3,79225920,9907200,9907200,e03477-fd-full.fits.gz
 name,21529767,3,PRIMARY,,,e03477-fd-full.fits.gz
 hdutype,21529767,3,PrimaryHDU,ImageHDU,ImageHDU,e03477-fd-full.fits.gz
 dim,21529767,3,"(3179, 3115)","(3179, 3115)","(3179, 3115)",e03477-fd-full.fits.gz
 itemsize,21529767,3,64,8,8,e03477-fd-full.fits.gz
-datasize,21529767,3,633765440,79220680,79220680,e03477-fd-full.fits.gz
+datasize,21529767,3,79220680,9902585,9902585,e03477-fd-full.fits.gz
 size,15856566,3,78894720,9866880,9866880,e07704-fd-full.fits.gz
 name,15856566,3,PRIMARY,,,e07704-fd-full.fits.gz
 hdutype,15856566,3,PrimaryHDU,ImageHDU,ImageHDU,e07704-fd-full.fits.gz
 dim,15856566,3,"(3105, 3176)","(3105, 3176)","(3105, 3176)",e07704-fd-full.fits.gz
 itemsize,15856566,3,64,8,8,e07704-fd-full.fits.gz
-datasize,15856566,3,631134720,78891840,78891840,e07704-fd-full.fits.gz
+datasize,15856566,3,78891840,9861480,9861480,e07704-fd-full.fits.gz
 size,53872893,3,78505920,9817920,9817920,e05698-nd-full.fits.gz
 name,53872893,3,PRIMARY,,,e05698-nd-full.fits.gz
 hdutype,53872893,3,PrimaryHDU,ImageHDU,ImageHDU,e05698-nd-full.fits.gz
 dim,53872893,3,"(3137, 3128)","(3137, 3128)","(3137, 3128)",e05698-nd-full.fits.gz
 itemsize,53872893,3,64,8,8,e05698-nd-full.fits.gz
-datasize,53872893,3,628002304,78500288,78500288,e05698-nd-full.fits.gz
+datasize,53872893,3,78500288,9812536,9812536,e05698-nd-full.fits.gz
 size,7271677,3,77673600,9714240,9714240,e23645-fd-full.fits.gz
 name,7271677,3,PRIMARY,,,e23645-fd-full.fits.gz
 hdutype,7271677,3,PrimaryHDU,ImageHDU,ImageHDU,e23645-fd-full.fits.gz
 dim,7271677,3,"(3141, 3091)","(3141, 3091)","(3141, 3091)",e23645-fd-full.fits.gz
 itemsize,7271677,3,64,8,8,e23645-fd-full.fits.gz
-datasize,7271677,3,621365184,77670648,77670648,e23645-fd-full.fits.gz
+datasize,7271677,3,77670648,9708831,9708831,e23645-fd-full.fits.gz
 size,52499729,3,80265600,10036800,10036800,e09371-nd-full.fits.gz
 name,52499729,3,PRIMARY,,,e09371-nd-full.fits.gz
 hdutype,52499729,3,PrimaryHDU,ImageHDU,ImageHDU,e09371-nd-full.fits.gz
 dim,52499729,3,"(3187, 3148)","(3187, 3148)","(3187, 3148)",e09371-nd-full.fits.gz
 itemsize,52499729,3,64,8,8,e09371-nd-full.fits.gz
-datasize,52499729,3,642091264,80261408,80261408,e09371-nd-full.fits.gz
+datasize,52499729,3,80261408,10032676,10032676,e09371-nd-full.fits.gz

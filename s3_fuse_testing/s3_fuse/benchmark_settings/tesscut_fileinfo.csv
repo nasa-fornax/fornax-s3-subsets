@@ -4,586 +4,586 @@ name,40765717440,3,PRIMARY,,name of extension,tess-s0026-4-1-cube.fits
 hdutype,40765717440,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0026-4-1-cube.fits
 dim,40765717440,3,(),"(2078, 2136, 1148, 2)","(1148, 1297)",tess-s0026-4-1-cube.fits
 itemsize,40765717440,3,,32,8,tess-s0026-4-1-cube.fits
-datasize,40765717440,3,0,326113406976,11911648,tess-s0026-4-1-cube.fits
+datasize,40765717440,3,0,40764175872,1488956,tess-s0026-4-1-cube.fits
 size,119101135680,3,2880,119096735040,4397760,tess-s0052-2-3-cube.fits
 name,119101135680,3,PRIMARY,,name of extension,tess-s0052-2-3-cube.fits
 hdutype,119101135680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0052-2-3-cube.fits
 dim,119101135680,3,(),"(2078, 2136, 3354, 2)","(3354, 1297)",tess-s0052-2-3-cube.fits
 itemsize,119101135680,3,,32,8,tess-s0052-2-3-cube.fits
-datasize,119101135680,3,0,952773838848,34801104,tess-s0052-2-3-cube.fits
+datasize,119101135680,3,0,119096729856,4350138,tess-s0052-2-3-cube.fits
 size,119065625280,3,2880,119061224640,4397760,tess-s0035-3-2-cube.fits
 name,119065625280,3,PRIMARY,,name of extension,tess-s0035-3-2-cube.fits
 hdutype,119065625280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0035-3-2-cube.fits
 dim,119065625280,3,(),"(2078, 2136, 3353, 2)","(3353, 1297)",tess-s0035-3-2-cube.fits
 itemsize,119065625280,3,,32,8,tess-s0035-3-2-cube.fits
-datasize,119065625280,3,0,952489767936,34790728,tess-s0035-3-2-cube.fits
+datasize,119065625280,3,0,119061220992,4348841,tess-s0035-3-2-cube.fits
 size,128653367040,3,2880,128648617920,4746240,tess-s0050-1-3-cube.fits
 name,128653367040,3,PRIMARY,,name of extension,tess-s0050-1-3-cube.fits
 hdutype,128653367040,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0050-1-3-cube.fits
 dim,128653367040,3,(),"(2078, 2136, 3623, 2)","(3623, 1297)",tess-s0050-1-3-cube.fits
 itemsize,128653367040,3,,32,8,tess-s0050-1-3-cube.fits
-datasize,128653367040,3,0,1029188914176,37592248,tess-s0050-1-3-cube.fits
+datasize,128653367040,3,0,128648614272,4699031,tess-s0050-1-3-cube.fits
 size,44210203200,3,2880,44208538560,1661760,tess-s0002-3-2-cube.fits
 name,44210203200,3,PRIMARY,,name of extension,tess-s0002-3-2-cube.fits
 hdutype,44210203200,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0002-3-2-cube.fits
 dim,44210203200,3,(),"(2078, 2136, 1245, 2)","(1245, 1297)",tess-s0002-3-2-cube.fits
 itemsize,44210203200,3,,32,8,tess-s0002-3-2-cube.fits
-datasize,44210203200,3,0,353668285440,12918120,tess-s0002-3-2-cube.fits
+datasize,44210203200,3,0,44208535680,1614765,tess-s0002-3-2-cube.fits
 size,121018682880,3,2880,121014213120,4466880,tess-s0043-2-2-cube.fits
 name,121018682880,3,PRIMARY,,name of extension,tess-s0043-2-2-cube.fits
 hdutype,121018682880,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0043-2-2-cube.fits
 dim,121018682880,3,(),"(2078, 2136, 3408, 2)","(3408, 1297)",tess-s0043-2-2-cube.fits
 itemsize,121018682880,3,,32,8,tess-s0043-2-2-cube.fits
-datasize,121018682880,3,0,968113668096,35361408,tess-s0043-2-2-cube.fits
+datasize,121018682880,3,0,121014208512,4420176,tess-s0043-2-2-cube.fits
 size,39807167040,3,2880,39805441920,1722240,tess-s0016-2-4-cube.fits
 name,39807167040,3,PRIMARY,,name of extension,tess-s0016-2-4-cube.fits
 hdutype,39807167040,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0016-2-4-cube.fits
 dim,39807167040,3,(),"(2078, 2136, 1121, 2)","(1121, 1489)",tess-s0016-2-4-cube.fits
 itemsize,39807167040,3,,32,8,tess-s0016-2-4-cube.fits
-datasize,39807167040,3,0,318443492352,13353352,tess-s0016-2-4-cube.fits
+datasize,39807167040,3,0,39805436544,1669169,tess-s0016-2-4-cube.fits
 size,44955918720,3,2880,44954225280,1690560,tess-s0021-3-4-cube.fits
 name,44955918720,3,PRIMARY,,name of extension,tess-s0021-3-4-cube.fits
 hdutype,44955918720,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0021-3-4-cube.fits
 dim,44955918720,3,(),"(2078, 2136, 1266, 2)","(1266, 1297)",tess-s0021-3-4-cube.fits
 itemsize,44955918720,3,,32,8,tess-s0021-3-4-cube.fits
-datasize,44955918720,3,0,359633774592,13136016,tess-s0021-3-4-cube.fits
+datasize,44955918720,3,0,44954221824,1642002,tess-s0021-3-4-cube.fits
 size,119065625280,3,2880,119061224640,4397760,tess-s0035-1-3-cube.fits
 name,119065625280,3,PRIMARY,,name of extension,tess-s0035-1-3-cube.fits
 hdutype,119065625280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0035-1-3-cube.fits
 dim,119065625280,3,(),"(2078, 2136, 3353, 2)","(3353, 1297)",tess-s0035-1-3-cube.fits
 itemsize,119065625280,3,,32,8,tess-s0035-1-3-cube.fits
-datasize,119065625280,3,0,952489767936,34790728,tess-s0035-1-3-cube.fits
+datasize,119065625280,3,0,119061220992,4348841,tess-s0035-1-3-cube.fits
 size,122829701760,3,2880,122825165760,4533120,tess-s0031-2-4-cube.fits
 name,122829701760,3,PRIMARY,,name of extension,tess-s0031-2-4-cube.fits
 hdutype,122829701760,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0031-2-4-cube.fits
 dim,122829701760,3,(),"(2078, 2136, 3459, 2)","(3459, 1297)",tess-s0031-2-4-cube.fits
 itemsize,122829701760,3,,32,8,tess-s0031-2-4-cube.fits
-datasize,122829701760,3,0,982601284608,35890584,tess-s0031-2-4-cube.fits
+datasize,122829701760,3,0,122825160576,4486323,tess-s0031-2-4-cube.fits
 size,34373888640,3,2880,34372584000,1301760,tess-s0008-2-2-cube.fits
 name,34373888640,3,PRIMARY,,name of extension,tess-s0008-2-2-cube.fits
 hdutype,34373888640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0008-2-2-cube.fits
 dim,34373888640,3,(),"(2078, 2136, 968, 2)","(968, 1297)",tess-s0008-2-2-cube.fits
 itemsize,34373888640,3,,32,8,tess-s0008-2-2-cube.fits
-datasize,34373888640,3,0,274980642816,10043968,tess-s0008-2-2-cube.fits
+datasize,34373888640,3,0,34372580352,1255496,tess-s0008-2-2-cube.fits
 size,34373888640,3,2880,34372584000,1301760,tess-s0008-4-3-cube.fits
 name,34373888640,3,PRIMARY,,name of extension,tess-s0008-4-3-cube.fits
 hdutype,34373888640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0008-4-3-cube.fits
 dim,34373888640,3,(),"(2078, 2136, 968, 2)","(968, 1297)",tess-s0008-4-3-cube.fits
 itemsize,34373888640,3,,32,8,tess-s0008-4-3-cube.fits
-datasize,34373888640,3,0,274980642816,10043968,tess-s0008-4-3-cube.fits
+datasize,34373888640,3,0,34372580352,1255496,tess-s0008-4-3-cube.fits
 size,43002861120,3,2880,43001239680,1618560,tess-s0010-1-1-cube.fits
 name,43002861120,3,PRIMARY,,name of extension,tess-s0010-1-1-cube.fits
 hdutype,43002861120,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0010-1-1-cube.fits
 dim,43002861120,3,(),"(2078, 2136, 1211, 2)","(1211, 1297)",tess-s0010-1-1-cube.fits
 itemsize,43002861120,3,,32,8,tess-s0010-1-1-cube.fits
-datasize,43002861120,3,0,344009874432,12565336,tess-s0010-1-1-cube.fits
+datasize,43002861120,3,0,43001234304,1570667,tess-s0010-1-1-cube.fits
 size,127836633600,3,2880,127831913280,4717440,tess-s0032-3-3-cube.fits
 name,127836633600,3,PRIMARY,,name of extension,tess-s0032-3-3-cube.fits
 hdutype,127836633600,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0032-3-3-cube.fits
 dim,127836633600,3,(),"(2078, 2136, 3600, 2)","(3600, 1297)",tess-s0032-3-3-cube.fits
 itemsize,127836633600,3,,32,8,tess-s0032-3-3-cube.fits
-datasize,127836633600,3,0,1022655283200,37353600,tess-s0032-3-3-cube.fits
+datasize,127836633600,3,0,127831910400,4669200,tess-s0032-3-3-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-1-1-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-1-1-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-1-1-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-1-1-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-1-1-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-1-1-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-1-1-cube.fits
 size,42186127680,3,2880,42184535040,1589760,tess-s0020-3-1-cube.fits
 name,42186127680,3,PRIMARY,,name of extension,tess-s0020-3-1-cube.fits
 hdutype,42186127680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0020-3-1-cube.fits
 dim,42186127680,3,(),"(2078, 2136, 1188, 2)","(1188, 1297)",tess-s0020-3-1-cube.fits
 itemsize,42186127680,3,,32,8,tess-s0020-3-1-cube.fits
-datasize,42186127680,3,0,337476243456,12326688,tess-s0020-3-1-cube.fits
+datasize,42186127680,3,0,42184530432,1540836,tess-s0020-3-1-cube.fits
 size,39309802560,3,2880,39308316480,1483200,tess-s0018-3-4-cube.fits
 name,39309802560,3,PRIMARY,,name of extension,tess-s0018-3-4-cube.fits
 hdutype,39309802560,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0018-3-4-cube.fits
 dim,39309802560,3,(),"(2078, 2136, 1107, 2)","(1107, 1297)",tess-s0018-3-4-cube.fits
 itemsize,39309802560,3,,32,8,tess-s0018-3-4-cube.fits
-datasize,39309802560,3,0,314466499584,11486232,tess-s0018-3-4-cube.fits
+datasize,39309802560,3,0,39308312448,1435779,tess-s0018-3-4-cube.fits
 size,128653367040,3,2880,128648617920,4746240,tess-s0050-2-1-cube.fits
 name,128653367040,3,PRIMARY,,name of extension,tess-s0050-2-1-cube.fits
 hdutype,128653367040,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0050-2-1-cube.fits
 dim,128653367040,3,(),"(2078, 2136, 3623, 2)","(3623, 1297)",tess-s0050-2-1-cube.fits
 itemsize,128653367040,3,,32,8,tess-s0050-2-1-cube.fits
-datasize,128653367040,3,0,1029188914176,37592248,tess-s0050-2-1-cube.fits
+datasize,128653367040,3,0,128648614272,4699031,tess-s0050-2-1-cube.fits
 size,119065625280,3,2880,119061224640,4397760,tess-s0035-1-2-cube.fits
 name,119065625280,3,PRIMARY,,name of extension,tess-s0035-1-2-cube.fits
 hdutype,119065625280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0035-1-2-cube.fits
 dim,119065625280,3,(),"(2078, 2136, 3353, 2)","(3353, 1297)",tess-s0035-1-2-cube.fits
 itemsize,119065625280,3,,32,8,tess-s0035-1-2-cube.fits
-datasize,119065625280,3,0,952489767936,34790728,tess-s0035-1-2-cube.fits
+datasize,119065625280,3,0,119061220992,4348841,tess-s0035-1-2-cube.fits
 size,44316737280,3,2880,44315066880,1667520,tess-s0022-4-1-cube.fits
 name,44316737280,3,PRIMARY,,name of extension,tess-s0022-4-1-cube.fits
 hdutype,44316737280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0022-4-1-cube.fits
 dim,44316737280,3,(),"(2078, 2136, 1248, 2)","(1248, 1297)",tess-s0022-4-1-cube.fits
 itemsize,44316737280,3,,32,8,tess-s0022-4-1-cube.fits
-datasize,44316737280,3,0,354520498176,12949248,tess-s0022-4-1-cube.fits
+datasize,44316737280,3,0,44315062272,1618656,tess-s0022-4-1-cube.fits
 size,42470208000,3,2880,42468606720,1598400,tess-s0005-2-3-cube.fits
 name,42470208000,3,PRIMARY,,name of extension,tess-s0005-2-3-cube.fits
 hdutype,42470208000,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0005-2-3-cube.fits
 dim,42470208000,3,(),"(2078, 2136, 1196, 2)","(1196, 1297)",tess-s0005-2-3-cube.fits
 itemsize,42470208000,3,,32,8,tess-s0005-2-3-cube.fits
-datasize,42470208000,3,0,339748810752,12409696,tess-s0005-2-3-cube.fits
+datasize,42470208000,3,0,42468601344,1551212,tess-s0005-2-3-cube.fits
 size,38812662720,3,2880,38811193920,1465920,tess-s0007-2-3-cube.fits
 name,38812662720,3,PRIMARY,,name of extension,tess-s0007-2-3-cube.fits
 hdutype,38812662720,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0007-2-3-cube.fits
 dim,38812662720,3,(),"(2078, 2136, 1093, 2)","(1093, 1297)",tess-s0007-2-3-cube.fits
 itemsize,38812662720,3,,32,8,tess-s0007-2-3-cube.fits
-datasize,38812662720,3,0,310489506816,11340968,tess-s0007-2-3-cube.fits
+datasize,38812662720,3,0,38811188352,1417621,tess-s0007-2-3-cube.fits
 size,45737144640,3,2880,45735422400,1719360,tess-s0003-2-3-cube.fits
 name,45737144640,3,PRIMARY,,name of extension,tess-s0003-2-3-cube.fits
 hdutype,45737144640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0003-2-3-cube.fits
 dim,45737144640,3,(),"(2078, 2136, 1288, 2)","(1288, 1297)",tess-s0003-2-3-cube.fits
 itemsize,45737144640,3,,32,8,tess-s0003-2-3-cube.fits
-datasize,45737144640,3,0,365883334656,13364288,tess-s0003-2-3-cube.fits
+datasize,45737144640,3,0,45735416832,1670536,tess-s0003-2-3-cube.fits
 size,125492964480,3,2880,125488330560,4631040,tess-s0042-4-2-cube.fits
 name,125492964480,3,PRIMARY,,name of extension,tess-s0042-4-2-cube.fits
 hdutype,125492964480,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0042-4-2-cube.fits
 dim,125492964480,3,(),"(2078, 2136, 3534, 2)","(3534, 1297)",tess-s0042-4-2-cube.fits
 itemsize,125492964480,3,,32,8,tess-s0042-4-2-cube.fits
-datasize,125492964480,3,0,1003906603008,36668784,tess-s0042-4-2-cube.fits
+datasize,125492964480,3,0,125488325376,4583598,tess-s0042-4-2-cube.fits
 size,120699092160,3,2880,120694633920,4455360,tess-s0051-2-2-cube.fits
 name,120699092160,3,PRIMARY,,name of extension,tess-s0051-2-2-cube.fits
 hdutype,120699092160,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0051-2-2-cube.fits
 dim,120699092160,3,(),"(2078, 2136, 3399, 2)","(3399, 1297)",tess-s0051-2-2-cube.fits
 itemsize,120699092160,3,,32,8,tess-s0051-2-2-cube.fits
-datasize,120699092160,3,0,965557029888,35268024,tess-s0051-2-2-cube.fits
+datasize,120699092160,3,0,120694628736,4408503,tess-s0051-2-2-cube.fits
 size,44316737280,3,2880,44315066880,1667520,tess-s0022-3-3-cube.fits
 name,44316737280,3,PRIMARY,,name of extension,tess-s0022-3-3-cube.fits
 hdutype,44316737280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0022-3-3-cube.fits
 dim,44316737280,3,(),"(2078, 2136, 1248, 2)","(1248, 1297)",tess-s0022-3-3-cube.fits
 itemsize,44316737280,3,,32,8,tess-s0022-3-3-cube.fits
-datasize,44316737280,3,0,354520498176,12949248,tess-s0022-3-3-cube.fits
+datasize,44316737280,3,0,44315062272,1618656,tess-s0022-3-3-cube.fits
 size,44068164480,3,2880,44066505600,1656000,tess-s0014-1-1-cube.fits
 name,44068164480,3,PRIMARY,,name of extension,tess-s0014-1-1-cube.fits
 hdutype,44068164480,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0014-1-1-cube.fits
 dim,44068164480,3,(),"(2078, 2136, 1241, 2)","(1241, 1297)",tess-s0014-1-1-cube.fits
 itemsize,44068164480,3,,32,8,tess-s0014-1-1-cube.fits
-datasize,44068164480,3,0,352532001792,12876616,tess-s0014-1-1-cube.fits
+datasize,44068164480,3,0,44066500224,1609577,tess-s0014-1-1-cube.fits
 size,39309802560,3,2880,39308316480,1483200,tess-s0018-4-3-cube.fits
 name,39309802560,3,PRIMARY,,name of extension,tess-s0018-4-3-cube.fits
 hdutype,39309802560,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0018-4-3-cube.fits
 dim,39309802560,3,(),"(2078, 2136, 1107, 2)","(1107, 1297)",tess-s0018-4-3-cube.fits
 itemsize,39309802560,3,,32,8,tess-s0018-4-3-cube.fits
-datasize,39309802560,3,0,314466499584,11486232,tess-s0018-4-3-cube.fits
+datasize,39309802560,3,0,39308312448,1435779,tess-s0018-4-3-cube.fits
 size,123468883200,3,2880,123464324160,4556160,tess-s0037-3-4-cube.fits
 name,123468883200,3,PRIMARY,,name of extension,tess-s0037-3-4-cube.fits
 hdutype,123468883200,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0037-3-4-cube.fits
 dim,123468883200,3,(),"(2078, 2136, 3477, 2)","(3477, 1297)",tess-s0037-3-4-cube.fits
 itemsize,123468883200,3,,32,8,tess-s0037-3-4-cube.fits
-datasize,123468883200,3,0,987714561024,36077352,tess-s0037-3-4-cube.fits
+datasize,123468883200,3,0,123464320128,4509669,tess-s0037-3-4-cube.fits
 size,43002861120,3,2880,43001239680,1618560,tess-s0010-2-3-cube.fits
 name,43002861120,3,PRIMARY,,name of extension,tess-s0010-2-3-cube.fits
 hdutype,43002861120,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0010-2-3-cube.fits
 dim,43002861120,3,(),"(2078, 2136, 1211, 2)","(1211, 1297)",tess-s0010-2-3-cube.fits
 itemsize,43002861120,3,,32,8,tess-s0010-2-3-cube.fits
-datasize,43002861120,3,0,344009874432,12565336,tess-s0010-2-3-cube.fits
+datasize,43002861120,3,0,43001234304,1570667,tess-s0010-2-3-cube.fits
 size,131636220480,3,2880,131631361920,4855680,tess-s0046-1-2-cube.fits
 name,131636220480,3,PRIMARY,,name of extension,tess-s0046-1-2-cube.fits
 hdutype,131636220480,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0046-1-2-cube.fits
 dim,131636220480,3,(),"(2078, 2136, 3707, 2)","(3707, 1297)",tess-s0046-1-2-cube.fits
 itemsize,131636220480,3,,32,8,tess-s0046-1-2-cube.fits
-datasize,131636220480,3,0,1053050870784,38463832,tess-s0046-1-2-cube.fits
+datasize,131636220480,3,0,131631358848,4807979,tess-s0046-1-2-cube.fits
 size,127836633600,3,2880,127831913280,4717440,tess-s0032-1-3-cube.fits
 name,127836633600,3,PRIMARY,,name of extension,tess-s0032-1-3-cube.fits
 hdutype,127836633600,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0032-1-3-cube.fits
 dim,127836633600,3,(),"(2078, 2136, 3600, 2)","(3600, 1297)",tess-s0032-1-3-cube.fits
 itemsize,127836633600,3,,32,8,tess-s0032-1-3-cube.fits
-datasize,127836633600,3,0,1022655283200,37353600,tess-s0032-1-3-cube.fits
+datasize,127836633600,3,0,127831910400,4669200,tess-s0032-1-3-cube.fits
 size,40126536000,3,2880,40125021120,1512000,tess-s0017-3-1-cube.fits
 name,40126536000,3,PRIMARY,,name of extension,tess-s0017-3-1-cube.fits
 hdutype,40126536000,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0017-3-1-cube.fits
 dim,40126536000,3,(),"(2078, 2136, 1130, 2)","(1130, 1297)",tess-s0017-3-1-cube.fits
 itemsize,40126536000,3,,32,8,tess-s0017-3-1-cube.fits
-datasize,40126536000,3,0,321000130560,11724880,tess-s0017-3-1-cube.fits
+datasize,40126536000,3,0,40125016320,1465610,tess-s0017-3-1-cube.fits
 size,120699751680,3,2880,120694633920,5114880,tess-s0051-1-3-cube.fits
 name,120699751680,3,PRIMARY,,name of extension,tess-s0051-1-3-cube.fits
 hdutype,120699751680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0051-1-3-cube.fits
 dim,120699751680,3,(),"(2078, 2136, 3399, 2)","(3399, 1489)",tess-s0051-1-3-cube.fits
 itemsize,120699751680,3,,32,8,tess-s0051-1-3-cube.fits
-datasize,120699751680,3,0,965557029888,40488888,tess-s0051-1-3-cube.fits
+datasize,120699751680,3,0,120694628736,5061111,tess-s0051-1-3-cube.fits
 size,119101135680,3,2880,119096735040,4397760,tess-s0052-2-1-cube.fits
 name,119101135680,3,PRIMARY,,name of extension,tess-s0052-2-1-cube.fits
 hdutype,119101135680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0052-2-1-cube.fits
 dim,119101135680,3,(),"(2078, 2136, 3354, 2)","(3354, 1297)",tess-s0052-2-1-cube.fits
 itemsize,119101135680,3,,32,8,tess-s0052-2-1-cube.fits
-datasize,119101135680,3,0,952773838848,34801104,tess-s0052-2-1-cube.fits
+datasize,119101135680,3,0,119096729856,4350138,tess-s0052-2-1-cube.fits
 size,123468883200,3,2880,123464324160,4556160,tess-s0036-2-4-cube.fits
 name,123468883200,3,PRIMARY,,name of extension,tess-s0036-2-4-cube.fits
 hdutype,123468883200,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0036-2-4-cube.fits
 dim,123468883200,3,(),"(2078, 2136, 3477, 2)","(3477, 1297)",tess-s0036-2-4-cube.fits
 itemsize,123468883200,3,,32,8,tess-s0036-2-4-cube.fits
-datasize,123468883200,3,0,987714561024,36077352,tess-s0036-2-4-cube.fits
+datasize,123468883200,3,0,123464320128,4509669,tess-s0036-2-4-cube.fits
 size,40126536000,3,2880,40125021120,1512000,tess-s0017-1-4-cube.fits
 name,40126536000,3,PRIMARY,,name of extension,tess-s0017-1-4-cube.fits
 hdutype,40126536000,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0017-1-4-cube.fits
 dim,40126536000,3,(),"(2078, 2136, 1130, 2)","(1130, 1297)",tess-s0017-1-4-cube.fits
 itemsize,40126536000,3,,32,8,tess-s0017-1-4-cube.fits
-datasize,40126536000,3,0,321000130560,11724880,tess-s0017-1-4-cube.fits
+datasize,40126536000,3,0,40125016320,1465610,tess-s0017-1-4-cube.fits
 size,45524082240,3,2880,45522368640,1710720,tess-s0001-4-2-cube.fits
 name,45524082240,3,PRIMARY,,name of extension,tess-s0001-4-2-cube.fits
 hdutype,45524082240,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0001-4-2-cube.fits
 dim,45524082240,3,(),"(2078, 2136, 1282, 2)","(1282, 1297)",tess-s0001-4-2-cube.fits
 itemsize,45524082240,3,,32,8,tess-s0001-4-2-cube.fits
-datasize,45524082240,3,0,364178909184,13302032,tess-s0001-4-2-cube.fits
+datasize,45524082240,3,0,45522363648,1662754,tess-s0001-4-2-cube.fits
 size,35261645760,3,2880,35260306560,1336320,tess-s0006-4-2-cube.fits
 name,35261645760,3,PRIMARY,,name of extension,tess-s0006-4-2-cube.fits
 hdutype,35261645760,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0006-4-2-cube.fits
 dim,35261645760,3,(),"(2078, 2136, 993, 2)","(993, 1297)",tess-s0006-4-2-cube.fits
 itemsize,35261645760,3,,32,8,tess-s0006-4-2-cube.fits
-datasize,35261645760,3,0,282082415616,10303368,tess-s0006-4-2-cube.fits
+datasize,35261645760,3,0,35260301952,1287921,tess-s0006-4-2-cube.fits
 size,41511432960,3,2880,41509866240,1563840,tess-s0025-3-3-cube.fits
 name,41511432960,3,PRIMARY,,name of extension,tess-s0025-3-3-cube.fits
 hdutype,41511432960,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0025-3-3-cube.fits
 dim,41511432960,3,(),"(2078, 2136, 1169, 2)","(1169, 1297)",tess-s0025-3-3-cube.fits
 itemsize,41511432960,3,,32,8,tess-s0025-3-3-cube.fits
-datasize,41511432960,3,0,332078896128,12129544,tess-s0025-3-3-cube.fits
+datasize,41511432960,3,0,41509862016,1516193,tess-s0025-3-3-cube.fits
 size,136217033280,3,2880,136212007680,5022720,tess-s0048-2-2-cube.fits
 name,136217033280,3,PRIMARY,,name of extension,tess-s0048-2-2-cube.fits
 hdutype,136217033280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0048-2-2-cube.fits
 dim,136217033280,3,(),"(2078, 2136, 3836, 2)","(3836, 1297)",tess-s0048-2-2-cube.fits
 itemsize,136217033280,3,,32,8,tess-s0048-2-2-cube.fits
-datasize,136217033280,3,0,1089696018432,39802336,tess-s0048-2-2-cube.fits
+datasize,136217033280,3,0,136212002304,4975292,tess-s0048-2-2-cube.fits
 size,43002861120,3,2880,43001239680,1618560,tess-s0010-2-4-cube.fits
 name,43002861120,3,PRIMARY,,name of extension,tess-s0010-2-4-cube.fits
 hdutype,43002861120,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0010-2-4-cube.fits
 dim,43002861120,3,(),"(2078, 2136, 1211, 2)","(1211, 1297)",tess-s0010-2-4-cube.fits
 itemsize,43002861120,3,,32,8,tess-s0010-2-4-cube.fits
-datasize,43002861120,3,0,344009874432,12565336,tess-s0010-2-4-cube.fits
+datasize,43002861120,3,0,43001234304,1570667,tess-s0010-2-4-cube.fits
 size,137744720640,3,2880,137738888640,5829120,tess-s0039-2-4-cube.fits
 name,137744720640,3,PRIMARY,,name of extension,tess-s0039-2-4-cube.fits
 hdutype,137744720640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0039-2-4-cube.fits
 dim,137744720640,3,(),"(2078, 2136, 3879, 2)","(3879, 1489)",tess-s0039-2-4-cube.fits
 itemsize,137744720640,3,,32,8,tess-s0039-2-4-cube.fits
-datasize,137744720640,3,0,1101911067648,46206648,tess-s0039-2-4-cube.fits
+datasize,137744720640,3,0,137738883456,5775831,tess-s0039-2-4-cube.fits
 size,123078271680,3,2880,123073727040,4541760,tess-s0053-1-4-cube.fits
 name,123078271680,3,PRIMARY,,name of extension,tess-s0053-1-4-cube.fits
 hdutype,123078271680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0053-1-4-cube.fits
 dim,123078271680,3,(),"(2078, 2136, 3466, 2)","(3466, 1297)",tess-s0053-1-4-cube.fits
 itemsize,123078271680,3,,32,8,tess-s0053-1-4-cube.fits
-datasize,123078271680,3,0,984589780992,35963216,tess-s0053-1-4-cube.fits
+datasize,123078271680,3,0,123073722624,4495402,tess-s0053-1-4-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-4-3-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-4-3-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-4-3-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-4-3-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-4-3-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-4-3-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-4-3-cube.fits
 size,136217033280,3,2880,136212007680,5022720,tess-s0048-4-4-cube.fits
 name,136217033280,3,PRIMARY,,name of extension,tess-s0048-4-4-cube.fits
 hdutype,136217033280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0048-4-4-cube.fits
 dim,136217033280,3,(),"(2078, 2136, 3836, 2)","(3836, 1297)",tess-s0048-4-4-cube.fits
 itemsize,136217033280,3,,32,8,tess-s0048-4-4-cube.fits
-datasize,136217033280,3,0,1089696018432,39802336,tess-s0048-4-4-cube.fits
+datasize,136217033280,3,0,136212002304,4975292,tess-s0048-4-4-cube.fits
 size,44210203200,3,2880,44208538560,1661760,tess-s0002-1-4-cube.fits
 name,44210203200,3,PRIMARY,,name of extension,tess-s0002-1-4-cube.fits
 hdutype,44210203200,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0002-1-4-cube.fits
 dim,44210203200,3,(),"(2078, 2136, 1245, 2)","(1245, 1297)",tess-s0002-1-4-cube.fits
 itemsize,44210203200,3,,32,8,tess-s0002-1-4-cube.fits
-datasize,44210203200,3,0,353668285440,12918120,tess-s0002-1-4-cube.fits
+datasize,44210203200,3,0,44208535680,1614765,tess-s0002-1-4-cube.fits
 size,119314195200,3,2880,119309785920,4406400,tess-s0027-4-2-cube.fits
 name,119314195200,3,PRIMARY,,name of extension,tess-s0027-4-2-cube.fits
 hdutype,119314195200,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0027-4-2-cube.fits
 dim,119314195200,3,(),"(2078, 2136, 3360, 2)","(3360, 1297)",tess-s0027-4-2-cube.fits
 itemsize,119314195200,3,,32,8,tess-s0027-4-2-cube.fits
-datasize,119314195200,3,0,954478264320,34863360,tess-s0027-4-2-cube.fits
+datasize,119314195200,3,0,119309783040,4357920,tess-s0027-4-2-cube.fits
 size,45772652160,3,2880,45770929920,1719360,tess-s0012-4-1-cube.fits
 name,45772652160,3,PRIMARY,,name of extension,tess-s0012-4-1-cube.fits
 hdutype,45772652160,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0012-4-1-cube.fits
 dim,45772652160,3,(),"(2078, 2136, 1289, 2)","(1289, 1297)",tess-s0012-4-1-cube.fits
 itemsize,45772652160,3,,32,8,tess-s0012-4-1-cube.fits
-datasize,45772652160,3,0,366167405568,13374664,tess-s0012-4-1-cube.fits
+datasize,45772652160,3,0,45770925696,1671833,tess-s0012-4-1-cube.fits
 size,131565199680,3,2880,131560344000,4852800,tess-s0038-4-4-cube.fits
 name,131565199680,3,PRIMARY,,name of extension,tess-s0038-4-4-cube.fits
 hdutype,131565199680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0038-4-4-cube.fits
 dim,131565199680,3,(),"(2078, 2136, 3705, 2)","(3705, 1297)",tess-s0038-4-4-cube.fits
 itemsize,131565199680,3,,32,8,tess-s0038-4-4-cube.fits
-datasize,131565199680,3,0,1052482728960,38443080,tess-s0038-4-4-cube.fits
+datasize,131565199680,3,0,131560341120,4805385,tess-s0038-4-4-cube.fits
 size,44316737280,3,2880,44315066880,1667520,tess-s0011-4-4-cube.fits
 name,44316737280,3,PRIMARY,,name of extension,tess-s0011-4-4-cube.fits
 hdutype,44316737280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0011-4-4-cube.fits
 dim,44316737280,3,(),"(2078, 2136, 1248, 2)","(1248, 1297)",tess-s0011-4-4-cube.fits
 itemsize,44316737280,3,,32,8,tess-s0011-4-4-cube.fits
-datasize,44316737280,3,0,354520498176,12949248,tess-s0011-4-4-cube.fits
+datasize,44316737280,3,0,44315062272,1618656,tess-s0011-4-4-cube.fits
 size,44316737280,3,2880,44315066880,1667520,tess-s0022-3-1-cube.fits
 name,44316737280,3,PRIMARY,,name of extension,tess-s0022-3-1-cube.fits
 hdutype,44316737280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0022-3-1-cube.fits
 dim,44316737280,3,(),"(2078, 2136, 1248, 2)","(1248, 1297)",tess-s0022-3-1-cube.fits
 itemsize,44316737280,3,,32,8,tess-s0022-3-1-cube.fits
-datasize,44316737280,3,0,354520498176,12949248,tess-s0022-3-1-cube.fits
+datasize,44316737280,3,0,44315062272,1618656,tess-s0022-3-1-cube.fits
 size,45524082240,3,2880,45522368640,1710720,tess-s0001-2-3-cube.fits
 name,45524082240,3,PRIMARY,,name of extension,tess-s0001-2-3-cube.fits
 hdutype,45524082240,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0001-2-3-cube.fits
 dim,45524082240,3,(),"(2078, 2136, 1282, 2)","(1282, 1297)",tess-s0001-2-3-cube.fits
 itemsize,45524082240,3,,32,8,tess-s0001-2-3-cube.fits
-datasize,45524082240,3,0,364178909184,13302032,tess-s0001-2-3-cube.fits
+datasize,45524082240,3,0,45522363648,1662754,tess-s0001-2-3-cube.fits
 size,38812662720,3,2880,38811193920,1465920,tess-s0007-1-3-cube.fits
 name,38812662720,3,PRIMARY,,name of extension,tess-s0007-1-3-cube.fits
 hdutype,38812662720,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0007-1-3-cube.fits
 dim,38812662720,3,(),"(2078, 2136, 1093, 2)","(1093, 1297)",tess-s0007-1-3-cube.fits
 itemsize,38812662720,3,,32,8,tess-s0007-1-3-cube.fits
-datasize,38812662720,3,0,310489506816,11340968,tess-s0007-1-3-cube.fits
+datasize,38812662720,3,0,38811188352,1417621,tess-s0007-1-3-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-1-3-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-1-3-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-1-3-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-1-3-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-1-3-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-1-3-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-1-3-cube.fits
 size,40978779840,3,2880,40977233280,1543680,tess-s0009-1-4-cube.fits
 name,40978779840,3,PRIMARY,,name of extension,tess-s0009-1-4-cube.fits
 hdutype,40978779840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0009-1-4-cube.fits
 dim,40978779840,3,(),"(2078, 2136, 1154, 2)","(1154, 1297)",tess-s0009-1-4-cube.fits
 itemsize,40978779840,3,,32,8,tess-s0009-1-4-cube.fits
-datasize,40978779840,3,0,327817832448,11973904,tess-s0009-1-4-cube.fits
+datasize,40978779840,3,0,40977229056,1496738,tess-s0009-1-4-cube.fits
 size,131636220480,3,2880,131631361920,4855680,tess-s0046-4-2-cube.fits
 name,131636220480,3,PRIMARY,,name of extension,tess-s0046-4-2-cube.fits
 hdutype,131636220480,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0046-4-2-cube.fits
 dim,131636220480,3,(),"(2078, 2136, 3707, 2)","(3707, 1297)",tess-s0046-4-2-cube.fits
 itemsize,131636220480,3,,32,8,tess-s0046-4-2-cube.fits
-datasize,131636220480,3,0,1053050870784,38463832,tess-s0046-4-2-cube.fits
+datasize,131636220480,3,0,131631358848,4807979,tess-s0046-4-2-cube.fits
 size,40765717440,3,2880,40764179520,1535040,tess-s0026-3-4-cube.fits
 name,40765717440,3,PRIMARY,,name of extension,tess-s0026-3-4-cube.fits
 hdutype,40765717440,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0026-3-4-cube.fits
 dim,40765717440,3,(),"(2078, 2136, 1148, 2)","(1148, 1297)",tess-s0026-3-4-cube.fits
 itemsize,40765717440,3,,32,8,tess-s0026-3-4-cube.fits
-datasize,40765717440,3,0,326113406976,11911648,tess-s0026-3-4-cube.fits
+datasize,40765717440,3,0,40764175872,1488956,tess-s0026-3-4-cube.fits
 size,44068164480,3,2880,44066505600,1656000,tess-s0014-1-2-cube.fits
 name,44068164480,3,PRIMARY,,name of extension,tess-s0014-1-2-cube.fits
 hdutype,44068164480,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0014-1-2-cube.fits
 dim,44068164480,3,(),"(2078, 2136, 1241, 2)","(1241, 1297)",tess-s0014-1-2-cube.fits
 itemsize,44068164480,3,,32,8,tess-s0014-1-2-cube.fits
-datasize,44068164480,3,0,352532001792,12876616,tess-s0014-1-2-cube.fits
+datasize,44068164480,3,0,44066500224,1609577,tess-s0014-1-2-cube.fits
 size,124108064640,3,2880,124103482560,4579200,tess-s0033-1-3-cube.fits
 name,124108064640,3,PRIMARY,,name of extension,tess-s0033-1-3-cube.fits
 hdutype,124108064640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0033-1-3-cube.fits
 dim,124108064640,3,(),"(2078, 2136, 3495, 2)","(3495, 1297)",tess-s0033-1-3-cube.fits
 itemsize,124108064640,3,,32,8,tess-s0033-1-3-cube.fits
-datasize,124108064640,3,0,992827837440,36264120,tess-s0033-1-3-cube.fits
+datasize,124108064640,3,0,124103479680,4533015,tess-s0033-1-3-cube.fits
 size,128653367040,3,2880,128648617920,4746240,tess-s0050-4-1-cube.fits
 name,128653367040,3,PRIMARY,,name of extension,tess-s0050-4-1-cube.fits
 hdutype,128653367040,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0050-4-1-cube.fits
 dim,128653367040,3,(),"(2078, 2136, 3623, 2)","(3623, 1297)",tess-s0050-4-1-cube.fits
 itemsize,128653367040,3,,32,8,tess-s0050-4-1-cube.fits
-datasize,128653367040,3,0,1029188914176,37592248,tess-s0050-4-1-cube.fits
+datasize,128653367040,3,0,128648614272,4699031,tess-s0050-4-1-cube.fits
 size,43002861120,3,2880,43001239680,1618560,tess-s0010-1-2-cube.fits
 name,43002861120,3,PRIMARY,,name of extension,tess-s0010-1-2-cube.fits
 hdutype,43002861120,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0010-1-2-cube.fits
 dim,43002861120,3,(),"(2078, 2136, 1211, 2)","(1211, 1297)",tess-s0010-1-2-cube.fits
 itemsize,43002861120,3,,32,8,tess-s0010-1-2-cube.fits
-datasize,43002861120,3,0,344009874432,12565336,tess-s0010-1-2-cube.fits
+datasize,43002861120,3,0,43001234304,1570667,tess-s0010-1-2-cube.fits
 size,134334993600,3,2880,134330037120,4953600,tess-s0030-2-1-cube.fits
 name,134334993600,3,PRIMARY,,name of extension,tess-s0030-2-1-cube.fits
 hdutype,134334993600,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0030-2-1-cube.fits
 dim,134334993600,3,(),"(2078, 2136, 3783, 2)","(3783, 1297)",tess-s0030-2-1-cube.fits
 itemsize,134334993600,3,,32,8,tess-s0030-2-1-cube.fits
-datasize,134334993600,3,0,1074640260096,39252408,tess-s0030-2-1-cube.fits
+datasize,134334993600,3,0,134330032512,4906551,tess-s0030-2-1-cube.fits
 size,43961633280,3,2880,43959977280,1653120,tess-s0023-1-4-cube.fits
 name,43961633280,3,PRIMARY,,name of extension,tess-s0023-1-4-cube.fits
 hdutype,43961633280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0023-1-4-cube.fits
 dim,43961633280,3,(),"(2078, 2136, 1238, 2)","(1238, 1297)",tess-s0023-1-4-cube.fits
 itemsize,43961633280,3,,32,8,tess-s0023-1-4-cube.fits
-datasize,43961633280,3,0,351679789056,12845488,tess-s0023-1-4-cube.fits
+datasize,43961633280,3,0,43959973632,1605686,tess-s0023-1-4-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-3-3-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-3-3-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-3-3-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-3-3-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-3-3-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-3-3-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-3-3-cube.fits
 size,128653367040,3,2880,128648617920,4746240,tess-s0050-1-2-cube.fits
 name,128653367040,3,PRIMARY,,name of extension,tess-s0050-1-2-cube.fits
 hdutype,128653367040,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0050-1-2-cube.fits
 dim,128653367040,3,(),"(2078, 2136, 3623, 2)","(3623, 1297)",tess-s0050-1-2-cube.fits
 itemsize,128653367040,3,,32,8,tess-s0050-1-2-cube.fits
-datasize,128653367040,3,0,1029188914176,37592248,tess-s0050-1-2-cube.fits
+datasize,128653367040,3,0,128648614272,4699031,tess-s0050-1-2-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-3-4-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-3-4-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-3-4-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-3-4-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-3-4-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-3-4-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-3-4-cube.fits
 size,122510108160,3,2880,122505583680,4521600,tess-s0045-3-4-cube.fits
 name,122510108160,3,PRIMARY,,name of extension,tess-s0045-3-4-cube.fits
 hdutype,122510108160,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0045-3-4-cube.fits
 dim,122510108160,3,(),"(2078, 2136, 3450, 2)","(3450, 1297)",tess-s0045-3-4-cube.fits
 itemsize,122510108160,3,,32,8,tess-s0045-3-4-cube.fits
-datasize,122510108160,3,0,980044646400,35797200,tess-s0045-3-4-cube.fits
+datasize,122510108160,3,0,122505580800,4474650,tess-s0045-3-4-cube.fits
 size,43535514240,3,2880,43533872640,1638720,tess-s0024-1-4-cube.fits
 name,43535514240,3,PRIMARY,,name of extension,tess-s0024-1-4-cube.fits
 hdutype,43535514240,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0024-1-4-cube.fits
 dim,43535514240,3,(),"(2078, 2136, 1226, 2)","(1226, 1297)",tess-s0024-1-4-cube.fits
 itemsize,43535514240,3,,32,8,tess-s0024-1-4-cube.fits
-datasize,43535514240,3,0,348270938112,12720976,tess-s0024-1-4-cube.fits
+datasize,43535514240,3,0,43533867264,1590122,tess-s0024-1-4-cube.fits
 size,40765717440,3,2880,40764179520,1535040,tess-s0026-1-4-cube.fits
 name,40765717440,3,PRIMARY,,name of extension,tess-s0026-1-4-cube.fits
 hdutype,40765717440,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0026-1-4-cube.fits
 dim,40765717440,3,(),"(2078, 2136, 1148, 2)","(1148, 1297)",tess-s0026-1-4-cube.fits
 itemsize,40765717440,3,,32,8,tess-s0026-1-4-cube.fits
-datasize,40765717440,3,0,326113406976,11911648,tess-s0026-1-4-cube.fits
+datasize,40765717440,3,0,40764175872,1488956,tess-s0026-1-4-cube.fits
 size,127836633600,3,2880,127831913280,4717440,tess-s0032-3-4-cube.fits
 name,127836633600,3,PRIMARY,,name of extension,tess-s0032-3-4-cube.fits
 hdutype,127836633600,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0032-3-4-cube.fits
 dim,127836633600,3,(),"(2078, 2136, 3600, 2)","(3600, 1297)",tess-s0032-3-4-cube.fits
 itemsize,127836633600,3,,32,8,tess-s0032-3-4-cube.fits
-datasize,127836633600,3,0,1022655283200,37353600,tess-s0032-3-4-cube.fits
+datasize,127836633600,3,0,127831910400,4669200,tess-s0032-3-4-cube.fits
 size,123007253760,3,2880,123002709120,4541760,tess-s0028-3-1-cube.fits
 name,123007253760,3,PRIMARY,,name of extension,tess-s0028-3-1-cube.fits
 hdutype,123007253760,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0028-3-1-cube.fits
 dim,123007253760,3,(),"(2078, 2136, 3464, 2)","(3464, 1297)",tess-s0028-3-1-cube.fits
 itemsize,123007253760,3,,32,8,tess-s0028-3-1-cube.fits
-datasize,123007253760,3,0,984021639168,35942464,tess-s0028-3-1-cube.fits
+datasize,123007253760,3,0,123002704896,4492808,tess-s0028-3-1-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-2-2-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-2-2-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-2-2-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-2-2-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-2-2-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-2-2-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-2-2-cube.fits
 size,40765944960,3,2880,40764179520,1762560,tess-s0026-3-2-cube.fits
 name,40765944960,3,PRIMARY,,name of extension,tess-s0026-3-2-cube.fits
 hdutype,40765944960,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0026-3-2-cube.fits
 dim,40765944960,3,(),"(2078, 2136, 1148, 2)","(1148, 1489)",tess-s0026-3-2-cube.fits
 itemsize,40765944960,3,,32,8,tess-s0026-3-2-cube.fits
-datasize,40765944960,3,0,326113406976,13674976,tess-s0026-3-2-cube.fits
+datasize,40765944960,3,0,40764175872,1709372,tess-s0026-3-2-cube.fits
 size,136217033280,3,2880,136212007680,5022720,tess-s0048-2-4-cube.fits
 name,136217033280,3,PRIMARY,,name of extension,tess-s0048-2-4-cube.fits
 hdutype,136217033280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0048-2-4-cube.fits
 dim,136217033280,3,(),"(2078, 2136, 3836, 2)","(3836, 1297)",tess-s0048-2-4-cube.fits
 itemsize,136217033280,3,,32,8,tess-s0048-2-4-cube.fits
-datasize,136217033280,3,0,1089696018432,39802336,tess-s0048-2-4-cube.fits
+datasize,136217033280,3,0,136212002304,4975292,tess-s0048-2-4-cube.fits
 size,41511663360,3,2880,41509866240,1794240,tess-s0025-2-3-cube.fits
 name,41511663360,3,PRIMARY,,name of extension,tess-s0025-2-3-cube.fits
 hdutype,41511663360,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0025-2-3-cube.fits
 dim,41511663360,3,(),"(2078, 2136, 1169, 2)","(1169, 1489)",tess-s0025-2-3-cube.fits
 itemsize,41511663360,3,,32,8,tess-s0025-2-3-cube.fits
-datasize,41511663360,3,0,332078896128,13925128,tess-s0025-2-3-cube.fits
+datasize,41511663360,3,0,41509862016,1740641,tess-s0025-2-3-cube.fits
 size,120699092160,3,2880,120694633920,4455360,tess-s0051-2-3-cube.fits
 name,120699092160,3,PRIMARY,,name of extension,tess-s0051-2-3-cube.fits
 hdutype,120699092160,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0051-2-3-cube.fits
 dim,120699092160,3,(),"(2078, 2136, 3399, 2)","(3399, 1297)",tess-s0051-2-3-cube.fits
 itemsize,120699092160,3,,32,8,tess-s0051-2-3-cube.fits
-datasize,120699092160,3,0,965557029888,35268024,tess-s0051-2-3-cube.fits
+datasize,120699092160,3,0,120694628736,4408503,tess-s0051-2-3-cube.fits
 size,45524332800,3,2880,45522368640,1961280,tess-s0001-2-4-cube.fits
 name,45524332800,3,PRIMARY,,name of extension,tess-s0001-2-4-cube.fits
 hdutype,45524332800,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0001-2-4-cube.fits
 dim,45524332800,3,(),"(2078, 2136, 1282, 2)","(1282, 1489)",tess-s0001-2-4-cube.fits
 itemsize,45524332800,3,,32,8,tess-s0001-2-4-cube.fits
-datasize,45524332800,3,0,364178909184,15271184,tess-s0001-2-4-cube.fits
+datasize,45524332800,3,0,45522363648,1908898,tess-s0001-2-4-cube.fits
 size,124108064640,3,2880,124103482560,4579200,tess-s0033-3-4-cube.fits
 name,124108064640,3,PRIMARY,,name of extension,tess-s0033-3-4-cube.fits
 hdutype,124108064640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0033-3-4-cube.fits
 dim,124108064640,3,(),"(2078, 2136, 3495, 2)","(3495, 1297)",tess-s0033-3-4-cube.fits
 itemsize,124108064640,3,,32,8,tess-s0033-3-4-cube.fits
-datasize,124108064640,3,0,992827837440,36264120,tess-s0033-3-4-cube.fits
+datasize,124108064640,3,0,124103479680,4533015,tess-s0033-3-4-cube.fits
 size,45772652160,3,2880,45770929920,1719360,tess-s0012-3-3-cube.fits
 name,45772652160,3,PRIMARY,,name of extension,tess-s0012-3-3-cube.fits
 hdutype,45772652160,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0012-3-3-cube.fits
 dim,45772652160,3,(),"(2078, 2136, 1289, 2)","(1289, 1297)",tess-s0012-3-3-cube.fits
 itemsize,45772652160,3,,32,8,tess-s0012-3-3-cube.fits
-datasize,45772652160,3,0,366167405568,13374664,tess-s0012-3-3-cube.fits
+datasize,45772652160,3,0,45770925696,1671833,tess-s0012-3-3-cube.fits
 size,134334993600,3,2880,134330037120,4953600,tess-s0030-4-1-cube.fits
 name,134334993600,3,PRIMARY,,name of extension,tess-s0030-4-1-cube.fits
 hdutype,134334993600,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0030-4-1-cube.fits
 dim,134334993600,3,(),"(2078, 2136, 3783, 2)","(3783, 1297)",tess-s0030-4-1-cube.fits
 itemsize,134334993600,3,,32,8,tess-s0030-4-1-cube.fits
-datasize,134334993600,3,0,1074640260096,39252408,tess-s0030-4-1-cube.fits
+datasize,134334993600,3,0,134330032512,4906551,tess-s0030-4-1-cube.fits
 size,35261645760,3,2880,35260306560,1336320,tess-s0006-1-2-cube.fits
 name,35261645760,3,PRIMARY,,name of extension,tess-s0006-1-2-cube.fits
 hdutype,35261645760,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0006-1-2-cube.fits
 dim,35261645760,3,(),"(2078, 2136, 993, 2)","(993, 1297)",tess-s0006-1-2-cube.fits
 itemsize,35261645760,3,,32,8,tess-s0006-1-2-cube.fits
-datasize,35261645760,3,0,282082415616,10303368,tess-s0006-1-2-cube.fits
+datasize,35261645760,3,0,35260301952,1287921,tess-s0006-1-2-cube.fits
 size,116402362560,3,2880,116398059840,4299840,tess-s0044-2-1-cube.fits
 name,116402362560,3,PRIMARY,,name of extension,tess-s0044-2-1-cube.fits
 hdutype,116402362560,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0044-2-1-cube.fits
 dim,116402362560,3,(),"(2078, 2136, 3278, 2)","(3278, 1297)",tess-s0044-2-1-cube.fits
 itemsize,116402362560,3,,32,8,tess-s0044-2-1-cube.fits
-datasize,116402362560,3,0,931184449536,34012528,tess-s0044-2-1-cube.fits
+datasize,116402362560,3,0,116398056192,4251566,tess-s0044-2-1-cube.fits
 size,129079491840,3,2880,129074725440,4763520,tess-s0029-2-3-cube.fits
 name,129079491840,3,PRIMARY,,name of extension,tess-s0029-2-3-cube.fits
 hdutype,129079491840,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0029-2-3-cube.fits
 dim,129079491840,3,(),"(2078, 2136, 3635, 2)","(3635, 1297)",tess-s0029-2-3-cube.fits
 itemsize,129079491840,3,,32,8,tess-s0029-2-3-cube.fits
-datasize,129079491840,3,0,1032597765120,37716760,tess-s0029-2-3-cube.fits
+datasize,129079491840,3,0,129074720640,4714595,tess-s0029-2-3-cube.fits
 size,137743968960,3,2880,137738888640,5077440,tess-s0039-4-3-cube.fits
 name,137743968960,3,PRIMARY,,name of extension,tess-s0039-4-3-cube.fits
 hdutype,137743968960,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0039-4-3-cube.fits
 dim,137743968960,3,(),"(2078, 2136, 3879, 2)","(3879, 1297)",tess-s0039-4-3-cube.fits
 itemsize,137743968960,3,,32,8,tess-s0039-4-3-cube.fits
-datasize,137743968960,3,0,1101911067648,40248504,tess-s0039-4-3-cube.fits
+datasize,137743968960,3,0,137738883456,5031063,tess-s0039-4-3-cube.fits
 size,123895008000,3,2880,123890431680,4573440,tess-s0034-1-1-cube.fits
 name,123895008000,3,PRIMARY,,name of extension,tess-s0034-1-1-cube.fits
 hdutype,123895008000,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0034-1-1-cube.fits
 dim,123895008000,3,(),"(2078, 2136, 3489, 2)","(3489, 1297)",tess-s0034-1-1-cube.fits
 itemsize,123895008000,3,,32,8,tess-s0034-1-1-cube.fits
-datasize,123895008000,3,0,991123411968,36201864,tess-s0034-1-1-cube.fits
+datasize,123895008000,3,0,123890426496,4525233,tess-s0034-1-1-cube.fits
 size,41014517760,3,2880,41012740800,1774080,tess-s0019-1-3-cube.fits
 name,41014517760,3,PRIMARY,,name of extension,tess-s0019-1-3-cube.fits
 hdutype,41014517760,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0019-1-3-cube.fits
 dim,41014517760,3,(),"(2078, 2136, 1155, 2)","(1155, 1489)",tess-s0019-1-3-cube.fits
 itemsize,41014517760,3,,32,8,tess-s0019-1-3-cube.fits
-datasize,41014517760,3,0,328101903360,13758360,tess-s0019-1-3-cube.fits
+datasize,41014517760,3,0,41012737920,1719795,tess-s0019-1-3-cube.fits
 size,43535514240,3,2880,43533872640,1638720,tess-s0024-2-4-cube.fits
 name,43535514240,3,PRIMARY,,name of extension,tess-s0024-2-4-cube.fits
 hdutype,43535514240,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0024-2-4-cube.fits
 dim,43535514240,3,(),"(2078, 2136, 1226, 2)","(1226, 1297)",tess-s0024-2-4-cube.fits
 itemsize,43535514240,3,,32,8,tess-s0024-2-4-cube.fits
-datasize,43535514240,3,0,348270938112,12720976,tess-s0024-2-4-cube.fits
+datasize,43535514240,3,0,43533867264,1590122,tess-s0024-2-4-cube.fits
 size,139448456640,3,2880,139443312960,5140800,tess-s0040-1-2-cube.fits
 name,139448456640,3,PRIMARY,,name of extension,tess-s0040-1-2-cube.fits
 hdutype,139448456640,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0040-1-2-cube.fits
 dim,139448456640,3,(),"(2078, 2136, 3927, 2)","(3927, 1297)",tess-s0040-1-2-cube.fits
 itemsize,139448456640,3,,32,8,tess-s0040-1-2-cube.fits
-datasize,139448456640,3,0,1115546471424,40746552,tess-s0040-1-2-cube.fits
+datasize,139448456640,3,0,139443308928,5093319,tess-s0040-1-2-cube.fits
 size,123895008000,3,2880,123890431680,4573440,tess-s0034-3-4-cube.fits
 name,123895008000,3,PRIMARY,,name of extension,tess-s0034-3-4-cube.fits
 hdutype,123895008000,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0034-3-4-cube.fits
 dim,123895008000,3,(),"(2078, 2136, 3489, 2)","(3489, 1297)",tess-s0034-3-4-cube.fits
 itemsize,123895008000,3,,32,8,tess-s0034-3-4-cube.fits
-datasize,123895008000,3,0,991123411968,36201864,tess-s0034-3-4-cube.fits
+datasize,123895008000,3,0,123890426496,4525233,tess-s0034-3-4-cube.fits
 size,123078271680,3,2880,123073727040,4541760,tess-s0053-3-2-cube.fits
 name,123078271680,3,PRIMARY,,name of extension,tess-s0053-3-2-cube.fits
 hdutype,123078271680,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0053-3-2-cube.fits
 dim,123078271680,3,(),"(2078, 2136, 3466, 2)","(3466, 1297)",tess-s0053-3-2-cube.fits
 itemsize,123078271680,3,,32,8,tess-s0053-3-2-cube.fits
-datasize,123078271680,3,0,984589780992,35963216,tess-s0053-3-2-cube.fits
+datasize,123078271680,3,0,123073722624,4495402,tess-s0053-3-2-cube.fits
 size,42505718400,3,2880,42504114240,1601280,tess-s0015-1-4-cube.fits
 name,42505718400,3,PRIMARY,,name of extension,tess-s0015-1-4-cube.fits
 hdutype,42505718400,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0015-1-4-cube.fits
 dim,42505718400,3,(),"(2078, 2136, 1197, 2)","(1197, 1297)",tess-s0015-1-4-cube.fits
 itemsize,42505718400,3,,32,8,tess-s0015-1-4-cube.fits
-datasize,42505718400,3,0,340032881664,12420072,tess-s0015-1-4-cube.fits
+datasize,42505718400,3,0,42504110208,1552509,tess-s0015-1-4-cube.fits
 size,45525761280,3,2880,45522368640,3389760,tess-s0001-2-1-cube.fits
 name,45525761280,3,PRIMARY,,name of extension,tess-s0001-2-1-cube.fits
 hdutype,45525761280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0001-2-1-cube.fits
 dim,45525761280,3,(),"(2078, 2136, 1282, 2)","(1282, 2577)",tess-s0001-2-1-cube.fits
 itemsize,45525761280,3,,32,8,tess-s0001-2-1-cube.fits
-datasize,45525761280,3,0,364178909184,26429712,tess-s0001-2-1-cube.fits
+datasize,45525761280,3,0,45522363648,3303714,tess-s0001-2-1-cube.fits
 size,131636220480,3,2880,131631361920,4855680,tess-s0046-4-1-cube.fits
 name,131636220480,3,PRIMARY,,name of extension,tess-s0046-4-1-cube.fits
 hdutype,131636220480,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0046-4-1-cube.fits
 dim,131636220480,3,(),"(2078, 2136, 3707, 2)","(3707, 1297)",tess-s0046-4-1-cube.fits
 itemsize,131636220480,3,,32,8,tess-s0046-4-1-cube.fits
-datasize,131636220480,3,0,1053050870784,38463832,tess-s0046-4-1-cube.fits
+datasize,131636220480,3,0,131631358848,4807979,tess-s0046-4-1-cube.fits
 size,37640825280,3,2880,37639399680,1422720,tess-s0004-2-3-cube.fits
 name,37640825280,3,PRIMARY,,name of extension,tess-s0004-2-3-cube.fits
 hdutype,37640825280,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0004-2-3-cube.fits
 dim,37640825280,3,(),"(2078, 2136, 1060, 2)","(1060, 1297)",tess-s0004-2-3-cube.fits
 itemsize,37640825280,3,,32,8,tess-s0004-2-3-cube.fits
-datasize,37640825280,3,0,301115166720,10998560,tess-s0004-2-3-cube.fits
+datasize,37640825280,3,0,37639395840,1374820,tess-s0004-2-3-cube.fits
 size,41014290240,3,2880,41012740800,1546560,tess-s0019-4-4-cube.fits
 name,41014290240,3,PRIMARY,,name of extension,tess-s0019-4-4-cube.fits
 hdutype,41014290240,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0019-4-4-cube.fits
 dim,41014290240,3,(),"(2078, 2136, 1155, 2)","(1155, 1297)",tess-s0019-4-4-cube.fits
 itemsize,41014290240,3,,32,8,tess-s0019-4-4-cube.fits
-datasize,41014290240,3,0,328101903360,11984280,tess-s0019-4-4-cube.fits
+datasize,41014290240,3,0,41012737920,1498035,tess-s0019-4-4-cube.fits
 size,116402362560,3,2880,116398059840,4299840,tess-s0044-2-4-cube.fits
 name,116402362560,3,PRIMARY,,name of extension,tess-s0044-2-4-cube.fits
 hdutype,116402362560,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0044-2-4-cube.fits
 dim,116402362560,3,(),"(2078, 2136, 3278, 2)","(3278, 1297)",tess-s0044-2-4-cube.fits
 itemsize,116402362560,3,,32,8,tess-s0044-2-4-cube.fits
-datasize,116402362560,3,0,931184449536,34012528,tess-s0044-2-4-cube.fits
+datasize,116402362560,3,0,116398056192,4251566,tess-s0044-2-4-cube.fits
 size,123468883200,3,2880,123464324160,4556160,tess-s0036-3-2-cube.fits
 name,123468883200,3,PRIMARY,,name of extension,tess-s0036-3-2-cube.fits
 hdutype,123468883200,3,PrimaryHDU,ImageHDU,BinTableHDU,tess-s0036-3-2-cube.fits
 dim,123468883200,3,(),"(2078, 2136, 3477, 2)","(3477, 1297)",tess-s0036-3-2-cube.fits
 itemsize,123468883200,3,,32,8,tess-s0036-3-2-cube.fits
-datasize,123468883200,3,0,987714561024,36077352,tess-s0036-3-2-cube.fits
+datasize,123468883200,3,0,123464320128,4509669,tess-s0036-3-2-cube.fits

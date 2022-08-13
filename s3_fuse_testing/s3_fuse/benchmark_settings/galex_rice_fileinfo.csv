@@ -4,598 +4,598 @@ name,7346880,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e06818
 hdutype,7346880,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e06818-fd-full-rice.fits
 dim,7346880,4,(),"(3093, 3098)","(3093, 3098)","(3093, 3098)",e06818-fd-full-rice.fits
 itemsize,7346880,4,,64,8,8,e06818-fd-full-rice.fits
-datasize,7346880,4,0,613255296,76656912,76656912,e06818-fd-full-rice.fits
+datasize,7346880,4,0,76656912,9582114,76656912,e06818-fd-full-rice.fits
 size,6693120,4,2880,6137280,195840,357120,e43718-nd-full-rice.fits
 name,6693120,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e43718-nd-full-rice.fits
 hdutype,6693120,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e43718-nd-full-rice.fits
 dim,6693120,4,(),"(3199, 3204)","(3199, 3204)","(3199, 3204)",e43718-nd-full-rice.fits
 itemsize,6693120,4,,64,8,8,e43718-nd-full-rice.fits
-datasize,6693120,4,0,655974144,81996768,81996768,e43718-nd-full-rice.fits
+datasize,6693120,4,0,81996768,10249596,81996768,e43718-nd-full-rice.fits
 size,6675840,4,2880,6053760,210240,408960,e07415-fd-full-rice.fits
 name,6675840,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e07415-fd-full-rice.fits
 hdutype,6675840,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e07415-fd-full-rice.fits
 dim,6675840,4,(),"(3171, 3118)","(3171, 3118)","(3171, 3118)",e07415-fd-full-rice.fits
 itemsize,6675840,4,,64,8,8,e07415-fd-full-rice.fits
-datasize,6675840,4,0,632779392,79097424,79097424,e07415-fd-full-rice.fits
+datasize,6675840,4,0,79097424,9887178,79097424,e07415-fd-full-rice.fits
 size,6816960,4,2880,6269760,218880,325440,e33791-nd-full-rice.fits
 name,6816960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e33791-nd-full-rice.fits
 hdutype,6816960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e33791-nd-full-rice.fits
 dim,6816960,4,(),"(3210, 3182)","(3210, 3182)","(3210, 3182)",e33791-nd-full-rice.fits
 itemsize,6816960,4,,64,8,8,e33791-nd-full-rice.fits
-datasize,6816960,4,0,653710080,81713760,81713760,e33791-nd-full-rice.fits
+datasize,6816960,4,0,81713760,10214220,81713760,e33791-nd-full-rice.fits
 size,6701760,4,2880,6114240,213120,371520,e33568-nd-full-rice.fits
 name,6701760,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e33568-nd-full-rice.fits
 hdutype,6701760,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e33568-nd-full-rice.fits
 dim,6701760,4,(),"(3183, 3203)","(3183, 3203)","(3183, 3203)",e33568-nd-full-rice.fits
 itemsize,6701760,4,,64,8,8,e33568-nd-full-rice.fits
-datasize,6701760,4,0,652489536,81561192,81561192,e33568-nd-full-rice.fits
+datasize,6701760,4,0,81561192,10195149,81561192,e33568-nd-full-rice.fits
 size,7035840,4,2880,6442560,201600,388800,e09208-nd-full-rice.fits
 name,7035840,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e09208-nd-full-rice.fits
 hdutype,7035840,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e09208-nd-full-rice.fits
 dim,7035840,4,(),"(3173, 3161)","(3173, 3161)","(3173, 3161)",e09208-nd-full-rice.fits
 itemsize,7035840,4,,64,8,8,e09208-nd-full-rice.fits
-datasize,7035840,4,0,641910592,80238824,80238824,e09208-nd-full-rice.fits
+datasize,7035840,4,0,80238824,10029853,80238824,e09208-nd-full-rice.fits
 size,6932160,4,2880,6338880,204480,385920,e26141-nd-full-rice.fits
 name,6932160,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e26141-nd-full-rice.fits
 hdutype,6932160,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e26141-nd-full-rice.fits
 dim,6932160,4,(),"(3082, 3148)","(3082, 3148)","(3082, 3148)",e26141-nd-full-rice.fits
 itemsize,6932160,4,,64,8,8,e26141-nd-full-rice.fits
-datasize,6932160,4,0,620936704,77617088,77617088,e26141-nd-full-rice.fits
+datasize,6932160,4,0,77617088,9702136,77617088,e26141-nd-full-rice.fits
 size,6808320,4,2880,6223680,204480,377280,e15231-nd-full-rice.fits
 name,6808320,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e15231-nd-full-rice.fits
 hdutype,6808320,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e15231-nd-full-rice.fits
 dim,6808320,4,(),"(3077, 3082)","(3077, 3082)","(3077, 3082)",e15231-nd-full-rice.fits
 itemsize,6808320,4,,64,8,8,e15231-nd-full-rice.fits
-datasize,6808320,4,0,606932096,75866512,75866512,e15231-nd-full-rice.fits
+datasize,6808320,4,0,75866512,9483314,75866512,e15231-nd-full-rice.fits
 size,5584320,4,2880,5065920,169920,345600,e18451-fd-full-rice.fits
 name,5584320,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e18451-fd-full-rice.fits
 hdutype,5584320,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e18451-fd-full-rice.fits
 dim,5584320,4,(),"(3087, 3176)","(3087, 3176)","(3087, 3176)",e18451-fd-full-rice.fits
 itemsize,5584320,4,,64,8,8,e18451-fd-full-rice.fits
-datasize,5584320,4,0,627475968,78434496,78434496,e18451-fd-full-rice.fits
+datasize,5584320,4,0,78434496,9804312,78434496,e18451-fd-full-rice.fits
 size,6652800,4,2880,6062400,210240,377280,e16031-nd-full-rice.fits
 name,6652800,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e16031-nd-full-rice.fits
 hdutype,6652800,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e16031-nd-full-rice.fits
 dim,6652800,4,(),"(3129, 3156)","(3129, 3156)","(3129, 3156)",e16031-nd-full-rice.fits
 itemsize,6652800,4,,64,8,8,e16031-nd-full-rice.fits
-datasize,6652800,4,0,632007936,79000992,79000992,e16031-nd-full-rice.fits
+datasize,6652800,4,0,79000992,9875124,79000992,e16031-nd-full-rice.fits
 size,6744960,4,2880,6180480,198720,362880,e28416-nd-full-rice.fits
 name,6744960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e28416-nd-full-rice.fits
 hdutype,6744960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e28416-nd-full-rice.fits
 dim,6744960,4,(),"(3085, 3076)","(3085, 3076)","(3085, 3076)",e28416-nd-full-rice.fits
 itemsize,6744960,4,,64,8,8,e28416-nd-full-rice.fits
-datasize,6744960,4,0,607325440,75915680,75915680,e28416-nd-full-rice.fits
+datasize,6744960,4,0,75915680,9489460,75915680,e28416-nd-full-rice.fits
 size,6615360,4,2880,6056640,210240,345600,e03797-nd-full-rice.fits
 name,6615360,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e03797-nd-full-rice.fits
 hdutype,6615360,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e03797-nd-full-rice.fits
 dim,6615360,4,(),"(3110, 3095)","(3110, 3095)","(3110, 3095)",e03797-nd-full-rice.fits
 itemsize,6615360,4,,64,8,8,e03797-nd-full-rice.fits
-datasize,6615360,4,0,616028800,77003600,77003600,e03797-nd-full-rice.fits
+datasize,6615360,4,0,77003600,9625450,77003600,e03797-nd-full-rice.fits
 size,6943680,4,2880,6330240,213120,397440,e46167-nd-full-rice.fits
 name,6943680,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e46167-nd-full-rice.fits
 hdutype,6943680,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e46167-nd-full-rice.fits
 dim,6943680,4,(),"(3166, 3177)","(3166, 3177)","(3166, 3177)",e46167-nd-full-rice.fits
 itemsize,6943680,4,,64,8,8,e46167-nd-full-rice.fits
-datasize,6943680,4,0,643736448,80467056,80467056,e46167-nd-full-rice.fits
+datasize,6943680,4,0,80467056,10058382,80467056,e46167-nd-full-rice.fits
 size,3430080,4,2880,3021120,149760,256320,e21371-fd-full-rice.fits
 name,3430080,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e21371-fd-full-rice.fits
 hdutype,3430080,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e21371-fd-full-rice.fits
 dim,3430080,4,(),"(3139, 3078)","(3139, 3078)","(3139, 3078)",e21371-fd-full-rice.fits
 itemsize,3430080,4,,64,8,8,e21371-fd-full-rice.fits
-datasize,3430080,4,0,618357888,77294736,77294736,e21371-fd-full-rice.fits
+datasize,3430080,4,0,77294736,9661842,77294736,e21371-fd-full-rice.fits
 size,6932160,4,2880,6310080,224640,394560,e07770-nd-full-rice.fits
 name,6932160,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e07770-nd-full-rice.fits
 hdutype,6932160,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e07770-nd-full-rice.fits
 dim,6932160,4,(),"(3206, 3119)","(3206, 3119)","(3206, 3119)",e07770-nd-full-rice.fits
 itemsize,6932160,4,,64,8,8,e07770-nd-full-rice.fits
-datasize,6932160,4,0,639968896,79996112,79996112,e07770-nd-full-rice.fits
+datasize,6932160,4,0,79996112,9999514,79996112,e07770-nd-full-rice.fits
 size,5526720,4,2880,4996800,175680,351360,e29633-fd-full-rice.fits
 name,5526720,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e29633-fd-full-rice.fits
 hdutype,5526720,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e29633-fd-full-rice.fits
 dim,5526720,4,(),"(3134, 3114)","(3134, 3114)","(3134, 3114)",e29633-fd-full-rice.fits
 itemsize,5526720,4,,64,8,8,e29633-fd-full-rice.fits
-datasize,5526720,4,0,624593664,78074208,78074208,e29633-fd-full-rice.fits
+datasize,5526720,4,0,78074208,9759276,78074208,e29633-fd-full-rice.fits
 size,6773760,4,2880,6197760,216000,357120,e41228-nd-full-rice.fits
 name,6773760,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e41228-nd-full-rice.fits
 hdutype,6773760,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e41228-nd-full-rice.fits
 dim,6773760,4,(),"(3163, 3189)","(3163, 3189)","(3163, 3189)",e41228-nd-full-rice.fits
 itemsize,6773760,4,,64,8,8,e41228-nd-full-rice.fits
-datasize,6773760,4,0,645555648,80694456,80694456,e41228-nd-full-rice.fits
+datasize,6773760,4,0,80694456,10086807,80694456,e41228-nd-full-rice.fits
 size,6782400,4,2880,6238080,201600,339840,e24342-nd-full-rice.fits
 name,6782400,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e24342-nd-full-rice.fits
 hdutype,6782400,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e24342-nd-full-rice.fits
 dim,6782400,4,(),"(3087, 3122)","(3087, 3122)","(3087, 3122)",e24342-nd-full-rice.fits
 itemsize,6782400,4,,64,8,8,e24342-nd-full-rice.fits
-datasize,6782400,4,0,616807296,77100912,77100912,e24342-nd-full-rice.fits
+datasize,6782400,4,0,77100912,9637614,77100912,e24342-nd-full-rice.fits
 size,6926400,4,2880,6304320,198720,420480,e29544-fd-full-rice.fits
 name,6926400,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e29544-fd-full-rice.fits
 hdutype,6926400,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e29544-fd-full-rice.fits
 dim,6926400,4,(),"(3075, 3065)","(3075, 3065)","(3075, 3065)",e29544-fd-full-rice.fits
 itemsize,6926400,4,,64,8,8,e29544-fd-full-rice.fits
-datasize,6926400,4,0,603192000,75399000,75399000,e29544-fd-full-rice.fits
+datasize,6926400,4,0,75399000,9424875,75399000,e29544-fd-full-rice.fits
 size,6920640,4,2880,6298560,207360,411840,e00938-fd-full-rice.fits
 name,6920640,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e00938-fd-full-rice.fits
 hdutype,6920640,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e00938-fd-full-rice.fits
 dim,6920640,4,(),"(3096, 3171)","(3096, 3171)","(3096, 3171)",e00938-fd-full-rice.fits
 itemsize,6920640,4,,64,8,8,e00938-fd-full-rice.fits
-datasize,6920640,4,0,628314624,78539328,78539328,e00938-fd-full-rice.fits
+datasize,6920640,4,0,78539328,9817416,78539328,e00938-fd-full-rice.fits
 size,6675840,4,2880,6088320,207360,377280,e28374-nd-full-rice.fits
 name,6675840,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e28374-nd-full-rice.fits
 hdutype,6675840,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e28374-nd-full-rice.fits
 dim,6675840,4,(),"(3167, 3146)","(3167, 3146)","(3167, 3146)",e28374-nd-full-rice.fits
 itemsize,6675840,4,,64,8,8,e28374-nd-full-rice.fits
-datasize,6675840,4,0,637656448,79707056,79707056,e28374-nd-full-rice.fits
+datasize,6675840,4,0,79707056,9963382,79707056,e28374-nd-full-rice.fits
 size,6710400,4,2880,6131520,213120,362880,e04338-nd-full-rice.fits
 name,6710400,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e04338-nd-full-rice.fits
 hdutype,6710400,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e04338-nd-full-rice.fits
 dim,6710400,4,(),"(3177, 3219)","(3177, 3219)","(3177, 3219)",e04338-nd-full-rice.fits
 itemsize,6710400,4,,64,8,8,e04338-nd-full-rice.fits
-datasize,6710400,4,0,654512832,81814104,81814104,e04338-nd-full-rice.fits
+datasize,6710400,4,0,81814104,10226763,81814104,e04338-nd-full-rice.fits
 size,6675840,4,2880,6096960,218880,357120,e07053-nd-full-rice.fits
 name,6675840,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e07053-nd-full-rice.fits
 hdutype,6675840,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e07053-nd-full-rice.fits
 dim,6675840,4,(),"(3163, 3087)","(3163, 3087)","(3163, 3087)",e07053-nd-full-rice.fits
 itemsize,6675840,4,,64,8,8,e07053-nd-full-rice.fits
-datasize,6675840,4,0,624907584,78113448,78113448,e07053-nd-full-rice.fits
+datasize,6675840,4,0,78113448,9764181,78113448,e07053-nd-full-rice.fits
 size,7015680,4,2880,6384960,207360,420480,e19760-fd-full-rice.fits
 name,7015680,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e19760-fd-full-rice.fits
 hdutype,7015680,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e19760-fd-full-rice.fits
 dim,7015680,4,(),"(3123, 3094)","(3123, 3094)","(3123, 3094)",e19760-fd-full-rice.fits
 itemsize,7015680,4,,64,8,8,e19760-fd-full-rice.fits
-datasize,7015680,4,0,618403968,77300496,77300496,e19760-fd-full-rice.fits
+datasize,7015680,4,0,77300496,9662562,77300496,e19760-fd-full-rice.fits
 size,7194240,4,2880,6528960,224640,437760,e07451-fd-full-rice.fits
 name,7194240,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e07451-fd-full-rice.fits
 hdutype,7194240,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e07451-fd-full-rice.fits
 dim,7194240,4,(),"(3119, 3175)","(3119, 3175)","(3119, 3175)",e07451-fd-full-rice.fits
 itemsize,7194240,4,,64,8,8,e07451-fd-full-rice.fits
-datasize,7194240,4,0,633780800,79222600,79222600,e07451-fd-full-rice.fits
+datasize,7194240,4,0,79222600,9902825,79222600,e07451-fd-full-rice.fits
 size,6733440,4,2880,6157440,207360,365760,e09909-nd-full-rice.fits
 name,6733440,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e09909-nd-full-rice.fits
 hdutype,6733440,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e09909-nd-full-rice.fits
 dim,6733440,4,(),"(3094, 3079)","(3094, 3079)","(3094, 3079)",e09909-nd-full-rice.fits
 itemsize,6733440,4,,64,8,8,e09909-nd-full-rice.fits
-datasize,6733440,4,0,609691264,76211408,76211408,e09909-nd-full-rice.fits
+datasize,6733440,4,0,76211408,9526426,76211408,e09909-nd-full-rice.fits
 size,6347520,4,2880,5774400,187200,383040,e13999-fd-full-rice.fits
 name,6347520,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e13999-fd-full-rice.fits
 hdutype,6347520,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e13999-fd-full-rice.fits
 dim,6347520,4,(),"(3076, 3149)","(3076, 3149)","(3076, 3149)",e13999-fd-full-rice.fits
 itemsize,6347520,4,,64,8,8,e13999-fd-full-rice.fits
-datasize,6347520,4,0,619924736,77490592,77490592,e13999-fd-full-rice.fits
+datasize,6347520,4,0,77490592,9686324,77490592,e13999-fd-full-rice.fits
 size,6966720,4,2880,6399360,233280,331200,e42100-nd-full-rice.fits
 name,6966720,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e42100-nd-full-rice.fits
 hdutype,6966720,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e42100-nd-full-rice.fits
 dim,6966720,4,(),"(3179, 3183)","(3179, 3183)","(3179, 3183)",e42100-nd-full-rice.fits
 itemsize,6966720,4,,64,8,8,e42100-nd-full-rice.fits
-datasize,6966720,4,0,647600448,80950056,80950056,e42100-nd-full-rice.fits
+datasize,6966720,4,0,80950056,10118757,80950056,e42100-nd-full-rice.fits
 size,7309440,4,2880,6644160,221760,440640,e06748-fd-full-rice.fits
 name,7309440,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e06748-fd-full-rice.fits
 hdutype,7309440,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e06748-fd-full-rice.fits
 dim,7309440,4,(),"(3078, 3127)","(3078, 3127)","(3078, 3127)",e06748-fd-full-rice.fits
 itemsize,7309440,4,,64,8,8,e06748-fd-full-rice.fits
-datasize,7309440,4,0,615993984,76999248,76999248,e06748-fd-full-rice.fits
+datasize,7309440,4,0,76999248,9624906,76999248,e06748-fd-full-rice.fits
 size,6981120,4,2880,6399360,178560,400320,e40591-nd-full-rice.fits
 name,6981120,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e40591-nd-full-rice.fits
 hdutype,6981120,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e40591-nd-full-rice.fits
 dim,6981120,4,(),"(3106, 3175)","(3106, 3175)","(3106, 3175)",e40591-nd-full-rice.fits
 itemsize,6981120,4,,64,8,8,e40591-nd-full-rice.fits
-datasize,6981120,4,0,631139200,78892400,78892400,e40591-nd-full-rice.fits
+datasize,6981120,4,0,78892400,9861550,78892400,e40591-nd-full-rice.fits
 size,7151040,4,2880,6557760,169920,420480,e43013-nd-full-rice.fits
 name,7151040,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e43013-nd-full-rice.fits
 hdutype,7151040,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e43013-nd-full-rice.fits
 dim,7151040,4,(),"(3052, 3088)","(3052, 3088)","(3052, 3088)",e43013-nd-full-rice.fits
 itemsize,7151040,4,,64,8,8,e43013-nd-full-rice.fits
-datasize,7151040,4,0,603172864,75396608,75396608,e43013-nd-full-rice.fits
+datasize,7151040,4,0,75396608,9424576,75396608,e43013-nd-full-rice.fits
 size,7122240,4,2880,6488640,230400,400320,e44795-nd-full-rice.fits
 name,7122240,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e44795-nd-full-rice.fits
 hdutype,7122240,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e44795-nd-full-rice.fits
 dim,7122240,4,(),"(3176, 3157)","(3176, 3157)","(3176, 3157)",e44795-nd-full-rice.fits
 itemsize,7122240,4,,64,8,8,e44795-nd-full-rice.fits
-datasize,7122240,4,0,641704448,80213056,80213056,e44795-nd-full-rice.fits
+datasize,7122240,4,0,80213056,10026632,80213056,e44795-nd-full-rice.fits
 size,4273920,4,2880,3813120,158400,299520,e26760-fd-full-rice.fits
 name,4273920,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e26760-fd-full-rice.fits
 hdutype,4273920,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e26760-fd-full-rice.fits
 dim,4273920,4,(),"(3118, 3156)","(3118, 3156)","(3118, 3156)",e26760-fd-full-rice.fits
 itemsize,4273920,4,,64,8,8,e26760-fd-full-rice.fits
-datasize,4273920,4,0,629786112,78723264,78723264,e26760-fd-full-rice.fits
+datasize,4273920,4,0,78723264,9840408,78723264,e26760-fd-full-rice.fits
 size,6871680,4,2880,6327360,221760,319680,e22053-nd-full-rice.fits
 name,6871680,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e22053-nd-full-rice.fits
 hdutype,6871680,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e22053-nd-full-rice.fits
 dim,6871680,4,(),"(3167, 3157)","(3167, 3157)","(3167, 3157)",e22053-nd-full-rice.fits
 itemsize,6871680,4,,64,8,8,e22053-nd-full-rice.fits
-datasize,6871680,4,0,639886016,79985752,79985752,e22053-nd-full-rice.fits
+datasize,6871680,4,0,79985752,9998219,79985752,e22053-nd-full-rice.fits
 size,7335360,4,2880,6670080,221760,440640,e14313-fd-full-rice.fits
 name,7335360,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e14313-fd-full-rice.fits
 hdutype,7335360,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e14313-fd-full-rice.fits
 dim,7335360,4,(),"(3147, 3108)","(3147, 3108)","(3147, 3108)",e14313-fd-full-rice.fits
 itemsize,7335360,4,,64,8,8,e14313-fd-full-rice.fits
-datasize,7335360,4,0,625976064,78247008,78247008,e14313-fd-full-rice.fits
+datasize,7335360,4,0,78247008,9780876,78247008,e14313-fd-full-rice.fits
 size,6736320,4,2880,6145920,210240,377280,e35028-nd-full-rice.fits
 name,6736320,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e35028-nd-full-rice.fits
 hdutype,6736320,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e35028-nd-full-rice.fits
 dim,6736320,4,(),"(3169, 3194)","(3169, 3194)","(3169, 3194)",e35028-nd-full-rice.fits
 itemsize,6736320,4,,64,8,8,e35028-nd-full-rice.fits
-datasize,6736320,4,0,647794304,80974288,80974288,e35028-nd-full-rice.fits
+datasize,6736320,4,0,80974288,10121786,80974288,e35028-nd-full-rice.fits
 size,6456960,4,2880,5857920,198720,397440,e05027-fd-full-rice.fits
 name,6456960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e05027-fd-full-rice.fits
 hdutype,6456960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e05027-fd-full-rice.fits
 dim,6456960,4,(),"(3113, 3088)","(3113, 3088)","(3113, 3088)",e05027-fd-full-rice.fits
 itemsize,6456960,4,,64,8,8,e05027-fd-full-rice.fits
-datasize,6456960,4,0,615228416,76903552,76903552,e05027-fd-full-rice.fits
+datasize,6456960,4,0,76903552,9612944,76903552,e05027-fd-full-rice.fits
 size,4884480,4,2880,4409280,161280,311040,e31636-fd-full-rice.fits
 name,4884480,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e31636-fd-full-rice.fits
 hdutype,4884480,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e31636-fd-full-rice.fits
 dim,4884480,4,(),"(3163, 3093)","(3163, 3093)","(3163, 3093)",e31636-fd-full-rice.fits
 itemsize,4884480,4,,64,8,8,e31636-fd-full-rice.fits
-datasize,4884480,4,0,626122176,78265272,78265272,e31636-fd-full-rice.fits
+datasize,4884480,4,0,78265272,9783159,78265272,e31636-fd-full-rice.fits
 size,6744960,4,2880,6131520,216000,394560,e35387-nd-full-rice.fits
 name,6744960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e35387-nd-full-rice.fits
 hdutype,6744960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e35387-nd-full-rice.fits
 dim,6744960,4,(),"(3208, 3133)","(3208, 3133)","(3208, 3133)",e35387-nd-full-rice.fits
 itemsize,6744960,4,,64,8,8,e35387-nd-full-rice.fits
-datasize,6744960,4,0,643242496,80405312,80405312,e35387-nd-full-rice.fits
+datasize,6744960,4,0,80405312,10050664,80405312,e35387-nd-full-rice.fits
 size,7289280,4,2880,6670080,198720,417600,e10602-nd-full-rice.fits
 name,7289280,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e10602-nd-full-rice.fits
 hdutype,7289280,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e10602-nd-full-rice.fits
 dim,7289280,4,(),"(3111, 3091)","(3111, 3091)","(3111, 3091)",e10602-nd-full-rice.fits
 itemsize,7289280,4,,64,8,8,e10602-nd-full-rice.fits
-datasize,7289280,4,0,615430464,76928808,76928808,e10602-nd-full-rice.fits
+datasize,7289280,4,0,76928808,9616101,76928808,e10602-nd-full-rice.fits
 size,7220160,4,2880,6615360,198720,403200,e20916-nd-full-rice.fits
 name,7220160,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e20916-nd-full-rice.fits
 hdutype,7220160,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e20916-nd-full-rice.fits
 dim,7220160,4,(),"(3089, 3062)","(3089, 3062)","(3089, 3062)",e20916-nd-full-rice.fits
 itemsize,7220160,4,,64,8,8,e20916-nd-full-rice.fits
-datasize,7220160,4,0,605345152,75668144,75668144,e20916-nd-full-rice.fits
+datasize,7220160,4,0,75668144,9458518,75668144,e20916-nd-full-rice.fits
 size,7122240,4,2880,6531840,195840,391680,e25577-nd-full-rice.fits
 name,7122240,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e25577-nd-full-rice.fits
 hdutype,7122240,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e25577-nd-full-rice.fits
 dim,7122240,4,(),"(3068, 3096)","(3068, 3096)","(3068, 3096)",e25577-nd-full-rice.fits
 itemsize,7122240,4,,64,8,8,e25577-nd-full-rice.fits
-datasize,7122240,4,0,607905792,75988224,75988224,e25577-nd-full-rice.fits
+datasize,7122240,4,0,75988224,9498528,75988224,e25577-nd-full-rice.fits
 size,5840640,4,2880,5293440,178560,365760,e09353-fd-full-rice.fits
 name,5840640,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e09353-fd-full-rice.fits
 hdutype,5840640,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e09353-fd-full-rice.fits
 dim,5840640,4,(),"(3176, 3132)","(3176, 3132)","(3176, 3132)",e09353-fd-full-rice.fits
 itemsize,5840640,4,,64,8,8,e09353-fd-full-rice.fits
-datasize,5840640,4,0,636622848,79577856,79577856,e09353-fd-full-rice.fits
+datasize,5840640,4,0,79577856,9947232,79577856,e09353-fd-full-rice.fits
 size,2917440,4,2880,2525760,149760,239040,e28978-fd-full-rice.fits
 name,2917440,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e28978-fd-full-rice.fits
 hdutype,2917440,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e28978-fd-full-rice.fits
 dim,2917440,4,(),"(3178, 3094)","(3178, 3094)","(3178, 3094)",e28978-fd-full-rice.fits
 itemsize,2917440,4,,64,8,8,e28978-fd-full-rice.fits
-datasize,2917440,4,0,629294848,78661856,78661856,e28978-fd-full-rice.fits
+datasize,2917440,4,0,78661856,9832732,78661856,e28978-fd-full-rice.fits
 size,7004160,4,2880,6399360,192960,408960,e11428-nd-full-rice.fits
 name,7004160,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e11428-nd-full-rice.fits
 hdutype,7004160,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e11428-nd-full-rice.fits
 dim,7004160,4,(),"(3152, 3193)","(3152, 3193)","(3152, 3193)",e11428-nd-full-rice.fits
 itemsize,7004160,4,,64,8,8,e11428-nd-full-rice.fits
-datasize,7004160,4,0,644117504,80514688,80514688,e11428-nd-full-rice.fits
+datasize,7004160,4,0,80514688,10064336,80514688,e11428-nd-full-rice.fits
 size,6842880,4,2880,6217920,204480,417600,e14019-fd-full-rice.fits
 name,6842880,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e14019-fd-full-rice.fits
 hdutype,6842880,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e14019-fd-full-rice.fits
 dim,6842880,4,(),"(3137, 3154)","(3137, 3154)","(3137, 3154)",e14019-fd-full-rice.fits
 itemsize,6842880,4,,64,8,8,e14019-fd-full-rice.fits
-datasize,6842880,4,0,633222272,79152784,79152784,e14019-fd-full-rice.fits
+datasize,6842880,4,0,79152784,9894098,79152784,e14019-fd-full-rice.fits
 size,2928960,4,2880,2543040,146880,236160,e17201-fd-full-rice.fits
 name,2928960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e17201-fd-full-rice.fits
 hdutype,2928960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e17201-fd-full-rice.fits
 dim,2928960,4,(),"(3121, 3113)","(3121, 3113)","(3121, 3113)",e17201-fd-full-rice.fits
 itemsize,2928960,4,,64,8,8,e17201-fd-full-rice.fits
-datasize,2928960,4,0,621803072,77725384,77725384,e17201-fd-full-rice.fits
+datasize,2928960,4,0,77725384,9715673,77725384,e17201-fd-full-rice.fits
 size,7223040,4,2880,6632640,187200,400320,e13734-nd-full-rice.fits
 name,7223040,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e13734-nd-full-rice.fits
 hdutype,7223040,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e13734-nd-full-rice.fits
 dim,7223040,4,(),"(3103, 3069)","(3103, 3069)","(3103, 3069)",e13734-nd-full-rice.fits
 itemsize,7223040,4,,64,8,8,e13734-nd-full-rice.fits
-datasize,7223040,4,0,609478848,76184856,76184856,e13734-nd-full-rice.fits
+datasize,7223040,4,0,76184856,9523107,76184856,e13734-nd-full-rice.fits
 size,4271040,4,2880,3807360,161280,299520,e21486-fd-full-rice.fits
 name,4271040,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e21486-fd-full-rice.fits
 hdutype,4271040,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e21486-fd-full-rice.fits
 dim,4271040,4,(),"(3144, 3086)","(3144, 3086)","(3144, 3086)",e21486-fd-full-rice.fits
 itemsize,4271040,4,,64,8,8,e21486-fd-full-rice.fits
-datasize,4271040,4,0,620952576,77619072,77619072,e21486-fd-full-rice.fits
+datasize,4271040,4,0,77619072,9702384,77619072,e21486-fd-full-rice.fits
 size,6791040,4,2880,6226560,210240,351360,e20036-nd-full-rice.fits
 name,6791040,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e20036-nd-full-rice.fits
 hdutype,6791040,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e20036-nd-full-rice.fits
 dim,6791040,4,(),"(3092, 3115)","(3092, 3115)","(3092, 3115)",e20036-nd-full-rice.fits
 itemsize,6791040,4,,64,8,8,e20036-nd-full-rice.fits
-datasize,6791040,4,0,616421120,77052640,77052640,e20036-nd-full-rice.fits
+datasize,6791040,4,0,77052640,9631580,77052640,e20036-nd-full-rice.fits
 size,7292160,4,2880,6626880,224640,437760,e30689-fd-full-rice.fits
 name,7292160,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e30689-fd-full-rice.fits
 hdutype,7292160,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e30689-fd-full-rice.fits
 dim,7292160,4,(),"(3098, 3203)","(3098, 3203)","(3098, 3203)",e30689-fd-full-rice.fits
 itemsize,7292160,4,,64,8,8,e30689-fd-full-rice.fits
-datasize,7292160,4,0,635065216,79383152,79383152,e30689-fd-full-rice.fits
+datasize,7292160,4,0,79383152,9922894,79383152,e30689-fd-full-rice.fits
 size,5388480,4,2880,4890240,161280,334080,e12509-fd-full-rice.fits
 name,5388480,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e12509-fd-full-rice.fits
 hdutype,5388480,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e12509-fd-full-rice.fits
 dim,5388480,4,(),"(3093, 3060)","(3093, 3060)","(3093, 3060)",e12509-fd-full-rice.fits
 itemsize,5388480,4,,64,8,8,e12509-fd-full-rice.fits
-datasize,5388480,4,0,605733120,75716640,75716640,e12509-fd-full-rice.fits
+datasize,5388480,4,0,75716640,9464580,75716640,e12509-fd-full-rice.fits
 size,6727680,4,2880,6108480,213120,403200,e37319-nd-full-rice.fits
 name,6727680,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e37319-nd-full-rice.fits
 hdutype,6727680,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e37319-nd-full-rice.fits
 dim,6727680,4,(),"(3103, 3110)","(3103, 3110)","(3103, 3110)",e37319-nd-full-rice.fits
 itemsize,6727680,4,,64,8,8,e37319-nd-full-rice.fits
-datasize,6727680,4,0,617621120,77202640,77202640,e37319-nd-full-rice.fits
+datasize,6727680,4,0,77202640,9650330,77202640,e37319-nd-full-rice.fits
 size,6940800,4,2880,6298560,210240,429120,e28245-fd-full-rice.fits
 name,6940800,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e28245-fd-full-rice.fits
 hdutype,6940800,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e28245-fd-full-rice.fits
 dim,6940800,4,(),"(3223, 3184)","(3223, 3184)","(3223, 3184)",e28245-fd-full-rice.fits
 itemsize,6940800,4,,64,8,8,e28245-fd-full-rice.fits
-datasize,6940800,4,0,656770048,82096256,82096256,e28245-fd-full-rice.fits
+datasize,6940800,4,0,82096256,10262032,82096256,e28245-fd-full-rice.fits
 size,6684480,4,2880,6160320,224640,296640,e08323-nd-full-rice.fits
 name,6684480,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e08323-nd-full-rice.fits
 hdutype,6684480,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e08323-nd-full-rice.fits
 dim,6684480,4,(),"(3124, 3170)","(3124, 3170)","(3124, 3170)",e08323-nd-full-rice.fits
 itemsize,6684480,4,,64,8,8,e08323-nd-full-rice.fits
-datasize,6684480,4,0,633797120,79224640,79224640,e08323-nd-full-rice.fits
+datasize,6684480,4,0,79224640,9903080,79224640,e08323-nd-full-rice.fits
 size,6935040,4,2880,6353280,195840,383040,e01747-nd-full-rice.fits
 name,6935040,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e01747-nd-full-rice.fits
 hdutype,6935040,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e01747-nd-full-rice.fits
 dim,6935040,4,(),"(3159, 3198)","(3159, 3198)","(3159, 3198)",e01747-nd-full-rice.fits
 itemsize,6935040,4,,64,8,8,e01747-nd-full-rice.fits
-datasize,6935040,4,0,646558848,80819856,80819856,e01747-nd-full-rice.fits
+datasize,6935040,4,0,80819856,10102482,80819856,e01747-nd-full-rice.fits
 size,6955200,4,2880,6387840,178560,385920,e04348-nd-full-rice.fits
 name,6955200,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e04348-nd-full-rice.fits
 hdutype,6955200,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e04348-nd-full-rice.fits
 dim,6955200,4,(),"(3076, 3048)","(3076, 3048)","(3076, 3048)",e04348-nd-full-rice.fits
 itemsize,6955200,4,,64,8,8,e04348-nd-full-rice.fits
-datasize,6955200,4,0,600041472,75005184,75005184,e04348-nd-full-rice.fits
+datasize,6955200,4,0,75005184,9375648,75005184,e04348-nd-full-rice.fits
 size,7018560,4,2880,6425280,198720,391680,e34827-nd-full-rice.fits
 name,7018560,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e34827-nd-full-rice.fits
 hdutype,7018560,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e34827-nd-full-rice.fits
 dim,7018560,4,(),"(3152, 3168)","(3152, 3168)","(3152, 3168)",e34827-nd-full-rice.fits
 itemsize,7018560,4,,64,8,8,e34827-nd-full-rice.fits
-datasize,7018560,4,0,639074304,79884288,79884288,e34827-nd-full-rice.fits
+datasize,7018560,4,0,79884288,9985536,79884288,e34827-nd-full-rice.fits
 size,6923520,4,2880,6287040,213120,420480,e06038-fd-full-rice.fits
 name,6923520,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e06038-fd-full-rice.fits
 hdutype,6923520,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e06038-fd-full-rice.fits
 dim,6923520,4,(),"(3150, 3106)","(3150, 3106)","(3150, 3106)",e06038-fd-full-rice.fits
 itemsize,6923520,4,,64,8,8,e06038-fd-full-rice.fits
-datasize,6923520,4,0,626169600,78271200,78271200,e06038-fd-full-rice.fits
+datasize,6923520,4,0,78271200,9783900,78271200,e06038-fd-full-rice.fits
 size,7289280,4,2880,6632640,201600,452160,e16418-nd-full-rice.fits
 name,7289280,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e16418-nd-full-rice.fits
 hdutype,7289280,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e16418-nd-full-rice.fits
 dim,7289280,4,(),"(3136, 3108)","(3136, 3108)","(3136, 3108)",e16418-nd-full-rice.fits
 itemsize,7289280,4,,64,8,8,e16418-nd-full-rice.fits
-datasize,7289280,4,0,623788032,77973504,77973504,e16418-nd-full-rice.fits
+datasize,7289280,4,0,77973504,9746688,77973504,e16418-nd-full-rice.fits
 size,6747840,4,2880,6128640,204480,411840,e05265-fd-full-rice.fits
 name,6747840,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e05265-fd-full-rice.fits
 hdutype,6747840,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e05265-fd-full-rice.fits
 dim,6747840,4,(),"(3102, 3098)","(3102, 3098)","(3102, 3098)",e05265-fd-full-rice.fits
 itemsize,6747840,4,,64,8,8,e05265-fd-full-rice.fits
-datasize,6747840,4,0,615039744,76879968,76879968,e05265-fd-full-rice.fits
+datasize,6747840,4,0,76879968,9609996,76879968,e05265-fd-full-rice.fits
 size,6442560,4,2880,5938560,152640,348480,e04139-nd-full-rice.fits
 name,6442560,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e04139-nd-full-rice.fits
 hdutype,6442560,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e04139-nd-full-rice.fits
 dim,6442560,4,(),"(3075, 3078)","(3075, 3078)","(3075, 3078)",e04139-nd-full-rice.fits
 itemsize,6442560,4,,64,8,8,e04139-nd-full-rice.fits
-datasize,6442560,4,0,605750400,75718800,75718800,e04139-nd-full-rice.fits
+datasize,6442560,4,0,75718800,9464850,75718800,e04139-nd-full-rice.fits
 size,6091200,4,2880,5587200,149760,351360,e10930-nd-full-rice.fits
 name,6091200,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e10930-nd-full-rice.fits
 hdutype,6091200,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e10930-nd-full-rice.fits
 dim,6091200,4,(),"(3137, 3042)","(3137, 3042)","(3137, 3042)",e10930-nd-full-rice.fits
 itemsize,6091200,4,,64,8,8,e10930-nd-full-rice.fits
-datasize,6091200,4,0,610736256,76342032,76342032,e10930-nd-full-rice.fits
+datasize,6091200,4,0,76342032,9542754,76342032,e10930-nd-full-rice.fits
 size,6960960,4,2880,6405120,169920,383040,e23532-nd-full-rice.fits
 name,6960960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e23532-nd-full-rice.fits
 hdutype,6960960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e23532-nd-full-rice.fits
 dim,6960960,4,(),"(3148, 3151)","(3148, 3151)","(3148, 3151)",e23532-nd-full-rice.fits
 itemsize,6960960,4,,64,8,8,e23532-nd-full-rice.fits
-datasize,6960960,4,0,634838272,79354784,79354784,e23532-nd-full-rice.fits
+datasize,6960960,4,0,79354784,9919348,79354784,e23532-nd-full-rice.fits
 size,6626880,4,2880,6045120,216000,362880,e26676-nd-full-rice.fits
 name,6626880,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e26676-nd-full-rice.fits
 hdutype,6626880,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e26676-nd-full-rice.fits
 dim,6626880,4,(),"(3148, 3188)","(3148, 3188)","(3148, 3188)",e26676-nd-full-rice.fits
 itemsize,6626880,4,,64,8,8,e26676-nd-full-rice.fits
-datasize,6626880,4,0,642292736,80286592,80286592,e26676-nd-full-rice.fits
+datasize,6626880,4,0,80286592,10035824,80286592,e26676-nd-full-rice.fits
 size,7015680,4,2880,6402240,181440,429120,e25925-nd-full-rice.fits
 name,7015680,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e25925-nd-full-rice.fits
 hdutype,7015680,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e25925-nd-full-rice.fits
 dim,7015680,4,(),"(3069, 3076)","(3069, 3076)","(3069, 3076)",e25925-nd-full-rice.fits
 itemsize,7015680,4,,64,8,8,e25925-nd-full-rice.fits
-datasize,7015680,4,0,604175616,75521952,75521952,e25925-nd-full-rice.fits
+datasize,7015680,4,0,75521952,9440244,75521952,e25925-nd-full-rice.fits
 size,7136640,4,2880,6511680,181440,440640,e43597-nd-full-rice.fits
 name,7136640,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e43597-nd-full-rice.fits
 hdutype,7136640,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e43597-nd-full-rice.fits
 dim,7136640,4,(),"(3079, 3090)","(3079, 3090)","(3079, 3090)",e43597-nd-full-rice.fits
 itemsize,7136640,4,,64,8,8,e43597-nd-full-rice.fits
-datasize,7136640,4,0,608903040,76112880,76112880,e43597-nd-full-rice.fits
+datasize,7136640,4,0,76112880,9514110,76112880,e43597-nd-full-rice.fits
 size,7148160,4,2880,6511680,201600,432000,e15645-nd-full-rice.fits
 name,7148160,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e15645-nd-full-rice.fits
 hdutype,7148160,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e15645-nd-full-rice.fits
 dim,7148160,4,(),"(3183, 3126)","(3183, 3126)","(3183, 3126)",e15645-nd-full-rice.fits
 itemsize,7148160,4,,64,8,8,e15645-nd-full-rice.fits
-datasize,7148160,4,0,636803712,79600464,79600464,e15645-nd-full-rice.fits
+datasize,7148160,4,0,79600464,9950058,79600464,e15645-nd-full-rice.fits
 size,6805440,4,2880,6189120,207360,406080,e29245-fd-full-rice.fits
 name,6805440,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e29245-fd-full-rice.fits
 hdutype,6805440,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e29245-fd-full-rice.fits
 dim,6805440,4,(),"(3117, 3141)","(3117, 3141)","(3117, 3141)",e29245-fd-full-rice.fits
 itemsize,6805440,4,,64,8,8,e29245-fd-full-rice.fits
-datasize,6805440,4,0,626591808,78323976,78323976,e29245-fd-full-rice.fits
+datasize,6805440,4,0,78323976,9790497,78323976,e29245-fd-full-rice.fits
 size,7493760,4,2880,6805440,230400,455040,e30590-fd-full-rice.fits
 name,7493760,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e30590-fd-full-rice.fits
 hdutype,7493760,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e30590-fd-full-rice.fits
 dim,7493760,4,(),"(3184, 3115)","(3184, 3115)","(3184, 3115)",e30590-fd-full-rice.fits
 itemsize,7493760,4,,64,8,8,e30590-fd-full-rice.fits
-datasize,7493760,4,0,634762240,79345280,79345280,e30590-fd-full-rice.fits
+datasize,7493760,4,0,79345280,9918160,79345280,e30590-fd-full-rice.fits
 size,7030080,4,2880,6468480,218880,339840,e40404-nd-full-rice.fits
 name,7030080,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e40404-nd-full-rice.fits
 hdutype,7030080,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e40404-nd-full-rice.fits
 dim,7030080,4,(),"(3164, 3141)","(3164, 3141)","(3164, 3141)",e40404-nd-full-rice.fits
 itemsize,7030080,4,,64,8,8,e40404-nd-full-rice.fits
-datasize,7030080,4,0,636039936,79504992,79504992,e40404-nd-full-rice.fits
+datasize,7030080,4,0,79504992,9938124,79504992,e40404-nd-full-rice.fits
 size,6779520,4,2880,6192000,216000,368640,e26678-nd-full-rice.fits
 name,6779520,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e26678-nd-full-rice.fits
 hdutype,6779520,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e26678-nd-full-rice.fits
 dim,6779520,4,(),"(3205, 3133)","(3205, 3133)","(3205, 3133)",e26678-nd-full-rice.fits
 itemsize,6779520,4,,64,8,8,e26678-nd-full-rice.fits
-datasize,6779520,4,0,642640960,80330120,80330120,e26678-nd-full-rice.fits
+datasize,6779520,4,0,80330120,10041265,80330120,e26678-nd-full-rice.fits
 size,2304000,4,2880,1949760,144000,207360,e01411-fd-full-rice.fits
 name,2304000,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e01411-fd-full-rice.fits
 hdutype,2304000,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e01411-fd-full-rice.fits
 dim,2304000,4,(),"(3085, 3104)","(3085, 3104)","(3085, 3104)",e01411-fd-full-rice.fits
 itemsize,2304000,4,,64,8,8,e01411-fd-full-rice.fits
-datasize,2304000,4,0,612853760,76606720,76606720,e01411-fd-full-rice.fits
+datasize,2304000,4,0,76606720,9575840,76606720,e01411-fd-full-rice.fits
 size,6681600,4,2880,6105600,204480,368640,e13712-nd-full-rice.fits
 name,6681600,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e13712-nd-full-rice.fits
 hdutype,6681600,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e13712-nd-full-rice.fits
 dim,6681600,4,(),"(3094, 3067)","(3094, 3067)","(3094, 3067)",e13712-nd-full-rice.fits
 itemsize,6681600,4,,64,8,8,e13712-nd-full-rice.fits
-datasize,6681600,4,0,607315072,75914384,75914384,e13712-nd-full-rice.fits
+datasize,6681600,4,0,75914384,9489298,75914384,e13712-nd-full-rice.fits
 size,7197120,4,2880,6583680,198720,411840,e10743-nd-full-rice.fits
 name,7197120,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e10743-nd-full-rice.fits
 hdutype,7197120,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e10743-nd-full-rice.fits
 dim,7197120,4,(),"(3144, 3186)","(3144, 3186)","(3144, 3186)",e10743-nd-full-rice.fits
 itemsize,7197120,4,,64,8,8,e10743-nd-full-rice.fits
-datasize,7197120,4,0,641074176,80134272,80134272,e10743-nd-full-rice.fits
+datasize,7197120,4,0,80134272,10016784,80134272,e10743-nd-full-rice.fits
 size,6693120,4,2880,6105600,207360,377280,e08553-nd-full-rice.fits
 name,6693120,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e08553-nd-full-rice.fits
 hdutype,6693120,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e08553-nd-full-rice.fits
 dim,6693120,4,(),"(3106, 3125)","(3106, 3125)","(3106, 3125)",e08553-nd-full-rice.fits
 itemsize,6693120,4,,64,8,8,e08553-nd-full-rice.fits
-datasize,6693120,4,0,621200000,77650000,77650000,e08553-nd-full-rice.fits
+datasize,6693120,4,0,77650000,9706250,77650000,e08553-nd-full-rice.fits
 size,6923520,4,2880,6324480,204480,391680,e34196-nd-full-rice.fits
 name,6923520,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e34196-nd-full-rice.fits
 hdutype,6923520,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e34196-nd-full-rice.fits
 dim,6923520,4,(),"(3157, 3103)","(3157, 3103)","(3157, 3103)",e34196-nd-full-rice.fits
 itemsize,6923520,4,,64,8,8,e34196-nd-full-rice.fits
-datasize,6923520,4,0,626954944,78369368,78369368,e34196-nd-full-rice.fits
+datasize,6923520,4,0,78369368,9796171,78369368,e34196-nd-full-rice.fits
 size,7375680,4,2880,6698880,224640,449280,e28692-fd-full-rice.fits
 name,7375680,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e28692-fd-full-rice.fits
 hdutype,7375680,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e28692-fd-full-rice.fits
 dim,7375680,4,(),"(3175, 3143)","(3175, 3143)","(3175, 3143)",e28692-fd-full-rice.fits
 itemsize,7375680,4,,64,8,8,e28692-fd-full-rice.fits
-datasize,7375680,4,0,638657600,79832200,79832200,e28692-fd-full-rice.fits
+datasize,7375680,4,0,79832200,9979025,79832200,e28692-fd-full-rice.fits
 size,6678720,4,2880,6099840,210240,365760,e25728-nd-full-rice.fits
 name,6678720,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e25728-nd-full-rice.fits
 hdutype,6678720,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e25728-nd-full-rice.fits
 dim,6678720,4,(),"(3188, 3133)","(3188, 3133)","(3188, 3133)",e25728-nd-full-rice.fits
 itemsize,6678720,4,,64,8,8,e25728-nd-full-rice.fits
-datasize,6678720,4,0,639232256,79904032,79904032,e25728-nd-full-rice.fits
+datasize,6678720,4,0,79904032,9988004,79904032,e25728-nd-full-rice.fits
 size,7257600,4,2880,6635520,195840,423360,e37169-nd-full-rice.fits
 name,7257600,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e37169-nd-full-rice.fits
 hdutype,7257600,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e37169-nd-full-rice.fits
 dim,7257600,4,(),"(3102, 3088)","(3102, 3088)","(3102, 3088)",e37169-nd-full-rice.fits
 itemsize,7257600,4,,64,8,8,e37169-nd-full-rice.fits
-datasize,7257600,4,0,613054464,76631808,76631808,e37169-nd-full-rice.fits
+datasize,7257600,4,0,76631808,9578976,76631808,e37169-nd-full-rice.fits
 size,6840000,4,2880,6203520,218880,414720,e04469-fd-full-rice.fits
 name,6840000,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e04469-fd-full-rice.fits
 hdutype,6840000,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e04469-fd-full-rice.fits
 dim,6840000,4,(),"(3158, 3117)","(3158, 3117)","(3158, 3117)",e04469-fd-full-rice.fits
 itemsize,6840000,4,,64,8,8,e04469-fd-full-rice.fits
-datasize,6840000,4,0,629983104,78747888,78747888,e04469-fd-full-rice.fits
+datasize,6840000,4,0,78747888,9843486,78747888,e04469-fd-full-rice.fits
 size,6048000,4,2880,5466240,195840,383040,e05160-fd-full-rice.fits
 name,6048000,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e05160-fd-full-rice.fits
 hdutype,6048000,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e05160-fd-full-rice.fits
 dim,6048000,4,(),"(3115, 3164)","(3115, 3164)","(3115, 3164)",e05160-fd-full-rice.fits
 itemsize,6048000,4,,64,8,8,e05160-fd-full-rice.fits
-datasize,6048000,4,0,630775040,78846880,78846880,e05160-fd-full-rice.fits
+datasize,6048000,4,0,78846880,9855860,78846880,e05160-fd-full-rice.fits
 size,4815360,4,2880,4317120,169920,325440,e14829-fd-full-rice.fits
 name,4815360,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e14829-fd-full-rice.fits
 hdutype,4815360,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e14829-fd-full-rice.fits
 dim,4815360,4,(),"(3202, 3103)","(3202, 3103)","(3202, 3103)",e14829-fd-full-rice.fits
 itemsize,4815360,4,,64,8,8,e14829-fd-full-rice.fits
-datasize,4815360,4,0,635891584,79486448,79486448,e14829-fd-full-rice.fits
+datasize,4815360,4,0,79486448,9935806,79486448,e14829-fd-full-rice.fits
 size,6696000,4,2880,6120000,213120,360000,e28618-nd-full-rice.fits
 name,6696000,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e28618-nd-full-rice.fits
 hdutype,6696000,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e28618-nd-full-rice.fits
 dim,6696000,4,(),"(3189, 3170)","(3189, 3170)","(3189, 3170)",e28618-nd-full-rice.fits
 itemsize,6696000,4,,64,8,8,e28618-nd-full-rice.fits
-datasize,6696000,4,0,646984320,80873040,80873040,e28618-nd-full-rice.fits
+datasize,6696000,4,0,80873040,10109130,80873040,e28618-nd-full-rice.fits
 size,7041600,4,2880,6454080,178560,406080,e15308-nd-full-rice.fits
 name,7041600,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e15308-nd-full-rice.fits
 hdutype,7041600,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e15308-nd-full-rice.fits
 dim,7041600,4,(),"(3101, 3200)","(3101, 3200)","(3101, 3200)",e15308-nd-full-rice.fits
 itemsize,7041600,4,,64,8,8,e15308-nd-full-rice.fits
-datasize,7041600,4,0,635084800,79385600,79385600,e15308-nd-full-rice.fits
+datasize,7041600,4,0,79385600,9923200,79385600,e15308-nd-full-rice.fits
 size,3697920,4,2880,3280320,149760,264960,e25707-fd-full-rice.fits
 name,3697920,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e25707-fd-full-rice.fits
 hdutype,3697920,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e25707-fd-full-rice.fits
 dim,3697920,4,(),"(3078, 3148)","(3078, 3148)","(3078, 3148)",e25707-fd-full-rice.fits
 itemsize,3697920,4,,64,8,8,e25707-fd-full-rice.fits
-datasize,3697920,4,0,620130816,77516352,77516352,e25707-fd-full-rice.fits
+datasize,3697920,4,0,77516352,9689544,77516352,e25707-fd-full-rice.fits
 size,6883200,4,2880,6272640,210240,397440,e09880-nd-full-rice.fits
 name,6883200,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e09880-nd-full-rice.fits
 hdutype,6883200,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e09880-nd-full-rice.fits
 dim,6883200,4,(),"(3198, 3156)","(3198, 3156)","(3198, 3156)",e09880-nd-full-rice.fits
 itemsize,6883200,4,,64,8,8,e09880-nd-full-rice.fits
-datasize,6883200,4,0,645944832,80743104,80743104,e09880-nd-full-rice.fits
+datasize,6883200,4,0,80743104,10092888,80743104,e09880-nd-full-rice.fits
 size,6724800,4,2880,6134400,216000,371520,e08265-nd-full-rice.fits
 name,6724800,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e08265-nd-full-rice.fits
 hdutype,6724800,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e08265-nd-full-rice.fits
 dim,6724800,4,(),"(3153, 3185)","(3153, 3185)","(3153, 3185)",e08265-nd-full-rice.fits
 itemsize,6724800,4,,64,8,8,e08265-nd-full-rice.fits
-datasize,6724800,4,0,642707520,80338440,80338440,e08265-nd-full-rice.fits
+datasize,6724800,4,0,80338440,10042305,80338440,e08265-nd-full-rice.fits
 size,6981120,4,2880,6367680,184320,426240,e21588-nd-full-rice.fits
 name,6981120,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e21588-nd-full-rice.fits
 hdutype,6981120,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e21588-nd-full-rice.fits
 dim,6981120,4,(),"(3087, 3073)","(3087, 3073)","(3087, 3073)",e21588-nd-full-rice.fits
 itemsize,6981120,4,,64,8,8,e21588-nd-full-rice.fits
-datasize,6981120,4,0,607126464,75890808,75890808,e21588-nd-full-rice.fits
+datasize,6981120,4,0,75890808,9486351,75890808,e21588-nd-full-rice.fits
 size,7084800,4,2880,6451200,210240,420480,e01827-fd-full-rice.fits
 name,7084800,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e01827-fd-full-rice.fits
 hdutype,7084800,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e01827-fd-full-rice.fits
 dim,7084800,4,(),"(3160, 3116)","(3160, 3116)","(3160, 3116)",e01827-fd-full-rice.fits
 itemsize,7084800,4,,64,8,8,e01827-fd-full-rice.fits
-datasize,7084800,4,0,630179840,78772480,78772480,e01827-fd-full-rice.fits
+datasize,7084800,4,0,78772480,9846560,78772480,e01827-fd-full-rice.fits
 size,6816960,4,2880,6232320,204480,377280,e35170-nd-full-rice.fits
 name,6816960,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e35170-nd-full-rice.fits
 hdutype,6816960,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e35170-nd-full-rice.fits
 dim,6816960,4,(),"(3087, 3161)","(3087, 3161)","(3087, 3161)",e35170-nd-full-rice.fits
 itemsize,6816960,4,,64,8,8,e35170-nd-full-rice.fits
-datasize,6816960,4,0,624512448,78064056,78064056,e35170-nd-full-rice.fits
+datasize,6816960,4,0,78064056,9758007,78064056,e35170-nd-full-rice.fits
 size,7418880,4,2880,6736320,230400,449280,e20155-fd-full-rice.fits
 name,7418880,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e20155-fd-full-rice.fits
 hdutype,7418880,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e20155-fd-full-rice.fits
 dim,7418880,4,(),"(3194, 3109)","(3194, 3109)","(3194, 3109)",e20155-fd-full-rice.fits
 itemsize,7418880,4,,64,8,8,e20155-fd-full-rice.fits
-datasize,7418880,4,0,635529344,79441168,79441168,e20155-fd-full-rice.fits
+datasize,7418880,4,0,79441168,9930146,79441168,e20155-fd-full-rice.fits
 size,6984000,4,2880,6431040,227520,322560,e35030-nd-full-rice.fits
 name,6984000,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e35030-nd-full-rice.fits
 hdutype,6984000,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e35030-nd-full-rice.fits
 dim,6984000,4,(),"(3234, 3218)","(3234, 3218)","(3234, 3218)",e35030-nd-full-rice.fits
 itemsize,6984000,4,,64,8,8,e35030-nd-full-rice.fits
-datasize,6984000,4,0,666048768,83256096,83256096,e35030-nd-full-rice.fits
+datasize,6984000,4,0,83256096,10407012,83256096,e35030-nd-full-rice.fits
 size,7182720,4,2880,6540480,207360,432000,e22848-fd-full-rice.fits
 name,7182720,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e22848-fd-full-rice.fits
 hdutype,7182720,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e22848-fd-full-rice.fits
 dim,7182720,4,(),"(3096, 3171)","(3096, 3171)","(3096, 3171)",e22848-fd-full-rice.fits
 itemsize,7182720,4,,64,8,8,e22848-fd-full-rice.fits
-datasize,7182720,4,0,628314624,78539328,78539328,e22848-fd-full-rice.fits
+datasize,7182720,4,0,78539328,9817416,78539328,e22848-fd-full-rice.fits
 size,6949440,4,2880,6324480,216000,406080,e10853-nd-full-rice.fits
 name,6949440,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e10853-nd-full-rice.fits
 hdutype,6949440,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e10853-nd-full-rice.fits
 dim,6949440,4,(),"(3159, 3149)","(3159, 3149)","(3159, 3149)",e10853-nd-full-rice.fits
 itemsize,6949440,4,,64,8,8,e10853-nd-full-rice.fits
-datasize,6949440,4,0,636652224,79581528,79581528,e10853-nd-full-rice.fits
+datasize,6949440,4,0,79581528,9947691,79581528,e10853-nd-full-rice.fits
 size,7272000,4,2880,6624000,216000,429120,e03477-fd-full-rice.fits
 name,7272000,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e03477-fd-full-rice.fits
 hdutype,7272000,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e03477-fd-full-rice.fits
 dim,7272000,4,(),"(3179, 3115)","(3179, 3115)","(3179, 3115)",e03477-fd-full-rice.fits
 itemsize,7272000,4,,64,8,8,e03477-fd-full-rice.fits
-datasize,7272000,4,0,633765440,79220680,79220680,e03477-fd-full-rice.fits
+datasize,7272000,4,0,79220680,9902585,79220680,e03477-fd-full-rice.fits
 size,6693120,4,2880,6076800,207360,406080,e07704-fd-full-rice.fits
 name,6693120,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e07704-fd-full-rice.fits
 hdutype,6693120,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e07704-fd-full-rice.fits
 dim,6693120,4,(),"(3105, 3176)","(3105, 3176)","(3105, 3176)",e07704-fd-full-rice.fits
 itemsize,6693120,4,,64,8,8,e07704-fd-full-rice.fits
-datasize,6693120,4,0,631134720,78891840,78891840,e07704-fd-full-rice.fits
+datasize,6693120,4,0,78891840,9861480,78891840,e07704-fd-full-rice.fits
 size,6670080,4,2880,6082560,221760,362880,e05698-nd-full-rice.fits
 name,6670080,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e05698-nd-full-rice.fits
 hdutype,6670080,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e05698-nd-full-rice.fits
 dim,6670080,4,(),"(3137, 3128)","(3137, 3128)","(3137, 3128)",e05698-nd-full-rice.fits
 itemsize,6670080,4,,64,8,8,e05698-nd-full-rice.fits
-datasize,6670080,4,0,628002304,78500288,78500288,e05698-nd-full-rice.fits
+datasize,6670080,4,0,78500288,9812536,78500288,e05698-nd-full-rice.fits
 size,5031360,4,2880,4530240,167040,331200,e23645-fd-full-rice.fits
 name,5031360,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e23645-fd-full-rice.fits
 hdutype,5031360,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e23645-fd-full-rice.fits
 dim,5031360,4,(),"(3141, 3091)","(3141, 3091)","(3141, 3091)",e23645-fd-full-rice.fits
 itemsize,5031360,4,,64,8,8,e23645-fd-full-rice.fits
-datasize,5031360,4,0,621365184,77670648,77670648,e23645-fd-full-rice.fits
+datasize,5031360,4,0,77670648,9708831,77670648,e23645-fd-full-rice.fits
 size,6730560,4,2880,6134400,210240,383040,e09371-nd-full-rice.fits
 name,6730560,4,PRIMARY,COMPRESSED_IMAGE,COMPRESSED_IMAGE,COMPRESSED_IMAGE,e09371-nd-full-rice.fits
 hdutype,6730560,4,PrimaryHDU,CompImageHDU,CompImageHDU,CompImageHDU,e09371-nd-full-rice.fits
 dim,6730560,4,(),"(3187, 3148)","(3187, 3148)","(3187, 3148)",e09371-nd-full-rice.fits
 itemsize,6730560,4,,64,8,8,e09371-nd-full-rice.fits
-datasize,6730560,4,0,642091264,80261408,80261408,e09371-nd-full-rice.fits
+datasize,6730560,4,0,80261408,10032676,80261408,e09371-nd-full-rice.fits
