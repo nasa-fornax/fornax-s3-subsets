@@ -131,13 +131,13 @@ def throttle(download=None, upload=None, interface="ens5"):
     """
     throttle network speed using wondershaper. requires a wondershaper
     installation and execution by a user with sudoer privileges and no
-    password.
+    password (e.g., the default user on most stock EC2 images).
+
     this permissions hack is sloppy and only suitable on single-user systems
     that have no password for sudoers _anyway_. I do not particularly
-    recommend editing this to add your password as plain text.
-    it would be better to edit permissions for the parts of the
-    system wondershaper touches if you wanted to use this in a
-    more general context.
+    recommend editing this to add your password as plain text. it would be
+    better to edit permissions for the parts of the system wondershaper
+    touches if you wanted to extend this to a more general context.
     """
     if (download is None) and (upload is None):
         return
@@ -166,6 +166,34 @@ def unthrottle(interface="ens5"):
         # on clear operations, even when successful.
         except sh.ErrorReturnCode:
             pass
+
+
+class Throttle:
+    """"
+    apply network transfer caps using wondershaper. basically exists
+    just to provide a context manager around throttle() and unthrottle() in
+    order to permit clean application of caps to particular code sections.
+    all caveats on throttle() and unthrottle() about crudeness and security
+    and so on apply here as well.
+    """
+
+    def __init__(
+            self, download=None, upload=None, interface="ens5", verbose=False
+    ):
+        self.throttle = partial(throttle, download, upload, interface)
+        self.unthrottle = partial(unthrottle, interface)
+        self.verbose = verbose
+
+    def __enter__(self):
+        self.throttle()
+        if self.verbose is True:
+            print(f"throttled interface: {self.throttle.args}")
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.unthrottle()
+        if self.verbose is True:
+            print(f"unthrottled interface: {self.unthrottle.args}")
 
 
 def load_first_aws_credential(cred_file=None):
