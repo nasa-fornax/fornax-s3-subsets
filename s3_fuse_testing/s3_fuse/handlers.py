@@ -37,12 +37,12 @@ def random_cuts_from_file(
     # pick some boxes to slice from the HDU
     imsz = imsz_from_header(header)
     rng = np.random.default_rng(rng_seed)
-    offsets = rectangular_slices(imsz, rng=rng, count=count, shape=shape)
+    indices = rectangular_slices(imsz, rng=rng, count=count, shape=shape)
     # and then slice them!
-    cuts = {}
-    for cut_ix in range(offsets.shape[0]):
+    cuts = {'indices': indices}
+    for cut_ix in range(indices.shape[0]):
         slices = tuple(
-            np.apply_along_axis(lambda row: slice(*row), 1, offsets[cut_ix])
+            np.apply_along_axis(lambda row: slice(*row), 1, indices[cut_ix])
         )
         cuts[cut_ix] = array_handle[slices]
         note(f"planned cuts,{path},{stat()}")
