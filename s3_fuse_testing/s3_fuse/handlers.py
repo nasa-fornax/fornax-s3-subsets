@@ -49,10 +49,14 @@ def random_cuts_from_file(
             np.apply_along_axis(lambda row: slice(*row), 1, indices[cut_ix])
         )
         cuts[cut_ix] = array_handle[slices]
-        note(f"planned cuts,{path},{stat()}")
+    # we perform this unusual-looking step because astropy does not, in
+    # general, actually copy memmapped data into memory in response to the
+    # __getitem__ call. so if we do not do _something_ with said data,
+    # astropy will in most cases never actually retrieve it (unless we've
+    # forced it to be "greedy" or similar, of course)
     for cut_ix, cut in cuts.items():
         cuts[cut_ix] = cut.copy()
-        note(f"got data,{path},{stat()}")
+    note(f"got data,{path},{stat()}")
     note(f"file done,{path},{stat(total=True)}")
     cuts['indices'] = indices
     return cuts, log
