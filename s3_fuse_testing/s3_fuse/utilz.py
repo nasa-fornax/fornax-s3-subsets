@@ -179,7 +179,6 @@ class Throttle:
 
     does nothing whatsoever if you pass None for both upload and download.
     """
-
     def __init__(
         self, download=None, upload=None, interface="ens5", verbose=False
     ):
@@ -189,6 +188,7 @@ class Throttle:
             self.verbose = verbose
         else:
             self.throttle, self.unthrottle = partial(zero), partial(zero)
+            self.verbose = False
 
     def __enter__(self):
         self.throttle()
