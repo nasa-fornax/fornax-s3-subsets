@@ -141,7 +141,7 @@ def interpret_benchmark_instructions(
             "throttle": throttle
         }
         if throttle is not None:
-            case["title"] += f"-{throttle/1000}"
+            case["title"] += f"-{int(throttle/1000)}"
         else:
             case["title"] += "-None"
         case |= deepcopy(settings)
