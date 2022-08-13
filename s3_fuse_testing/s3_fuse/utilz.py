@@ -12,6 +12,7 @@ from io import BytesIO
 from pathlib import Path
 from typing import Callable
 
+import psutil
 import sh
 from dustgoggles.func import zero
 
@@ -221,3 +222,28 @@ def load_first_aws_credential(cred_file=None):
             if len(creds) == 2:
                 break
     return creds
+
+
+class CPUMonitor:
+    def __init__(self, times=('user', 'system', 'iowait', 'idle')):
+        self.times = times
+        self.interval = None
+        self.last = None
+        self.absolute = None
+        self.update()
+
+    def update(self):
+        cputimes = psutil.cpu_times()
+        self.absolute = {
+            time_type: getattr(cputimes, time_type)
+            for time_type in self.times
+        }
+        if self.interval is None:
+            self.interval = {t: 0 for t in self.times}
+        else:
+            self.interval = {
+                t: self.absolute[t] - self.last[t]
+                for t in self.times
+            }
+        self.last = self.absolute
+

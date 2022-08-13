@@ -12,7 +12,8 @@ from killscreen.monitors import Stopwatch, Netstat
 
 from s3_fuse.fits import imsz_from_header
 from s3_fuse.random_generators import rectangular_slices
-from s3_fuse.utilz import make_loaders, s3_url, load_first_aws_credential
+from s3_fuse.utilz import make_loaders, s3_url, load_first_aws_credential, \
+    CPUMonitor
 
 
 def random_cuts_from_file(
@@ -74,8 +75,9 @@ def benchmark_cuts(
     # set up monitors: timer, net traffic gauge, dict to put logs in
     watch, netstat, log = Stopwatch(silent=True), Netstat(), {}
     # stat is a formatting/printing function for time and net traffic results;
-    # note simultaneously prints messages and puts them timestamped in 'log'
-    stat, note = print_stats(watch, netstat), notary(log)
+    # note simultaneously prints messages and puts them timestamped in 'log';
+    # cpumon monitors elapsed cpu times.
+    stat, note, cpumon = print_stats(watch, netstat), notary(log), CPUMonitor()
     rng = np.random.default_rng(seed)
     cuts = []
     # although fsspec uses boto3, it doesn't appear to use boto3's default
@@ -89,7 +91,9 @@ def benchmark_cuts(
     if paths[0].startswith("s3://"):
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
-    watch.start()
+    watch.start(), cpumon.update()
+    # TODO; make this CPU thing much nicer
+    cpulog = []
     for path in paths:
         path_cuts, path_log = random_cuts_from_file(
             path, loader, hdu_ix, count, shape, rng, astropy_handle_attribute
@@ -100,8 +104,10 @@ def benchmark_cuts(
         else:
             del path_cuts
         log |= path_log
+        cpumon.update()
+        cpulog.append(cpumon.interval)
     note(f"case done,,{stat(total=True)}")
-    return cuts, stat, log
+    return cuts, stat, log, cpulog
 
 
 def interpret_benchmark_instructions(
@@ -166,3 +172,5 @@ def interpret_benchmark_instructions(
             case["astropy_handle_attribute"] = "section"
         cases.append(case)
     return cases
+
+
