@@ -8,6 +8,7 @@ test parameters for a series of full TESSCut cubes. these are massive
 CUT_SHAPES = ((1, 100, 100, 1), (100, 100, 1, 1), (100, 1, 100, 1))
 CUT_COUNTS = (1, 5)
 BUCKET = "stpubdata"
+AUTHENTICATE_S3 = False
 HDU_IX = 1
 # these files are too big to open with other loaders.
 # a 'greedy' loader would require at least 120 GB of

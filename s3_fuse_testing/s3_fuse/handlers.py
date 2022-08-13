@@ -69,6 +69,7 @@ def benchmark_cuts(
     seed: Optional[int] = None,
     verbose: bool = False,
     aws_credentials_path: Optional[str] = None,
+    authenticate_s3: bool = False,
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
@@ -88,7 +89,7 @@ def benchmark_cuts(
     # credential in the specified file (by default ~/.aws/credentials). we
     # could do it better if we needed to generalize this, probably by messing
     # with the client/resource objects passed around by fsspec.
-    if paths[0].startswith("s3://"):
+    if paths[0].startswith("s3://") and (authenticate_s3 is True):
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
     watch.start(), cpumon.update()
