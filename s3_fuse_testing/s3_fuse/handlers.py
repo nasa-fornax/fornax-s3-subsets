@@ -50,7 +50,7 @@ def random_cuts_from_file(
     for cut_ix, cut in cuts.items():
         cuts[cut_ix] = cut.copy()
         note(f"got data,{path},{stat()}")
-    note(f"done with file,{path},{stat(total=True)} file total")
+    note(f"file done,{path},{stat(total=True)}")
     cuts['indices'] = indices
     return cuts, log
 
@@ -65,6 +65,7 @@ def benchmark_cuts(
     return_cuts: bool = False,
     n_files: Optional[int] = None,
     seed: Optional[int] = None,
+    verbose: bool = False
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
@@ -80,13 +81,13 @@ def benchmark_cuts(
         path_cuts, path_log = random_cuts_from_file(
             path, loader, hdu_ix, count, shape, rng, astropy_handle_attribute
         )
-        note(f"got cuts,{path},{stat()}", loud=True)
+        note(f"got cuts,{path},{stat()}", loud=verbose)
         if return_cuts is True:
             cuts.append(path_cuts)
         else:
             del path_cuts
         log |= path_log
-    note(f"done with case,,{stat(total=True)} case total")
+    note(f"case done,,{stat(total=True)}")
     return cuts, stat, log
 
 
