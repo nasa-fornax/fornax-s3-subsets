@@ -76,10 +76,11 @@ def benchmark_cuts(
 ):
     paths = paths[:n_files] if n_files is not None else paths
     # set up monitors: timer, net traffic gauge, cpu timer, dict to put logs in
-    watch, netstat, cpumon, log = (
-        Stopwatch(silent=True, digits=None), Netstat(), CPUMonitor(), {}
-    )
-    # stat is a formatting/printing function monitor results;
+    watch = Stopwatch(silent=True, digits=None)
+    netstat = Netstat(round_to=None)
+    cpumon = CPUMonitor(round_to=None)
+    log = {}
+    # stat is a formatting/printing function for monitor results;
     # note simultaneously prints messages and puts them timestamped in 'log'
     stat, note = print_stats(watch, netstat, cpumon), notary(log)
     rng = np.random.default_rng(seed)
