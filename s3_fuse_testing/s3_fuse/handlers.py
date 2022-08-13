@@ -1,8 +1,9 @@
 """
 top-level handling functions for s3-slicing testing and benchmarks
 """
+from functools import partial
 from pathlib import Path
-from typing import Callable, Optional, Sequence, Any
+from typing import Callable, Optional, Sequence
 
 import numpy as np
 from gPhoton.io.fits_utils import logged_fits_initializer
@@ -11,7 +12,7 @@ from killscreen.monitors import Stopwatch, Netstat
 
 from s3_fuse.fits import imsz_from_header
 from s3_fuse.random_generators import rectangular_slices
-from s3_fuse.utilz import make_loaders, s3_url
+from s3_fuse.utilz import make_loaders, s3_url, load_first_aws_credential
 
 
 def random_cuts_from_file(
@@ -66,6 +67,7 @@ def benchmark_cuts(
     n_files: Optional[int] = None,
     seed: Optional[int] = None,
     verbose: bool = False,
+    aws_credentials_path: Optional[str] = None,
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
@@ -76,6 +78,17 @@ def benchmark_cuts(
     stat, note = print_stats(watch, netstat), notary(log)
     rng = np.random.default_rng(seed)
     cuts = []
+    # although fsspec uses boto3, it doesn't appear to use boto3's default
+    # session initialization, so doesn't automatically load default aws
+    # credentials. so, if we're looking at s3:// URIs, we manually load
+    # creds just in case those URIs reference access-restricted resources.
+    # this is a crude credential-loading function that just loads the first
+    # credential in the specified file (by default ~/.aws/credentials). we
+    # could do it better if we needed to generalize this, probably by messing
+    # with the client/resource objects passed around by fsspec.
+    if paths[0].startswith("s3://"):
+        creds = load_first_aws_credential(aws_credentials_path)
+        loader = partial(loader, fsspec_kwargs=creds)
     watch.start()
     for path in paths:
         path_cuts, path_log = random_cuts_from_file(

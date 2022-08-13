@@ -14,6 +14,7 @@ from typing import Callable
 
 import sh
 
+
 def preload_target(function, path, *args, **kwargs):
     """
     `function` should be able to accept both streams and paths.
@@ -165,3 +166,24 @@ def unthrottle(interface="ens5"):
         # on clear operations, even when successful.
         except sh.ErrorReturnCode:
             pass
+
+
+def load_first_aws_credential(cred_file=None):
+    """
+    load whatever aws credential is placed first in a
+    conventionally-formatted aws credentials file,
+    by default ~/.aws/credentials. return a dict whose key names
+    match corresponding fsspec initialization kwargs.
+    """
+    if cred_file is None:
+        cred_file = Path(os.path.expanduser('~'), ".aws", "credentials")
+    with open(cred_file) as stream:
+        creds = {}
+        for line in stream.readlines():
+            if 'key_id' in line.lower():
+                creds['key'] = line.split("=")[1].strip()
+            elif "secret_access" in line.lower():
+                creds['secret'] = line.split("=")[1].strip()
+            if len(creds) == 2:
+                break
+    return creds
