@@ -135,12 +135,15 @@ def interpret_benchmark_instructions(
         throttle_speeds
     ):
         shape, count, loader, throttle = element
-        ratestr = f"-{int(throttle/1000)}" if throttle is not None else "None"
-        title = "-".join(
-            (benchmark_name, loader, count, '_'.join(map(str, shape)), ratestr)
+        title_parts = (
+            benchmark_name,
+            loader,
+            str(count),
+            '_'.join(map(str, shape)),
+            str(int(throttle/1000)) if throttle is not None else "None"
         )
         case = {
-            'title': title,
+            'title': "-".join(title_parts),
             "shape": shape,
             "count": count,
             "throttle": throttle,
