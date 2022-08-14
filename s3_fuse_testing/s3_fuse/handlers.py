@@ -73,7 +73,7 @@ def benchmark_cuts(
     seed: Optional[int] = None,
     aws_credentials_path: Optional[str] = None,
     authenticate_s3: bool = False,
-    preload_hdu: bool = False
+    preload_hdu: bool = False,
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
