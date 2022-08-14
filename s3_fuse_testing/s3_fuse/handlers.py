@@ -147,7 +147,7 @@ def interpret_benchmark_instructions(
         throttle_speeds,
         instructions.LOADERS,
     ):
-        shape, count, loader, throttle = element
+        shape, count, throttle, loader = element
         title_parts = (
             benchmark_name,
             loader,
