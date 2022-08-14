@@ -8,7 +8,7 @@ HDU_IX = 1
 # note that CompImageHDU does not expose a .section attribute -- it wouldn't
 # particularly matter anyway.
 LOADERS = (
-    "astropy", "astropy_s3", "fitsio", "fitsio_preload_hdu", "greedy_astropy"
+    "fitsio", "fitsio_preload_hdu", "astropy", "astropy_s3", "greedy_astropy"
 )
 TEST_FILES = (
     'ps1/rings.v3.skycell/1724/066/rings.v3.skycell.1724.066.stk.g.unconv.fits',

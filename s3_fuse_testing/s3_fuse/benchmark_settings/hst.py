@@ -8,7 +8,7 @@ BUCKET = "stpubdata"
 AUTHENTICATE_S3 = False
 HDU_IX = 1
 LOADERS = (
-    "astropy", "astropy_s3_section", "astropy_s3", "fitsio", "greedy_astropy"
+    "astropy", "fitsio", "astropy_s3_section", "astropy_s3", "greedy_astropy"
 )
 TEST_FILES = (
     'hst/public/u5i2/u5i21403r/u5i21403r_drz.fits',
