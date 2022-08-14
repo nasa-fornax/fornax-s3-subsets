@@ -13,7 +13,7 @@ import pandas as pd
 import sh
 
 
-def interpret_benchmark_fn(fn):
+def interpret_bench_fn(fn):
     parts = Path(fn).stem[:-14].split("-")
     return {
         "dataset": parts[0],
@@ -26,8 +26,21 @@ def interpret_benchmark_fn(fn):
     }
 
 
+def interpret_bench_title(title):
+    """truncated version of previous function, for summary tables"""
+    parts = title.split("-")
+    return {
+        "dataset": parts[0],
+        "loader": parts[1],
+        "n_cuts": int(parts[2]),
+        "dims": tuple(map(int, parts[3].split("_"))),
+        "throttle": None if parts[4] == "None" else int(parts[4]),
+        "title": title,
+    }
+
+
 def read_benchmark_result(benchmark_result_path):
-    props = interpret_benchmark_fn(benchmark_result_path)
+    props = interpret_bench_fn(benchmark_result_path)
     reader = csv.DictReader(benchmark_result_path.open())
     return tuple(map(lambda line: line | props, reader))
 
@@ -55,11 +68,23 @@ def load_benchmark_results(
     full_result_df = full_result_df.astype(dtypes).copy()
     # splitting the independent variables is redundant w/title for
     # differentiation, but may be useful for slicing or whatever
-    summary = full_result_df.drop(columns="path").pivot_table(
-        index=["title", "dataset", "loader", "n_cuts", "dims", "throttle"],
-        aggfunc=summarizers,
+    identifier_columns = [
+        "dataset",
+        "loader",
+        "n_cuts",
+        "dims",
+        "throttle",
+        "bench_ix",
+    ]
+    pivot_df = full_result_df.drop(columns=identifier_columns + ["path"])
+    summary = pivot_df.pivot_table(index="title", aggfunc=summarizers)
+    return full_result_df, pd.concat(
+        [
+            pd.DataFrame(summary.index.map(interpret_bench_title).to_list()),
+            summary.reset_index(drop=True),
+        ],
+        axis=1,
     )
-    return full_result_df, summary
 
 
 def check_existing_benchmarks(
