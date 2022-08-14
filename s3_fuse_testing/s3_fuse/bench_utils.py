@@ -55,8 +55,8 @@ def load_benchmark_results(
     full_result_df = full_result_df.astype(dtypes).copy()
     # splitting the independent variables is redundant w/title for
     # differentiation, but may be useful for slicing or whatever
-    summary = full_result_df.pivot_table(
-        index=["title", "loader", "n_cuts", "dims", "throttle"],
+    summary = full_result_df.drop(columns="path").pivot_table(
+        index=["title", "dataset", "loader", "n_cuts", "dims", "throttle"],
         aggfunc=summarizers,
     )
     return full_result_df, summary
