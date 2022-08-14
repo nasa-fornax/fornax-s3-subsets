@@ -1,7 +1,7 @@
 """
 test parameters for a sampling of 'big' (200-350 MB) HST drizzle images
 """
-CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
+CUT_SHAPES = ((40, 40), (200, 200), )
 CUT_COUNTS = (1, 20)
 BUCKET = "stpubdata"
 AUTHENTICATE_S3 = False

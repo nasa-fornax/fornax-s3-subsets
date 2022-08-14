@@ -2,8 +2,7 @@
 test parameters for a sampling of full-depth gPhoton 2-generated GALEX images
 in RICE-compressed format. same underlying data as the galex_gzip case.
 """
-
-CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
+CUT_SHAPES = ((40, 40), (200, 200), )
 CUT_COUNTS = (1, 5, 20)
 BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
