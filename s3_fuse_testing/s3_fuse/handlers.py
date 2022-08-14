@@ -125,7 +125,8 @@ def interpret_benchmark_instructions(
     settings |= {
         "paths": instructions.TEST_FILES,
         "bucket": instructions.BUCKET,
-        "hdu_ix": instructions.HDU_IX
+        "hdu_ix": instructions.HDU_IX,
+        "authenticate_s3": instructions.AUTHENTICATE_S3
     }
     cases = []
     throttle_speeds = general_settings.get("bandwidth")
