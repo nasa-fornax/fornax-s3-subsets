@@ -33,7 +33,8 @@ def random_cuts_from_file(
         loader,
         (hdu_ix,),
         get_handles=True,
-        astropy_handle_attribute=astropy_handle_attribute
+        astropy_handle_attribute=astropy_handle_attribute,
+        preload_hdus=preload_hdu
     )
     array_handle = hdu_struct['handles'][0]
     log, header, stat = [hdu_struct[k] for k in ('log', 'header', 'stat')]
