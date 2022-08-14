@@ -144,8 +144,8 @@ def interpret_benchmark_instructions(
     for element in product(
         instructions.CUT_SHAPES,
         instructions.CUT_COUNTS,
+        throttle_speeds,
         instructions.LOADERS,
-        throttle_speeds
     ):
         shape, count, loader, throttle = element
         title_parts = (
