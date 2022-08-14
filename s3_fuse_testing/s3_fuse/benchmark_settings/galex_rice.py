@@ -4,11 +4,15 @@ in RICE-compressed format. same underlying data as the galex_gzip case.
 """
 
 CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
-CUT_COUNTS = (1, 20)
+CUT_COUNTS = (1, 5, 20)
 BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
 HDU_IX = 1
-LOADERS = "astropy", "astropy_s3", "fitsio", "greedy_astropy"
+# note that CompImageHDU does not expose a .section attribute -- it wouldn't
+# particularly matter anyway.
+LOADERS = (
+    "astropy", "astropy_s3", "fitsio", "fitsio_preload_hdu", "greedy_astropy"
+)
 TEST_FILES = (
     'e06818/e06818-fd-full-rice.fits',
     'e43718/e43718-nd-full-rice.fits',

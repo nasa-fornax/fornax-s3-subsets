@@ -10,14 +10,13 @@ CUT_COUNTS = (1, 5)
 BUCKET = "stpubdata"
 AUTHENTICATE_S3 = False
 HDU_IX = 1
-# these files are too big to open with other loaders.
-# a 'greedy' loader would require at least 120 GB of
-# available RAM for some of these files. This would drop
-# to a mere ~40 GB for astropy_s3 (s3 access without section,
-# copies an entire HDU into memory), but would still require using
-# a rather expensive instance. fitsio simply won't work at all --
-# CFITSIO throws an error when it simply _thinks_ about opening
-# one of these files, before transferring any data at all.
+# these files are too big to open with other loaders. a 'greedy' loader
+# would require at least 120 GB of available RAM for some of these files.
+# This would drop to a mere ~40 GB for "preload_hdu"-type loaders, including
+# astropy_s3 (s3 access without section, copies an entire HDU into memory),
+# but would still require using a rather expensive instance. fitsio simply
+# won't work at all -- CFITSIO throws an error when it simply _thinks_ about
+# opening one of these files, before transferring any data at all.
 LOADERS = ("astropy", "astropy_s3_section")
 TEST_FILES = (
     "tess/public/mast/tess-s0026-4-1-cube.fits",

@@ -3,7 +3,7 @@ test parameters for a sampling of 'mid-size' (20-60 MB) HST drizzle images
 """
 
 CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
-CUT_COUNTS = (1, 20)
+CUT_COUNTS = (1, 5, 20)
 BUCKET = "stpubdata"
 AUTHENTICATE_S3 = False
 HDU_IX = 1

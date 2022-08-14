@@ -8,7 +8,7 @@ TODO: except for the last extension, which is maybe compressed ASDF data?
  looking into it.
 """
 CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
-CUT_COUNTS = (1, 20)
+CUT_COUNTS = (1, 5, 20)
 BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
 HDU_IX = 1
