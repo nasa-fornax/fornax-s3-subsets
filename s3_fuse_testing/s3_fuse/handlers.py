@@ -116,7 +116,7 @@ def benchmark_cuts(
         else:
             del path_cuts
         log |= path_log
-        print_inline(f"{i}/{len(paths)} complete")
+        print_inline(f"{i + 1}/{len(paths)} complete")
     return cuts, stat, log
 
 
