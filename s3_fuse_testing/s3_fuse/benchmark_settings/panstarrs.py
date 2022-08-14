@@ -3,7 +3,7 @@
 CUT_SHAPES = ((40, 40), (200, 200), (200, 10), (10, 200))
 CUT_COUNTS = (1, 5, 20)
 BUCKET = "nishapur"
-AUTHENTICATE_S3 = False
+AUTHENTICATE_S3 = True
 HDU_IX = 1
 # note that CompImageHDU does not expose a .section attribute -- it wouldn't
 # particularly matter anyway.
