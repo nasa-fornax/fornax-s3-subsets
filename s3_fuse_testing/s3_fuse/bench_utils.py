@@ -78,13 +78,22 @@ def load_benchmark_results(
     ]
     pivot_df = full_result_df.drop(columns=identifier_columns + ["path"])
     summary = pivot_df.pivot_table(index="title", aggfunc=summarizers)
-    return full_result_df, pd.concat(
+    summary = pd.concat(
         [
             pd.DataFrame(summary.index.map(interpret_bench_title).to_list()),
             summary.reset_index(drop=True),
         ],
         axis=1,
     )
+    # "flatten" column names that originated in the pivot table multiindex
+    # so that numpy does not interpret combinations of regular and multiindex
+    # columns as ragged ndarrays
+    summary.columns = list(
+        summary.columns.map(
+            lambda col: "_".join(col) if isinstance(col, tuple) else col
+        )
+    )
+    return full_result_df, summary
 
 
 def check_existing_benchmarks(
