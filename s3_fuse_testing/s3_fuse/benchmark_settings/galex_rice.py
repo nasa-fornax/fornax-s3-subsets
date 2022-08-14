@@ -11,7 +11,7 @@ HDU_IX = 1
 # note that CompImageHDU does not expose a .section attribute -- it wouldn't
 # particularly matter anyway.
 LOADERS = (
-    "astropy", "fitsio", "fitsio_preload_hdu", "astropy_s3", "greedy_astropy"
+    "fitsio", "fitsio_preload_hdu", "astropy", "astropy_s3", "greedy_astropy"
 )
 TEST_FILES = (
     'e06818/e06818-fd-full-rice.fits',
