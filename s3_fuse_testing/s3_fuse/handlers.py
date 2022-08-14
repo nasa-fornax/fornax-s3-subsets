@@ -25,6 +25,7 @@ def random_cuts_from_file(
     shape: Sequence[int],
     rng=None,
     astropy_handle_attribute: str = "data",
+    preload_hdu: bool = False
 ):
     """take random slices from a fits file; examine this process closely"""
     hdu_struct = logged_fits_initializer(
@@ -72,6 +73,7 @@ def benchmark_cuts(
     seed: Optional[int] = None,
     aws_credentials_path: Optional[str] = None,
     authenticate_s3: bool = False,
+    preload_hdu: bool = False
     **_
 ):
     paths = paths[:n_files] if n_files is not None else paths
@@ -170,6 +172,9 @@ def interpret_benchmark_instructions(
             # downstream functions to access the "section" attribute
             # of HDUs instead of the "data" attribute.
             case["astropy_handle_attribute"] = "section"
+        if "preload_hdu" in loader:
+            # 'semigreedy'. load the full extension before beginning slicing.
+            case["preload_hdu"] = True
         cases.append(case)
     return cases
 

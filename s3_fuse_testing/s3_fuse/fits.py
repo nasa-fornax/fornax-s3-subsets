@@ -106,7 +106,8 @@ def logged_fits_initializer(
     get_handles: bool = False,
     verbose: int = 0,
     logged: bool = True,
-    astropy_handle_attribute: str = "data"
+    astropy_handle_attribute: str = "data",
+    preload_hdus: bool = False
 ):
     """
     initialize a FITS object using a passed 'loader' -- probably
@@ -152,6 +153,12 @@ def logged_fits_initializer(
                 getattr(h, astropy_handle_attribute) for h in output["handles"]
             ]
         note(f"got data handles,{path},{stat()}", loud=verbose > 1)
+        if preload_hdus is True:
+            if library == "astropy":
+                [h.data[:].copy() for h in output['handles']]
+            else:
+                [h.read() for h in output['handles']]
+            note(f"preloaded hdus,{path},{stat()}", loud=verbose > 1)
     if get_wcs is True:
         import astropy.wcs
         from gPhoton.coords.wcs import extract_wcs_keywords
