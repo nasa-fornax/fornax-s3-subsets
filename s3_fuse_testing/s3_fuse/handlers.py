@@ -98,11 +98,18 @@ def benchmark_cuts(
     if paths[0].startswith("s3://") and (authenticate_s3 is True):
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
-    watch.start(), cpumon.update()
+    watch.start()
     print_inline(f"0/{len(paths)} complete")
     for i, path in enumerate(paths):
         path_cuts, path_log = random_cuts_from_file(
-            path, loader, hdu_ix, count, shape, rng, astropy_handle_attribute
+            path,
+            loader,
+            hdu_ix,
+            count,
+            shape,
+            rng,
+            astropy_handle_attribute,
+            preload_hdu
         )
         if return_cuts is True:
             cuts.append(path_cuts)
