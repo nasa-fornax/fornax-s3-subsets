@@ -12,8 +12,12 @@ CUT_COUNTS = (1, 20)
 BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
 HDU_IX = 0
+# there currently appears to be an undesirable behavior in section that
+# causes it to re-download and decompress the entire file once per each
+# line -- so a 40x40 cut will in general result in downloading and
+# decompressing a file 40 times. I have marked it out for now.
 LOADERS = (
-    "astropy", "astropy_s3_section", "astropy_s3", "fitsio", "greedy_astropy"
+    "astropy", "astropy_s3", "fitsio", "greedy_astropy"
 )
 TEST_FILES = (
     'e06818/e06818-fd-full.fits.gz',
