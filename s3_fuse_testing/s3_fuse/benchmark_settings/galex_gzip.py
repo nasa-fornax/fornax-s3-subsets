@@ -15,9 +15,14 @@ HDU_IX = 0
 # there currently appears to be an undesirable behavior in section that
 # causes it to re-download and decompress the entire file once per each
 # line -- so a 40x40 cut will in general result in downloading and
-# decompressing a file 40 times. I have marked it out for now.
+# decompressing a file 40 times. I have marked it out for now -- each case
+# takes ~20 minutes so is impractical to run.
+
+# there is also apparently a bug in the "greedy" benchmark wrapper for astropy
+# wrt gzipped files that causes it to crash out. may fix at some point, may
+# not -- this is not really an interesting case; we know it's bad.
 LOADERS = (
-    "astropy", "astropy_s3", "fitsio", "greedy_astropy"
+    "astropy", "astropy_s3", "fitsio"
 )
 TEST_FILES = (
     'e06818/e06818-fd-full.fits.gz',
