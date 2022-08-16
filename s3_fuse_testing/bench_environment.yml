@@ -1,0 +1,36 @@
+name: fornax-bench
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - boto3
+  - click
+  - cython
+  - dustgoggles
+  - fire
+  - fitsio
+  - flask
+  - fs
+  - fsspec
+  - gcc
+  - ipython
+  - jupyter
+  - matplotlib
+  - more-itertools
+  - numpy
+  - pandas
+  - pip
+  - pyarrow
+  - pyerfa
+  - pyyaml
+  - python-isal
+  - requests
+  - rich
+  - s3fs
+  - scipy
+  - sh
+  - termcolor
+  - werkzeug
+  - pip:
+      - git+https://github.com/MillionConcepts/killscreen.git
+      - git+https://github.com/barentsen/astropy.git@cloud-support
