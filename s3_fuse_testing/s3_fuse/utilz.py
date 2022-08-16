@@ -7,14 +7,14 @@ import random
 import re
 import shutil
 from functools import partial
-from inspect import getfullargspec
+from inspect import getfullargspec, getmodule
 from io import BytesIO
 from pathlib import Path
-from typing import Callable
+from sys import stdout
+from typing import Callable, Any
 
-import psutil
-import sh
 from dustgoggles.func import zero
+import sh
 
 
 def preload_target(function, path, *args, **kwargs):
@@ -224,3 +224,30 @@ def load_first_aws_credential(cred_file=None):
     return creds
 
 
+# the following functions are vendored from gPhoton 2.
+
+def print_inline(text, blanks=60):
+    """
+    For updating text in place without a carriage return.
+
+    :param text: Message to print to standard out.
+
+    :type text: str
+
+    :param blanks: Number of white spaces to prepend to message.
+
+    :type blanks: int
+    """
+    stdout.write(" "*blanks+"\r")
+    stdout.write(str(str(text)+'\r'))
+    stdout.flush()
+    return
+
+
+def crudely_find_library(obj: Any) -> str:
+    if isinstance(obj, functools.partial):
+        if len(obj.args) > 0:
+            if isinstance(obj.args[0], Callable):
+                return crudely_find_library(obj.args[0])
+        return crudely_find_library(obj.func)
+    return getmodule(obj).__name__.split(".")[0]

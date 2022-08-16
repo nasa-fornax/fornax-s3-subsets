@@ -11,12 +11,12 @@ from typing import Sequence, Any
 
 from gPhoton.aspect import TABLE_PATHS
 from gPhoton.coadd import cut_skyboxes
-from gPhoton.io.fits_utils import logged_fits_initializer
-from gPhoton.pretty import make_monitors
+from killscreen.monitors import make_monitors
 from gPhoton.reference import eclipse_to_paths
 from more_itertools import chunked
 from pyarrow import parquet
 
+from s3_fuse.fits import logged_fits_initializer
 from s3_fuse.utilz import cleanup_greedy_shm
 
 

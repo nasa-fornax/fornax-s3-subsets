@@ -11,13 +11,15 @@ from typing import Callable, Optional, Sequence, Mapping
 
 import numpy as np
 import pandas as pd
-from gPhoton.pretty import notary, print_inline
-from killscreen.monitors import Stopwatch, Netstat, CPUMonitor, print_stats
+from killscreen.monitors import (
+    Stopwatch, Netstat, CPUMonitor, print_stats, notary
+)
 
 from s3_fuse.fits import imsz_from_header, logged_fits_initializer
 from s3_fuse.random_generators import rectangular_slices
 from s3_fuse.utilz import (
     make_loaders,
+    print_inline,
     s3_url,
     load_first_aws_credential,
     Throttle,

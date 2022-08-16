@@ -7,10 +7,8 @@ from pathlib import Path
 from typing import Sequence, Literal, Union, Callable
 
 from cytoolz import keyfilter
-from gPhoton.io.fits_utils import get_header
-from gPhoton.reference import crudely_find_library
-from gPhoton.types import Pathlike
 from killscreen.monitors import make_monitors
+from s3_fuse.utilz import crudely_find_library
 
 
 def make_tiled_galex_object(
@@ -99,7 +97,7 @@ def fitsstat(path: Union[str, Path]) -> dict:
 
 
 def logged_fits_initializer(
-    path: Pathlike,
+    path: Union[str, Path],
     loader: Callable,
     hdu_indices: Sequence[int],
     get_wcs: bool = False,
@@ -161,9 +159,52 @@ def logged_fits_initializer(
             note(f"preloaded hdus,{path},{stat()}", loud=verbose > 1)
     if get_wcs is True:
         import astropy.wcs
-        from gPhoton.coords.wcs import extract_wcs_keywords
 
         output['wcs'] = astropy.wcs.WCS(extract_wcs_keywords(header))
         note(f"initialized wcs,{path},{stat()}", loud=verbose > 1)
     output['log'] = note(None, eject=True)
     return output
+
+
+# the following functions are vendored from gPhoton 2.
+
+def get_header(hdul: Sequence, hdu_ix: int, library: str):
+    """
+    fetch header from either an astropy or fitsio HDU list object
+    """
+    if library == "fitsio":
+        return hdul[hdu_ix].read_header()
+    elif library == "astropy":
+        return hdul[hdu_ix].header
+    raise ValueError(f"don't know {library}")
+
+
+def translate_pc_keyword(keyword: str):
+    """
+    convert old-style fits wcs transformation keywords. this is not strictly
+    necessary for any GALEX products, but is useful for some data fusion
+    applications.
+    """
+    # note: i suppose this will fail for headers with hundreds of dimensions.
+    # they may not exist, though, and deserve special-purpose code if they do.
+    if not keyword.startswith("PC0"):
+        return keyword
+    return keyword.replace("PC00", "PC").replace("00", "_")
+
+
+def extract_wcs_keywords(header):
+    """
+    header formatting and WCS keyword handling can make astropy.wcs upset.
+    it handles validation and fixes gracefully, but not quickly, so things
+    like the legacy-formatted WCS keywords in PS1 headers can introduce a
+    surprising amount of overhead.
+
+    this is basically intended as an optimization function for those cases.
+    it trims irrelevant keywords and fixes legacy-style keywords as
+    preprocessing for astropy.wcs.WCS initalization functions.
+    """
+    wcs_words = ('CTYPE', 'CRVAL', 'CRPIX', 'CDELT', 'NAXIS', 'PC')
+    return {
+        translate_pc_keyword(k): header[k] for k in header.keys()
+        if any([k.startswith(w) for w in wcs_words])
+    }

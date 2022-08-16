@@ -16,11 +16,11 @@ import requests
 from cytoolz import groupby
 from cytoolz.curried import get
 from gPhoton.coadd import cut_skyboxes
-from gPhoton.io.fits_utils import logged_fits_initializer
-from gPhoton.pretty import make_monitors
+from killscreen.monitors import make_monitors
 from killscreen.utilities import filestamp
 from more_itertools import chunked
 
+from s3_fuse.fits import logged_fits_initializer
 from s3_fuse.utilz import cleanup_greedy_shm
 
 PS1_FILTERS = ("g", "r", "i", "z", "y")
