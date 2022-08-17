@@ -1,0 +1,73 @@
+,filesize,n_hdu,0,filename
+datasize,481884480,1,481877088,irac_ch1_go2_cov_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch1_go2_cov_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch1_go2_cov_10.fits
+itemsize,481884480,1,32,irac_ch1_go2_cov_10.fits
+name,481884480,1,PRIMARY,irac_ch1_go2_cov_10.fits
+size,481884480,1,481884480,irac_ch1_go2_cov_10.fits
+datasize,481884480,1,481877088,irac_ch1_go2_unc_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch1_go2_unc_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch1_go2_unc_10.fits
+itemsize,481884480,1,32,irac_ch1_go2_unc_10.fits
+name,481884480,1,PRIMARY,irac_ch1_go2_unc_10.fits
+size,481884480,1,481884480,irac_ch1_go2_unc_10.fits
+datasize,481884480,1,481877088,irac_ch2_go2_sci_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch2_go2_sci_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch2_go2_sci_10.fits
+itemsize,481884480,1,32,irac_ch2_go2_sci_10.fits
+name,481884480,1,PRIMARY,irac_ch2_go2_sci_10.fits
+size,481884480,1,481884480,irac_ch2_go2_sci_10.fits
+datasize,481884480,1,481877088,irac_ch3_go2_cov_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch3_go2_cov_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch3_go2_cov_10.fits
+itemsize,481884480,1,32,irac_ch3_go2_cov_10.fits
+name,481884480,1,PRIMARY,irac_ch3_go2_cov_10.fits
+size,481884480,1,481884480,irac_ch3_go2_cov_10.fits
+datasize,481884480,1,481877088,irac_ch3_go2_unc_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch3_go2_unc_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch3_go2_unc_10.fits
+itemsize,481884480,1,32,irac_ch3_go2_unc_10.fits
+name,481884480,1,PRIMARY,irac_ch3_go2_unc_10.fits
+size,481884480,1,481884480,irac_ch3_go2_unc_10.fits
+datasize,481884480,1,481877088,irac_ch4_go2_sci_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch4_go2_sci_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch4_go2_sci_10.fits
+itemsize,481884480,1,32,irac_ch4_go2_sci_10.fits
+name,481884480,1,PRIMARY,irac_ch4_go2_sci_10.fits
+size,481884480,1,481884480,irac_ch4_go2_sci_10.fits
+datasize,481884480,1,481877088,irac_ch1_go2_sci_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch1_go2_sci_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch1_go2_sci_10.fits
+itemsize,481884480,1,32,irac_ch1_go2_sci_10.fits
+name,481884480,1,PRIMARY,irac_ch1_go2_sci_10.fits
+size,481884480,1,481884480,irac_ch1_go2_sci_10.fits
+datasize,481884480,1,481877088,irac_ch2_go2_cov_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch2_go2_cov_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch2_go2_cov_10.fits
+itemsize,481884480,1,32,irac_ch2_go2_cov_10.fits
+name,481884480,1,PRIMARY,irac_ch2_go2_cov_10.fits
+size,481884480,1,481884480,irac_ch2_go2_cov_10.fits
+datasize,481884480,1,481877088,irac_ch2_go2_unc_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch2_go2_unc_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch2_go2_unc_10.fits
+itemsize,481884480,1,32,irac_ch2_go2_unc_10.fits
+name,481884480,1,PRIMARY,irac_ch2_go2_unc_10.fits
+size,481884480,1,481884480,irac_ch2_go2_unc_10.fits
+datasize,481884480,1,481877088,irac_ch3_go2_sci_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch3_go2_sci_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch3_go2_sci_10.fits
+itemsize,481884480,1,32,irac_ch3_go2_sci_10.fits
+name,481884480,1,PRIMARY,irac_ch3_go2_sci_10.fits
+size,481884480,1,481884480,irac_ch3_go2_sci_10.fits
+datasize,481884480,1,481877088,irac_ch4_go2_cov_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch4_go2_cov_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch4_go2_cov_10.fits
+itemsize,481884480,1,32,irac_ch4_go2_cov_10.fits
+name,481884480,1,PRIMARY,irac_ch4_go2_cov_10.fits
+size,481884480,1,481884480,irac_ch4_go2_cov_10.fits
+datasize,481884480,1,481877088,irac_ch4_go2_unc_10.fits
+dim,481884480,1,"(11096, 10857)",irac_ch4_go2_unc_10.fits
+hdutype,481884480,1,PrimaryHDU,irac_ch4_go2_unc_10.fits
+itemsize,481884480,1,32,irac_ch4_go2_unc_10.fits
+name,481884480,1,PRIMARY,irac_ch4_go2_unc_10.fits
+size,481884480,1,481884480,irac_ch4_go2_unc_10.fits
