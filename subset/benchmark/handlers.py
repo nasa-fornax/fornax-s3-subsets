@@ -243,29 +243,45 @@ def process_bench_stats(log, test_case, benchmark_name):
     file_total_records = []
     for _, total in file_totals.iterrows():
         record = total[["path", "duration", "volume"]].to_dict()
+        # load pregenerated information about this file for derived stats
         match_info = file_info.loc[path_series == total["path"]]
+        # which HDU/extension did we slice from?
         extension = match_info[str(test_case["hdu_ix"])]
+        # total file size (counting all HDUs, headers, etc.) in MB
         record["file_size"] = int(match_info["filesize"].iloc[0]) / 1000 ** 2
+        # # transfer volume as a proportion of the size of the entire file
         record["file_size_ratio"] = record["volume"] / record["file_size"]
+        # datasize of the sliced HDU in MB
         record["hdu_size"] = int(extension["datasize"]) / 1000 ** 2
+        # transfer volume as a proportion of the sliced HDU
         record["hdu_size_ratio"] = record["volume"] / record["hdu_size"]
+        # number of cutouts retrieved per file in this test case
         record["n_cuts"] = test_case["count"]
+        # in-memory volume of resultant cutout in MB (_not_ transfer volume)
         record["size_per_cut"] = (
             int(extension["itemsize"])
-            / 8
-            / 1000 ** 2
-            * reduce(mul, test_case["shape"])
+            / 8  # BITPIX is in bits; we want this value in bytes
+            / 1000 ** 2  # ... actually megabytes
+            * reduce(mul, test_case["shape"])  # number of elements in cutout
         )
+        # total in-memory volume of all cutouts in MB (_not_ transfer volume)
         record["cut_size"] = record["size_per_cut"] * record["n_cuts"]
+        # transfer volume as a proportion of total in-memory volume of cutouts
         record["cut_size_ratio"] = record["volume"] / record["cut_size"]
+        # MB transferred per second
         record["mb_rate"] = record["volume"] / record["duration"]
+        # number of cutouts retrieved per second
         record["cut_rate"] = record["n_cuts"] / record["duration"]
+        # 'effective' MB (bytes retained in a cutout) transferred per second
         record["retained_mb_rate"] = record["cut_size"] / record["duration"]
+        # seconds of cpu "busy" time (see notes elsewhere)
         record["cpu_busy"] = total.loc[
             total.index.str.startswith("cpu")
             & ~total.index.str.contains("idle")
         ].sum()
+        # seconds of cpu "idle" time (see notes elsewhere)
         record["cpu_idle"] = total["cpu_idle"]
+        # CPU busy-to-idle ratio (see notes elsewhere)
         record["cpu_busy_ratio"] = record["cpu_busy"] / record["cpu_idle"]
         file_total_records.append(record)
     return pd.DataFrame(file_total_records)
