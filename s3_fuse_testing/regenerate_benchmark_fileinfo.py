@@ -35,7 +35,7 @@ if __name__ == "__main__":
         remount(benchmarks[benchmark_name][0]['bucket'])
         file_info = {}
         for path in paths:
-            file_info[path] = fitsstat(path)
+            file_info[path] = fitsstat(Path(S3_MOUNTPOINT, path))
         infoframes = []
         for filename, info in file_info.items():
             infoframe = pd.DataFrame(info)
