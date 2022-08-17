@@ -13,7 +13,8 @@ BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
 HDU_IX = 1
 LOADERS = (
-    "astropy", "fitsio", "astropy_s3", "astropy_s3_section", "greedy_astropy"
+    "astropy", "astropy_preload_hdu", "fitsio",
+    "astropy_s3", "astropy_s3_section", "greedy_astropy"
 )
 TEST_FILES = (
     'jwst/jw02733001001/jw02733001001_02101_00001_nrcb1_o001_crf.fits',
