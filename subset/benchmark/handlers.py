@@ -22,7 +22,10 @@ from killscreen.monitors import (
 from subset.utilz.fits import imsz_from_header, logged_fits_initializer
 from subset.benchmark.random_generators import rectangular_slices
 from subset.utilz.generic import (
-    make_loaders, print_inline, load_first_aws_credential, s3_url
+    make_loaders,
+    print_inline,
+    load_first_aws_credential,
+    s3_url,
 )
 from subset.utilz.throttle import Throttle
 
@@ -233,7 +236,7 @@ def process_bench_stats(log, test_case, benchmark_name):
     )
     file_totals = file_totals.drop(columns=["duration_str", "volume_str"])
     file_info = pd.read_csv(
-        f"{__file__}/benchmark_settings/{benchmark_name}_fileinfo.csv",
+        f"{Path(__file__).parent}/benchmark_settings/{benchmark_name}_fileinfo.csv",
         index_col=0,
     )
     path_series = file_info["filename"].map(lambda p: Path(p).name)
