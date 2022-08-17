@@ -6,7 +6,7 @@ CUT_SHAPES = ((40, 40), (200, 200))
 CUT_COUNTS = (1, 5, 20)
 BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
-HDU_IX = 1
+HDU_IX = 0
 LOADERS = (
     "astropy", "fitsio",  "astropy_s3_section", "astropy_s3", "greedy_astropy"
 )
