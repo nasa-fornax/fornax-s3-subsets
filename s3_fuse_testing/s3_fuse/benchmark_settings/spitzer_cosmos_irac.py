@@ -8,8 +8,7 @@ BUCKET = "nishapur"
 AUTHENTICATE_S3 = True
 HDU_IX = 0
 LOADERS = (
-    "astropy", "fitsio",  "astropy_preload_hdu", 
-    "astropy_s3_section", "astropy_s3", "greedy_astropy"
+    "astropy", "fitsio", "astropy_s3_section", "astropy_s3", "greedy_astropy"
 )
 TEST_FILES = (
     "spitzer/cosmos/irac_ch1_go2_cov_10.fits",
