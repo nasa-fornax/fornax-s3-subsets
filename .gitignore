@@ -148,7 +148,7 @@ s3_fuse_testing/s3_fuse/result_cache
 subset/secrets/*
 
 # allow an explanation of the potential existence of the secrets
-!s3_fuse_testing/s3_fuse/secrets/readme.md
+!subset/secrets/readme.md
 
 # dev scratch files
 *scratch.py
