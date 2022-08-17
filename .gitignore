@@ -144,8 +144,8 @@ cython_debug/
 # cached benchmark results
 s3_fuse_testing/s3_fuse/result_cache
 
-# secrets -- please do not delete this !!! 
-s3_fuse_testing/s3_fuse/secrets/*
+# secrets -- please do not delete this !!!
+subset/secrets/*
 
 # allow an explanation of the potential existence of the secrets
 !s3_fuse_testing/s3_fuse/secrets/readme.md
