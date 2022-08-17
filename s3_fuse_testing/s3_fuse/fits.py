@@ -153,7 +153,7 @@ def logged_fits_initializer(
         note(f"got data handles,{path},{stat()}", loud=verbose > 1)
         if preload_hdus is True:
             if library == "astropy":
-                [h.data[:].copy() for h in output['handles']]
+                [h[:].copy() for h in output['handles']]
             else:
                 [h.read() for h in output['handles']]
             note(f"preloaded hdus,{path},{stat()}", loud=verbose > 1)
