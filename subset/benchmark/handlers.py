@@ -21,13 +21,10 @@ from killscreen.monitors import (
 
 from subset.utilz.fits import imsz_from_header, logged_fits_initializer
 from subset.benchmark.random_generators import rectangular_slices
-from subset.utilz.utilz import (
-    make_loaders,
-    print_inline,
-    load_first_aws_credential,
-    s3_url,
-    Throttle,
+from subset.utilz.generic import (
+    make_loaders, print_inline, load_first_aws_credential, s3_url
 )
+from subset.utilz.throttle import Throttle
 
 
 def random_cuts_from_file(

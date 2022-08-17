@@ -17,10 +17,14 @@ S3_MOUNTPOINT = "/mnt/s3"
 
 if __name__ == "__main__":
     from functools import partial
+    import os
     from pathlib import Path
 
     import pandas as pd
 
+    # hacky; can remove if we decide to add an install script or put this in
+    # the repo root
+    os.chdir("../")
     from subset.utilz.fits import fitsstat
     from subset.benchmark.handlers import interpret_benchmark_instructions
     from subset.utilz.mount_s3 import mount_bucket
