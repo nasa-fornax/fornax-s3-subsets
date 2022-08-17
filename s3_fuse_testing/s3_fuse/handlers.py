@@ -100,11 +100,13 @@ def benchmark_cuts(
     # although fsspec uses boto3, it doesn't appear to use boto3's default
     # session initialization, so doesn't automatically load default aws
     # credentials. so, if we're looking at s3:// URIs, we manually load
-    # creds just in case those URIs reference access-restricted resources.
+    # creds so that we can reference access-restricted resources UNLESS the
+    # bucket has been marked as supporting anonymous access (i.e., the value
+    # of the AUTHENTICATE_S3 attribute of the benchmark module is False).
     # this is a crude credential-loading function that just loads the first
     # credential in the specified file (by default ~/.aws/credentials). we
-    # could do it better if we needed to generalize this, probably by messing
-    # with the client/resource objects passed around by fsspec.
+    # could do it better if we needed to generalize this, probably by
+    # messing with the client/resource objects passed around by fsspec.
     if paths[0].startswith("s3://") and (authenticate_s3 is True):
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
