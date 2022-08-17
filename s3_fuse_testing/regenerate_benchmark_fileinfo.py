@@ -9,7 +9,9 @@ BENCHMARKS_FOR_WHICH_TO_REGENERATE_FILEINFO = (
     "panstarrs",
     "galex_gzip",
     "galex_rice",
-    "tesscut"
+    "tesscut",
+    "spitzer_irac",
+    "spitzer_cosmos_irac"
 )
 S3_MOUNTPOINT = "/mnt/s3"
 
