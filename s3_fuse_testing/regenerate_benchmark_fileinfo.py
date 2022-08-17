@@ -24,7 +24,7 @@ if __name__ == "__main__":
     from s3_fuse.mount_s3 import mount_bucket
 
     benchmarks = {
-        benchmark_name: interpret_benchmark_instructions(benchmark_name)
+        benchmark_name: interpret_benchmark_instructions(benchmark_name, {})
         for benchmark_name in BENCHMARKS_FOR_WHICH_TO_REGENERATE_FILEINFO
     }
     remount = partial(
