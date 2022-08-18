@@ -54,13 +54,14 @@ def make_tiled_galex_object(
     return path_comp
 
 
-def imsz_from_header(header):
+def imsz_from_header(header) -> tuple[int]:
     """
     get image size from either compressed or uncompressed FITS image headers.
+    should work on headers returned from either fitsio or astropy,
     returns in 'reversed' order for numpy array indexing.
     """
     key_type = "ZNAXIS" if "ZNAXIS" in header.keys() else "NAXIS"
-    axis_entries = keyfilter(
+    axis_entries: dict[str, int] = keyfilter(
         lambda k: False if k is None else re.match(rf"{key_type}\d", k),
         dict(header),
     )
@@ -68,6 +69,10 @@ def imsz_from_header(header):
 
 
 def fitsstat(path: Union[str, Path]) -> dict:
+    """
+    produce a dict describing the characteristics
+    of a FITS file and its extensions.
+    """
     import astropy.io.fits
 
     info = {"filesize": os.stat(path).st_size}
@@ -200,7 +205,7 @@ def extract_wcs_keywords(header):
 
     this is basically intended as an optimization function for those cases.
     it trims irrelevant keywords and fixes legacy-style keywords as
-    preprocessing for astropy.wcs.WCS initalization functions.
+    preprocessing for astropy.wcs.WCS initialization functions.
     """
     wcs_words = ("CTYPE", "CRVAL", "CRPIX", "CDELT", "NAXIS", "PC")
     return {

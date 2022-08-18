@@ -1,15 +1,17 @@
 """
-stream handling, generic utilities, etc.
+stream handling, elementary OS-level operations, functional utiltiies, etc.
+this module is intended to be safely importable by any other module in the
+library, so it should NOT import anything from other modules in the library
+at top level.
 """
-import functools
+from functools import partial
+from io import BytesIO
+from inspect import getfullargspec, getmodule
 import os
+from pathlib import Path
 import random
 import re
 import shutil
-from functools import partial
-from inspect import getfullargspec, getmodule
-from io import BytesIO
-from pathlib import Path
 from sys import stdout
 from typing import Callable, Any
 
@@ -97,13 +99,20 @@ def make_loaders(*loader_names: str) -> dict[str, Callable]:
     return loaders
 
 
-def cleanup_greedy_shm(loader):
-    func = loader.func if isinstance(loader, functools.partial) else loader
+def cleanup_greedy_shm(loader: Callable) -> bool:
+    """
+    if a function has been wrapped to pre-scratch its inputs to /dev/shm,
+    and a path to a subdirectory of /dev/shm is included as a kwarg, delete
+    that path. returns True if it performs cleanup, False if not.
+    """
+    func = loader.func if isinstance(loader, partial) else loader
     spec = getfullargspec(func)
     if spec.kwonlydefaults is None:
-        return
+        return False
     if "shm_path" in spec.kwonlydefaults:
         shutil.rmtree(spec.kwonlydefaults["shm_path"], True)
+        return True
+    return False
 
 
 def parse_topline(log):
@@ -169,7 +178,11 @@ def print_inline(text, blanks=60):
 
 
 def crudely_find_library(obj: Any) -> str:
-    if isinstance(obj, functools.partial):
+    """
+    attempt to determine the original library of an object, even if it is a
+    function that has been partially evaluated.
+    """
+    if isinstance(obj, partial):
         if len(obj.args) > 0:
             if isinstance(obj.args[0], Callable):
                 return crudely_find_library(obj.args[0])
@@ -178,7 +191,9 @@ def crudely_find_library(obj: Any) -> str:
 
 
 def summarize_stat(stat):
-    """format topline summary of benchmark stat object"""
+    """
+    generate a top-line summary from the output of a function returned by
+    """
     duration, volume, cpu = stat(total=True, simple_cpu=True).split(",")
     idle, busy = map(float, re.findall(r"[\d\.]+", cpu))
     return (

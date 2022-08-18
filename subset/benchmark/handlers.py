@@ -22,9 +22,9 @@ from killscreen.monitors import (
 from subset.utilz.fits import imsz_from_header, logged_fits_initializer
 from subset.benchmark.random_generators import rectangular_slices
 from subset.utilz.generic import (
+    load_first_aws_credential,
     make_loaders,
     print_inline,
-    load_first_aws_credential,
     s3_url,
 )
 from subset.utilz.throttle import Throttle
@@ -90,6 +90,12 @@ def benchmark_cuts(
     preload_hdu: bool = False,
     **_,
 ):
+    """
+    pointy-end handler function for executing a specific benchmark test case.
+    written with the expectation that it will be called by execute_test_case(),
+    but there is no reason it cannot be called on its own with arguments
+    assembled some other way.
+    """
     paths = paths[:n_files] if n_files is not None else paths
     # set up monitors: timer, net traffic gauge, cpu timer, dict to put logs in
     watch = Stopwatch(silent=True, digits=None)

@@ -1,3 +1,7 @@
+"""
+provides support for bandwidth-throttled benchmarks. maybe useful for other
+cases in which you want to bandwidth-throttle an operation.
+"""
 from functools import partial
 
 from dustgoggles.func import zero
@@ -46,7 +50,7 @@ def unthrottle(interface="ens5"):
 
 
 class Throttle:
-    """ "
+    """
     apply network transfer caps using wondershaper. basically exists
     just to provide a context manager around throttle() and unthrottle() in
     order to permit clean application of caps to particular code sections.
