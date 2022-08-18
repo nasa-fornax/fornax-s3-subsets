@@ -195,7 +195,7 @@ def summarize_stat(stat):
     generate a top-line summary from the output of a function returned by
     """
     duration, volume, cpu = stat(total=True, simple_cpu=True).split(",")
-    idle, busy = map(float, re.findall(r"[\d\.]+", cpu))
+    idle, busy = map(float, re.findall(r"[\d.]+", cpu))
     return (
         f"{duration}, {volume} transferred, ~"
         f"{round(busy / idle * 100, 1)}% CPU usage"
