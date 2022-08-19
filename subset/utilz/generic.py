@@ -198,5 +198,5 @@ def summarize_stat(stat):
     idle, busy = map(float, re.findall(r"[\d.]+", cpu))
     return (
         f"{duration}, {volume} transferred, ~"
-        f"{round(busy / idle * 100, 1)}% CPU usage"
+        f"{round(busy / (busy + idle) * 100, 1)}% CPU usage"
     )
