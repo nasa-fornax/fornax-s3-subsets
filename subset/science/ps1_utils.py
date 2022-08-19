@@ -10,6 +10,7 @@ from typing import Collection, Optional, Sequence, Any
 
 import astropy.io.fits
 import astropy.wcs
+import numpy as np
 import pyarrow as pa
 import pyarrow.compute as pac
 import requests
@@ -242,3 +243,28 @@ def initialize_ps1_chunk(
         metadata |= {k: v.get() for k, v in metadata.items()}
     # noinspection PyTypeChecker
     return metadata
+
+
+def twice_sinh(array):
+    """
+    calculate 2 * sinh(array) using np.sinh if AVX512F is available,
+    and exponential functions if not (> 10x performance difference)
+    """
+    # noinspection PyProtectedMember
+    from numpy.core._multiarray_umath import __cpu_features__
+
+    if __cpu_features__.get("AVX512F") is True:
+        return np.sinh(array) * 2
+    return np.exp(array) - np.exp(-array)
+
+
+# a scaling constant used in the PS1 stack image production pipeline.
+SCALING_CONSTANT_A = 2.5 / np.log(10)
+
+
+def ps1_stack2flux(data, header) -> np.ndarray:
+    """
+    converts asinh-scaled data units in PS1 stack images to linear flux units
+    """
+    scaled = data / SCALING_CONSTANT_A
+    return header["BOFFSET"] + header["BSOFTEN"] * twice_sinh(scaled)
