@@ -268,3 +268,8 @@ def ps1_stack2flux(data, header) -> np.ndarray:
     """
     scaled = data / SCALING_CONSTANT_A
     return header["BOFFSET"] + header["BSOFTEN"] * twice_sinh(scaled)
+
+
+def ps1_flux2mag(flux_sum, exptime):
+    """convert PS1 summed linear flux units to AB Mag (exptime in seconds)"""
+    return -2.5 * np.log10(flux_sum) + 25 + 2.5 * np.log10(exptime)
