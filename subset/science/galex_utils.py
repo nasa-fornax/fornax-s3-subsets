@@ -156,6 +156,7 @@ def initialize_galex_chunk(
             "loader": loader,
             "hdu_indices": (1, 2, 3),
             "astropy_handle_attribute": astropy_handle_attribute,
+            "logged": False
         }
         if pool is None:
             metadata[(eclipse, band)] = logged_fits_initializer(**init_params)
