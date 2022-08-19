@@ -210,7 +210,7 @@ def initialize_ps1_chunk(
     threads,
     data_root,
     verbose=0,
-    data_handle_attribute="data",
+    astropy_handle_attribute="data",
 ) -> dict[tuple[int, int, str], Any]:
     pool = Pool(threads) if threads is not None else None
     metadata = {}
@@ -221,7 +221,7 @@ def initialize_ps1_chunk(
         # themselves are very cheap because we're only projecting 4 pixels)
         stack_init_params = {
             "path": f"{data_root}{ps1_stack_path(*stack, band)}",
-            "data_handle_attribute": data_handle_attribute,
+            "astropy_handle_attribute": astropy_handle_attribute,
             "get_wcs": band == bands[0],
             "loader": loader,
             "hdu_indices": [1],

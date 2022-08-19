@@ -143,7 +143,7 @@ def initialize_galex_chunk(
     chunk: Sequence[int],
     threads,
     data_root,
-    data_handle_attribute="data",
+    astropy_handle_attribute="data",
 ) -> dict[tuple[int, str], Any]:
     pool = Pool(threads) if threads is not None else None
     metadata = {}
@@ -155,7 +155,7 @@ def initialize_galex_chunk(
             "get_wcs": True,
             "loader": loader,
             "hdu_indices": (1, 2, 3),
-            "data_handle_attribute": data_handle_attribute,
+            "astropy_handle_attribute": astropy_handle_attribute,
         }
         if pool is None:
             metadata[(eclipse, band)] = logged_fits_initializer(**init_params)
