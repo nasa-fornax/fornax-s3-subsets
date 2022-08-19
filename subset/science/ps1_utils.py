@@ -18,11 +18,11 @@ from cytoolz import groupby
 from cytoolz.curried import get
 from gPhoton.coadd import cut_skyboxes
 from killscreen.monitors import make_monitors
-from killscreen.utilities import filestamp
+from killscreen.utilities import filestamp, roundstring
 from more_itertools import chunked
 
 from subset.utilz.fits import logged_fits_initializer
-from subset.utilz.generic import cleanup_greedy_shm
+from subset.utilz.generic import cleanup_greedy_shm, summarize_stat
 
 PS1_FILTERS = ("g", "r", "i", "z", "y")
 PS1_IMAGE_TYPES = (
@@ -198,7 +198,7 @@ def get_ps1_cutouts(
         cuts += chunk_cuts
     note(
         f"made {len(cuts)} cuts from {len(stacks) * len(bands)} images,"
-        f"{stat(total=True)}",
+        f"{roundstring(summarize_stat(stat))}",
         verbose > 0,
     )
     return cuts, note(None, eject=True)
@@ -258,7 +258,8 @@ def twice_sinh(array):
     return np.exp(array) - np.exp(-array)
 
 
-# a scaling constant used in the PS1 stack image production pipeline.
+# a scaling constant used in the PS1 stack image production pipeline,
+# not included in the headers.
 SCALING_CONSTANT_A = 2.5 / np.log(10)
 
 

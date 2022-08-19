@@ -13,11 +13,12 @@ from gPhoton.aspect import TABLE_PATHS
 from gPhoton.coadd import cut_skyboxes
 from killscreen.monitors import make_monitors
 from gPhoton.reference import eclipse_to_paths
+from killscreen.utilities import roundstring
 from more_itertools import chunked
 from pyarrow import parquet
 
 from subset.utilz.fits import logged_fits_initializer
-from subset.utilz.generic import cleanup_greedy_shm
+from subset.utilz.generic import cleanup_greedy_shm, summarize_stat
 
 
 def get_galex_version_path(eclipse, band, depth, obj, version, data_root):
@@ -131,7 +132,7 @@ def get_galex_cutouts(
         note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
     note(
         f"made {len(cuts)} cuts from {len(eclipses) * len(bands)} images,"
-        f"{stat(total=True)}",
+        f"{roundstring(summarize_stat(stat))}",
         verbose > 0,
     )
     return cuts, note(None, eject=True)
