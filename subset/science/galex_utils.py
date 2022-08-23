@@ -9,6 +9,7 @@ from itertools import product
 from multiprocessing import Pool
 from typing import Sequence, Any
 
+import numpy as np
 from gPhoton.aspect import TABLE_PATHS
 from gPhoton.coadd import cut_skyboxes
 from killscreen.monitors import make_monitors
@@ -116,6 +117,7 @@ def get_galex_cutouts(
                     "path": metadata[(eclipse, band)]["path"],
                     "band": band,
                     "eclipse": eclipse,
+                    "exptime": metadata[(eclipse, band)]["header"]["EXPTIME"]
                 }
                 plans.append(target.copy() | meta_dict)
         note(
@@ -170,3 +172,14 @@ def initialize_galex_chunk(
         pool.join()
         metadata |= {k: v.get() for k, v in metadata.items()}
     return metadata
+
+
+def counts2mag(cps, band):
+    scale = 18.82 if band == 'FUV' else 20.08
+    # This threw a warning if the countrate was negative which happens when
+    #  the background is brighter than the source. Suppress.
+    with np.errstate(invalid='ignore'):
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            mag = -2.5 * np.log10(cps) + scale
+    return mag
