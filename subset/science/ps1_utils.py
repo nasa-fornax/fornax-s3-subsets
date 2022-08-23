@@ -274,3 +274,16 @@ def ps1_stack2flux(data, header) -> np.ndarray:
 def ps1_flux2mag(flux_sum, exptime):
     """convert PS1 summed linear flux units to AB Mag (exptime in seconds)"""
     return -2.5 * np.log10(flux_sum) + 25 + 2.5 * np.log10(exptime)
+
+
+def ps1_stack_mask_path(proj_cell, sky_cell, band):
+    """
+    construct relative path for a PS1 stack mask image by projection cell,
+    sky cell, and band.
+    """
+    proj_cell = str(proj_cell).zfill(4)
+    sky_cell = str(sky_cell).zfill(3)
+    return (
+        f"/rings.v3.skycell/{proj_cell}/{sky_cell}/"
+        f"rings.v3.skycell.{proj_cell}.{sky_cell}.stk.{band}.unconv.mask.fits"
+    )
