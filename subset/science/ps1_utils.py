@@ -38,7 +38,7 @@ PS1_IMAGE_TYPES = (
 PS1_IMAGE_FORMATS = ("fits", "jpg", "png")
 PS1_FILENAME_URL = "https://ps1images.stsci.edu/cgi-bin/ps1filenames.py"
 PS1_CUTOUT_URL = "https://ps1images.stsci.edu/cgi-bin/fitscut.cgi"
-
+PS1_DOWNLOAD_ROOT = "http://ps1images.stsci.edu/rings.v3.skycell"
 
 # see documentation at
 # https://outerspace.stsci.edu/display/PANSTARRS/PS1+Image+Cutout+Service
