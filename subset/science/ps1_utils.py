@@ -2,11 +2,8 @@
 utilities for interacting with PS1 catalogs, files, and services.
 """
 from io import BytesIO
-from itertools import product
-from multiprocessing import Pool
-from pathlib import Path
-import pickle
-from typing import Collection, Optional, Sequence, Any
+from types import MappingProxyType
+from typing import Collection, Optional
 
 import astropy.io.fits
 import astropy.wcs
@@ -16,13 +13,7 @@ import pyarrow.compute as pac
 import requests
 from cytoolz import groupby
 from cytoolz.curried import get
-from gPhoton.coadd import cut_skyboxes
-from killscreen.monitors import make_monitors
-from killscreen.utilities import filestamp, roundstring
 from more_itertools import chunked
-
-from subset.utilz.fits import logged_fits_initializer
-from subset.utilz.generic import cleanup_greedy_shm, summarize_stat
 
 PS1_FILTERS = ("g", "r", "i", "z", "y")
 PS1_IMAGE_TYPES = (
@@ -135,114 +126,28 @@ def prune_ps1_catalog(catalog_table, test_table):
     return pa.concat_tables(proj_cell_tables)
 
 
-# TODO, maybe: merge these with galex functions in some way --
-#  annoying because requires some kind of chunked parameter passing
-#  or giving up on chunked WCS init in PS1
-def get_ps1_cutouts(
-    stacks: Collection[tuple[int, int]],
-    loader,
-    targets,
-    length,
-    data_root,
-    bands,
-    verbose=1,
-    logged=True,
-    image_chunksize: int = 40,
-    image_threads=None,
-    cut_threads=None,
-    return_cuts=True,
-    dump=False,
-    dump_to=".",
-):
-    stat, note = make_monitors(fake=not logged, silent=True)
+def ps1_chunker(stacks, targets, bands, image_chunksize=40):
     stack_chunks = chunked(stacks, int(image_chunksize / len(bands)))
-    target_groups = groupby(get(["proj_cell", "sky_cell"]), targets)
-    cuts = []
-    tag = filestamp()
-    for ix, chunk in enumerate(stack_chunks):
-        metadata = initialize_ps1_chunk(
-            loader, bands, chunk, image_threads, data_root, verbose
-        )
-        plans = []
-        for name, file_info in metadata.items():
-            proj, sky, band = name
-            # noinspection PyTypeChecker
-            for target in target_groups[(proj, sky)]:
-                meta_dict = {
-                    "wcs": metadata[(proj, sky, bands[0])]["wcs"],
-                    "path": metadata[(proj, sky, band)]["path"],
-                    "header": metadata[(proj, sky, band)]["header"],
-                    "band": band,
-                }
-                plans.append(target.copy() | meta_dict)
-        note(
-            f"initialized {len(chunk) * len(bands)} images,{stat()}",
-            verbose > 1,
-        )
-        cut_kwargs = {
-            "loader": loader,
-            "hdu_indices": (1,),
-            "side_length": length,
-        }
-        chunk_cuts = cut_skyboxes(plans, cut_threads, cut_kwargs)
-        cleanup_greedy_shm(loader)
-        note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
-        if dump is True:
-            # TODO: do this more nicely
-            with open(Path(dump_to, f"chunk_{ix}_{tag}.pkl"), "wb+") as stream:
-                pickle.dump(chunk_cuts, stream)
-            note(f"dumped {len(plans)} cutouts to disk,{stat()}", verbose > 1)
-        if return_cuts is False:
-            for cut in chunk_cuts:
-                del cut["arrays"]
-        cuts += chunk_cuts
-    note(
-        f"made {len(cuts)} cuts from {len(stacks) * len(bands)} images,"
-        f"{roundstring(summarize_stat(stat))}",
-        verbose > 0,
-    )
-    return cuts, note(None, eject=True)
+    target_groups = {
+        "_".join(map(str, k)): v
+        for k, v in groupby(get(["proj_cell", "sky_cell"]), targets).items()
+    }
+    return stack_chunks, target_groups
 
 
-def initialize_ps1_chunk(
-    loader,
-    bands,
-    chunk: Sequence[tuple[int, int]],
-    threads,
-    data_root,
-    verbose=0,
-    astropy_handle_attribute="data",
-) -> dict[tuple[int, int, str], Any]:
-    pool = Pool(threads) if threads is not None else None
-    metadata = {}
-    for band, stack in product(bands, chunk):
-        # all ps1 stack images associated with a sky cell / proj cell should
-        # have the same wcs no matter their bands, so don't waste time
-        # repeatedly initializing the WCS object (the projection operations
-        # themselves are very cheap because we're only projecting 4 pixels)
-        stack_init_params = {
-            "path": f"{data_root}{ps1_stack_path(*stack, band)}",
-            "astropy_handle_attribute": astropy_handle_attribute,
-            "get_wcs": band == bands[0],
-            "loader": loader,
-            "hdu_indices": [1],
-            "verbose": verbose,
-            "logged": False,
-        }
-        if pool is None:
-            metadata[(*stack, band)] = logged_fits_initializer(
-                **stack_init_params
-            )
-        else:
-            metadata[(*stack, band)] = pool.apply_async(
-                logged_fits_initializer, kwds=stack_init_params
-            )
-    if pool is not None:
-        pool.close()
-        pool.join()
-        metadata |= {k: v.get() for k, v in metadata.items()}
-    # noinspection PyTypeChecker
-    return metadata
+def ps1_chunk_kwargs(stack, band, data_root, loader, bands):
+    # all ps1 stack images associated with a sky cell / proj cell should
+    # have the same wcs no matter their bands, so don't waste time
+    # repeatedly initializing the WCS object (the projection operations
+    # themselves are very cheap because we're only projecting 4 pixels)
+    stack_init_params = {
+        "path": f"{data_root}{ps1_stack_path(*stack.split('_'), band)}",
+        "get_wcs": band == bands[0],
+        "loader": loader,
+        "hdu_indices": (1,),
+        "band": band,
+    }
+    return stack_init_params
 
 
 def twice_sinh(array):
@@ -287,3 +192,12 @@ def ps1_stack_mask_path(proj_cell, sky_cell, band):
         f"/rings.v3.skycell/{proj_cell}/{sky_cell}/"
         f"rings.v3.skycell.{proj_cell}.{sky_cell}.stk.{band}.unconv.mask.fits"
     )
+
+
+PS1_CUT_CONSTANTS = MappingProxyType(
+    {
+        'chunker': ps1_chunker,
+        'kwarg_assembler': ps1_chunk_kwargs,
+        'hdu_indices': (1,)
+    }
+)
