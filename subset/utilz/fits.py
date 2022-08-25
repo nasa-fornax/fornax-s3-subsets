@@ -198,18 +198,21 @@ def translate_pc_keyword(keyword: str):
 
 def extract_wcs_keywords(header):
     """
-    header formatting and WCS keyword handling can make astropy.wcs upset.
-    it handles validation and fixes gracefully, but not quickly, so things
-    like the legacy-formatted WCS keywords in PS1 headers can introduce a
-    surprising amount of overhead.
-
-    this is basically intended as an optimization function for those cases.
-    it trims irrelevant keywords and fixes legacy-style keywords as
-    preprocessing for astropy.wcs.WCS initialization functions.
+    header formatting and WCS keyword handling can make astropy.wcs upset,
+    it handles validation and fixes gracefully, but not quickly. faster
+    to trim irrelevant keywords and fix old-style ones before feeding them to
+    astropy.wcs.
     """
-    wcs_words = ("CTYPE", "CRVAL", "CRPIX", "CDELT", "NAXIS", "PC")
-    return {
-        translate_pc_keyword(k): header[k]
-        for k in header.keys()
+    wcs_words = ('CTYPE', 'CRVAL', 'CRPIX', 'CDELT', 'ZNAXIS', 'NAXIS', 'PC')
+    keywords = {
+        translate_pc_keyword(k): header[k] for k in header.keys()
         if any([k.startswith(w) for w in wcs_words])
     }
+    # we don't care about the dimensions of compressed HDUs; we always want
+    # the dimensions of the underlying image, and astropy.wcs does not
+    # automatically filter for this (astropy.io.fits does, usually, but not
+    # always, and fitsio doesn't)
+    not_z = {k: v for k, v in keywords.items() if not k.startswith('ZNAXIS')}
+    un_zd = {k[1:]: v for k, v in keywords.items() if k.startswith('ZNAXIS')}
+    return not_z | un_zd
+
