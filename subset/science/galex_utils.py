@@ -105,6 +105,7 @@ GALEX_CUT_CONSTANTS = MappingProxyType(
     {
         'chunker': galex_chunker,
         'kwarg_assembler': galex_chunk_kwargs,
-        'hdu_indices': (1, 2, 3)
+        'hdu_indices': (1, 2, 3),
+        'exptime_field': 'EXPT_0'
     }
 )

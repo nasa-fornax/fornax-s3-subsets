@@ -198,6 +198,7 @@ PS1_CUT_CONSTANTS = MappingProxyType(
     {
         'chunker': ps1_chunker,
         'kwarg_assembler': ps1_chunk_kwargs,
-        'hdu_indices': (1,)
+        'hdu_indices': (1,),
+        'share_wcs': True
     }
 )

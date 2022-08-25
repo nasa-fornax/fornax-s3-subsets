@@ -6,13 +6,14 @@ from pathlib import Path
 from types import MappingProxyType
 
 from astropy.wcs import WCS
+from cytoolz import first
+from cytoolz.curried import get
 from dustgoggles.func import zero
 from gPhoton.coadd import cut_skyboxes
 from gPhoton.io.fits_utils import AgnosticHDUL
 from killscreen.monitors import make_monitors
 from killscreen.utilities import filestamp, roundstring
 
-from science.ps1_utils import ps1_chunk_kwargs
 from utilz.fits import extract_wcs_keywords
 from utilz.generic import cleanup_greedy_shm, summarize_stat
 
@@ -48,7 +49,9 @@ def initialize_fits_chunk(
     return metadata
 
 
-def merge_chunk_metadata(named_targets, chunk_metadata, shared_wcs_band=None):
+def merge_chunk_metadata(
+    named_targets, chunk_metadata, share_wcs=False, exptime_field="EXPTIME"
+):
     plans = []
     for id_band, file_info in chunk_metadata.items():
         for target in named_targets[id_band[0]]:
@@ -56,13 +59,13 @@ def merge_chunk_metadata(named_targets, chunk_metadata, shared_wcs_band=None):
                 "path": file_info["path"],
                 "header": file_info["header"],
                 "band": id_band[1],
-                "exptime": file_info["header"]["EXPTIME"],
+                "exptime": file_info["header"][exptime_field],
             }
-            if shared_wcs_band is None:
+            if share_wcs is False:
                 meta_dict["system"] = file_info["system"]
             else:
                 meta_dict["system"] = chunk_metadata[
-                    (id_band[0], shared_wcs_band)
+                    (id_band[0], first(map(get(1), chunk_metadata.keys())))
                 ]["system"]
             plans.append(target.copy() | meta_dict)
     return plans
@@ -106,6 +109,8 @@ def bulk_skycut(
     verbose=1,
     image_chunksize=40,
     name="chunk",
+    share_wcs=False,
+    exptime_field="EXPTIME"
 ):
     file_chunks, target_groups = chunker(ids, targets, bands, image_chunksize)
     results, tag = [], filestamp()
@@ -119,7 +124,9 @@ def bulk_skycut(
             loader=loader,
             threads=threads["image"],
         )
-        plans = merge_chunk_metadata(target_groups, metadata, bands[0])
+        plans = merge_chunk_metadata(
+            target_groups, metadata, share_wcs, exptime_field
+        )
         note(
             f"initialized {len(chunk) * len(bands)} images,{stat()}",
             verbose > 1,
