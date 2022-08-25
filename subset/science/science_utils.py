@@ -78,6 +78,7 @@ def cut_and_dump(
     outpath=None,
 ):
     chunk_cuts = cut_skyboxes(plans, **cut_kwargs)
+    chunk_cuts = [plan | cut for plan, cut in zip(plans, chunk_cuts)]
     cleanup_greedy_shm(cut_kwargs["loader"])
     note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
     if outpath is not None:
@@ -106,7 +107,7 @@ def bulk_skycut(
     image_chunksize=40,
     name="chunk",
 ):
-    file_chunks, target_groups = chunker(ids, targets, bands)
+    file_chunks, target_groups = chunker(ids, targets, bands, image_chunksize)
     results, tag = [], filestamp()
     stat, note = make_monitors(silent=True)
     for ix, chunk in enumerate(file_chunks):
