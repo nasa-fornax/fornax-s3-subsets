@@ -5,21 +5,13 @@ others require a gPhoton 2 installation in the environment.
 """
 import random
 import warnings
-from itertools import product
-from multiprocessing import Pool
-from typing import Sequence, Any
+from types import MappingProxyType
 
 import numpy as np
 from gPhoton.aspect import TABLE_PATHS
-from gPhoton.coadd import cut_skyboxes
-from killscreen.monitors import make_monitors
 from gPhoton.reference import eclipse_to_paths
-from killscreen.utilities import roundstring
 from more_itertools import chunked
 from pyarrow import parquet
-
-from subset.utilz.fits import logged_fits_initializer
-from subset.utilz.generic import cleanup_greedy_shm, summarize_stat
 
 
 def get_galex_version_path(eclipse, band, depth, obj, version, data_root):
@@ -77,109 +69,42 @@ def parquet_generic_search(columns, predicates, refs, table_path):
     return parquet.read_table(table_path, filters=filters)
 
 
-# TODO, maybe: merge these with PS1 functions in some way --
-#  annoying because requires some kind of chunked parameter passing
-#  or giving up on chunked WCS init in PS1
-def get_galex_cutouts(
-    eclipses,
-    loader,
-    targets,
-    length,
-    data_root,
-    bands,
-    verbose=1,
-    logged=True,
-    image_chunksize: int = 40,
-    image_threads=None,
-    cut_threads=None,
-):
-    stat, note = make_monitors(fake=not logged, silent=True)
+def galex_chunker(eclipses, targets, bands, image_chunksize=40):
     eclipse_chunks = chunked(eclipses, int(image_chunksize / len(bands)))
     eclipse_targets = {
         eclipse: tuple(filter(lambda t: eclipse in t["galex"], targets))
         for eclipse in eclipses
     }
-    cuts = []
-    for chunk in eclipse_chunks:
-        metadata = initialize_galex_chunk(
-            loader=loader,
-            bands=bands,
-            chunk=chunk,
-            threads=image_threads,
-            data_root=data_root,
-        )
-        plans = []
-        for name, file_info in metadata.items():
-            eclipse, band = name
-            for target in eclipse_targets[eclipse]:
-                meta_dict = {
-                    "wcs": metadata[(eclipse, band)]["wcs"],
-                    "path": metadata[(eclipse, band)]["path"],
-                    "band": band,
-                    "eclipse": eclipse,
-                    "exptime": metadata[(eclipse, band)]["header"]["EXPTIME"]
-                }
-                plans.append(target.copy() | meta_dict)
-        note(
-            f"initialized {len(chunk) * len(bands)} images,{stat()}",
-            verbose > 1,
-        )
-        cut_kwargs = {
-            "loader": loader,
-            "hdu_indices": (1, 2, 3),
-            "side_length": length,
-        }
-        cuts += cut_skyboxes(plans, cut_threads, cut_kwargs)
-        cleanup_greedy_shm(loader)
-        note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
-    note(
-        f"made {len(cuts)} cuts from {len(eclipses) * len(bands)} images,"
-        f"{roundstring(summarize_stat(stat))}",
-        verbose > 0,
-    )
-    return cuts, note(None, eject=True)
+    return eclipse_chunks, eclipse_targets
 
 
-def initialize_galex_chunk(
-    loader,
-    bands,
-    chunk: Sequence[int],
-    threads,
-    data_root,
-    astropy_handle_attribute="data",
-) -> dict[tuple[int, str], Any]:
-    pool = Pool(threads) if threads is not None else None
-    metadata = {}
-    for band, eclipse in product(bands, chunk):
-        init_params = {
-            "path": eclipse_to_paths(eclipse, data_root, None, "rice")[band][
-                "image"
-            ],
-            "get_wcs": True,
-            "loader": loader,
-            "hdu_indices": (1, 2, 3),
-            "astropy_handle_attribute": astropy_handle_attribute,
-            "logged": False
-        }
-        if pool is None:
-            metadata[(eclipse, band)] = logged_fits_initializer(**init_params)
-        else:
-            metadata[(eclipse, band)] = pool.apply_async(
-                logged_fits_initializer, kwds=init_params
-            )
-    if pool is not None:
-        pool.close()
-        pool.join()
-        metadata |= {k: v.get() for k, v in metadata.items()}
-    return metadata
+def galex_chunk_kwargs(eclipse, band, data_root, loader, _bands):
+    return {
+        "path": eclipse_to_paths(eclipse, data_root, None, "rice")[band][
+            "image"
+        ],
+        "get_wcs": True,
+        "loader": loader,
+        "hdu_indices": (1, 2, 3),
+        "band": band,
+    }
 
 
 def counts2mag(cps, band):
-    scale = 18.82 if band == 'FUV' else 20.08
+    scale = 18.82 if band == "FUV" else 20.08
     # This threw a warning if the countrate was negative which happens when
     #  the background is brighter than the source. Suppress.
-    with np.errstate(invalid='ignore'):
+    with np.errstate(invalid="ignore"):
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
             mag = -2.5 * np.log10(cps) + scale
     return mag
+
+
+GALEX_CUT_CONSTANTS = MappingProxyType(
+    {
+        'chunker': galex_chunker,
+        'kwarg_assembler': galex_chunk_kwargs,
+        'hdu_indices': (1, 2, 3)
+    }
+)
