@@ -1,21 +1,13 @@
-import os
-import pickle
-from itertools import product
-from multiprocessing import Pool
-from pathlib import Path
-from types import MappingProxyType
+from typing import Sequence, Union
 
+import numpy as np
 from astropy.wcs import WCS
-from cytoolz import first
-from cytoolz.curried import get
-from dustgoggles.func import zero
-from gPhoton.coadd import cut_skyboxes
+from cytoolz import keyfilter, keymap
 from gPhoton.io.fits_utils import AgnosticHDUL
-from killscreen.monitors import make_monitors
-from killscreen.utilities import filestamp, roundstring
+from photutils import CircularAperture
+from scipy import stats
 
-from utilz.fits import extract_wcs_keywords
-from utilz.generic import cleanup_greedy_shm, summarize_stat
+from subset.utilz.fits import extract_wcs_keywords
 
 
 def agnostic_fits_skim(path, loader, get_wcs=True, hdu_indices=(0,), **kwargs):
@@ -29,123 +21,126 @@ def agnostic_fits_skim(path, loader, get_wcs=True, hdu_indices=(0,), **kwargs):
     return metadata
 
 
-def initialize_fits_chunk(
-    chunk, bands, data_root, kwarg_assembler, loader, threads
-):
-    pool = Pool(threads) if threads is not None else None
-    metadata = {}
-    for band, identifier in product(bands, chunk):
-        kwargs = kwarg_assembler(identifier, band, data_root, loader, bands)
-        if pool is None:
-            metadata[(identifier, band)] = agnostic_fits_skim(**kwargs)
-        else:
-            metadata[(identifier, band)] = pool.apply_async(
-                agnostic_fits_skim, kwds=kwargs
-            )
-    if pool is not None:
-        pool.close()
-        pool.join()
-        metadata |= {k: v.get() for k, v in metadata.items()}
-    return metadata
+def pd_combinations(df, columns):
+    return df[columns].value_counts().index.to_frame().reset_index(drop=True)
 
 
-def merge_chunk_metadata(
-    named_targets, chunk_metadata, share_wcs=False, exptime_field="EXPTIME"
-):
-    plans = []
-    for id_band, file_info in chunk_metadata.items():
-        for target in named_targets[id_band[0]]:
-            meta_dict = {
-                "path": file_info["path"],
-                "header": file_info["header"],
-                "band": id_band[1],
-                "exptime": file_info["header"][exptime_field],
-            }
-            if share_wcs is False:
-                meta_dict["system"] = file_info["system"]
-            else:
-                meta_dict["system"] = chunk_metadata[
-                    (id_band[0], first(map(get(1), chunk_metadata.keys())))
-                ]["system"]
-            plans.append(target.copy() | meta_dict)
-    return plans
+def filter_to_cells(df, cells):
+    proj = df.loc[df["proj_cell"].isin(cells["proj_cell"])]
+    return proj.loc[proj["sky_cell"].isin(cells["sky_cell"])]
 
 
-def cut_and_dump(
-    plans,
-    cut_kwargs,
-    stat=zero,
-    note=zero,
-    return_cuts=False,
-    verbose=1,
-    outpath=None,
-):
-    chunk_cuts = cut_skyboxes(plans, **cut_kwargs)
-    chunk_cuts = [plan | cut for plan, cut in zip(plans, chunk_cuts)]
-    cleanup_greedy_shm(cut_kwargs["loader"])
-    note(f"made {len(plans)} cutouts,{stat()}", verbose > 1)
-    if outpath is not None:
-        with outpath.with_extension(".pkl").open("wb+") as stream:
-            pickle.dump(chunk_cuts, stream)
-        note(f"dumped {len(plans)} cutouts to disk,{stat()}", verbose > 1)
-    if return_cuts is False:
-        for cut in chunk_cuts:
-            del cut["arrays"]
-    return chunk_cuts
-
-
-def bulk_skycut(
-    ids,
-    targets,
-    bands,
-    chunker,
-    kwarg_assembler,
-    hdu_indices=(1,),
-    data_root=os.getcwd(),
-    dump_to=None,
-    loader=None,
-    return_cuts=False,
-    threads=MappingProxyType({"image": None, "cut": None}),
-    verbose=1,
-    image_chunksize=40,
-    name="chunk",
-    share_wcs=False,
-    exptime_field="EXPTIME"
-):
-    file_chunks, target_groups = chunker(ids, targets, bands, image_chunksize)
-    results, tag = [], filestamp()
-    stat, note = make_monitors(silent=True)
-    for ix, chunk in enumerate(file_chunks):
-        metadata = initialize_fits_chunk(
-            chunk=chunk,
-            bands=bands,
-            data_root=data_root,
-            kwarg_assembler=kwarg_assembler,
-            loader=loader,
-            threads=threads["image"],
-        )
-        plans = merge_chunk_metadata(
-            target_groups, metadata, share_wcs, exptime_field
-        )
-        note(
-            f"initialized {len(chunk) * len(bands)} images,{stat()}",
-            verbose > 1,
-        )
-        if dump_to is None:
-            outpath = None
-        else:
-            outpath = Path(dump_to, f"{name}_{ix}_{tag}")
-        cut_kwargs = {
-            "loader": loader,
-            "hdu_indices": hdu_indices,
-            "threads": threads["cut"],
-        }
-        results += cut_and_dump(
-            plans, cut_kwargs, stat, note, return_cuts, verbose, outpath
-        )
-    note(
-        f"made {len(results)} cuts from {len(ids) * len(bands)} "
-        f"images,{roundstring(summarize_stat(stat))}",
-        verbose > 0,
+def centered_aperture(cut_record, radius_arcsec):
+    system, array = cut_record['system'], cut_record['array']
+    system = system.to_header()
+    center = array.shape[1] / 2, array.shape[0] / 2
+    degrees_per_pixel = np.abs(
+        np.array([system['CDELT1'], system['CDELT2']])
+    ).mean()
+    return CircularAperture(
+        (center,), r=radius_arcsec / 3600 / degrees_per_pixel
     )
-    return results, note(eject=True)
+
+# NOTE: The following visualization-support functions are vendored from
+# marslab (https://github.com/MillionConcepts/marslab); its license is
+# included by reference.
+
+def find_masked_bounds(image, cheat_low, cheat_high):
+    """
+    relatively memory-efficient way to perform bound calculations for
+    normalize_range on a masked array.
+    """
+    valid = image[~image.mask].data
+    if valid.size == 0:
+        return None, None
+    if (cheat_low != 0) and (cheat_high != 0):
+        minimum, maximum = np.percentile(
+            valid, [cheat_low, 100 - cheat_high], overwrite_input=True
+        ).astype(image.dtype)
+    elif cheat_low != 0:
+        maximum = valid.max()
+        minimum = np.percentile(valid, cheat_low, overwrite_input=True).astype(
+            image.dtype
+        )
+    elif cheat_high != 0:
+        minimum = valid.min()
+        maximum = np.percentile(
+            valid, 100 - cheat_high, overwrite_input=True
+        ).astype(image.dtype)
+    else:
+        minimum = valid.min()
+        maximum = valid.max()
+    return minimum, maximum
+
+
+# noinspection PyArgumentList
+def find_unmasked_bounds(image, cheat_low, cheat_high):
+    """straightforward way to find unmasked array bounds for normalize_range"""
+    if cheat_low != 0:
+        minimum = np.percentile(image, cheat_low).astype(image.dtype)
+    else:
+        minimum = image.min()
+    if cheat_high != 0:
+        maximum = np.percentile(image, 100 - cheat_high).astype(image.dtype)
+    else:
+        maximum = image.max()
+    return minimum, maximum
+
+
+def centile_clip(image, centiles=(1, 99)):
+    """
+    simple clipping function that clips values above and below a given
+    percentile range
+    """
+    finite = np.ma.masked_invalid(image)
+    bounds = np.percentile(finite[~finite.mask].data, centiles)
+    result = np.ma.clip(finite, *bounds)
+    if isinstance(image, np.ma.MaskedArray):
+        return result
+    return result.data
+
+
+def normalize_range(
+    image: np.ndarray,
+    bounds: Sequence[int] = (0, 1),
+    stretch: Union[float, tuple[float, float]] = 0,
+    inplace: bool = False,
+) -> np.ndarray:
+    """
+    simple linear min-max scaler that optionally percentile-clips the input at
+    stretch = (low_percentile, 100 - high_percentile). if inplace is True,
+    may transform the original array, with attendant memory savings and
+    destructive effects.
+    """
+    if isinstance(stretch, Sequence):
+        cheat_low, cheat_high = stretch
+    else:
+        cheat_low, cheat_high = (stretch, stretch)
+    range_min, range_max = bounds
+    if isinstance(image, np.ma.MaskedArray):
+        minimum, maximum = find_masked_bounds(image, cheat_low, cheat_high)
+        if minimum is None:
+            return image
+    else:
+        minimum, maximum = find_unmasked_bounds(image, cheat_low, cheat_high)
+    if not ((cheat_high is None) and (cheat_low is None)):
+        if inplace is True:
+            image = np.clip(image, minimum, maximum, out=image)
+        else:
+            image = np.clip(image, minimum, maximum)
+    if inplace is True:
+        # perform the operation in-place
+        image -= minimum
+        image *= (range_max - range_min)
+        if image.dtype.char in np.typecodes['AllInteger']:
+            # this loss of precision is probably better than
+            # automatically typecasting it.
+            # TODO: detect rollover cases, etc.
+            image //= (maximum - minimum)
+        else:
+            image /= (maximum - minimum)
+        image += range_min
+        return image
+    return (image - minimum) * (range_max - range_min) / (
+        maximum - minimum
+    ) + range_min
