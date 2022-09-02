@@ -302,17 +302,17 @@ def cutouts_to_channels(cutouts):
     """
     channel_dict = {}
     for obj_id in set(map(get("obj_id"), cutouts)):
-        matches = [c for c in cutouts if c['obj_id'] == obj_id]
-        nuv_band = [c for c in matches if c['band'] == 'NUV']
+        matches = [c for c in cutouts if c["obj_id"] == obj_id]
+        nuv_band = [c for c in matches if c["band"] == "NUV"]
         if len(nuv_band) == 0:
             print(f"no valid GALEX coadd for {obj_id}")
             continue
-        z_band = [c for c in matches if c['band'] == 'z']
-        g_band = [c for c in matches if c['band'] == 'g']
+        z_band = [c for c in matches if c["band"] == "z"]
+        g_band = [c for c in matches if c["band"] == "g"]
         assert all([len(b) == 1 for b in (nuv_band, z_band, g_band)])
-        nuv_cut = nuv_band[0]['array']
-        z_cut = z_band[0]['array']
-        g_cut = g_band[0]['array']
+        nuv_cut = nuv_band[0]["array"]
+        z_cut = z_band[0]["array"]
+        g_cut = g_band[0]["array"]
         assert z_cut.shape == g_cut.shape
         # fortunately, ps1 and galex both use gnomonic projections,
         # so little spatial distortion is added by stretching them to fit
@@ -324,10 +324,27 @@ def cutouts_to_channels(cutouts):
         nuv_upsample = resize(
             nuv_cut, g_cut.shape, order=0, anti_aliasing=False
         )
-        channel_dict[obj_id] = {'z': z_cut,  'g': g_cut,  'nuv': nuv_upsample}
+        channel_dict[obj_id] = {"z": z_cut, "g": g_cut, "nuv": nuv_upsample}
     return channel_dict
 
 
 def filter_to_cells(df, cells):
     proj = df.loc[df["proj_cell"].isin(cells["proj_cell"])]
     return proj.loc[proj["sky_cell"].isin(cells["sky_cell"])]
+
+
+def load_ps1_cutout_masks(ps1_cutouts):
+    import fitsio
+
+    masks = {}
+    for cut in ps1_cutouts:
+        coords = cut["coords"]
+        slices = (
+            slice(coords[2], coords[3] + 1),
+            slice(coords[0], coords[1] + 1),
+        )
+        mask = fitsio.FITS(cut["path"].replace(".fits", ".mask.fits"))[1][
+            slices
+        ]
+        masks[(cut["obj_id"], cut["band"])] = mask
+    return masks
