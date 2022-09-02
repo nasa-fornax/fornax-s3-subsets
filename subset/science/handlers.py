@@ -258,6 +258,7 @@ def filter_ps1_catalog(
     catalog: pd.DataFrame,
     mag_cutoff: Optional[int],
     extension_type: Literal[None, "extended", "point"],
+    stack_only: bool = True
 ):
     if mag_cutoff is not None:
         catalog = catalog.loc[
@@ -268,6 +269,8 @@ def filter_ps1_catalog(
         catalog = catalog.loc[catalog["flag"] % 2 == 1]
     elif extension_type == "point":
         catalog = catalog.loc[catalog["flag"] % 2 == 0]
+    if stack_only is True:
+        catalog = catalog.loc[catalog['n_stack_detections'] > 0]
     return catalog
 
 
