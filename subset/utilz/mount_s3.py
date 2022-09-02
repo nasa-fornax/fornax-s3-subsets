@@ -76,17 +76,16 @@ def _mount_bucket_with_goofys_in_debug_mode(
 
 
 def mount_bucket(
-    backend,
     mount_path,
     bucket,
     remount=False,
     stream_handlers=None,
     verbose=False,
+    backend="goofys",
 ):
     if conditional_unmount(remount, mount_path) is False:
         return
     stream_handlers = {} if stream_handlers is None else stream_handlers
-    #     out_actions, err_actions = console_stream_handlers(**stream_targets)
     if (backend == "goofys") and (verbose is True):
         return _mount_bucket_with_goofys_in_debug_mode(
             mount_path, bucket, stream_handlers

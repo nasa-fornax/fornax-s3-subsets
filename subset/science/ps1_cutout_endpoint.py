@@ -63,7 +63,7 @@ TUNING = {
 
 def make_ps1_slices(targets: list[dict]):
     ps1_stacks = set(map(get(['proj_cell', 'sky_cell']), targets))
-    mount_bucket(backend="goofys", mount_path=S3_ROOT, bucket=BUCKET)
+    mount_bucket(mount_path=S3_ROOT, bucket=BUCKET)
     loader_name, loader = LOADER
     if loader_name in TUNING.keys():
         tuning_params = TUNING[loader_name]

@@ -33,7 +33,7 @@ if __name__ == "__main__":
         benchmark_name: interpret_benchmark_instructions(benchmark_name, {})
         for benchmark_name in BENCHMARKS_FOR_WHICH_TO_REGENERATE_FILEINFO
     }
-    remount = partial(mount_bucket, "goofys", S3_MOUNTPOINT, remount=True)
+    remount = partial(mount_bucket, S3_MOUNTPOINT, remount=True)
     for benchmark_name in benchmarks.keys():
         paths = benchmarks[benchmark_name][0]["paths"]
         remount(benchmarks[benchmark_name][0]["bucket"])

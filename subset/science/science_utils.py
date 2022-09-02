@@ -1,11 +1,9 @@
 from typing import Sequence, Union
 
-import numpy as np
 from astropy.wcs import WCS
-from cytoolz import keyfilter, keymap
+import numpy as np
 from gPhoton.io.fits_utils import AgnosticHDUL
 from photutils import CircularAperture
-from scipy import stats
 
 from subset.utilz.fits import extract_wcs_keywords
 
@@ -25,25 +23,22 @@ def pd_combinations(df, columns):
     return df[columns].value_counts().index.to_frame().reset_index(drop=True)
 
 
-def filter_to_cells(df, cells):
-    proj = df.loc[df["proj_cell"].isin(cells["proj_cell"])]
-    return proj.loc[proj["sky_cell"].isin(cells["sky_cell"])]
-
-
 def centered_aperture(cut_record, radius_arcsec):
-    system, array = cut_record['system'], cut_record['array']
+    system, array = cut_record["system"], cut_record["array"]
     system = system.to_header()
     center = array.shape[1] / 2, array.shape[0] / 2
     degrees_per_pixel = np.abs(
-        np.array([system['CDELT1'], system['CDELT2']])
+        np.array([system["CDELT1"], system["CDELT2"]])
     ).mean()
     return CircularAperture(
         (center,), r=radius_arcsec / 3600 / degrees_per_pixel
     )
 
+
 # NOTE: The following visualization-support functions are vendored from
 # marslab (https://github.com/MillionConcepts/marslab); its license is
 # included by reference.
+
 
 def find_masked_bounds(image, cheat_low, cheat_high):
     """
@@ -131,14 +126,14 @@ def normalize_range(
     if inplace is True:
         # perform the operation in-place
         image -= minimum
-        image *= (range_max - range_min)
-        if image.dtype.char in np.typecodes['AllInteger']:
+        image *= range_max - range_min
+        if image.dtype.char in np.typecodes["AllInteger"]:
             # this loss of precision is probably better than
             # automatically typecasting it.
             # TODO: detect rollover cases, etc.
-            image //= (maximum - minimum)
+            image //= maximum - minimum
         else:
-            image /= (maximum - minimum)
+            image /= maximum - minimum
         image += range_min
         return image
     return (image - minimum) * (range_max - range_min) / (
