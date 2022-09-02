@@ -303,7 +303,7 @@ def cutouts_to_channels(cutouts):
     channel_dict = {}
     for obj_id in set(map(get("obj_id"), cutouts)):
         matches = [c for c in cutouts if c['band'] == obj_id]
-        nuv_band = [c for c in matches if c['band'] == 'NUV']
+        nuv_band = [c for c in matches if c['band'] == 'nuv']
         if len(nuv_band) == 0:
             print(f"no valid GALEX coadd for {obj_id}")
             continue
