@@ -1,19 +1,18 @@
-"""
-utilities for interacting with PS1 catalogs, files, and services.
-"""
+"""utilities for interacting with PS1 catalogs, files, and services."""
 from io import BytesIO
 from types import MappingProxyType
 from typing import Collection, Optional
 
 import astropy.io.fits
 import astropy.wcs
+from cytoolz import groupby
+from cytoolz.curried import get
+from more_itertools import chunked
 import numpy as np
 import pyarrow as pa
 import pyarrow.compute as pac
 import requests
-from cytoolz import groupby
-from cytoolz.curried import get
-from more_itertools import chunked
+
 
 PS1_FILTERS = ("g", "r", "i", "z", "y")
 PS1_IMAGE_TYPES = (
@@ -196,9 +195,9 @@ def ps1_stack_mask_path(proj_cell, sky_cell, band):
 
 PS1_CUT_CONSTANTS = MappingProxyType(
     {
-        'chunker': ps1_chunker,
-        'kwarg_assembler': ps1_chunk_kwargs,
-        'hdu_indices': (1,),
-        'share_wcs': True
+        "chunker": ps1_chunker,
+        "kwarg_assembler": ps1_chunk_kwargs,
+        "hdu_indices": (1,),
+        "share_wcs": True,
     }
 )

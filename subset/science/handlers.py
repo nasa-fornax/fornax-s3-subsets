@@ -285,13 +285,16 @@ def sample_ps1_catalog(catalog, target_count, max_cell_count):
     return targets.to_dict(orient="records")
 
 
-def get_corresponding_images(targets, available_eclipses):
+def get_corresponding_images(targets, available_eclipses=None):
     ps1_stacks = {f"{t['proj_cell']}_{t['sky_cell']}" for t in targets}
-    galex_visits = {
-        e
-        for e in tuple(chain.from_iterable(map(get("galex"), targets)))
-        if e in available_eclipses.values
-    }
+    if available_eclipses is not None:
+        galex_visits = {
+            e
+            for e in tuple(chain.from_iterable(map(get("galex"), targets)))
+            if e in available_eclipses.values
+        }
+    else:
+        galex_visits = {}
     return ps1_stacks, galex_visits
 
 
