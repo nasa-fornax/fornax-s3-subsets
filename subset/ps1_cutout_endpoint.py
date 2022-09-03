@@ -5,11 +5,11 @@ in the scaling example.
 import os
 from multiprocessing import cpu_count
 from pathlib import Path
+import pickle
 import sys
 
 import fire
 import pandas as pd
-from cytoolz.curried import get
 from killscreen.utilities import filestamp
 
 # hacky; can remove if we decide to add an install script or put this in the
@@ -91,6 +91,8 @@ def make_ps1_slices(targets: list[dict]):
         [line.split(",") for line in log.values()], index=log.keys()
     )
     logframe.to_csv(Path(DUMP_PATH, f"{filestamp()}_log.csv"))
+    with open(Path(DUMP_PATH, f"{filestamp()}_cuts.pkl"), "wb") as stream:
+        pickle.dump(cuts, stream)
 
 
 # tell fire to handle command line call
