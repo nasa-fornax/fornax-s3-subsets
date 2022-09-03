@@ -118,7 +118,7 @@ def cleanup_greedy_shm(loader: Callable) -> bool:
 def parse_topline(log):
     """parse top line of output log from skybox-slicing examples."""
     total = next(reversed(log.values()))
-    summary, _, duration, volume = total.split(",")
+    summary, duration, volume, _ = total.split(",")
     cut_count = int(re.search(r"\d+", summary).group())
     seconds = float(re.search(r"\d+\.?\d+", duration).group())
     megabytes = float(re.search(r"\d+\.?\d+", volume).group())
