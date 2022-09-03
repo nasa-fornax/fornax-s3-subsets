@@ -5,6 +5,7 @@ in the scaling example.
 import os
 from multiprocessing import cpu_count
 from pathlib import Path
+import sys
 
 import fire
 import pandas as pd
@@ -13,7 +14,7 @@ from killscreen.utilities import filestamp
 
 # hacky; can remove if we decide to add an install script or put this in the
 # repo root
-os.chdir(Path(__file__).parent.parent)
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from subset.science.ps1_utils import PS1_CUT_CONSTANTS
 from subset.utilz.mount_s3 import mount_bucket
