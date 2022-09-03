@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from subset.science.ps1_utils import PS1_CUT_CONSTANTS
 from subset.utilz.mount_s3 import mount_bucket
-from subset.science.handlers import bulk_skycut
+from subset.science.handlers import bulk_skycut, get_corresponding_images
 from subset.utilz.generic import make_loaders, parse_topline
 
 # default settings'
@@ -69,7 +69,7 @@ TUNING = {
 
 
 def make_ps1_slices(targets: list[dict]):
-    ps1_stacks = set(map(get(["proj_cell", "sky_cell"]), targets))
+    ps1_stacks, _ = get_corresponding_images(targets)
     mount_bucket(mount_path=S3_ROOT, bucket=BUCKET)
     loader_name, loader = LOADER
     tuning_params = TUNING.get(loader_name, TUNING["default"])
