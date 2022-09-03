@@ -11,6 +11,11 @@ import pandas as pd
 from cytoolz.curried import get
 from killscreen.utilities import filestamp
 
+# hacky; can remove if we decide to add an install script or put this in the
+# repo root
+os.chdir(globals()['_dh'][0].parent)
+
+
 from science.ps1_utils import PS1_CUT_CONSTANTS
 from subset.utilz.mount_s3 import mount_bucket
 from subset.science.handlers import bulk_skycut
