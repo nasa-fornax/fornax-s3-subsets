@@ -11,17 +11,15 @@ import pandas as pd
 from cytoolz.curried import get
 from killscreen.utilities import filestamp
 
+from science.ps1_utils import PS1_CUT_CONSTANTS
 from subset.utilz.mount_s3 import mount_bucket
-from subset.science.ps1_utils import get_ps1_cutouts
+from subset.science.handlers import bulk_skycut
 from subset.utilz.generic import make_loaders, parse_topline
 
 # default settings'
 
 BUCKET = 'nishapur'
 S3_ROOT = '/mnt/s3'
-
-# default cutout side length in degrees
-CUTOUT_SIDE_LENGTH = 60 / 3600
 
 # default PS1 bands to consider (currently only g and z are staged.)
 PS1_BANDS = ("g", "z")
@@ -31,10 +29,10 @@ DUMP_PATH = Path(os.path.expanduser("~"), '.slice_test')
 
 # select loader. options are "astropy", "fitsio", "greedy_astropy",
 # "greedy_fitsio"
-# NOTE: because all the files this particular notebook is looking
-# at are RICE-compressed, there is unlikely to be much difference
-# between astropy and greedy_astropy -- astropy does not support
-# loading individual tiles from a a tile-compressed FITS file.
+# NOTE: because all these files are RICE-compressed,
+# there is unlikely to be much difference between astropy and greedy_astropy
+# -- astropy does not support loading individual tiles from a a
+# tile-compressed FITS file.
 LOADER = tuple(make_loaders("fitsio",).items())[0]
 
 # per-loader default performance-tuning parameters
@@ -45,8 +43,8 @@ LOADER = tuple(make_loaders("fitsio",).items())[0]
 TUNING = {
     "fitsio": {
         "chunksize": 40,
-        "image_threads": cpu_count() * 6,
-        "cut_threads": cpu_count() * 6
+        "image_threads": cpu_count() * 7,
+        "cut_threads": cpu_count() * 7
     },
     "greedy_fitsio": {
         "chunksize": 10,
@@ -65,22 +63,17 @@ def make_ps1_slices(targets: list[dict]):
     ps1_stacks = set(map(get(['proj_cell', 'sky_cell']), targets))
     mount_bucket(mount_path=S3_ROOT, bucket=BUCKET)
     loader_name, loader = LOADER
-    if loader_name in TUNING.keys():
-        tuning_params = TUNING[loader_name]
-    else:
-        tuning_params = TUNING["default"]
+    tuning_params = TUNING.get(loader_name, TUNING['default'])
     os.makedirs(DUMP_PATH, exist_ok=True)
-    cuts, log = get_ps1_cutouts(
+    cuts, log = bulk_skycut(
         ps1_stacks,
-        loader,
         targets,
-        CUTOUT_SIDE_LENGTH,
-        f"{S3_ROOT}/ps1",
-        PS1_BANDS,
-        verbose=2,
-        return_cuts=False,
-        dump=True,
-        dump_to=DUMP_PATH,
+        loader=loader,
+        return_cuts=True,
+        data_root=f"{S3_ROOT}/ps1",
+        bands=PS1_BANDS,
+        verbose=1,
+        **PS1_CUT_CONSTANTS,
         **tuning_params
     )
     rate, weight = parse_topline(log)
