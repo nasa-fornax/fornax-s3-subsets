@@ -38,23 +38,23 @@ DUMP_PATH = Path(os.path.expanduser("~"), '.slice_test')
 LOADER = tuple(make_loaders("fitsio",).items())[0]
 
 # per-loader default performance-tuning parameters
-# image_chunksize: how many images shall we initialize at once?
+# chunksize: how many images shall we initialize at once?
 # image_threads: how many threads shall we init with in parallel?
 # cut_threads: how many threads shall we cut with in parallel?
 # set thread params to None to disable parallelism.
 TUNING = {
     "fitsio": {
-        "image_chunksize": 40,
+        "chunksize": 40,
         "image_threads": cpu_count() * 6,
         "cut_threads": cpu_count() * 6
     },
     "greedy_fitsio": {
-        "image_chunksize": 10,
+        "chunksize": 10,
         "image_threads": cpu_count() * 2,
         "cut_threads": None
     },
     "default": {
-        "image_chunksize": 20,
+        "chunksize": 20,
         "image_threads": cpu_count() * 4,
         "cut_threads": cpu_count() * 4
     },

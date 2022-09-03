@@ -125,8 +125,8 @@ def prune_ps1_catalog(catalog_table, test_table):
     return pa.concat_tables(proj_cell_tables)
 
 
-def ps1_chunker(stacks, targets, bands, image_chunksize=40):
-    stack_chunks = chunked(stacks, int(image_chunksize / len(bands)))
+def ps1_chunker(stacks, targets, bands, chunksize=40):
+    stack_chunks = chunked(stacks, int(chunksize / len(bands)))
     target_groups = {
         "_".join(map(str, k)): v
         for k, v in groupby(get(["proj_cell", "sky_cell"]), targets).items()

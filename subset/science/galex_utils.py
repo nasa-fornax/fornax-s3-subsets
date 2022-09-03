@@ -69,8 +69,8 @@ def parquet_generic_search(columns, predicates, refs, table_path):
     return parquet.read_table(table_path, filters=filters)
 
 
-def galex_chunker(eclipses, targets, bands, image_chunksize=40):
-    eclipse_chunks = chunked(eclipses, int(image_chunksize / len(bands)))
+def galex_chunker(eclipses, targets, bands, chunksize=40):
+    eclipse_chunks = chunked(eclipses, int(chunksize / len(bands)))
     eclipse_targets = {
         eclipse: tuple(filter(lambda t: eclipse in t["galex"], targets))
         for eclipse in eclipses

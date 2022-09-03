@@ -176,12 +176,12 @@ def bulk_skycut(
     return_cuts=False,
     threads=MappingProxyType({"image": None, "cut": None}),
     verbose=1,
-    image_chunksize=40,
+    chunksize=40,
     name="chunk",
     share_wcs=False,
     exptime_field="EXPTIME",
 ):
-    file_chunks, target_groups = chunker(ids, targets, bands, image_chunksize)
+    file_chunks, target_groups = chunker(ids, targets, bands, chunksize)
     results, tag = [], filestamp()
     stat, note = make_monitors(silent=True)
     for ix, chunk in enumerate(file_chunks):
