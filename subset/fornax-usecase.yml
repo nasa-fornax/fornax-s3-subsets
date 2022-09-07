@@ -1,0 +1,24 @@
+name: fornax-usecase
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - dustgoggles
+  - astropy
+  - fast-histogram
+  - photutils
+  - numba
+  - fitsio
+  - jupyter
+  - matplotlib
+  - more-itertools
+  - numpy=1.21
+  - pandas
+  - pip
+  - pyarrow
+  - cytoolz
+  - s3fs
+  - awscli
+  - pip:
+      - git+git+https://github.com/MillionConcepts/gphoton_working.git
+      - git+git+https://github.com/MillionConcepts/killscreen.git
