@@ -117,9 +117,13 @@ def benchmark_cuts(
     # credential in the specified file (by default ~/.aws/credentials). we
     # could do it better if we needed to generalize this, probably by
     # messing with the client/resource objects passed around by fsspec.
-    if paths[0].startswith("s3://") and (authenticate_s3 is True):
+    # conversely, if the bucket has been marked as supporting anonymous
+    # access, we pass anon=True to fsspec.
+    if paths[0].startswith("s3://") and authenticate_s3 is True:
         creds = load_first_aws_credential(aws_credentials_path)
         loader = partial(loader, fsspec_kwargs=creds)
+    elif paths[0].startswith("s3://"):
+        loader = partial(loader, fsspec_kwargs={'anon': True})
     watch.start()
     print_inline(f"0/{len(paths)} complete")
     for i, path in enumerate(paths):
