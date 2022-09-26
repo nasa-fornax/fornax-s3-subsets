@@ -20,5 +20,5 @@ dependencies:
   - s3fs
   - awscli
   - pip:
-      - git+git+https://github.com/MillionConcepts/gphoton_working.git
-      - git+git+https://github.com/MillionConcepts/killscreen.git
+      - git+https://github.com/MillionConcepts/gphoton_working.git
+      - git+https://github.com/MillionConcepts/killscreen.git
