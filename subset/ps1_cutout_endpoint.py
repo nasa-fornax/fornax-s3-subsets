@@ -55,7 +55,7 @@ LOADER = tuple(
 TUNING = {
     "fitsio": {
         "chunksize": 40,
-        "threads": {"image": cpu_count() * 4, "cut": cpu_count() * 4},
+        "threads": {"image": cpu_count() * 5, "cut": cpu_count() * 5},
     },
     "greedy_fitsio": {
         "chunksize": 10,
