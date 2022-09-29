@@ -54,7 +54,7 @@ LOADER = tuple(
 # serve parallel requests.
 TUNING = {
     "fitsio": {
-        "chunksize": 40,
+        "chunksize": 250,
         "threads": {"image": cpu_count() * 5, "cut": cpu_count() * 5},
     },
     "greedy_fitsio": {
@@ -62,7 +62,7 @@ TUNING = {
         "threads": {"image": cpu_count() * 2, "cut": None},
     },
     "default": {
-        "chunksize": 20,
+        "chunksize": 250,
         "threads": {"image": cpu_count() * 4, "cut": cpu_count() * 4},
     },
 }
