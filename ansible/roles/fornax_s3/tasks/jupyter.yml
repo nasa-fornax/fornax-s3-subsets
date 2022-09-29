@@ -1,0 +1,19 @@
+# - name: generate the jupyter config
+#   command:
+#     argv:
+#       - /bin/bash
+#       - -l
+#       - -c
+#       - /home/ubuntu/mambaforge/bin/jupyter notebook --generate-config
+#     creates: /home/ubuntu/.jupyter/jupyter_notebook_config.py
+#   become_user: ubuntu
+#   become: yes
+#   become_method: su
+
+# - name: copy jupyter server entrypoint script
+#   copy:
+#     src: jupyter_server.bash
+#     dest: /home/ubuntu/jupyter_server.bash
+#     owner: ubuntu
+#     group: ubuntu
+#     mode: '0750'

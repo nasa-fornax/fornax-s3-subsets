@@ -1,0 +1,50 @@
+# - name: install dependencies
+#   apt:
+#     pkg:
+#       - git
+#       - curl
+#       - gnupg2
+#       - ca-certificates
+#       - lsb-release
+
+- name: Download Mambaforge
+  get_url:
+    url: https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-Linux-x86_64.sh
+    dest: /home/ec2-user/Mambaforge-Linux-x86_64.sh
+    mode: 0750
+
+- name: install Mambaforge
+  command:
+    argv:
+      - /bin/bash
+      - -c
+      - /home/ec2-user/Mambaforge-Linux-x86_64.sh -b
+    creates: /home/ec2-user/mambaforge
+
+- name: mamba init
+  command:
+    argv:
+      - /bin/bash
+      - -c
+      - /home/ec2-user/mambaforge/bin/mamba init
+
+- name: install goofys
+  get_url:
+    url: https://github.com/kahing/goofys/releases/latest/download/goofys
+    dest: /usr/bin/goofys
+    mode: 555
+
+- name: download wondershaper
+  git:
+    repo: https://github.com/magnific0/wondershaper.git
+    dest: /home/root/wondershaper
+    clone: yes
+    update: no
+
+- name: install wondershaper
+  command:
+    argv:
+      - /bin/bash
+      - -c
+      - cd /home/root/wondershaper && make install
+    creates: /usr/local/sbin/wondershaper

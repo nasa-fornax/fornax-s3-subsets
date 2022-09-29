@@ -1,0 +1,8 @@
+- name: install software dependencies
+  import_tasks: dependencies.yml
+
+- name: install fornax_s3
+  import_tasks: fornax_s3.yml
+
+- name: install jupyter server
+  import_tasks: jupyter.yml

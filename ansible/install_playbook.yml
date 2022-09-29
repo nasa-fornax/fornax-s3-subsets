@@ -1,0 +1,4 @@
+- name: install the software
+  hosts: localhost
+  roles:
+    - role: fornax_s3
